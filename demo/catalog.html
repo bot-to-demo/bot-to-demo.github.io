@@ -615,7 +615,7 @@
 		font-family: 'Comfortaa', cursive;
 		font-size: 0.8em;
 		font-weight: bold;
-		line-height: 1.2em;
+		/* line-height: 1.2em; */
 		text-align: center;
 		padding: 1rem;
 		margin: 1rem;
@@ -624,15 +624,6 @@
 		top: -300px;
 	}
 
-	/* .prod-box:hover {
-	background-color:#f37b03;
-	transition: 0.5s;
-}
-
-.prod-box:hover .prod-name {
-	color:#fffefd;
-	transition: 0.5s;
-} */
 
 	.prod-name {
 		color: #cc9933;
@@ -1221,7 +1212,15 @@
 	}
 
 	/* iPhone 6+, 7+, 8+ ----------- */
-	@media only screen and (min-device-width: 414px) and (min-device-height: 736px) and (orientation : portrait) {
+	@media
+		only screen and (min-device-width: 414px),
+		only screen and (min-device-height: 736px),
+		only screen and (orientation : portrait),
+		only screen and (-webkit-min-device-pixel-ratio: 3.0),
+		only screen and (        min-device-pixel-ratio: 3.0),
+		only screen and (                min-resolution: 401dpi),
+  		only screen and (                min-resolution: 3.0dppx)
+		{
 		.prod-box {
 			color: rgb(58, 250, 0);
 		}
