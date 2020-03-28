@@ -1,25 +1,54 @@
 <!DOCTYPE html>
-<html lang="ua-UA">
+<html lang="uk" itemscope itemtype="http://schema.org/WebPage" prefix="og: http://ogp.me/ns#">
 
 <head>
-	<meta charset="UTF-8">
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161766012-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-161766012-1');
+	</script> -->
 	<title>Контакти - Сіль Землі</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="Приватна пекарня Сіль Землі, смт. Буштино. Хліб та хлібобулочні вироби.">
+	<meta name="keywords" content="Буштино, хліб, замовлення, пекарня, хлеб, пекарня, Закарпаття, Тячево, Тячівський район, Буштыно, булочки, свіжа випічка, Сіль Землі, Соль Земли, silzemli, sil zemli, контакти, адреса, робота.">
+	<!-- Open Graph -->
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="Сіль Землі">
+	<meta property="og:title" content="Пекарня смт. Буштино">
+	<meta property="og:description" content="Приватна пекарня Сіль Землі, смт. Буштино. Хліб та хлібобулочні вироби.">
+	<meta property="og:url" content="https://silzemli.com.ua/contacts.html">
+	<meta name="og:locale" content="uk">
+	<meta name="fb:app_id" content="https://m.facebook.com/Пекарня-Сіль-Землі-799960886817298/">
+	<meta property="og:image" content="https://silzemli.com.ua/social-preview.png">
+
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
 	<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
-	<link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
 
 	<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 	<link rel="manifest" href="site.webmanifest">
 	<link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
-	<meta name="msapplication-TileColor" content="#da532c">
-	<meta name="theme-color" content="#ffffff">
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 <style>
 	@font-face {
 		font-family: Appetite;
 		src: url(founts/Appetite.ttf);
+	}
+
+	@font-face {
+		font-family: 'Comfortaa';
+		src: url(founts/Comfortaa-VariableFont.ttf);
+		font-display: fallback;
 	}
 
 	html,
@@ -207,7 +236,7 @@
 
 	.little-had {
 		height: 70px;
-		/* transition: 1s; */
+		position: fixed;
 	}
 
 	.nav {
@@ -433,8 +462,8 @@
 	}
 
 	.bakery-img {
-		/* height: 300px;
-    width: 450px; media */
+		height: 300px;
+		width: 450px;
 		box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.993);
 	}
 
@@ -583,20 +612,20 @@
 
 
 	@keyframes line-mov {
-  to {
-    stroke-width: 1;
-		stroke-dasharray: -200;
-		stroke-dashoffset: 100;
-  }
-}
+		to {
+			stroke-width: 1;
+			stroke-dasharray: -200;
+			stroke-dashoffset: 100;
+		}
+	}
 
-@keyframes line-mov-2 {
-  to {
-		stroke-width: 1;
-		stroke-dasharray: 300;
-		stroke-dashoffset: 300;
-  }
-}
+	@keyframes line-mov-2 {
+		to {
+			stroke-width: 1;
+			stroke-dasharray: 300;
+			stroke-dashoffset: 300;
+		}
+	}
 
 	.adres-main {
 		display: flex;
@@ -673,25 +702,25 @@
 	}
 
 	.mobile-map-link-1 {
-		position: absolute; 
-		left:0;
-		right:0;
-		top:0;
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
 		bottom: 50%;
 	}
 
 	.mobile-map-link-2 {
-		position: absolute; 
-		left:0;
-		right:0;
+		position: absolute;
+		left: 0;
+		right: 0;
 		top: 50%;
-		bottom:0;
+		bottom: 0;
 	}
 
 
 	.social-icons-header {
-			display: none;
-		}
+		display: none;
+	}
 
 	.work-h2 {
 		color: #f37b03;
@@ -715,105 +744,120 @@
 
 
 	#check {
-  display: none;
-}
+		display: none;
+	}
 
-.checkbtn {
-  display: none;
-}
+	.checkbtn {
+		display: none;
+	}
 
-nav {
-	display: flex;
-	padding-top: 1em;
-	margin-right: 3%;
-	width: 40%;
-}
-
-
+	nav {
+		display: flex;
+		padding-top: 1em;
+		margin-right: 3%;
+		width: 40%;
+	}
 
 
 
 
-.ham {
-  cursor: pointer;
-  -webkit-tap-highlight-color: transparent;
-  transition: transform 400ms;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-.hamRotate.active {
-  transform: rotate(45deg);
-}
-.hamRotate180.active {
-  transform: rotate(180deg);
-}
-.line {
-  fill:none;
-  transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
-  stroke:#cc9933;
-  stroke-width:5.5;
-  stroke-linecap:round;
-}
-.ham7 .top {
-  stroke-dasharray: 40 82;
-}
-.ham7 .middle {
-  stroke-dasharray: 40 111;
-}
-.ham7 .bottom {
-  stroke-dasharray: 40 161;
-}
-.ham7.active .top {
-  stroke-dasharray: 17 82;
-  stroke-dashoffset: -62px;
-}
-.ham7.active .middle {
-  stroke-dashoffset: 23px;
-}
-.ham7.active .bottom {
-  stroke-dashoffset: -83px;
-}
 
 
-.i-tel {
-	width: 25px;
-	height: 25px;
-}
+	.ham {
+		cursor: pointer;
+		-webkit-tap-highlight-color: transparent;
+		transition: transform 400ms;
+		-moz-user-select: none;
+		-webkit-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+	}
 
-.call-tel {
-  fill:#cc9933;
-  transform-origin: 50% 50%;
-  animation: call 6s infinite ;
-}
+	.hamRotate.active {
+		transform: rotate(45deg);
+	}
 
-@keyframes call {
-  39%,
-  50%,
-  100% {
-            transform: rotate(0deg);
-  }
-  40% {
-            transform: rotate(8deg);
-  }
-  42%,
-  44%,
-  46% {
-            transform: rotate(-10deg);
-  }
-  43%,
-  45%,
-  47% {
-            transform: rotate(10deg);
-  }
-  48% {
-            transform: rotate(-8deg);
-  }
-  49% {
-            transform: rotate(8deg);
-  }
-}
+	.hamRotate180.active {
+		transform: rotate(180deg);
+	}
+
+	.line {
+		fill: none;
+		transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+		stroke: #cc9933;
+		stroke-width: 5.5;
+		stroke-linecap: round;
+	}
+
+	.ham7 .top {
+		stroke-dasharray: 40 82;
+	}
+
+	.ham7 .middle {
+		stroke-dasharray: 40 111;
+	}
+
+	.ham7 .bottom {
+		stroke-dasharray: 40 161;
+	}
+
+	.ham7.active .top {
+		stroke-dasharray: 17 82;
+		stroke-dashoffset: -62px;
+	}
+
+	.ham7.active .middle {
+		stroke-dashoffset: 23px;
+	}
+
+	.ham7.active .bottom {
+		stroke-dashoffset: -83px;
+	}
+
+
+	.i-tel {
+		width: 25px;
+		height: 25px;
+	}
+
+	.call-tel {
+		fill: #cc9933;
+		transform-origin: 50% 50%;
+		animation: call 6s infinite;
+	}
+
+	@keyframes call {
+
+		39%,
+		50%,
+		100% {
+			transform: rotate(0deg);
+		}
+
+		40% {
+			transform: rotate(8deg);
+		}
+
+		42%,
+		44%,
+		46% {
+			transform: rotate(-10deg);
+		}
+
+		43%,
+		45%,
+		47% {
+			transform: rotate(10deg);
+		}
+
+		48% {
+			transform: rotate(-8deg);
+		}
+
+		49% {
+			transform: rotate(8deg);
+		}
+	}
 
 
 	@keyframes pulse {
@@ -829,11 +873,11 @@ nav {
 		}
 	}
 
-	/* @media all and (min-width: 1340px) {
-		.soc-img {
-			padding-right: 7rem;
-		}
-	} */
+	.map-svg-title {
+		font-family: 'ArialMT';
+		font-weight: bold;
+		font-size: 27px;
+	}
 
 	@media all and (max-width: 1100px) {
 
@@ -878,7 +922,10 @@ nav {
 		}
 
 		.bakery-img {
-			width: 100%;
+			margin-top: 2rem;
+			width: auto;
+			max-width: 100%;
+			height: auto;
 		}
 
 		/* .contact-h1 {
@@ -1009,52 +1056,59 @@ nav {
 
 
 
-		.checkbtn{
-	display: flex;
-	align-items: center;
-	cursor: pointer;
-	/* order: 2; */
-  }
-
-  .nav {
-	position: fixed;
-    width: 100%;
-	/* background-color: rgb(95, 54, 0); */
-	/* background-color: rgb(0, 0, 0); */
-	background-color: rgb(43, 24, 1);
-    top: 84px;
-	/* top: -100%; */
-	left: -100%;
-	display: flex;
-	justify-content: space-around;
-	transition: all .5s;
-	z-index: 99999;
+		.checkbtn {
+			display: flex;
+			align-items: center;
+			cursor: pointer;
+			/* order: 2; */
 		}
 
-	.main, .about, .products, .contacts {
-		display: block;
-		margin-top: 12px;
-		margin-bottom: 12px;
-		line-height: 25px;
-	}
+		.nav {
+			position: fixed;
+			width: 100%;
+			/* background-color: rgb(95, 54, 0); */
+			/* background-color: rgb(0, 0, 0); */
+			background-color: rgb(43, 24, 1);
+			top: 84px;
+			/* top: -100%; */
+			left: -100%;
+			display: flex;
+			justify-content: space-around;
+			transition: all .5s;
+			z-index: 99999;
+		}
 
-	#check:checked ~ .nav{
-	/* top: 84px; */
-	left: 0;
-  }
+		.main,
+		.about,
+		.products,
+		.contacts {
+			display: block;
+			margin-top: 12px;
+			margin-bottom: 12px;
+			line-height: 25px;
+		}
 
-  nav {
-    padding-top: 0;
-    margin-right: 0;
-    width: auto;
-  }
+		#check:checked~.nav {
+			/* top: 84px; */
+			left: 0;
+		}
+
+		nav {
+			padding-top: 0;
+			margin-right: 0;
+			width: auto;
+		}
 
 	}
 
 
 
 	@media all and (max-width: 500px) {
-		.main, .about, .products, .contacts {
+
+		.main,
+		.about,
+		.products,
+		.contacts {
 			font-size: 0.7em;
 		}
 
@@ -1067,64 +1121,89 @@ nav {
 			height: 30px;
 		}
 
+		.map-svg-title {
+			font-family: 'ArialMT';
+			font-weight: bold;
+			font-size: 25px;
+		}
+
+		.bakery-img {
+			margin-top: 0;
+		}
+
 	}
 
 
 	@media all and (max-width: 350px) {
 
-	* {
-		font-size: 13px;
-	}
+		* {
+			font-size: 13px;
+		}
 
-	.main, .about, .products {
-		padding-right: 0;
-	}
-	}
+		.main,
+		.about,
+		.products {
+			padding-right: 0;
+		}
 
+		.map-svg-title {
+			font-family: 'ArialMT';
+			font-weight: bold;
+			font-size: 23px;
+		}
+
+	}
 </style>
 
 <body>
 	<script>
 		(function () {
-			window.oldScrollY = window.scrollY;
-			document.onscroll = event => {
-				let res = window.oldScrollY > window.scrollY ? 1 : 2;
+			if (window.matchMedia("(min-width: 1100px)").matches) {
 				window.oldScrollY = window.scrollY;
+				document.onscroll = event => {
 
-				if (res == 2 && window.scrollY < 100) {
-					document.querySelector('.header').classList.add('little-had');
-					document.querySelector('.logo').classList.add('little-logo');
-					// document.querySelector('.st11').classList.add('path');
-				}
+					let res = window.oldScrollY > window.scrollY ? 1 : 2;
+					window.oldScrollY = window.scrollY;
+					// console.log(window.oldScrollY);
 
-				if (res == 1 && window.scrollY < 250) {
-					document.querySelector('.header').classList.remove('little-had');
-					document.querySelector('.logo').classList.remove('little-logo');
+					let head = document.querySelector('.header');
+					let logo = document.querySelector('.logo');
+
+					if (res == 2 && window.scrollY > 100) {
+						head.classList.add('little-had');
+						logo.classList.add('little-logo');
+					} else if (res == 1 && window.scrollY < 250) {
+						head.classList.remove('little-had');
+						logo.classList.remove('little-logo');
+					} else {
+						head.classList.add('little-had');
+						logo.classList.add('little-logo');
+					}
 				}
 			}
 		})();
 	</script>
 
 	<header class="header">
+		<!-- SEO h1 Title for Google -->
+		<section style="display: none;"><h1>Наші контактні дані та вакансії</h1></section>
+		<!-- SEO h1 Title for Google end-->
 		<nav>
 			<input type="checkbox" id="check">
 			<label for="check" class="checkbtn">
-				<svg class="ham hamRotate ham7" viewBox="0 0 100 100" width="65" onclick="this.classList.toggle('active')">
-					<path
-						  class="line top"
-						  d="m 70,33 h -40 c 0,0 -6,1.368796 -6,8.5 0,7.131204 6,8.5013 6,8.5013 l 20,-0.0013" />
-					<path
-						  class="line middle"
-						  d="m 70,50 h -40" />
-					<path
-						  class="line bottom"
-						  d="m 69.575405,67.073826 h -40 c -5.592752,0 -6.873604,-9.348582 1.371031,-9.348582 8.244634,0 19.053564,21.797129 19.053564,12.274756 l 0,-40" />
-				  </svg>
+				<svg class="ham hamRotate ham7" viewBox="0 0 100 100" width="65"
+					onclick="this.classList.toggle('active')">
+					<path class="line top"
+						d="m 70,33 h -40 c 0,0 -6,1.368796 -6,8.5 0,7.131204 6,8.5013 6,8.5013 l 20,-0.0013" />
+					<path class="line middle" d="m 70,50 h -40" />
+					<path class="line bottom"
+						d="m 69.575405,67.073826 h -40 c -5.592752,0 -6.873604,-9.348582 1.371031,-9.348582 8.244634,0 19.053564,21.797129 19.053564,12.274756 l 0,-40" />
+				</svg>
 			</label>
 			<div class="nav">
-				<a class="main" href="index.html" >ГОЛОВНА</a>
-				<a class="about" href="about.html" >ПРО&nbspНАС</a>
-				<a class="products" href="catalog.html" >ПРОДУКЦІЯ</a>
+				<a class="main" href="index.html">ГОЛОВНА</a>
+				<a class="about" href="about.html">ПРО&nbspНАС</a>
+				<a class="products" href="catalog.html">ПРОДУКЦІЯ</a>
 				<a class="contacts">КОНТАКТИ</a>
 			</div>
 		</nav>
@@ -1142,20 +1221,21 @@ nav {
 				<img class="clock" src="images/clock.svg" alt="clock">
 				<div class="working-time">Пн-Сб:<br />цілодобово<br />Нд:<br />з 10:00</div>
 			</div>
-			<div class="social-icons-header">			
+			<div class="social-icons-header">
 				<a href="tel:+380673102145">
 					<?xml version="1.0" encoding="iso-8859-1"?>
-					<svg version="1.1" class="i-tel" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-						viewBox="0 0 51.413 51.413" style="enable-background:new 0 0 51.413 51.413;" xml:space="preserve">
-					<g>
+					<svg version="1.1" class="i-tel" xmlns="http://www.w3.org/2000/svg"
+						xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 51.413 51.413"
+						style="enable-background:new 0 0 51.413 51.413;" xml:space="preserve">
 						<g>
-							<path class="call-tel" d="M25.989,12.274c8.663,0.085,14.09-0.454,14.823,9.148h10.564c0-14.875-12.973-16.88-25.662-16.88
-								c-12.69,0-25.662,2.005-25.662,16.88h10.482C11.345,11.637,17.398,12.19,25.989,12.274z"/>
-							<path class="call-tel" d="M5.291,26.204c2.573,0,4.714,0.154,5.19-2.377c0.064-0.344,0.101-0.734,0.101-1.185H10.46H0
-								C0,26.407,2.369,26.204,5.291,26.204z"/>
-							<path class="call-tel" d="M40.88,22.642h-0.099c0,0.454,0.039,0.845,0.112,1.185c0.502,2.334,2.64,2.189,5.204,2.189
-								c2.936,0,5.316,0.193,5.316-3.374H40.88z"/>
-							<path style="fill:#cc9933;" d="M35.719,20.078v-1.496c0-0.669-0.771-0.711-1.723-0.711h-1.555c-0.951,0-1.722,0.042-1.722,0.711
+							<g>
+								<path class="call-tel" d="M25.989,12.274c8.663,0.085,14.09-0.454,14.823,9.148h10.564c0-14.875-12.973-16.88-25.662-16.88
+								c-12.69,0-25.662,2.005-25.662,16.88h10.482C11.345,11.637,17.398,12.19,25.989,12.274z" />
+								<path class="call-tel" d="M5.291,26.204c2.573,0,4.714,0.154,5.19-2.377c0.064-0.344,0.101-0.734,0.101-1.185H10.46H0
+								C0,26.407,2.369,26.204,5.291,26.204z" />
+								<path class="call-tel" d="M40.88,22.642h-0.099c0,0.454,0.039,0.845,0.112,1.185c0.502,2.334,2.64,2.189,5.204,2.189
+								c2.936,0,5.316,0.193,5.316-3.374H40.88z" />
+								<path style="fill:#cc9933;" d="M35.719,20.078v-1.496c0-0.669-0.771-0.711-1.723-0.711h-1.555c-0.951,0-1.722,0.042-1.722,0.711
 								v1.289v1h-11v-1v-1.289c0-0.669-0.771-0.711-1.722-0.711h-1.556c-0.951,0-1.722,0.042-1.722,0.711v1.496v1.306
 								C12.213,23.988,4.013,35.073,3.715,36.415l0.004,8.955c0,0.827,0.673,1.5,1.5,1.5h40c0.827,0,1.5-0.673,1.5-1.5v-9
 								c-0.295-1.303-8.493-12.383-11-14.987V20.078z M19.177,37.62c-0.805,0-1.458-0.652-1.458-1.458s0.653-1.458,1.458-1.458
@@ -1168,9 +1248,9 @@ nav {
 								c0.806,0,1.458,0.653,1.458,1.458C26.635,26.969,25.983,27.621,25.177,27.621z M31.177,37.62c-0.806,0-1.458-0.652-1.458-1.458
 								s0.652-1.458,1.458-1.458s1.458,0.652,1.458,1.458S31.983,37.62,31.177,37.62z M31.177,32.62c-0.806,0-1.458-0.652-1.458-1.458
 								s0.652-1.458,1.458-1.458s1.458,0.652,1.458,1.458S31.983,32.62,31.177,32.62z M31.177,27.621c-0.806,0-1.458-0.652-1.458-1.458
-								c0-0.805,0.652-1.458,1.458-1.458s1.458,0.653,1.458,1.458C32.635,26.969,31.983,27.621,31.177,27.621z"/>
+								c0-0.805,0.652-1.458,1.458-1.458s1.458,0.653,1.458,1.458C32.635,26.969,31.983,27.621,31.177,27.621z" />
+							</g>
 						</g>
-					</g>
 				</a>
 				<a href="https://www.instagram.com/sil.zemli/" target="_blank" rel="noopener">
 					<img width="25" height="25" src="images/instagram.svg" alt="instagram">
@@ -1186,7 +1266,13 @@ nav {
 	</header>
 	<main>
 		<section class="contact-box">
-			<img class="bakery-img" src="images/contacts/bakery.png" alt="bakery">
+			<picture>
+				<source srcset="images/contacts/bakery-350.png" media="(max-width: 350px)">
+				<source srcset="images/contacts/bakery-500.png" media="(max-width: 500px)">
+				<source srcset="images/contacts/bakery-600.png">
+				<img class="bakery-img" srcset="images/contacts/bakery-600.png" alt="bakery">
+			</picture>
+			<!-- <img class="bakery-img"  src="images/contacts/bakery-600.png" alt="bakery"> -->
 			<div class="contact-form">
 				<h1 class="contact-h1">ЗВ’ЯЗАТИСЯ&nbspЗ&nbspНАМИ:</h1>
 				<div class="contact-data">
@@ -1194,19 +1280,20 @@ nav {
 						<h2 class="contact-h2">Контактні телефони:</h2>
 						<a class="contackt-link-main" href="tel:+380673102145">Замовлення: +38 (067) 310 21 45</a>
 						<a class="contackt-link-main" href="tel:+380673122909">Директор: +38 (067) 312 29 09</a>
-						<!-- <a class="contackt-link-main" href="fax:+0313469205">Тел/факс: 0 (3134) 6 92 05</a> -->
 					</div>
 					<div class="contact-blocks">
 						<h2 class="contact-h2">Надіслати нам листа:</h2>
 						<a class="email-link-main" href="mailto:silzemli111@gmail.com" target="_blank">Email</a>
-						<!-- <p style="color:#cc9933">silzemli111@gmail.com</p> -->
 						<a style="color:#cc9933" href="fax:+0313469205">Тел/факс: 0 (3134) 6 92 05</a>
 					</div>
 				</div>
 				<div class="work-cont">
 					<h2 class="work-h2">РОБОТА:</h2>
-					<p>Якщо Вас цікавить робота у нас, можете відправити своє резюме</br>на Email <a style="color:#cc9933" href="mailto:silzemli111@gmail.com" target="_blank">silzemli111@gmail.com</a> c зазначенням бажаної посади.
-					</br>За інформацією про актуальні вакансії звертатися за телефоном:</br><a class="contackt-link-main" href="tel:+380673122909">+38 (067) 312 29 09</a></p>
+					<p>Якщо Вас цікавить робота у нас, можете відправити своє резюме</br>на Email <a
+							style="color:#cc9933" href="mailto:rabota@silzemli.com.ua"
+							target="_blank">rabota@silzemli.com.ua</a> c зазначенням бажаної посади.
+						</br>За інформацією про актуальні вакансії звертатися за телефоном:</br><a
+							class="contackt-link-main" href="tel:+380673122909">+38 (067) 312 29 09</a></p>
 				</div>
 			</div>
 		</section>
@@ -1266,302 +1353,414 @@ nav {
 				xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1366 663"
 				style="enable-background:new 0 0 1366 663;" xml:space="preserve">
 				<style type="text/css">
-					.st0{fill:none;stroke:#999999;stroke-width:20;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:10;}
-					.st1{fill:none;stroke:#999999;stroke-width:3;stroke-linecap:round;stroke-miterlimit:10;}
-					.st2{fill:none;stroke:#999999;stroke-width:3;stroke-miterlimit:10;}
-					.st3{fill:none;stroke:#999999;stroke-width:11;stroke-linecap:square;stroke-miterlimit:10;}
-					.st4{fill:none;stroke:#999999;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-					.st5{fill:#999999;}
-					.st6{fill:none;stroke:#B3B3B3;stroke-miterlimit:10;}
-					.st7{fill:none;stroke:#CC9933;stroke-miterlimit:10;}
-					.st8{fill:none;stroke:#CC9933;stroke-width:3;stroke-miterlimit:10;}
-					.st9{fill:none;stroke:#CC9933;stroke-width:2;stroke-miterlimit:10;}
-					.st10{fill:none;stroke:#CC9933;stroke-width:4;stroke-miterlimit:10;}
-					.st11{fill:none;}
-					.st12{fill:#CC9933;}
-					.st13{font-family:'ArialMT';font-weight: bold;}
-					.st14{font-size:15px;}
-					.st15{font-size:12px;}
-					.st16{font-size:19px;}
-					.st17{font-size:33px;}
-					.st18{font-size:17px;}
-					.st19{font-size:27px;}
-				
-										.pulse {
-										fill: #CC9933;
-										stroke: #CC9933;
-										stroke-width: 3;
-										stroke-miterlimit: 10;
-									}
+					.st0 {
+						fill: none;
+						stroke: #999999;
+						stroke-width: 20;
+						stroke-linecap: square;
+						stroke-linejoin: round;
+						stroke-miterlimit: 10;
+					}
+
+					.st1 {
+						fill: none;
+						stroke: #999999;
+						stroke-width: 3;
+						stroke-linecap: round;
+						stroke-miterlimit: 10;
+					}
+
+					.st2 {
+						fill: none;
+						stroke: #999999;
+						stroke-width: 3;
+						stroke-miterlimit: 10;
+					}
+
+					.st3 {
+						fill: none;
+						stroke: #999999;
+						stroke-width: 11;
+						stroke-linecap: square;
+						stroke-miterlimit: 10;
+					}
+
+					.st4 {
+						fill: none;
+						stroke: #999999;
+						stroke-width: 3;
+						stroke-linecap: round;
+						stroke-linejoin: round;
+						stroke-miterlimit: 10;
+					}
+
+					.st5 {
+						fill: #999999;
+					}
+
+					.st6 {
+						fill: none;
+						stroke: #B3B3B3;
+						stroke-miterlimit: 10;
+					}
+
+					.st7 {
+						fill: none;
+						stroke: #CC9933;
+						stroke-miterlimit: 10;
+					}
+
+					.st8 {
+						fill: none;
+						stroke: #CC9933;
+						stroke-width: 3;
+						stroke-miterlimit: 10;
+					}
+
+					.st9 {
+						fill: none;
+						stroke: #CC9933;
+						stroke-width: 2;
+						stroke-miterlimit: 10;
+					}
+
+					.st10 {
+						fill: none;
+						stroke: #CC9933;
+						stroke-width: 4;
+						stroke-miterlimit: 10;
+					}
+
+					.st11 {
+						fill: none;
+					}
+
+					.st12 {
+						fill: #CC9933;
+					}
+
+					.st13 {
+						font-family: 'Comfortaa';
+						font-weight: bold;
+					}
+
+					.st14 {
+						font-size: 15px;
+					}
+
+					.st15 {
+						font-size: 12px;
+					}
+
+					.st16 {
+						font-size: 16px;
+					}
+
+					.st17 {
+						font-size: 28px;
+					}
+
+					.st18 {
+						font-size: 13px;
+					}
+
+					.st19 {
+						font-size: 27px;
+					}
+
+					.pulse {
+						fill: #CC9933;
+						stroke: #CC9933;
+						stroke-width: 3;
+						stroke-miterlimit: 10;
+					}
 				</style>
-				<line class="st0" x1="375" y1="367.6" x2="407.4" y2="389.8"/>
+				<line class="st0" x1="375" y1="367.6" x2="407.4" y2="389.8" />
 				<g>
 					<g>
 						<g>
 							<g>
-								<line class="st1" x1="745.6" y1="100.8" x2="735.5" y2="111.8"/>
-								<path class="st1" d="M861.8,171.4c-6.1,6.6-12.6,13.3-19.7,20.2c-6.2,6-12.3,11.6-18.2,16.8"/>
+								<line class="st1" x1="745.6" y1="100.8" x2="735.5" y2="111.8" />
+								<path class="st1"
+									d="M861.8,171.4c-6.1,6.6-12.6,13.3-19.7,20.2c-6.2,6-12.3,11.6-18.2,16.8" />
 								<g>
 									<path class="st1" d="M562.1,305.8c22.1-13.8,55.2-36.5,91.5-69.5c21.6-19.7,33.6-33.3,69.9-71.2c19.5-20.4,48.3-50.2,84.4-86.3
-										"/>
-									<path class="st1" d="M605.9,126.7c16.5-14.6,33.3-30.3,50.4-47c22.7-22.4,43.5-44.4,62.4-65.8"/>
-									<path class="st1" d="M751.2,35.2c-14.1,16.9-28.6,33.4-43.5,49.7"/>
-									<path class="st1" d="M813.3,119.1c-11.3,13-23.3,25.3-34.6,38.4"/>
-									<path class="st1" d="M831,98.9c-0.9,1-1.8,2-2.6,2.9"/>
-									<line class="st2" x1="683" y1="9.6" x2="640" y2="55.7"/>
+										" />
+									<path class="st1"
+										d="M605.9,126.7c16.5-14.6,33.3-30.3,50.4-47c22.7-22.4,43.5-44.4,62.4-65.8" />
+									<path class="st1" d="M751.2,35.2c-14.1,16.9-28.6,33.4-43.5,49.7" />
+									<path class="st1" d="M813.3,119.1c-11.3,13-23.3,25.3-34.6,38.4" />
+									<path class="st1" d="M831,98.9c-0.9,1-1.8,2-2.6,2.9" />
+									<line class="st2" x1="683" y1="9.6" x2="640" y2="55.7" />
 									<path class="st1" d="M429.3,174.7C515.2,85.1,578,20,587.4,10.6c1.3-1.3,4.4-4.4,9.4-6.3c9.1-3.5,17.6-0.6,24,1
-										c6,1.5,0.6-0.5,37,2.4c15.9,1.3,36.5,3.2,61,6.2"/>
-									<path class="st1" d="M751.7,31.6c-10.5-6.8-21.5-12.7-32.9-17.7"/>
-									<path class="st1" d="M837.3,103.4c-20.4-16.1-39.1-34.3-58.7-51.3"/>
-									<path class="st1" d="M919.4,164.6c-17.1-11.8-33.9-24-50.4-36.6c-4.1-3.2-8.3-6.4-12.4-9.6"/>
+										c6,1.5,0.6-0.5,37,2.4c15.9,1.3,36.5,3.2,61,6.2" />
+									<path class="st1" d="M751.7,31.6c-10.5-6.8-21.5-12.7-32.9-17.7" />
+									<path class="st1" d="M837.3,103.4c-20.4-16.1-39.1-34.3-58.7-51.3" />
+									<path class="st1"
+										d="M919.4,164.6c-17.1-11.8-33.9-24-50.4-36.6c-4.1-3.2-8.3-6.4-12.4-9.6" />
 								</g>
-								<path class="st1" d="M418.5,1.7C528,111,637,220,745.6,328.8"/>
-								<line class="st1" x1="459" y1="0" x2="510.9" y2="49"/>
-								<line class="st1" x1="541.1" y1="16.8" x2="490" y2="73.2"/>
-								<path class="st1" d="M411.4,1.3c-5.4,5-10.8,10-16.2,15"/>
-								<line class="st1" x1="429.3" y1="53.3" x2="395.2" y2="16.3"/>
-								<line class="st1" x1="405" y1="78.8" x2="429.3" y2="53.3"/>
-								<line class="st1" x1="423.5" y1="100.8" x2="347.7" y2="17.3"/>
-								<line class="st1" x1="524.3" y1="0" x2="562.1" y2="36.6"/>
-								<line class="st1" x1="565.1" y1="0" x2="815.2" y2="263.5"/>
-								<line class="st1" x1="558.7" y1="40.2" x2="785.9" y2="288.5"/>
-								<line class="st1" x1="543.2" y1="59" x2="758.6" y2="294.2"/>
-								<line class="st1" x1="769.6" y1="289.9" x2="758.6" y2="294.2"/>
-								<line class="st1" x1="778.2" y1="300" x2="769.6" y2="289.9"/>
-								<line class="st1" x1="475.3" y1="126.7" x2="707.7" y2="362.4"/>
-								<line class="st1" x1="605.9" y1="2.6" x2="650" y2="45"/>
-								<path class="st1" d="M678.7,57.1c27.4,25.3,55.6,52.6,84.3,82.1c30.8,31.8,59,63,85,93.2"/>
-								<line class="st1" x1="701.8" y1="32.6" x2="731.7" y2="58.1"/>
-								<line class="st1" x1="748.6" y1="78.8" x2="730.5" y2="62.2"/>
-								<line class="st1" x1="804.9" y1="130.2" x2="851.9" y2="181.7"/>
-								<line class="st3" x1="758.8" y1="82.9" x2="746.5" y2="95.3"/>
+								<path class="st1" d="M418.5,1.7C528,111,637,220,745.6,328.8" />
+								<line class="st1" x1="459" y1="0" x2="510.9" y2="49" />
+								<line class="st1" x1="541.1" y1="16.8" x2="490" y2="73.2" />
+								<path class="st1" d="M411.4,1.3c-5.4,5-10.8,10-16.2,15" />
+								<line class="st1" x1="429.3" y1="53.3" x2="395.2" y2="16.3" />
+								<line class="st1" x1="405" y1="78.8" x2="429.3" y2="53.3" />
+								<line class="st1" x1="423.5" y1="100.8" x2="347.7" y2="17.3" />
+								<line class="st1" x1="524.3" y1="0" x2="562.1" y2="36.6" />
+								<line class="st1" x1="565.1" y1="0" x2="815.2" y2="263.5" />
+								<line class="st1" x1="558.7" y1="40.2" x2="785.9" y2="288.5" />
+								<line class="st1" x1="543.2" y1="59" x2="758.6" y2="294.2" />
+								<line class="st1" x1="769.6" y1="289.9" x2="758.6" y2="294.2" />
+								<line class="st1" x1="778.2" y1="300" x2="769.6" y2="289.9" />
+								<line class="st1" x1="475.3" y1="126.7" x2="707.7" y2="362.4" />
+								<line class="st1" x1="605.9" y1="2.6" x2="650" y2="45" />
+								<path class="st1"
+									d="M678.7,57.1c27.4,25.3,55.6,52.6,84.3,82.1c30.8,31.8,59,63,85,93.2" />
+								<line class="st1" x1="701.8" y1="32.6" x2="731.7" y2="58.1" />
+								<line class="st1" x1="748.6" y1="78.8" x2="730.5" y2="62.2" />
+								<line class="st1" x1="804.9" y1="130.2" x2="851.9" y2="181.7" />
+								<line class="st3" x1="758.8" y1="82.9" x2="746.5" y2="95.3" />
 							</g>
-							<line class="st4" x1="861.8" y1="76.8" x2="828.4" y2="49.4"/>
-							<path class="st4" d="M893.6,104.9c-6.8-4.1-14.6-6.6-21-11.1c-5.6-4-9.2-10.3-10.8-16.9"/>
-							<path class="st4" d="M936.6,144.8C932,130,917,123,904.7,113.7"/>
-							<line class="st4" x1="912.6" y1="82.1" x2="958.2" y2="126.7"/>
-							<path class="st4" d="M1015.4,131.8c-18.3-22.2-39.3-41.7-59.4-62.2c-5.8-5.9-11.4-11.9-16.9-18.1"/>
-							<line class="st4" x1="883.4" y1="6.2" x2="907.8" y2="17.8"/>
-							<line class="st4" x1="847.8" y1="5.5" x2="883.3" y2="5"/>
-							<path class="st4" d="M839.3,0.7c2.9,2,5.8,4,8.6,6"/>
-							<path class="st4" d="M989.6,104.4c12.1-0.9,21.2-3.7,27.2-6c12.8-4.9,17.7-10,30.7-13.9c9.1-2.7,17-3.3,22.1-3.4"/>
-							<line class="st4" x1="1003.4" y1="0" x2="994.2" y2="10.1"/>
-							<line class="st4" x1="1087.8" y1="121" x2="994.2" y2="10.1"/>
-							<line class="st4" x1="1217" y1="0" x2="1087.8" y2="121"/>
-							<line class="st4" x1="1154.6" y1="0" x2="1060.6" y2="88.7"/>
-							<line class="st4" x1="1169.9" y1="110.8" x2="1158.4" y2="120.5"/>
-							<line class="st4" x1="1164.2" y1="89.3" x2="1144.5" y2="104.4"/>
-							<path class="st4" d="M1122.3,88.7c5,2.6,10.9,6.3,16.9,11.2c8.8,7.2,15,14.7,19.2,20.6"/>
-							<line class="st4" x1="908.3" y1="176.6" x2="932.3" y2="198.7"/>
-							<line class="st4" x1="945.3" y1="194.4" x2="932.3" y2="198.7"/>
-							<line class="st4" x1="956.3" y1="199.2" x2="945.3" y2="194.4"/>
-							<line class="st4" x1="977.4" y1="203" x2="965.9" y2="192.3"/>
-							<line class="st4" x1="956.3" y1="199.2" x2="965.9" y2="192.3"/>
-							<line class="st4" x1="798.9" y1="282.2" x2="838.7" y2="327.4"/>
-							<line class="st4" x1="914.6" y1="219.4" x2="767.2" y2="361.4"/>
-							<line class="st4" x1="912.2" y1="244.6" x2="831.7" y2="319.4"/>
-							<line class="st4" x1="901" y1="232.4" x2="943.4" y2="279"/>
-							<line class="st4" x1="950.8" y1="301.9" x2="943.4" y2="279"/>
-							<line class="st4" x1="901.6" y1="290.4" x2="946.4" y2="288.4"/>
-							<line class="st4" x1="892.5" y1="295" x2="901.6" y2="290.4"/>
-							<line class="st4" x1="897" y1="258.6" x2="907.8" y2="270.7"/>
-							<line class="st4" x1="698.1" y1="484.3" x2="950.8" y2="301.9"/>
-							<line class="st4" x1="1000" y1="274.6" x2="1000" y2="282"/>
-							<line class="st4" x1="976.5" y1="305.8" x2="1000" y2="282"/>
-							<line class="st4" x1="964" y1="295" x2="976.5" y2="305.8"/>
-							<line class="st4" x1="950.8" y1="301.9" x2="964" y2="295"/>
-							<line class="st4" x1="678.7" y1="440.2" x2="711.5" y2="426.7"/>
-							<line class="st4" x1="924" y1="391.2" x2="760" y2="512.6"/>
-							<line class="st4" x1="752.7" y1="444.9" x2="787.5" y2="492.3"/>
-							<path class="st4" d="M796.6,485.6c3.5,5.2,7.2,8.9,10,11.2c4.7,4,8.9,7.7,15.4,9.1c4.4,1,5.8,0.1,11,1.4c4.4,1.2,7.7,3,9.8,4.3"
-								/>
-							<line class="st4" x1="811.4" y1="445" x2="828.4" y2="462"/>
-							<line class="st4" x1="848" y1="493.9" x2="828.4" y2="462"/>
-							<line class="st4" x1="811.4" y1="445" x2="818.8" y2="439.7"/>
-							<line class="st4" x1="881.9" y1="462.2" x2="859.9" y2="438.7"/>
-							<line class="st4" x1="842.8" y1="422.4" x2="859.9" y2="438.7"/>
-							<line class="st4" x1="876.2" y1="403.7" x2="856.5" y2="412.3"/>
-							<line class="st4" x1="842.8" y1="422.4" x2="856.5" y2="412.3"/>
-							<line class="st4" x1="871.8" y1="405.5" x2="906.9" y2="437.3"/>
+							<line class="st4" x1="861.8" y1="76.8" x2="828.4" y2="49.4" />
+							<path class="st4" d="M893.6,104.9c-6.8-4.1-14.6-6.6-21-11.1c-5.6-4-9.2-10.3-10.8-16.9" />
+							<path class="st4" d="M936.6,144.8C932,130,917,123,904.7,113.7" />
+							<line class="st4" x1="912.6" y1="82.1" x2="958.2" y2="126.7" />
+							<path class="st4"
+								d="M1015.4,131.8c-18.3-22.2-39.3-41.7-59.4-62.2c-5.8-5.9-11.4-11.9-16.9-18.1" />
+							<line class="st4" x1="883.4" y1="6.2" x2="907.8" y2="17.8" />
+							<line class="st4" x1="847.8" y1="5.5" x2="883.3" y2="5" />
+							<path class="st4" d="M839.3,0.7c2.9,2,5.8,4,8.6,6" />
+							<path class="st4"
+								d="M989.6,104.4c12.1-0.9,21.2-3.7,27.2-6c12.8-4.9,17.7-10,30.7-13.9c9.1-2.7,17-3.3,22.1-3.4" />
+							<line class="st4" x1="1003.4" y1="0" x2="994.2" y2="10.1" />
+							<line class="st4" x1="1087.8" y1="121" x2="994.2" y2="10.1" />
+							<line class="st4" x1="1217" y1="0" x2="1087.8" y2="121" />
+							<line class="st4" x1="1154.6" y1="0" x2="1060.6" y2="88.7" />
+							<line class="st4" x1="1169.9" y1="110.8" x2="1158.4" y2="120.5" />
+							<line class="st4" x1="1164.2" y1="89.3" x2="1144.5" y2="104.4" />
+							<path class="st4" d="M1122.3,88.7c5,2.6,10.9,6.3,16.9,11.2c8.8,7.2,15,14.7,19.2,20.6" />
+							<line class="st4" x1="908.3" y1="176.6" x2="932.3" y2="198.7" />
+							<line class="st4" x1="945.3" y1="194.4" x2="932.3" y2="198.7" />
+							<line class="st4" x1="956.3" y1="199.2" x2="945.3" y2="194.4" />
+							<line class="st4" x1="977.4" y1="203" x2="965.9" y2="192.3" />
+							<line class="st4" x1="956.3" y1="199.2" x2="965.9" y2="192.3" />
+							<line class="st4" x1="798.9" y1="282.2" x2="838.7" y2="327.4" />
+							<line class="st4" x1="914.6" y1="219.4" x2="767.2" y2="361.4" />
+							<line class="st4" x1="912.2" y1="244.6" x2="831.7" y2="319.4" />
+							<line class="st4" x1="901" y1="232.4" x2="943.4" y2="279" />
+							<line class="st4" x1="950.8" y1="301.9" x2="943.4" y2="279" />
+							<line class="st4" x1="901.6" y1="290.4" x2="946.4" y2="288.4" />
+							<line class="st4" x1="892.5" y1="295" x2="901.6" y2="290.4" />
+							<line class="st4" x1="897" y1="258.6" x2="907.8" y2="270.7" />
+							<line class="st4" x1="698.1" y1="484.3" x2="950.8" y2="301.9" />
+							<line class="st4" x1="1000" y1="274.6" x2="1000" y2="282" />
+							<line class="st4" x1="976.5" y1="305.8" x2="1000" y2="282" />
+							<line class="st4" x1="964" y1="295" x2="976.5" y2="305.8" />
+							<line class="st4" x1="950.8" y1="301.9" x2="964" y2="295" />
+							<line class="st4" x1="678.7" y1="440.2" x2="711.5" y2="426.7" />
+							<line class="st4" x1="924" y1="391.2" x2="760" y2="512.6" />
+							<line class="st4" x1="752.7" y1="444.9" x2="787.5" y2="492.3" />
+							<path class="st4"
+								d="M796.6,485.6c3.5,5.2,7.2,8.9,10,11.2c4.7,4,8.9,7.7,15.4,9.1c4.4,1,5.8,0.1,11,1.4c4.4,1.2,7.7,3,9.8,4.3" />
+							<line class="st4" x1="811.4" y1="445" x2="828.4" y2="462" />
+							<line class="st4" x1="848" y1="493.9" x2="828.4" y2="462" />
+							<line class="st4" x1="811.4" y1="445" x2="818.8" y2="439.7" />
+							<line class="st4" x1="881.9" y1="462.2" x2="859.9" y2="438.7" />
+							<line class="st4" x1="842.8" y1="422.4" x2="859.9" y2="438.7" />
+							<line class="st4" x1="876.2" y1="403.7" x2="856.5" y2="412.3" />
+							<line class="st4" x1="842.8" y1="422.4" x2="856.5" y2="412.3" />
+							<line class="st4" x1="871.8" y1="405.5" x2="906.9" y2="437.3" />
 						</g>
-						<line class="st4" x1="396.2" y1="208.3" x2="429.3" y2="174.7"/>
+						<line class="st4" x1="396.2" y1="208.3" x2="429.3" y2="174.7" />
 						<path class="st4" d="M475.6,290.4C470,286,465,279,459,274c-5-6-11-12-16-18c-8-6-14-13-21-20c-38-39-73-75-111-114
-							c-4-5-8-9-12-14c-10-8-17-18-27-26c-2-2-4-6-6-8c-10-10-19-19-29-29"/>
-						<path class="st4" d="M504.2,319.9c-3-3.4-6.2-6.8-9.4-10"/>
-						<line class="st4" x1="380.2" y1="192.3" x2="405" y2="199.3"/>
-						<line class="st4" x1="540.2" y1="289.4" x2="497.7" y2="327.8"/>
+							c-4-5-8-9-12-14c-10-8-17-18-27-26c-2-2-4-6-6-8c-10-10-19-19-29-29" />
+						<path class="st4" d="M504.2,319.9c-3-3.4-6.2-6.8-9.4-10" />
+						<line class="st4" x1="380.2" y1="192.3" x2="405" y2="199.3" />
+						<line class="st4" x1="540.2" y1="289.4" x2="497.7" y2="327.8" />
 						<path class="st4" d="M235.6,110.8c1.6,4.8,4.5,11.9,9.7,19.4c6.1,8.8,12.3,13.6,16.2,16.9c25.1,21.4,20.1,36.9,41.8,49.7
-							c5.3,3.1,16.3,9.6,29.5,8c5.4-0.7,12.8-3.8,27.3-10.2c6.5-2.8,11.9-5.3,15.5-7"/>
-						<line class="st4" x1="341.8" y1="218.4" x2="335.3" y2="205.1"/>
-						<line class="st4" x1="349.4" y1="199.3" x2="341.8" y2="218.4"/>
-						<path class="st4" d="M393.8,285.3C392,283,391,280,389,278c-12-12-22-25-37-32c-10-5-14-17-10.2-27.6"/>
-						<path class="st4" d="M447.6,435.5C460,415,470,392,462,369c-12-21-33-36-50-54c-1-1-1-3-2.4-3.5"/>
+							c5.3,3.1,16.3,9.6,29.5,8c5.4-0.7,12.8-3.8,27.3-10.2c6.5-2.8,11.9-5.3,15.5-7" />
+						<line class="st4" x1="341.8" y1="218.4" x2="335.3" y2="205.1" />
+						<line class="st4" x1="349.4" y1="199.3" x2="341.8" y2="218.4" />
+						<path class="st4"
+							d="M393.8,285.3C392,283,391,280,389,278c-12-12-22-25-37-32c-10-5-14-17-10.2-27.6" />
+						<path class="st4"
+							d="M447.6,435.5C460,415,470,392,462,369c-12-21-33-36-50-54c-1-1-1-3-2.4-3.5" />
 						<path class="st4" d="M497.7,327.8c5.4,17.1,12.1,29.4,17.3,37.4c6.1,9.5,14.2,19.7,26.3,34.9c5.1,6.4,9.8,13.2,14.8,19.8
-							c5.3,7,9.2,12,11.5,19.8c1.4,4.8,1.8,9,1.8,11.9"/>
-						<line class="st4" x1="460.6" y1="366" x2="503.3" y2="337.6"/>
+							c5.3,7,9.2,12,11.5,19.8c1.4,4.8,1.8,9,1.8,11.9" />
+						<line class="st4" x1="460.6" y1="366" x2="503.3" y2="337.6" />
 						<path class="st4" d="M461.4,367.6c12.7,18.7,25.2,32.4,34.8,41.6c12.2,11.9,18.6,17.9,29.2,22c8.3,3.2,13.9,3.2,23.8,7.9
-							c9.3,4.5,16,10.1,20.2,14"/>
-						<path class="st4" d="M569.3,453.1c2.1,5.6,4.6,11.5,7.6,17.6c6.1,12.6,12.7,23.4,19.1,32.4"/>
-						<path class="st4" d="M659.7,410.3c-16.8,21.1-34.4,45.5-51.5,73.4c-11.7,19.1-21.8,37.6-30.6,55.1"/>
-						<path class="st4" d="M596,460c24.5-20.9,39.5-29.3,45-25.1c2,1.5,2.7,4.7,2.2,9.6"/>
-						<path class="st4" d="M639.2,481.2c1.1-8.1,0.7-14.3,0-18.7c-0.7-4.7-2.2-9.9,0.7-13.3c1.1-1.3,2.4-1.9,3.4-2.3"/>
+							c9.3,4.5,16,10.1,20.2,14" />
+						<path class="st4" d="M569.3,453.1c2.1,5.6,4.6,11.5,7.6,17.6c6.1,12.6,12.7,23.4,19.1,32.4" />
+						<path class="st4"
+							d="M659.7,410.3c-16.8,21.1-34.4,45.5-51.5,73.4c-11.7,19.1-21.8,37.6-30.6,55.1" />
+						<path class="st4" d="M596,460c24.5-20.9,39.5-29.3,45-25.1c2,1.5,2.7,4.7,2.2,9.6" />
+						<path class="st4"
+							d="M639.2,481.2c1.1-8.1,0.7-14.3,0-18.7c-0.7-4.7-2.2-9.9,0.7-13.3c1.1-1.3,2.4-1.9,3.4-2.3" />
 						<path class="st4" d="M685,469c-1.8,0.8-4.6,2.1-7.7,4.3c-7.2,5.1-8.3,9.3-17.6,18.7c-4.2,4.2-4.3,3.7-7.9,7.6
-							c-5.2,5.5-8.8,10.6-11,14"/>
-						<line class="st4" x1="616.6" y1="470.4" x2="643.3" y2="484.1"/>
-						<path class="st4" d="M651.8,499.6c-1.8-1.3-5.3-4.3-7.2-9.4c-0.9-2.3-1.2-4.5-1.3-6.1"/>
-						<path class="st4" d="M667.6,526.6c-2.3-0.9-7.4-3.4-11.5-9c-4.4-5.9-5-12-5.2-14.4"/>
+							c-5.2,5.5-8.8,10.6-11,14" />
+						<line class="st4" x1="616.6" y1="470.4" x2="643.3" y2="484.1" />
+						<path class="st4" d="M651.8,499.6c-1.8-1.3-5.3-4.3-7.2-9.4c-0.9-2.3-1.2-4.5-1.3-6.1" />
+						<path class="st4" d="M667.6,526.6c-2.3-0.9-7.4-3.4-11.5-9c-4.4-5.9-5-12-5.2-14.4" />
 					</g>
-					<path class="st4" d="M88.3,1.2C86,4,86,7,85,10c-9,20-18,40-27.2,60.3"/>
-					<path class="st4" d="M89,108c-4.2,0-10-0.8-14.4-4.8c-4.1-3.8-4.4-8.1-7.7-16.2c-1.7-4.1-4.5-10-9.1-16.7"/>
-					<line class="st4" x1="147" y1="76.8" x2="89" y2="108"/>
-					<path class="st4" d="M235.6,110.8c-12.3-1.9-27.4-5.3-43.9-11.4c-18.5-6.9-33.4-15.2-44.6-22.6"/>
-					<line class="st4" x1="14.1" y1="174.7" x2="247.5" y2="362.2"/>
+					<path class="st4" d="M88.3,1.2C86,4,86,7,85,10c-9,20-18,40-27.2,60.3" />
+					<path class="st4"
+						d="M89,108c-4.2,0-10-0.8-14.4-4.8c-4.1-3.8-4.4-8.1-7.7-16.2c-1.7-4.1-4.5-10-9.1-16.7" />
+					<line class="st4" x1="147" y1="76.8" x2="89" y2="108" />
+					<path class="st4" d="M235.6,110.8c-12.3-1.9-27.4-5.3-43.9-11.4c-18.5-6.9-33.4-15.2-44.6-22.6" />
+					<line class="st4" x1="14.1" y1="174.7" x2="247.5" y2="362.2" />
 					<path class="st4" d="M340.7,223.7c-10.1,6.6-16.7,13.4-20.8,18.2c-11.3,13.3-12.8,22.6-26.4,44.6c-2.6,4.3-6.6,10-14.4,21.1
-						c-29.4,42-30.5,45.5-37.9,53.1c-8.2,8.5-18.1,18.6-34.1,26.1c-11,5.1-17.6,5.7-48,13c-14,3.3-25.3,6.2-32.6,8.2"/>
-					<line class="st4" x1="205.1" y1="229.4" x2="219" y2="252"/>
-					<path class="st4" d="M342.9,343.2c-18.6-11.9-37.9-25-57.6-39.4c-24-17.4-46-34.8-66.2-51.8"/>
-					<line class="st4" x1="15" y1="265" x2="185" y2="391.7"/>
-					<line class="st4" x1="14.1" y1="273.1" x2="52.5" y2="331.5"/>
-					<path class="st4" d="M126.4,408c-5.5-5.7-11.6-11.5-18.2-17.3c-17.4-15.2-34.7-27-50.4-36"/>
-					<line class="st4" x1="52.5" y1="331.5" x2="57.8" y2="354.7"/>
-					<path class="st4" d="M235.6,367.6c9-3.2,19.6-6.2,31.5-8.1c27.1-4.5,50.3-2.1,66.7,1.1"/>
-					<line class="st4" x1="342.9" y1="343.2" x2="333.8" y2="360.5"/>
-					<line class="st4" x1="354.9" y1="338.9" x2="342.9" y2="343.2"/>
-					<line class="st4" x1="424.5" y1="384.5" x2="354.9" y2="338.9"/>
-					<path class="st4" d="M461.4,446.9c-26.9-19.2-47-34.2-61-44.7c-9.5-7.1-21.1-16.1-38.4-26.4c-11.5-6.9-21.4-12-28.3-15.4"/>
-					<line class="st4" x1="401" y1="430.6" x2="417.2" y2="414.8"/>
-					<line class="st4" x1="152.7" y1="401.4" x2="164.8" y2="415.2"/>
-					<path class="st4" d="M335.7,469c-20.9-6.6-41.9-13.2-62.8-19.8c-36-11.3-72-22.7-108.1-34"/>
-					<line class="st4" x1="345.6" y1="467" x2="335.7" y2="469"/>
+						c-29.4,42-30.5,45.5-37.9,53.1c-8.2,8.5-18.1,18.6-34.1,26.1c-11,5.1-17.6,5.7-48,13c-14,3.3-25.3,6.2-32.6,8.2" />
+					<line class="st4" x1="205.1" y1="229.4" x2="219" y2="252" />
+					<path class="st4" d="M342.9,343.2c-18.6-11.9-37.9-25-57.6-39.4c-24-17.4-46-34.8-66.2-51.8" />
+					<line class="st4" x1="15" y1="265" x2="185" y2="391.7" />
+					<line class="st4" x1="14.1" y1="273.1" x2="52.5" y2="331.5" />
+					<path class="st4" d="M126.4,408c-5.5-5.7-11.6-11.5-18.2-17.3c-17.4-15.2-34.7-27-50.4-36" />
+					<line class="st4" x1="52.5" y1="331.5" x2="57.8" y2="354.7" />
+					<path class="st4" d="M235.6,367.6c9-3.2,19.6-6.2,31.5-8.1c27.1-4.5,50.3-2.1,66.7,1.1" />
+					<line class="st4" x1="342.9" y1="343.2" x2="333.8" y2="360.5" />
+					<line class="st4" x1="354.9" y1="338.9" x2="342.9" y2="343.2" />
+					<line class="st4" x1="424.5" y1="384.5" x2="354.9" y2="338.9" />
+					<path class="st4"
+						d="M461.4,446.9c-26.9-19.2-47-34.2-61-44.7c-9.5-7.1-21.1-16.1-38.4-26.4c-11.5-6.9-21.4-12-28.3-15.4" />
+					<line class="st4" x1="401" y1="430.6" x2="417.2" y2="414.8" />
+					<line class="st4" x1="152.7" y1="401.4" x2="164.8" y2="415.2" />
+					<path class="st4" d="M335.7,469c-20.9-6.6-41.9-13.2-62.8-19.8c-36-11.3-72-22.7-108.1-34" />
+					<line class="st4" x1="345.6" y1="467" x2="335.7" y2="469" />
 					<path class="st4" d="M167.4,416c4-3.8,10.5-9,19.5-12.8c9.3-4,12.4-2.7,22.1-6.2c13.4-4.9,14.6-9.9,26.9-15.8
-						c9.5-4.6,17.1-5.5,30.7-7.2c11.1-1.4,27.5-2.3,47.5,0.5"/>
-					<line class="st4" x1="314.1" y1="374.4" x2="299.2" y2="413.3"/>
-					<line class="st4" x1="224.8" y1="389.8" x2="299.2" y2="413.3"/>
-					<line class="st4" x1="269.5" y1="448.1" x2="281" y2="407.5"/>
-					<line class="st4" x1="289.6" y1="484.1" x2="292.7" y2="455.4"/>
-					<path class="st4" d="M358.7,373.7c2.3,6.3,4.6,15.5,2.3,25.4c-2.6,11-9,15.3-13.6,24c-4.4,8.4-7.7,21.9-1.8,43.9"/>
-					<line class="st4" x1="345.6" y1="467" x2="402.9" y2="499.6"/>
-					<line class="st4" x1="461.4" y1="446.9" x2="457.6" y2="497.3"/>
-					<line class="st4" x1="402.9" y1="499.6" x2="457.6" y2="497.3"/>
-					<line class="st4" x1="461.4" y1="455" x2="562.1" y2="498.4"/>
-					<line class="st4" x1="582.6" y1="486.2" x2="562.1" y2="498.4"/>
-					<line class="st4" x1="287.7" y1="526.6" x2="314.1" y2="506.9"/>
-					<line class="st4" x1="335.7" y1="469" x2="329" y2="503.2"/>
-					<path class="st4" d="M314.1,506.9c1.1,0.4,5.1,1.7,9.6,0c2.7-1,4.4-2.7,5.3-3.7"/>
-					<path class="st4" d="M335.7,474.6c4.4,6,8.9,9.6,12,11.7c12.8,8.8,23.9,7.1,32.3,17.2c2.5,3,3.9,5.9,4.6,7.8"/>
+						c9.5-4.6,17.1-5.5,30.7-7.2c11.1-1.4,27.5-2.3,47.5,0.5" />
+					<line class="st4" x1="314.1" y1="374.4" x2="299.2" y2="413.3" />
+					<line class="st4" x1="224.8" y1="389.8" x2="299.2" y2="413.3" />
+					<line class="st4" x1="269.5" y1="448.1" x2="281" y2="407.5" />
+					<line class="st4" x1="289.6" y1="484.1" x2="292.7" y2="455.4" />
+					<path class="st4"
+						d="M358.7,373.7c2.3,6.3,4.6,15.5,2.3,25.4c-2.6,11-9,15.3-13.6,24c-4.4,8.4-7.7,21.9-1.8,43.9" />
+					<line class="st4" x1="345.6" y1="467" x2="402.9" y2="499.6" />
+					<line class="st4" x1="461.4" y1="446.9" x2="457.6" y2="497.3" />
+					<line class="st4" x1="402.9" y1="499.6" x2="457.6" y2="497.3" />
+					<line class="st4" x1="461.4" y1="455" x2="562.1" y2="498.4" />
+					<line class="st4" x1="582.6" y1="486.2" x2="562.1" y2="498.4" />
+					<line class="st4" x1="287.7" y1="526.6" x2="314.1" y2="506.9" />
+					<line class="st4" x1="335.7" y1="469" x2="329" y2="503.2" />
+					<path class="st4" d="M314.1,506.9c1.1,0.4,5.1,1.7,9.6,0c2.7-1,4.4-2.7,5.3-3.7" />
+					<path class="st4"
+						d="M335.7,474.6c4.4,6,8.9,9.6,12,11.7c12.8,8.8,23.9,7.1,32.3,17.2c2.5,3,3.9,5.9,4.6,7.8" />
 					<path class="st4" d="M317.9,528.5c11.9-4.9,22-7.9,29.4-9.8c13.3-3.4,12.4-1.8,23.9-5.1c5-1.5,8.5-2.7,13.4-2.4
-						c6.5,0.4,11.6,3.3,14.9,5.5"/>
-					<line class="st4" x1="402.9" y1="499.6" x2="394.1" y2="513.6"/>
-					<line class="st4" x1="364.5" y1="533.8" x2="364.5" y2="528.5"/>
-					<path class="st4" d="M377,511.2c1,6.3-0.4,9.2-1.9,10.6c-0.8,0.8-1.6,1-3.4,1.9c-3.3,1.7-5.7,3.5-7.2,4.8"/>
-					<line class="st4" x1="384.6" y1="511.2" x2="386.6" y2="529.9"/>
+						c6.5,0.4,11.6,3.3,14.9,5.5" />
+					<line class="st4" x1="402.9" y1="499.6" x2="394.1" y2="513.6" />
+					<line class="st4" x1="364.5" y1="533.8" x2="364.5" y2="528.5" />
+					<path class="st4"
+						d="M377,511.2c1,6.3-0.4,9.2-1.9,10.6c-0.8,0.8-1.6,1-3.4,1.9c-3.3,1.7-5.7,3.5-7.2,4.8" />
+					<line class="st4" x1="384.6" y1="511.2" x2="386.6" y2="529.9" />
 					<path class="st4" d="M394.1,513.6c0.2,7.9,0,14.4-0.1,18.7c-0.3,10.1-0.8,12.3-0.2,18c0.2,1.7,0.6,5.1,3.6,17
-						c1.3,5,3.1,11.9,5.5,19.9"/>
-					<path class="st4" d="M394.3,553.8c0.8-1.4,2.8-4.9,6.9-6.9c7.5-3.7,14.9,0.6,15.6,1"/>
-					<line class="st4" x1="416.8" y1="547.9" x2="425.2" y2="578.2"/>
-					<path class="st4" d="M402.9,587.3c0.9,0.5,5.8,3.3,11.8,1.7c8-2.2,10.4-10.3,10.6-10.8"/>
-					<line class="st4" x1="286" y1="557" x2="315" y2="563"/>
-					<line class="st4" x1="347.2" y1="561.4" x2="315" y2="563"/>
-					<line class="st4" x1="386.6" y1="529.9" x2="347.2" y2="561.4"/>
-					<line class="st4" x1="407.9" y1="527" x2="386.6" y2="529.9"/>
-					<line class="st4" x1="434.3" y1="631.9" x2="434.8" y2="586.3"/>
-					<line class="st4" x1="407.9" y1="527" x2="421" y2="541.4"/>
-					<line class="st4" x1="434.6" y1="585.1" x2="427.4" y2="566.2"/>
-					<line class="st4" x1="421" y1="541.4" x2="427.4" y2="566.2"/>
-					<line class="st4" x1="457.6" y1="497.3" x2="699.5" y2="583.8"/>
-					<line class="st4" x1="729.3" y1="560" x2="713.9" y2="581.8"/>
-					<line class="st4" x1="699.5" y1="583.8" x2="713.4" y2="583"/>
-					<line class="st4" x1="699" y1="615.6" x2="713.7" y2="601"/>
-					<line class="st4" x1="712" y1="583" x2="713.7" y2="601"/>
-					<line class="st4" x1="590.3" y1="586.8" x2="699" y2="615.6"/>
-					<path class="st4" d="M707.4,608.3c1.3,2.6,2.9,6.5,3.6,11.4c0.5,3.4,0.4,6.3,0.2,8.6"/>
-					<line class="st4" x1="701" y1="632.2" x2="711.3" y2="628.3"/>
-					<line class="st4" x1="609.6" y1="551.7" x2="586.2" y2="617.3"/>
-					<line class="st4" x1="560.6" y1="611.3" x2="635.2" y2="632.6"/>
-					<line class="st4" x1="543.5" y1="631.9" x2="544" y2="628.3"/>
-					<path class="st4" d="M560.6,611.3c-2.4,3.6-5.8,7.9-10.3,12c-2.1,2-4.2,3.6-6.2,5"/>
-					<line class="st4" x1="507.5" y1="614.6" x2="519.8" y2="592"/>
-					<line class="st4" x1="527.4" y1="589.4" x2="520" y2="590.9"/>
-					<path class="st4" d="M547.4,618.3c-1.5-0.6-3.6-1.5-5.8-3.2c-1.7-1.3-3-2.7-3.8-3.8"/>
-					<path class="st4" d="M527.4,589.4c1.7,2.3,3.6,5.1,5.3,8.4c2.6,5,4.1,9.7,5,13.4"/>
-					<line class="st4" x1="547.4" y1="618.3" x2="556.7" y2="614.8"/>
-					<line class="st4" x1="510.8" y1="516.3" x2="481.4" y2="588.5"/>
-					<line class="st4" x1="469.1" y1="501.4" x2="459.5" y2="526.6"/>
-					<line class="st4" x1="470.6" y1="531.4" x2="459.5" y2="526.6"/>
-					<line class="st4" x1="453.5" y1="546" x2="461.4" y2="527.4"/>
-					<line class="st4" x1="486.4" y1="576.1" x2="489" y2="584.5"/>
-					<line class="st4" x1="515.4" y1="600.1" x2="489" y2="584.5"/>
-					<line class="st4" x1="481.4" y1="588.5" x2="468.9" y2="581.5"/>
-					<line class="st4" x1="451.1" y1="563.5" x2="468.9" y2="581.5"/>
+						c1.3,5,3.1,11.9,5.5,19.9" />
+					<path class="st4" d="M394.3,553.8c0.8-1.4,2.8-4.9,6.9-6.9c7.5-3.7,14.9,0.6,15.6,1" />
+					<line class="st4" x1="416.8" y1="547.9" x2="425.2" y2="578.2" />
+					<path class="st4" d="M402.9,587.3c0.9,0.5,5.8,3.3,11.8,1.7c8-2.2,10.4-10.3,10.6-10.8" />
+					<line class="st4" x1="286" y1="557" x2="315" y2="563" />
+					<line class="st4" x1="347.2" y1="561.4" x2="315" y2="563" />
+					<line class="st4" x1="386.6" y1="529.9" x2="347.2" y2="561.4" />
+					<line class="st4" x1="407.9" y1="527" x2="386.6" y2="529.9" />
+					<line class="st4" x1="434.3" y1="631.9" x2="434.8" y2="586.3" />
+					<line class="st4" x1="407.9" y1="527" x2="421" y2="541.4" />
+					<line class="st4" x1="434.6" y1="585.1" x2="427.4" y2="566.2" />
+					<line class="st4" x1="421" y1="541.4" x2="427.4" y2="566.2" />
+					<line class="st4" x1="457.6" y1="497.3" x2="699.5" y2="583.8" />
+					<line class="st4" x1="729.3" y1="560" x2="713.9" y2="581.8" />
+					<line class="st4" x1="699.5" y1="583.8" x2="713.4" y2="583" />
+					<line class="st4" x1="699" y1="615.6" x2="713.7" y2="601" />
+					<line class="st4" x1="712" y1="583" x2="713.7" y2="601" />
+					<line class="st4" x1="590.3" y1="586.8" x2="699" y2="615.6" />
+					<path class="st4" d="M707.4,608.3c1.3,2.6,2.9,6.5,3.6,11.4c0.5,3.4,0.4,6.3,0.2,8.6" />
+					<line class="st4" x1="701" y1="632.2" x2="711.3" y2="628.3" />
+					<line class="st4" x1="609.6" y1="551.7" x2="586.2" y2="617.3" />
+					<line class="st4" x1="560.6" y1="611.3" x2="635.2" y2="632.6" />
+					<line class="st4" x1="543.5" y1="631.9" x2="544" y2="628.3" />
+					<path class="st4" d="M560.6,611.3c-2.4,3.6-5.8,7.9-10.3,12c-2.1,2-4.2,3.6-6.2,5" />
+					<line class="st4" x1="507.5" y1="614.6" x2="519.8" y2="592" />
+					<line class="st4" x1="527.4" y1="589.4" x2="520" y2="590.9" />
+					<path class="st4" d="M547.4,618.3c-1.5-0.6-3.6-1.5-5.8-3.2c-1.7-1.3-3-2.7-3.8-3.8" />
+					<path class="st4" d="M527.4,589.4c1.7,2.3,3.6,5.1,5.3,8.4c2.6,5,4.1,9.7,5,13.4" />
+					<line class="st4" x1="547.4" y1="618.3" x2="556.7" y2="614.8" />
+					<line class="st4" x1="510.8" y1="516.3" x2="481.4" y2="588.5" />
+					<line class="st4" x1="469.1" y1="501.4" x2="459.5" y2="526.6" />
+					<line class="st4" x1="470.6" y1="531.4" x2="459.5" y2="526.6" />
+					<line class="st4" x1="453.5" y1="546" x2="461.4" y2="527.4" />
+					<line class="st4" x1="486.4" y1="576.1" x2="489" y2="584.5" />
+					<line class="st4" x1="515.4" y1="600.1" x2="489" y2="584.5" />
+					<line class="st4" x1="481.4" y1="588.5" x2="468.9" y2="581.5" />
+					<line class="st4" x1="451.1" y1="563.5" x2="468.9" y2="581.5" />
 				</g>
 				<g>
 					<path class="st5" d="M164.9,547.1c-0.8,0-1.5-0.7-1.5-1.5v-47.2c0-0.8,0.7-1.5,1.5-1.5h193.8c0.8,0,1.5,0.7,1.5,1.5v47.2
-						c0,0.8-0.7,1.5-1.5,1.5H164.9z"/>
+						c0,0.8-0.7,1.5-1.5,1.5H164.9z" />
 					<path class="st5" d="M358.7,498.4v47.2H164.9v-47.2L358.7,498.4 M358.7,495.4H164.9c-1.7,0-3,1.3-3,3v47.2c0,1.7,1.3,3,3,3h193.8
-						c1.7,0,3-1.3,3-3v-47.2C361.7,496.8,360.4,495.4,358.7,495.4L358.7,495.4z"/>
+						c1.7,0,3-1.3,3-3v-47.2C361.7,496.8,360.4,495.4,358.7,495.4L358.7,495.4z" />
 				</g>
 				<path class="st5" d="M721.6,630.2c15-12.2,39.4-29.1,72.7-39.6c47.4-14.9,61.1-0.6,91.4-16.6c40.7-21.4,26.2-52.7,77.8-92.9
 					c29.1-22.7,45.2-21.7,59.8-46.1c13.8-23.2,4-31.8,18-61.2c15.1-31.7,31.5-31.9,46.8-63.4c12.9-26.5,5.6-35.3,13.3-56.1
 					c25.7-69.1,142.8-68.5,144.4-108.1c0.9-23.3-39.1-38.2-32.4-61.2c2.6-9.1,10.4-12.2,20.9-20.2c14.1-10.8,32-29.7,45.4-65
 					c10.8-3.2,14.4-1.8,15.8,0c7.7,9.8-43.5,42.7-45.4,91.7c-0.8,21.8,9,22.5,10,54.7c0.5,16.3,1.7,54.3-17.2,64.6
 					c-18.5,10-37.8-16.7-59.7-7c-13.5,6-11.9,18.6-30.1,53.7c-16.7,32.3-23.5,32-39,61.5c-16.1,30.6-13.5,39.8-25.2,67.7
-					c-9.1,21.5-18.5,34.9-67,92.9c-48.3,57.8-72.5,86.7-79.2,92.2c-23.4,18.9-68.6,47.6-145.4,55.4"/>
-				<line class="st6" x1="855.2" y1="95.8" x2="1123" y2="311.4"/>
-				<path class="st6" d="M805.2,50.6c11.5,9.9,23,19.8,34.8,29.4"/>
-				<path class="st6" d="M746.2,0.4c6.5,5.8,13.3,11.3,20,16.8"/>
-				<path class="st6" d="M790.2,49.8c15.2,12,30.6,23.6,45.5,35.9"/>
-				<path class="st6" d="M727.1-0.3c10.4,8.2,20.8,16.4,31.2,24.7"/>
-				<line class="st7" x1="839.1" y1="82.5" x2="839.2" y2="95.8"/>
-				<line class="st7" x1="852.7" y1="82.9" x2="839.2" y2="83.1"/>
-				<line class="st7" x1="839.6" y1="95.8" x2="853.2" y2="95.8"/>
-				<line class="st7" x1="852.5" y1="82.6" x2="852.6" y2="96"/>
-				<line class="st7" x1="839.9" y1="95.8" x2="839.6" y2="95.8"/>
-				<line class="st7" x1="841.8" y1="85.4" x2="841.8" y2="92.5"/>
-				<line class="st8" x1="849.9" y1="85.7" x2="842" y2="85.7"/>
-				<line class="st7" x1="850.1" y1="92.4" x2="850.1" y2="85.5"/>
-				<line class="st7" x1="842" y1="90.3" x2="850.1" y2="90.3"/>
-				<line class="st7" x1="845.9" y1="87" x2="845.9" y2="89.9"/>
-				<line class="st7" x1="841.8" y1="92.5" x2="850.1" y2="92.4"/>
-				<line class="st8" x1="845.9" y1="90.6" x2="845.9" y2="92.2"/>
-				<line class="st9" x1="844" y1="92.9" x2="844" y2="93.7"/>
-				<line class="st9" x1="848.1" y1="92.9" x2="848.1" y2="94.1"/>
-				<line class="st9" x1="844" y1="93.7" x2="844" y2="94.1"/>
-				<path class="st6" d="M800,51.5c12.3,10.5,24.6,21,37,31.5"/>
-				<path class="st6" d="M739.5,0c7.7,6.5,15.4,13.1,23.1,19.6"/>
-				<line class="st6" x1="854.3" y1="90.6" x2="876.6" y2="113.1"/>
-				<path class="st10" d="M256.5,1.2c7,7,106.2,106.5,199.4,199.9c41.3,41.5,80.2,85.5,123.1,125.3c22.3,20.7,52.9,41.6,77,80.6
-					c7.1,11.4,19.9,34.3,32.4,59.8c6.8,13.8,6.8,14.8,20.2,43.9c29.4,64.1,36.5,75.5,43.2,84.3c13.6,18,27.2,30.9,36.4,38.9"/>
-				<line class="st10" x1="1091.3" y1="2.6" x2="657.9" y2="410.3"/>
-				<rect x="710.1" y="369.1" class="st11" width="57.1" height="12.5"/>
+					c-9.1,21.5-18.5,34.9-67,92.9c-48.3,57.8-72.5,86.7-79.2,92.2c-23.4,18.9-68.6,47.6-145.4,55.4" />
+				<line class="st6" x1="855.2" y1="95.8" x2="1123" y2="311.4" />
+				<path class="st6" d="M805.2,50.6c11.5,9.9,23,19.8,34.8,29.4" />
+				<path class="st6" d="M746.2,0.4c6.5,5.8,13.3,11.3,20,16.8" />
+				<path class="st6" d="M790.2,49.8c15.2,12,30.6,23.6,45.5,35.9" />
+				<path class="st6" d="M727.1-0.3c10.4,8.2,20.8,16.4,31.2,24.7" />
+				<line class="st7" x1="839.1" y1="82.5" x2="839.2" y2="95.8" />
+				<line class="st7" x1="852.7" y1="82.9" x2="839.2" y2="83.1" />
+				<line class="st7" x1="839.6" y1="95.8" x2="853.2" y2="95.8" />
+				<line class="st7" x1="852.5" y1="82.6" x2="852.6" y2="96" />
+				<line class="st7" x1="839.9" y1="95.8" x2="839.6" y2="95.8" />
+				<line class="st7" x1="841.8" y1="85.4" x2="841.8" y2="92.5" />
+				<line class="st8" x1="849.9" y1="85.7" x2="842" y2="85.7" />
+				<line class="st7" x1="850.1" y1="92.4" x2="850.1" y2="85.5" />
+				<line class="st7" x1="842" y1="90.3" x2="850.1" y2="90.3" />
+				<line class="st7" x1="845.9" y1="87" x2="845.9" y2="89.9" />
+				<line class="st7" x1="841.8" y1="92.5" x2="850.1" y2="92.4" />
+				<line class="st8" x1="845.9" y1="90.6" x2="845.9" y2="92.2" />
+				<line class="st9" x1="844" y1="92.9" x2="844" y2="93.7" />
+				<line class="st9" x1="848.1" y1="92.9" x2="848.1" y2="94.1" />
+				<line class="st9" x1="844" y1="93.7" x2="844" y2="94.1" />
+				<path class="st6" d="M800,51.5c12.3,10.5,24.6,21,37,31.5" />
+				<path class="st6" d="M739.5,0c7.7,6.5,15.4,13.1,23.1,19.6" />
+				<line class="st6" x1="854.3" y1="90.6" x2="876.6" y2="113.1" />
+				<path class="st10"
+					d="M256.5,1.2c7,7,106.2,106.5,199.4,199.9c41.3,41.5,80.2,85.5,123.1,125.3c22.3,20.7,52.9,41.6,77,80.6
+					c7.1,11.4,19.9,34.3,32.4,59.8c6.8,13.8,6.8,14.8,20.2,43.9c29.4,64.1,36.5,75.5,43.2,84.3c13.6,18,27.2,30.9,36.4,38.9" />
+				<line class="st10" x1="1091.3" y1="2.6" x2="657.9" y2="410.3" />
+				<rect x="710.1" y="369.1" class="st11" width="57.1" height="12.5" />
 				<text transform="matrix(1 0 0 1 710.0801 379.7695)" class="st12 st13 st14">T0720</text>
-				<rect x="558.4" y="337.9" class="st11" width="38.4" height="18.2"/>
+				<rect x="558.4" y="337.9" class="st11" width="38.4" height="18.2" />
 				<text transform="matrix(1 0 0 1 558.3998 348.5693)" class="st12 st13 st14">H09</text>
-				<rect x="1061.5" y="348.1" transform="matrix(1.202135e-02 -0.9999 0.9999 1.202135e-02 678.9306 1441.4727)" class="st11" width="14.9" height="58.1"/>
+				<rect x="1061.5" y="348.1"
+					transform="matrix(1.202135e-02 -0.9999 0.9999 1.202135e-02 678.9306 1441.4727)" class="st11"
+					width="14.9" height="58.1" />
 				<text transform="matrix(1 0 0 1 1174.019 223.6998)" class="st12 st13 st15">р.Теребля</text>
-				<rect x="1250.1" y="274.6" class="st11" width="104.4" height="29.5"/>
+				<rect x="1250.1" y="274.6" class="st11" width="104.4" height="29.5" />
 				<text transform="matrix(1 0 0 1 1250.0801 288.0498)" class="st12 st13 st16">Руське поле</text>
 				<path class="st11" d="M290.3,283.6v78.5h206.6v-78.5H290.3z M490,308c-2.7,0-4.2-1.7-4.7-3.8c-1-0.7-1.7-1.7-2-2.8
 					c-0.7,0.3-1.4,0.6-2.4,0.6c-6.4,0-6.4-10,0-10c2.6,0,4.1,1.6,4.6,3.6c0.7-0.3,1.4-0.6,2.4-0.6c2.7,0,4.2,1.7,4.7,3.8
-					C496.3,301.1,495.4,308,490,308z"/>
+					C496.3,301.1,495.4,308,490,308z" />
 				<text transform="matrix(1 0 0 1 290.3112 307.0012)" class="st12 st13 st17">смт. Буштино</text>
-				<rect x="793.1" y="101.8" class="st11" width="116.8" height="17.5"/>
+				<rect x="793.1" y="101.8" class="st11" width="116.8" height="17.5" />
 				<text transform="matrix(1 0 0 1 793.1327 113.8837)" class="st12 st13 st18">з/д ст. Буштино</text>
-				<path class="st11" d="M920.6,26.3c0.1,0.2,0.1,0.5,0.1,0.7c0.4-0.1,0.8-0.2,1.3-0.2c3.4,0,5,2.8,4.8,5.4c0.2,0,0.4,0,0.6,0
+				<path class="st11"
+					d="M920.6,26.3c0.1,0.2,0.1,0.5,0.1,0.7c0.4-0.1,0.8-0.2,1.3-0.2c3.4,0,5,2.8,4.8,5.4c0.2,0,0.4,0,0.6,0
 					c3.8,0,5.4,3.5,4.7,6.4c1.4,0.5,2.4,1.7,2.8,3c0.3,0,0.5-0.1,0.8-0.1c6.4,0,6.4,10,0,10c-2.5,0-4-1.5-4.6-3.3
 					c-0.3,0-0.5,0.1-0.8,0.1c-3.8,0-5.4-3.5-4.7-6.4c-2.2-0.8-3.2-3-3-5.1c-0.2,0-0.4,0-0.6,0c-3,0-4.6-2.2-4.8-4.5
-					c-0.4,0.1-0.8,0.2-1.3,0.2c-3.2,0-4.8-2.4-4.8-4.9c-0.8-0.3-1.5-0.7-2-1.3h-87.6v16.3c3.2,1.8,3.2,7.1,0,8.8v2.7h121.9V26.3H920.6z"
-					/>
-				<text transform="matrix(1 0 0 1 754.3978 45)" class="st12 st13 st19">Сіль Землі №1</text>
-				<line class="st2" x1="14.1" y1="174.7" x2="0" y2="162.7"/>
-				<line class="st2" x1="15" y1="265" x2="0" y2="252.5"/>
-				<line class="st2" x1="14.1" y1="273.1" x2="1.6" y2="257.3"/>
+					c-0.4,0.1-0.8,0.2-1.3,0.2c-3.2,0-4.8-2.4-4.8-4.9c-0.8-0.3-1.5-0.7-2-1.3h-87.6v16.3c3.2,1.8,3.2,7.1,0,8.8v2.7h121.9V26.3H920.6z" />
+				<text transform="matrix(1 0 0 1 754.3978 45)" class="st12 map-svg-title">Сіль Землі №1</text>
+				<line class="st2" x1="14.1" y1="174.7" x2="0" y2="162.7" />
+				<line class="st2" x1="15" y1="265" x2="0" y2="252.5" />
+				<line class="st2" x1="14.1" y1="273.1" x2="1.6" y2="257.3" />
 				<a href="https://goo.gl/maps/P7V6F6ZkQUoYj3UDA" target="_blank">
-					<circle class="pulse" cx="967.5" cy="38.4" r="20.4"/>
+					<circle class="pulse" cx="967.5" cy="38.4" r="20.4" />
 				</a>
 				<a href="https://goo.gl/maps/pRuzWcB9LodoixsZ6" target="_blank">
-					<circle class="pulse" cx="701" cy="556.8" r="20.4"/>
+					<circle class="pulse" cx="701" cy="556.8" r="20.4" />
 				</a>
-				<text transform="matrix(1 0 0 1 731.1 544.6088)" class="st12 st13 st19">Сіль Землі №2</text>
+				<text transform="matrix(1 0 0 1 731.1 544.6088)" class="st12 map-svg-title">Сіль Землі №2</text>
 			</svg>
 		</section>
 	</main>
@@ -1571,10 +1770,11 @@ nav {
 				<a href="index.html"><img class="footer-logo" src="images/logo.svg" alt="Сіль Землі"></a>
 			</div>
 			<p class="address">
-				Міні-пекарня:</br>«Сіль Землі»</br>Україна, Закарпатська обл., смт. Буштино,</br>№1 - вул. Заводська, 13,</br>№2 - вул. Б. Хмельницького, 4.</br>© «Сіль Землі» 2019. Всі права захищені.
+				Міні-пекарня:</br>«Сіль Землі»</br>Україна, Закарпатська обл., смт. Буштино,</br>№1 - вул. Заводська,
+				13,</br>№2 - вул. Б. Хмельницького, 4.</br>© «Сіль Землі» 2020. Всі права захищені.
 			</p>
 			<div class="social-link">
-				<a class="email-link" href="mailto:ivanovichsb@gmail.com" target="_blank">email</a>
+				<a class="email-link" href="mailto:silzemli111@gmail.com" target="_blank">email</a>
 				<div class="social-icons">
 					<a href="https://www.instagram.com/sil.zemli/" target="_blank" rel="noopener">
 						<img width="20" height="20" src="images/instagram.svg" alt="instagram">
@@ -1613,25 +1813,25 @@ nav {
 			rootMargin: '0px',
 			threshold: 1.0
 		}
-		let callback = function(entries, observer) { 
-	
+		let callback = function (entries, observer) {
+
 			for (entry of entries) {
-			// console.log(entry);
-	
-			if (entry.isIntersecting) {
-				document.getElementById('line1').classList.add('svg-line-mobi-1');
-				document.getElementById('line2').classList.add('svg-line-mobi-2');
-				document.getElementById('line3').classList.add('svg-line-mobi-1');
-				document.getElementById('line4').classList.add('svg-line-mobi-2');
-			} else {
-				document.getElementById('line1').classList.remove('svg-line-mobi-1');
-				document.getElementById('line2').classList.remove('svg-line-mobi-2');
-				document.getElementById('line3').classList.remove('svg-line-mobi-1');
-				document.getElementById('line4').classList.remove('svg-line-mobi-2');
+				// console.log(entry);
+
+				if (entry.isIntersecting) {
+					document.getElementById('line1').classList.add('svg-line-mobi-1');
+					document.getElementById('line2').classList.add('svg-line-mobi-2');
+					document.getElementById('line3').classList.add('svg-line-mobi-1');
+					document.getElementById('line4').classList.add('svg-line-mobi-2');
+				} else {
+					document.getElementById('line1').classList.remove('svg-line-mobi-1');
+					document.getElementById('line2').classList.remove('svg-line-mobi-2');
+					document.getElementById('line3').classList.remove('svg-line-mobi-1');
+					document.getElementById('line4').classList.remove('svg-line-mobi-2');
+				}
 			}
 		}
-		}
-	
+
 		let observer = new IntersectionObserver(callback, options);
 		observer.observe(document.querySelector('.adres'));
 	</script>

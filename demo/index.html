@@ -1,73 +1,188 @@
 <!DOCTYPE html>
-<html lang="ua-UA">
+<html lang="uk" itemscope itemtype="http://schema.org/WebPage" prefix="og: http://ogp.me/ns#">
 
 <head>
-	<meta charset="UTF-8">
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161766012-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-161766012-1');
+	</script> -->
 	<title>Головна - Сіль Землі</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="Приватна пекарня Сіль Землі, смт. Буштино. Хліб та хлібобулочні вироби.">
+	<meta name="keywords" content="Буштино, хліб, замовлення, пекарня, хлеб, пекарня, Закарпаття, Тячево, Тячівський район, Буштыно, булочки, свіжа випічка, Сіль Землі, Соль Земли, silzemli, sil zemli.">
+	<!-- Open Graph -->
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="Сіль Землі">
+	<meta property="og:title" content="Пекарня смт. Буштино">
+	<meta property="og:description" content="Приватна пекарня Сіль Землі, смт. Буштино. Хліб та хлібобулочні вироби.">
+	<meta property="og:url" content="https://silzemli.com.ua/index.html">
+	<meta name="og:locale" content="uk">
+	<meta name="fb:app_id" content="https://m.facebook.com/Пекарня-Сіль-Землі-799960886817298/">
+	<meta property="og:image" content="https://silzemli.com.ua/social-preview.png">
+
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
 	<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
-	<link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
 
 	<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 	<link rel="manifest" href="site.webmanifest">
 	<link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
-	<meta name="msapplication-TileColor" content="#da532c">
-	<meta name="theme-color" content="#ffffff">
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 <style>
+	@font-face {
+		font-family: Appetite;
+		src: url(founts/Appetite.ttf);
+	}
 
-@font-face {
-    font-family: Appetite;
-    src: url(founts/Appetite.ttf);
-   }
+	@font-face {
+		font-family: 'Comfortaa';
+		src: url(founts/Comfortaa-VariableFont.ttf);
+		font-display: fallback;
+  	}
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
+	html,
+	body,
+	div,
+	span,
+	applet,
+	object,
+	iframe,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	p,
+	blockquote,
+	pre,
+	a,
+	abbr,
+	acronym,
+	address,
+	big,
+	cite,
+	code,
+	del,
+	dfn,
+	em,
+	img,
+	ins,
+	kbd,
+	q,
+	s,
+	samp,
+	small,
+	strike,
+	strong,
+	sub,
+	sup,
+	tt,
+	var,
+	b,
+	u,
+	i,
+	center,
+	dl,
+	dt,
+	dd,
+	ol,
+	ul,
+	li,
+	fieldset,
+	form,
+	label,
+	legend,
+	table,
+	caption,
+	tbody,
+	tfoot,
+	thead,
+	tr,
+	th,
+	td,
+	article,
+	aside,
+	canvas,
+	details,
+	embed,
+	figure,
+	figcaption,
+	footer,
+	header,
+	hgroup,
+	menu,
+	nav,
+	output,
+	ruby,
+	section,
+	summary,
+	time,
+	mark,
+	audio,
+	video {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		font-size: 100%;
+		font: inherit;
+		vertical-align: baseline;
+	}
 
-* {
+	/* HTML5 display-role reset for older browsers */
+	article,
+	aside,
+	details,
+	figcaption,
+	figure,
+	footer,
+	header,
+	hgroup,
+	menu,
+	nav,
+	section {
+		display: block;
+	}
+
+	body {
+		line-height: 1;
+	}
+
+	ol,
+	ul {
+		list-style: none;
+	}
+
+	blockquote,
+	q {
+		quotes: none;
+	}
+
+	blockquote:before,
+	blockquote:after,
+	q:before,
+	q:after {
+		content: '';
+		content: none;
+	}
+
+	table {
+		border-collapse: collapse;
+		border-spacing: 0;
+	}
+
+	* {
 		padding: 0;
 		margin: 0;
 		box-sizing: border-box;
@@ -103,7 +218,7 @@ table {
 		margin-top: 10px;
 	}
 
-.header {
+	.header {
 		position: sticky;
 		top: 0;
 		display: flex;
@@ -119,7 +234,7 @@ table {
 
 	.little-had {
 		height: 70px;
-		/* transition: 1s; */
+		position: fixed;
 	}
 
 	.nav {
@@ -138,8 +253,8 @@ table {
 		margin-left: 3%;
 	}
 
-.main {
-	color: #f37b03;
+	.main {
+		color: #f37b03;
 		cursor: pointer;
 		font-family: Appetite;
 		letter-spacing: 0.1em;
@@ -148,10 +263,12 @@ table {
 		padding-right: 10px;
 		margin-bottom: 30px;
 		margin-top: 17px;
-}
+	}
 
-.about, .products, .contacts {
-	color: #cc9933;
+	.about,
+	.products,
+	.contacts {
+		color: #cc9933;
 		font-family: Appetite;
 		letter-spacing: 0.1em;
 		line-height: 35px;
@@ -160,30 +277,30 @@ table {
 		margin-bottom: 30px;
 		margin-top: 17px;
 		border-radius: 30px;
-}
+	}
 
-.about:hover {
-	cursor: pointer;
-	background-color: rgba(252, 252, 252, 0.212);
-	color: #f37b03;
-	transition: 0.2s;
-}
+	.about:hover {
+		cursor: pointer;
+		background-color: rgba(252, 252, 252, 0.212);
+		color: #f37b03;
+		transition: 0.2s;
+	}
 
-.products:hover {
-	cursor: pointer;
-	background-color: rgba(252, 252, 252, 0.212);
-	color: #f37b03;
-	transition: 0.2s;
-}
+	.products:hover {
+		cursor: pointer;
+		background-color: rgba(252, 252, 252, 0.212);
+		color: #f37b03;
+		transition: 0.2s;
+	}
 
-.contacts:hover {
-	cursor: pointer;
-	background-color: rgba(252, 252, 252, 0.212);
-	color: #f37b03;
-	transition: 0.2s;
-}
+	.contacts:hover {
+		cursor: pointer;
+		background-color: rgba(252, 252, 252, 0.212);
+		color: #f37b03;
+		transition: 0.2s;
+	}
 
-.phone {
+	.phone {
 		width: 25px;
 	}
 
@@ -208,191 +325,194 @@ table {
 		line-height: 13px;
 	}
 
-	.contackt-namber, .time-to-work {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+	.contackt-namber,
+	.time-to-work {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
 
-/* .time-to-work {
+	/* .time-to-work {
 	padding-right: 15%;
 } */
 
-.first-block {
-	width: 100%;
-	height: 100vh;
-	padding-top: 9%;
-	color: #f37b03;
-	font-family: Appetite;
-	font-size: 1.9em;
-	letter-spacing: 0.2em;
-	font-weight: bold;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
+	.first-block {
+		width: 100%;
+		height: 100vh;
+		padding-top: 9%;
+		color: #f37b03;
+		font-family: Appetite;
+		font-size: 1.9em;
+		letter-spacing: 0.2em;
+		font-weight: bold;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
 
-.bread-line {
-	width: 350px;
-	margin-top: 1.5rem;
-	margin-bottom: 1.5rem;
-}
+	.bread-line {
+		width: 350px;
+		margin-top: 1.5rem;
+		margin-bottom: 1.5rem;
+	}
 
-.bread {
-	width: 100%;
-	display: flex;
-	position: absolute;
-	bottom: 0;
-	opacity: 1;
-	filter: drop-shadow(0 -1px 5px rgba(100,0,0,0.5));
-}
+	.bread {
+		width: 100%;
+		display: flex;
+		position: absolute;
+		bottom: 0;
+		opacity: 1;
+		filter: drop-shadow(0 -1px 5px rgba(100, 0, 0, 0.5));
+	}
 
-.botton-about {
-	position: sticky;
-	width: 224px;
-	height: 40px;
-	font-size: 0.5em;
-	margin-top: 3rem;
-	border:solid 2px #cc6600;
-	border-radius: 30px;
-	background: #ffffff73;
-	font-family: 'Comfortaa', cursive;
-	font-weight: bold;
-	color: #330000;
-	opacity: 1;
-	letter-spacing: 0;
-	display: flex;
-	align-items: center;
- 	justify-content: center;
-}
+	.botton-about {
+		position: sticky;
+		width: 224px;
+		height: 40px;
+		font-size: 0.5em;
+		margin-top: 3rem;
+		border: solid 2px #cc6600;
+		border-radius: 30px;
+		background: #ffffff73;
+		font-family: 'Comfortaa', cursive;
+		font-weight: bold;
+		color: #330000;
+		opacity: 1;
+		letter-spacing: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
 
-.botton-about:hover {
-	color: #cc6600;
-	cursor: pointer;
-	background-color: #cc66002d;
-	box-shadow: 0 0 7px 0px rgba(0,0,0,0.75);
-	border:solid 2px #cc66002d;
-	transition: 0.2s;
-}
+	.botton-about:hover {
+		color: #cc6600;
+		cursor: pointer;
+		background-color: #cc66002d;
+		box-shadow: 0 0 7px 0px rgba(0, 0, 0, 0.75);
+		border: solid 2px #cc66002d;
+		transition: 0.2s;
+	}
 
-.display-none {
-	opacity: 0;
-	/* transition: 2s; */
-}
+	.display-none {
+		opacity: 0;
+		/* transition: 2s; */
+	}
 
-.opacity {
-	opacity: 0.5;
-}
+	.opacity {
+		opacity: 0.5;
+	}
 
-.first-block h1 {
-	font-size: 1.2em;
-}
+	.first-block h1 {
+		font-size: 1.2em;
+	}
 
-.second {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
- 	justify-content: center;
-}
+	.second {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
 
-.production {
-	margin-top: 5rem;
-	width: 800px;
-	height: 400px;
-	background: url(images/home/catalog-back.png) no-repeat;
-	background-size: 100% 100%;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
- 	justify-content: center;
-	filter: drop-shadow(0 0 3px rgba(100,0,0,0.5));
-}
+	.production {
+		margin-top: 5rem;
+		width: 800px;
+		height: 400px;
+		background: url(images/home/catalog-back.png) no-repeat;
+		background-size: 100% 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		filter: drop-shadow(0 0 3px rgba(100, 0, 0, 0.5));
+	}
 
-.prod-menu {
-	display: flex;
-}
+	.prod-menu {
+		display: flex;
+	}
 
-.menu {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
- 	justify-content: center;
-	text-align:center;
-	font-family: Appetite;
-	font-size: 1.6em;
-	/* filter: drop-shadow(0 0 3px rgba(100,0,0,0.5)); */
-}
+	.menu {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		font-family: Appetite;
+		font-size: 1.6em;
+		/* filter: drop-shadow(0 0 3px rgba(100,0,0,0.5)); */
+	}
 
-.bread-menu-link {
-	width: 100%;
-	margin-right: 2rem;
-	margin-left: 2rem;
-}
+	.bread-menu-link {
+		width: 100%;
+		margin-right: 2rem;
+		margin-left: 2rem;
+	}
 
-.link-style {
-	color: #330000;
-}
+	.link-style {
+		color: #330000;
+	}
 
-.link-style:hover {
-	color: #f37b03;
-	cursor: pointer;
-	transition: 0.2s;
-}
+	.link-style:hover {
+		color: #f37b03;
+		cursor: pointer;
+		transition: 0.2s;
+	}
 
-.link-style:hover img {
-	filter: drop-shadow(0 0 3px rgba(100,0,0,0.5));
-	transition: 0.2s;
-}
+	.link-style:hover img {
+		filter: drop-shadow(0 0 3px rgba(100, 0, 0, 0.5));
+		transition: 0.2s;
+	}
 
-.buns-link, .bread-link, .other-link {
-	margin-top: 40px;
-	font-size: 1em;
-}
+	.buns-link,
+	.bread-link,
+	.other-link {
+		margin-top: 40px;
+		font-size: 1em;
+	}
 
-.botton-prod {
-	width: 156px;
-	height: 40px;
-	display: flex;
-	align-items: center;
- 	justify-content: center;
-	margin-top: 3rem;
-	border:solid 2px #cc6600;
-	border-radius: 30px;
-	background: #ffffff73;
-	font-family: 'Comfortaa', cursive;
-	font-weight: bold;
-	color: #330000;
-}
+	.botton-prod {
+		width: 156px;
+		height: 40px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-top: 3rem;
+		border: solid 2px #cc6600;
+		border-radius: 30px;
+		background: #ffffff73;
+		font-family: 'Comfortaa', cursive;
+		font-weight: bold;
+		color: #330000;
+	}
 
-.botton-prod:hover {
-	color: #cc6600;
-	cursor: pointer;
-	background-color: #cc66002d;
-	box-shadow: 0 0 7px 0px rgba(0,0,0,0.75);
-	border:solid 2px #cc66002d;
-	transition: 0.2s;
-}
+	.botton-prod:hover {
+		color: #cc6600;
+		cursor: pointer;
+		background-color: #cc66002d;
+		box-shadow: 0 0 7px 0px rgba(0, 0, 0, 0.75);
+		border: solid 2px #cc66002d;
+		transition: 0.2s;
+	}
 
-.property {
-	margin-top: 7rem;
-	width: 85%;
-	display: flex;
-	justify-content: space-between;
-}
+	.property {
+		margin-top: 7rem;
+		width: 85%;
+		display: flex;
+		justify-content: space-between;
+	}
 
-.property-setup {
-	font-family: 'Comfortaa', cursive;
-	color: #330000;
-	font-weight: bold;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-
-
+	.property-setup {
+		font-family: 'Comfortaa', cursive;
+		color: #330000;
+		font-weight: bold;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
 
 
-footer {
+
+
+	footer {
 		display: flex;
 		justify-content: center;
 		margin-top: 3rem;
@@ -411,7 +531,7 @@ footer {
 		justify-content: space-between;
 	}
 
-.footer-logo {
+	.footer-logo {
 		width: 95px;
 		height: 95px;
 		filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, .8));
@@ -427,7 +547,7 @@ footer {
 		line-height: 1.1em;
 	}
 
-.schedule {
+	.schedule {
 		line-height: 1.5em;
 	}
 
@@ -458,7 +578,7 @@ footer {
 	}
 
 
-.social-icons {
+	.social-icons {
 		margin-top: 10px;
 		cursor: pointer;
 		display: flex;
@@ -494,9 +614,9 @@ footer {
 
 
 
-.social-icons-header {
-			display: none;
-		}
+	.social-icons-header {
+		display: none;
+	}
 
 
 
@@ -506,689 +626,725 @@ footer {
 
 
 	#check {
-  display: none;
-}
+		display: none;
+	}
 
-.checkbtn {
-  display: none;
-}
+	.checkbtn {
+		display: none;
+	}
 
-nav {
-	display: flex;
-	padding-top: 1em;
-	margin-right: 3%;
-	width: 40%;
-}
-
-
+	nav {
+		display: flex;
+		padding-top: 1em;
+		margin-right: 3%;
+		width: 40%;
+	}
 
 
 
 
-.ham {
-  cursor: pointer;
-  -webkit-tap-highlight-color: transparent;
-  transition: transform 400ms;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-.hamRotate.active {
-  transform: rotate(45deg);
-}
-.hamRotate180.active {
-  transform: rotate(180deg);
-}
-.line {
-  fill:none;
-  transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
-  stroke:#cc9933;
-  stroke-width:5.5;
-  stroke-linecap:round;
-}
-.ham7 .top {
-  stroke-dasharray: 40 82;
-}
-.ham7 .middle {
-  stroke-dasharray: 40 111;
-}
-.ham7 .bottom {
-  stroke-dasharray: 40 161;
-}
-.ham7.active .top {
-  stroke-dasharray: 17 82;
-  stroke-dashoffset: -62px;
-}
-.ham7.active .middle {
-  stroke-dashoffset: 23px;
-}
-.ham7.active .bottom {
-  stroke-dashoffset: -83px;
-}
+
+
+	.ham {
+		cursor: pointer;
+		-webkit-tap-highlight-color: transparent;
+		transition: transform 400ms;
+		-moz-user-select: none;
+		-webkit-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+	}
+
+	.hamRotate.active {
+		transform: rotate(45deg);
+	}
+
+	.hamRotate180.active {
+		transform: rotate(180deg);
+	}
+
+	.line {
+		fill: none;
+		transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+		stroke: #cc9933;
+		stroke-width: 5.5;
+		stroke-linecap: round;
+	}
+
+	.ham7 .top {
+		stroke-dasharray: 40 82;
+	}
+
+	.ham7 .middle {
+		stroke-dasharray: 40 111;
+	}
+
+	.ham7 .bottom {
+		stroke-dasharray: 40 161;
+	}
+
+	.ham7.active .top {
+		stroke-dasharray: 17 82;
+		stroke-dashoffset: -62px;
+	}
+
+	.ham7.active .middle {
+		stroke-dashoffset: 23px;
+	}
+
+	.ham7.active .bottom {
+		stroke-dashoffset: -83px;
+	}
 
 
 
 	.i-tel {
-	width: 25px;
-	height: 25px;
-}
-
-.call-tel {
-  fill:#cc9933;
-  transform-origin: 50% 50%;
-  animation: call 6s infinite ;
-}
-
-@keyframes call {
-  39%,
-  50%,
-  100% {
-            transform: rotate(0deg);
-  }
-  40% {
-            transform: rotate(8deg);
-  }
-  42%,
-  44%,
-  46% {
-            transform: rotate(-10deg);
-  }
-  43%,
-  45%,
-  47% {
-            transform: rotate(10deg);
-  }
-  48% {
-            transform: rotate(-8deg);
-  }
-  49% {
-            transform: rotate(8deg);
-  }
-}
-
-
-
-
-
-.smoke {
-  fill:#CC9933;
-  transform-origin: 0% 45%;
-  animation: smoke .7s infinite ;
-}
-
-.smoke2 {
-  fill:#CC9933;
-  transform-origin: 0% 45%;
-  animation: smoke .7s infinite ;
-  animation-delay: .4s;
-}
-
-.smoke3 {
-  fill:#CC9933;
-  transform-origin: 0% 45%;
-  animation: smoke .7s infinite ;
-  animation-delay: .2s;
-}
-
-#line, #line2 {
-  display: none;
-  fill:none;
-  stroke:#CC9933;
-  stroke-width:2;
-  stroke-linecap:round;
-  stroke-linejoin:round;
-  stroke-miterlimit:10;
-  stroke-dashoffset: 300;
-  stroke-dasharray: 300;
-  animation: line-move 1s forwards 1;
-}
-
-#line3, #line4 {
-  display: none;
-  /* fill:none;
-  stroke:#CC9933;
-  stroke-width:2;
-  stroke-linecap:round;
-  stroke-linejoin:round;
-  stroke-miterlimit:10; */
-  stroke-dashoffset: -300;
-  stroke-dasharray: 300;
-  animation: line-move 1s forwards 1;
-}
-
-@keyframes smoke {
-  to{
-    transform: scale(1, 1.7);
-    opacity:0;
-    }
-}
-
-@keyframes line-move {
-  to {
-  stroke-dashoffset: 0;
-  }
-}
-
-
-
-.menu-img-bun {
-	width: 122px;
-	height: 100px;
-}
-
-.menu-img {
-	width: 97px;
-	height: 99px;
-}
-
-.quality-img, .care-img, .natural-img, .fresh-img {
-	width: 130px;
-	height: 130px;
-}
-
-.quality-text, .care-text, .natural-text, .fresh-text {
-	display: flex;
-	justify-content: center;
-	margin-top: 1rem;
-    font-size: 1.1em;
-	opacity: 0;
-}
-
-.natural-text {
-	width: 153px;
-}
-
-.tracking-in-expand {
-	-webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-	        animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-}
-
-@keyframes tracking-in-expand {
-  0% {
-    letter-spacing: -0.5em;
-    /* opacity: 0; */
-  }
-  40% {
-    opacity: 0.6;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-.baker-box {
-	display: none;
-}
-
-
-
-@media all and (max-width: 1100px) {
-
-body {
-	background-image: none;
-	background-color: rgba(255, 249, 161, 0.37);
-}
-
-.header {
-	height: auto;
-	justify-content: space-around;
-	background: url(images/brown-board-small.png) 100% 100% no-repeat;
-	background-size: cover;
-}
-
-.logo-cont {
-	margin: 7px;
-	padding-left: 1rem;
-}
-
-.logo {
-	width: 70px;
-}
-
-.push {
-	width: 80px;
-	margin: 0;
-}
-
-.time-to-work {
-	display: none;
-}
-
-.contackt-namber {
-	display: none;
-}
-
-
-
-.first-block {
-    height: 83%;
-	justify-content: center;
-	padding-top: 0;
-}
-
-.bread {
-    display: none;
-}
-
-.bread-line {
-    width: 275px;
-	margin-bottom: 2rem;
-}
-
-.first-block h1 {
-	font-size: 1em;
-	padding-top: 4.5rem;
-}
-
-.H-2-first {
-	font-size: .7em;
-	margin-top: 1rem;
-}
-
-
-
-.production {
-    margin-top: 1rem;
-    width: 100%;
-    height: 250px;
-	box-shadow: 0 0 13px 0 rgba(0, 0, 0, 0.75);
-    background-image:none;
-	background-color: rgba(248, 248, 248, 0.753);
-	filter: none;
-}
-
-.property {
-    margin-top: 2rem;
-	margin-bottom: 2rem;
-    width: 100%;
-	flex-flow: row wrap;
-	font-size: 0.8em;
-	justify-content: space-evenly;
-}
-
-.prod-link {
-	padding-bottom: 1rem;
-}
-
-.prod-menu {
-    justify-content: space-evenly;
-	margin-top: 1rem;
-}
-
-.bread-menu-link {
-    margin-right: 0.7rem;
-    margin-left: 0.7rem;
-}
-
-.menu-img {
-    width: 47px;
-    height: 47px;
-}
-
-.menu-img-bun {
-    width: 57px;
-    height: 50px;
-}
-
-.buns-link, .bread-link, .other-link {
-    margin-top: 10px;
-    font-size: 0.6em;
-}
-
-.botton-about {
-	width: 200px;
-    height: 33px;
-    font-size: 0.5em;
-}
-
-.botton-prod {
-	margin-top: 2.5rem;
-    height: 33px;
-    width: 127px;
-    font-size: 0.9em;
-}
-
-.quality-img, .care-img, .natural-img, .fresh-img {
-    width: 60px;
-    height: 60px;
-}
-
-.property-setup {
-	width: 25%;
-}
-
-.baker-anim {
-	width: 375px;
-	height: 325px;
-}
-
-.baker-full {
-	width: 375px;
-	height: 325px;
-	opacity: 0;
-	animation: opacity-baker 2s linear forwards;
-  	animation-delay: 4s;
-	position: absolute; 
-	left:0;
-	right:0;
-	top:0;
-	bottom: 0;
-}
-
-.baker-box {
-    display: block;
-    margin-top: 2rem;
-	position: relative;
-}
-
-.baker-line {
-  fill:none;
-  stroke:#403F40;
-  stroke-width:2;
-  stroke-linecap:round;
-  stroke-linejoin:round;
-  stroke-miterlimit:10;
-  stroke-dasharray: 1000;
-  stroke-dashoffset: 1000;
-  animation: dash-baker 7s linear forwards;
-  animation-delay: 1.4s;
-}
-
-@keyframes dash-baker {
-  to {
-    stroke-dashoffset: 0;
-	opacity: 0;
-  }
-}
-
-@keyframes opacity-baker {
-  to {
-    opacity: 1;
-  }
-}
-
-
-
-
-
-
-footer {
-	background-image: none;
-	background-color: rgb(51, 33, 17);
-	height: auto;
-	margin-top: 0;
-}
-
-.footer {
-	flex-direction: column;
-	margin-top: 1rem;
-	margin-bottom: 1rem;
-	width: 100%;
-}
-
-.address {
-	order: 4;
-	margin-bottom: 0.5rem;
-}
-
-.footer-logo-box {
-	order: 3;
-	margin-top: 0.5rem;
-	margin-bottom: 0.5rem;
-}
-
-.footer-logo {
-	width: 70px;
-	height: 70px;
-}
-
-.schedule {
-	order: 1;
-	margin-bottom: 0.5rem;
-}
-
-.social-link {
-	margin: 0;
-	order: 2;
-}
-
-.contackt-link {
-	display: none;
-}
-
-.cont-tel {
-	order: 5;
-}
-
-.social-icons-header {
-	width: 100%;
-	display: flex;
-	flex-flow: row wrap;
-	align-items: center;
-	justify-content: space-around;
-	padding-top: 3px;
-	padding-bottom: 3px;
-}
-
-.social-icons-header a {
-	margin: 3px;
-}
-
-.order-footer {
-	display: block;
-}
-
-
-
-
-
-
-
-.checkbtn {
-	display: flex;
-	align-items: center;
-	cursor: pointer;
-}
-
-.nav {
-	position: fixed;
-	width: 100%;
-	/* background-color: rgb(95, 54, 0); */
-	/* background-color: rgb(0, 0, 0); */
-	background-color: rgb(43, 24, 1);
-	top: 84px;
-	/* top: -100%; */
-	left: -100%;
-	display: flex;
-	justify-content: space-around;
-	transition: all .5s;
-	z-index: 99999;
-}
-
-.main,
-.about,
-.products,
-.contacts {
-	display: block;
-	margin-top: 12px;
-	margin-bottom: 12px;
-	line-height: 25px;
-}
-
-#check:checked~.nav {
-	/* top: 84px; */
-	left: 0;
-}
-
-nav {
-	padding-top: 0;
-	margin-right: 0;
-	width: auto;
-}
-
-.natural-text {
-	width: 122px;
-}
-
-}
-
-
-
-@media all and (max-width: 500px) {
-
-.main,
-.about,
-.products,
-.contacts {
-	font-size: 0.7em;
-}
-
-.social-icons-header>a:not(:first-child) {
-	display: none;
-}
-
-.i-tel {
-	width: 30px;
-	height: 30px;
-}
-
-.property {
-    /* margin-top: 1rem;
+		width: 25px;
+		height: 25px;
+	}
+
+	.call-tel {
+		fill: #cc9933;
+		transform-origin: 50% 50%;
+		animation: call 6s infinite;
+	}
+
+	@keyframes call {
+
+		39%,
+		50%,
+		100% {
+			transform: rotate(0deg);
+		}
+
+		40% {
+			transform: rotate(8deg);
+		}
+
+		42%,
+		44%,
+		46% {
+			transform: rotate(-10deg);
+		}
+
+		43%,
+		45%,
+		47% {
+			transform: rotate(10deg);
+		}
+
+		48% {
+			transform: rotate(-8deg);
+		}
+
+		49% {
+			transform: rotate(8deg);
+		}
+	}
+
+
+
+
+
+	.smoke {
+		fill: #CC9933;
+		transform-origin: 0% 45%;
+		animation: smoke .7s infinite;
+	}
+
+	.smoke2 {
+		fill: #CC9933;
+		transform-origin: 0% 45%;
+		animation: smoke .7s infinite;
+		animation-delay: .4s;
+	}
+
+	.smoke3 {
+		fill: #CC9933;
+		transform-origin: 0% 45%;
+		animation: smoke .7s infinite;
+		animation-delay: .2s;
+	}
+
+	#line,
+	#line2 {
+		display: none;
+		fill: none;
+		stroke: #CC9933;
+		stroke-width: 2;
+		stroke-dashoffset: 300;
+		stroke-dasharray: 300;
+		animation: line-move-left 1s forwards 1;
+	}
+
+	#line3,
+	#line4 {
+		display: none;
+		fill: none;
+		stroke: #CC9933;
+		stroke-width: 2;
+		stroke-dashoffset: 300;
+		stroke-dasharray: 300;
+		animation: line-move-right 1s forwards 1;
+	}
+
+	@keyframes smoke {
+		to {
+			transform: scale(1, 1.7);
+			opacity: 0;
+		}
+	}
+
+	@keyframes line-move-right {
+		to {
+			stroke-dashoffset: 600;
+		}
+	}
+
+	@keyframes line-move-left {
+		to {
+			stroke-dashoffset: 0;
+		}
+	}
+
+
+
+	.menu-img-bun {
+		width: 122px;
+		height: 100px;
+	}
+
+	.menu-img {
+		width: 97px;
+		height: 99px;
+	}
+
+	.quality-img,
+	.care-img,
+	.natural-img,
+	.fresh-img {
+		width: 130px;
+		height: 130px;
+	}
+
+	.quality-text,
+	.care-text,
+	.natural-text,
+	.fresh-text {
+		display: flex;
+		justify-content: center;
+		margin-top: 1rem;
+		font-size: 1.1em;
+		opacity: 0;
+	}
+
+	.natural-text {
+		width: 153px;
+	}
+
+	.tracking-in-expand {
+		-webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+		animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	}
+
+	@keyframes tracking-in-expand {
+		0% {
+			letter-spacing: -0.5em;
+			/* opacity: 0; */
+		}
+
+		40% {
+			opacity: 0.6;
+		}
+
+		100% {
+			opacity: 1;
+		}
+	}
+
+	.baker-box {
+		display: none;
+	}
+
+
+
+	@media all and (max-width: 1100px) {
+
+		body {
+			background-image: none;
+			background-color: rgba(255, 249, 161, 0.37);
+		}
+
+		.header {
+			height: auto;
+			justify-content: space-around;
+			background: url(images/brown-board-small.png) 100% 100% no-repeat;
+			background-size: cover;
+		}
+
+		.logo-cont {
+			margin: 7px;
+			padding-left: 1rem;
+		}
+
+		.logo {
+			width: 70px;
+		}
+
+		.push {
+			width: 80px;
+			margin: 0;
+		}
+
+		.time-to-work {
+			display: none;
+		}
+
+		.contackt-namber {
+			display: none;
+		}
+
+
+
+		.first-block {
+			height: 83%;
+			justify-content: center;
+			padding-top: 0;
+		}
+
+		.bread {
+			display: none;
+		}
+
+		.bread-line {
+			width: 275px;
+			margin-bottom: 2rem;
+		}
+
+		.first-block h1 {
+			font-size: 1em;
+			padding-top: 4.5rem;
+		}
+
+		.H-2-first {
+			font-size: .7em;
+			margin-top: 1rem;
+		}
+
+
+
+		.production {
+			margin-top: 1rem;
+			width: 100%;
+			height: 250px;
+			box-shadow: 0 0 13px 0 rgba(0, 0, 0, 0.75);
+			background-image: none;
+			background-color: rgba(248, 248, 248, 0.753);
+			filter: none;
+		}
+
+		.property {
+			margin-top: 2rem;
+			margin-bottom: 2rem;
+			width: 100%;
+			flex-flow: row wrap;
+			font-size: 0.8em;
+			justify-content: space-evenly;
+		}
+
+		.prod-link {
+			padding-bottom: 1rem;
+		}
+
+		.prod-menu {
+			justify-content: space-evenly;
+			margin-top: 1rem;
+		}
+
+		.bread-menu-link {
+			margin-right: 0.7rem;
+			margin-left: 0.7rem;
+		}
+
+		.menu-img {
+			width: 47px;
+			height: 47px;
+		}
+
+		.menu-img-bun {
+			width: 57px;
+			height: 50px;
+		}
+
+		.buns-link,
+		.bread-link,
+		.other-link {
+			margin-top: 10px;
+			font-size: 0.6em;
+		}
+
+		.botton-about {
+			width: 200px;
+			height: 33px;
+			font-size: 0.5em;
+		}
+
+		.botton-prod {
+			margin-top: 2.5rem;
+			height: 33px;
+			width: 127px;
+			font-size: 0.9em;
+		}
+
+		.quality-img,
+		.care-img,
+		.natural-img,
+		.fresh-img {
+			width: 60px;
+			height: 60px;
+		}
+
+		.property-setup {
+			width: 25%;
+		}
+
+		.baker-anim {
+			width: 375px;
+			height: 325px;
+		}
+
+		.baker-full {
+			width: 375px;
+			height: 325px;
+			opacity: 0;
+			animation: opacity-baker 2s linear forwards;
+			animation-delay: 4s;
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+		}
+
+		.baker-box {
+			display: block;
+			margin-top: 2rem;
+			position: relative;
+		}
+
+		.baker-line {
+			fill: none;
+			stroke: #403F40;
+			stroke-width: 2;
+			stroke-linecap: round;
+			stroke-linejoin: round;
+			stroke-miterlimit: 10;
+			stroke-dasharray: 1000;
+			stroke-dashoffset: 1000;
+			animation: dash-baker 7s linear forwards;
+			animation-delay: 1.4s;
+		}
+
+		@keyframes dash-baker {
+			to {
+				stroke-dashoffset: 0;
+				opacity: 0;
+			}
+		}
+
+		@keyframes opacity-baker {
+			to {
+				opacity: 1;
+			}
+		}
+
+
+
+
+
+
+		footer {
+			background-image: none;
+			background-color: rgb(51, 33, 17);
+			height: auto;
+			margin-top: 0;
+		}
+
+		.footer {
+			flex-direction: column;
+			margin-top: 1rem;
+			margin-bottom: 1rem;
+			width: 100%;
+		}
+
+		.address {
+			order: 4;
+			margin-bottom: 0.5rem;
+		}
+
+		.footer-logo-box {
+			order: 3;
+			margin-top: 0.5rem;
+			margin-bottom: 0.5rem;
+		}
+
+		.footer-logo {
+			width: 70px;
+			height: 70px;
+		}
+
+		.schedule {
+			order: 1;
+			margin-bottom: 0.5rem;
+		}
+
+		.social-link {
+			margin: 0;
+			order: 2;
+		}
+
+		.contackt-link {
+			display: none;
+		}
+
+		.cont-tel {
+			order: 5;
+		}
+
+		.social-icons-header {
+			width: 100%;
+			display: flex;
+			flex-flow: row wrap;
+			align-items: center;
+			justify-content: space-around;
+			padding-top: 3px;
+			padding-bottom: 3px;
+		}
+
+		.social-icons-header a {
+			margin: 3px;
+		}
+
+		.order-footer {
+			display: block;
+		}
+
+
+
+
+
+
+
+		.checkbtn {
+			display: flex;
+			align-items: center;
+			cursor: pointer;
+		}
+
+		.nav {
+			position: fixed;
+			width: 100%;
+			/* background-color: rgb(95, 54, 0); */
+			/* background-color: rgb(0, 0, 0); */
+			background-color: rgb(43, 24, 1);
+			top: 84px;
+			/* top: -100%; */
+			left: -100%;
+			display: flex;
+			justify-content: space-around;
+			transition: all .5s;
+			z-index: 99999;
+		}
+
+		.main,
+		.about,
+		.products,
+		.contacts {
+			display: block;
+			margin-top: 12px;
+			margin-bottom: 12px;
+			line-height: 25px;
+		}
+
+		#check:checked~.nav {
+			/* top: 84px; */
+			left: 0;
+		}
+
+		nav {
+			padding-top: 0;
+			margin-right: 0;
+			width: auto;
+		}
+
+		.natural-text {
+			width: 122px;
+		}
+
+	}
+
+
+
+	@media all and (max-width: 500px) {
+
+		.main,
+		.about,
+		.products,
+		.contacts {
+			font-size: 0.7em;
+		}
+
+		.social-icons-header>a:not(:first-child) {
+			display: none;
+		}
+
+		.i-tel {
+			width: 30px;
+			height: 30px;
+		}
+
+		.property {
+			/* margin-top: 1rem;
 	margin-bottom: 1rem; */
-	width: 80%;
-}
+			width: 80%;
+		}
 
-.property-setup {
-	width: 50%;
-	padding: 0.4rem;
-}
+		.property-setup {
+			width: 50%;
+			padding: 0.4rem;
+		}
 
-/* .care-text {
+		/* .care-text {
 	word-wrap: break-word;
 	дбайливе ставлення
 } */
-.H-2-first {
-	font-size: .6em;
-}
+		.H-2-first {
+			font-size: .6em;
+		}
 
 
 
-.quality-text, .care-text, .natural-text, .fresh-text {
-    margin-top: 0.7rem;
-}
+		.quality-text,
+		.care-text,
+		.natural-text,
+		.fresh-text {
+			margin-top: 0.7rem;
+		}
 
-.botton-about {
-	width: 173px;
-    font-size: 0.4em;
-}
+		.botton-about {
+			width: 173px;
+			font-size: 0.4em;
+		}
 
-.botton-prod {
-    width: 113px;
-    font-size: 0.7em;
-}
+		.botton-prod {
+			width: 113px;
+			font-size: 0.7em;
+		}
 
-.bread-line {
-	width: 250px;
-    height: 50px;
-}
+		.bread-line {
+			width: 250px;
+			height: 50px;
+		}
 
 
-/* .property-setup {
+		/* .property-setup {
 	padding: 0.7rem;
 } */
 
-}
+	}
 
 
-@media all and (max-width: 350px) {
+	@media all and (max-width: 350px) {
 
-* {
-	font-size: 13px;
-}
+		* {
+			font-size: 13px;
+		}
 
-.main,
-.about,
-.products {
-	padding-right: 0;
-}
+		.main,
+		.about,
+		.products {
+			padding-right: 0;
+		}
 
-.natural-text {
-	width: 103px;
-}
+		.natural-text {
+			width: 103px;
+		}
 
-.botton-about {
-	width: 147px;
-	height: 28px;
-}
+		.botton-about {
+			width: 147px;
+			height: 28px;
+		}
 
-.botton-prod {
-    width: 98px;
-	height: 26px;
-}
-/* .H-2-first {
+		.botton-prod {
+			width: 98px;
+			height: 26px;
+		}
+
+		/* .H-2-first {
     font-size: .6em;
 } */
 
-.baker-full {
-    width: 290px;
-    height: 290px;
-}
+		.baker-full {
+			width: 290px;
+			height: 290px;
+		}
 
-.baker-anim {
-    width: 290px;
-    height: 290px;
-}
+		.baker-anim {
+			width: 290px;
+			height: 290px;
+		}
 
-}
+	}
 </style>
+
 <body>
 	<script>
 		(function () {
 			if (window.matchMedia("(min-width: 1100px)").matches) {
 
-			window.oldScrollY = window.scrollY;
-			document.onscroll = event => {
-				let res = window.oldScrollY > window.scrollY ? 1 : 2;
 				window.oldScrollY = window.scrollY;
-				
-				if (res == 2 && window.scrollY < 100) {
-					opacity();
-					document.querySelector('.header').classList.add('little-had');
-					document.querySelector('.logo').classList.add('little-logo');
+				document.onscroll = event => {
+					let res = window.oldScrollY > window.scrollY ? 1 : 2;
+					window.oldScrollY = window.scrollY;
+
+					if (res == 2 && window.scrollY < 100) {
+						opacity();
+						document.querySelector('.header').classList.add('little-had');
+						document.querySelector('.logo').classList.add('little-logo');
+					}
+
+					if (res == 2 && window.scrollY > 150) {
+						add();
+					}
+					if (res == 1 && window.scrollY < 250) {
+						del();
+						document.querySelector('.header').classList.remove('little-had');
+						document.querySelector('.logo').classList.remove('little-logo');
+					}
 				}
-		
-				if (res == 2 && window.scrollY > 150) {
-					add();
-				} if (res == 1 && window.scrollY < 250) {
-					del();
-					document.querySelector('.header').classList.remove('little-had');
-					document.querySelector('.logo').classList.remove('little-logo');
+
+				function add() {
+					document.querySelector('.bread').classList.add('display-none');
+					document.querySelector('.botton-about').classList.add('display-none');
+					document.querySelector('.first-block').style.height = '100%';
+					document.querySelector('.bread').classList.remove('opacity');
 				}
-			}
-			
-			function add() {
-				document.querySelector('.bread').classList.add('display-none');
-				document.querySelector('.botton-about').classList.add('display-none');
-				document.querySelector('.first-block').style.height = '100%';
-				document.querySelector('.bread').classList.remove('opacity');
-			}
-		
-			function del() {
-				document.querySelector('.bread').classList.remove('display-none');
-				document.querySelector('.botton-about').classList.remove('display-none');
-				document.querySelector('.first-block').style.height = '100vh';
-			}
-		
-			function opacity() {
-				document.querySelector('.bread').classList.add('opacity');
-			}
+
+				function del() {
+					document.querySelector('.bread').classList.remove('display-none');
+					document.querySelector('.botton-about').classList.remove('display-none');
+					document.querySelector('.first-block').style.height = '100vh';
+				}
+
+				function opacity() {
+					document.querySelector('.bread').classList.add('opacity');
+				}
 			}
 		})();
 	</script>
 
 
-	
+
 	<header class="header">
 		<nav>
 			<input type="checkbox" id="check">
@@ -1226,17 +1382,18 @@ nav {
 			<div class="social-icons-header">
 				<a href="tel:+380673102145">
 					<?xml version="1.0" encoding="iso-8859-1"?>
-					<svg version="1.1" class="i-tel" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-						viewBox="0 0 51.413 51.413" style="enable-background:new 0 0 51.413 51.413;" xml:space="preserve">
-					<g>
+					<svg version="1.1" class="i-tel" xmlns="http://www.w3.org/2000/svg"
+						xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 51.413 51.413"
+						style="enable-background:new 0 0 51.413 51.413;" xml:space="preserve">
 						<g>
-							<path class="call-tel" d="M25.989,12.274c8.663,0.085,14.09-0.454,14.823,9.148h10.564c0-14.875-12.973-16.88-25.662-16.88
-								c-12.69,0-25.662,2.005-25.662,16.88h10.482C11.345,11.637,17.398,12.19,25.989,12.274z"/>
-							<path class="call-tel" d="M5.291,26.204c2.573,0,4.714,0.154,5.19-2.377c0.064-0.344,0.101-0.734,0.101-1.185H10.46H0
-								C0,26.407,2.369,26.204,5.291,26.204z"/>
-							<path class="call-tel" d="M40.88,22.642h-0.099c0,0.454,0.039,0.845,0.112,1.185c0.502,2.334,2.64,2.189,5.204,2.189
-								c2.936,0,5.316,0.193,5.316-3.374H40.88z"/>
-							<path style="fill:#cc9933;" d="M35.719,20.078v-1.496c0-0.669-0.771-0.711-1.723-0.711h-1.555c-0.951,0-1.722,0.042-1.722,0.711
+							<g>
+								<path class="call-tel" d="M25.989,12.274c8.663,0.085,14.09-0.454,14.823,9.148h10.564c0-14.875-12.973-16.88-25.662-16.88
+								c-12.69,0-25.662,2.005-25.662,16.88h10.482C11.345,11.637,17.398,12.19,25.989,12.274z" />
+								<path class="call-tel" d="M5.291,26.204c2.573,0,4.714,0.154,5.19-2.377c0.064-0.344,0.101-0.734,0.101-1.185H10.46H0
+								C0,26.407,2.369,26.204,5.291,26.204z" />
+								<path class="call-tel" d="M40.88,22.642h-0.099c0,0.454,0.039,0.845,0.112,1.185c0.502,2.334,2.64,2.189,5.204,2.189
+								c2.936,0,5.316,0.193,5.316-3.374H40.88z" />
+								<path style="fill:#cc9933;" d="M35.719,20.078v-1.496c0-0.669-0.771-0.711-1.723-0.711h-1.555c-0.951,0-1.722,0.042-1.722,0.711
 								v1.289v1h-11v-1v-1.289c0-0.669-0.771-0.711-1.722-0.711h-1.556c-0.951,0-1.722,0.042-1.722,0.711v1.496v1.306
 								C12.213,23.988,4.013,35.073,3.715,36.415l0.004,8.955c0,0.827,0.673,1.5,1.5,1.5h40c0.827,0,1.5-0.673,1.5-1.5v-9
 								c-0.295-1.303-8.493-12.383-11-14.987V20.078z M19.177,37.62c-0.805,0-1.458-0.652-1.458-1.458s0.653-1.458,1.458-1.458
@@ -1249,9 +1406,9 @@ nav {
 								c0.806,0,1.458,0.653,1.458,1.458C26.635,26.969,25.983,27.621,25.177,27.621z M31.177,37.62c-0.806,0-1.458-0.652-1.458-1.458
 								s0.652-1.458,1.458-1.458s1.458,0.652,1.458,1.458S31.983,37.62,31.177,37.62z M31.177,32.62c-0.806,0-1.458-0.652-1.458-1.458
 								s0.652-1.458,1.458-1.458s1.458,0.652,1.458,1.458S31.983,32.62,31.177,32.62z M31.177,27.621c-0.806,0-1.458-0.652-1.458-1.458
-								c0-0.805,0.652-1.458,1.458-1.458s1.458,0.653,1.458,1.458C32.635,26.969,31.983,27.621,31.177,27.621z"/>
+								c0-0.805,0.652-1.458,1.458-1.458s1.458,0.653,1.458,1.458C32.635,26.969,31.983,27.621,31.177,27.621z" />
+							</g>
 						</g>
-					</g>
 				</a>
 				<a href="https://www.instagram.com/sil.zemli/" target="_blank" rel="noopener">
 					<img width="25" height="25" src="images/instagram.svg" alt="instagram">
@@ -1266,222 +1423,237 @@ nav {
 		</div>
 	</header>
 	<main>
-	<section class="first-block">
-		<h1>СІЛЬ ЗЕМЛІ</h1>
-		<svg version="1.1" class="bread-line" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-			viewBox="0 0 756 128.2" style="enable-background:new 0 0 756 128.2;" xml:space="preserve">
-		<style type="text/css">
-			.st0{fill:#CC9933;}
-			.st1{fill:none;}
-			.st2{fill:none;stroke:#CC9933;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-		</style>
-		<path class="st0" d="M430.7,79.3c-5.4-5-15.6-10.5-33.5-9.3c-5.3-4.6-13-8.3-23.8-8c-5.5,0.2-17,2.6-23.6,10.5
+		<section class="first-block">
+			<h1>СІЛЬ ЗЕМЛІ</h1>
+			<svg version="1.1" class="bread-line" xmlns="http://www.w3.org/2000/svg"
+				xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 756 128.2"
+				style="enable-background:new 0 0 756 128.2;" xml:space="preserve">
+				<path fill="#CC9933" d="M430.7,79.3c-5.4-5-15.6-10.5-33.5-9.3c-5.3-4.6-13-8.3-23.8-8c-5.5,0.2-17,2.6-23.6,10.5
 			c-2.9-0.8-6-1.1-9.3-0.7c0,0,0,0-0.1,0c-10.3,1.3-24.6,11.4-24.6,27c0,9.1,3.9,14.8,12.6,18.6c9.6,4.2,25.9,6.1,51.3,6.1
 			c23.7,0,39.7-2.3,48.8-7.1c9.8-5.1,11.1-12.6,11.1-18.5C439.5,91.3,436.2,84.3,430.7,79.3z M379.6,117.3c-53.3,0-57.7-8.8-57.7-18.5
 			c0-11.8,11.3-19.8,19.2-20.8c16.5-1.6,21.8,16.6,22.1,17.4c0.5,1.7,2.2,2.6,3.8,2.2s2.6-2.2,2.1-3.8c-0.1-0.2-1.7-6-6-11.6
 			c-2.2-2.9-4.7-5.2-7.4-6.9c5-4.8,13.2-6.8,17.8-6.9c10.3-0.3,18.5,3.6,24.2,11.6c4.4,6.2,5.8,12.6,5.8,12.7c0.3,1.5,1.6,2.5,3,2.5
 			c0.2,0,0.4,0,0.6-0.1c1.7-0.3,2.8-2,2.4-3.7c-0.1-0.3-1.6-7.7-6.7-14.9c-0.1-0.1-0.2-0.3-0.3-0.4c12.5,0.1,19.8,4.2,23.8,7.8
-			c5,4.6,6.8,10.3,6.8,14C433.3,105.1,433.3,117.3,379.6,117.3z"/>
-		<line class="st1" x1="67" y1="82.3" x2="267.8" y2="83.1"/>
-		<line id="line" x1="4.6" y1="114.8" x2="291.8" y2="114.8"/>
-		<line id="line2" x1="37.6" y1="92.5" x2="270.2" y2="92.9"/>
-		<line id="line3" class="st2" x1="483.5" y1="92.5" x2="716.1" y2="92.9"/>
-		<line id="line4" class="st2" x1="463.4" y1="114.8" x2="750.6" y2="114.8"/>
-		<g>
-			<path class="smoke" d="M346.1,14.2c-1.2,1.9-2.4,3.8-3.3,5.8c-0.9,2-1.6,4.1-1.8,6.1c-0.2,2,0.2,4,1.1,5.6c0.5,0.8,1.1,1.5,1.8,2.2
+			c5,4.6,6.8,10.3,6.8,14C433.3,105.1,433.3,117.3,379.6,117.3z" />
+				<line fill="none" x1="67" y1="82.3" x2="267.8" y2="83.1" />
+				<line id="line" x1="4.6" y1="114.8" x2="291.8" y2="114.8" />
+				<line id="line2" x1="37.6" y1="92.5" x2="270.2" y2="92.9" />
+				<line id="line3" x1="483.5" y1="92.5" x2="716.1" y2="92.9" />
+				<line id="line4" x1="463.4" y1="114.8" x2="750.6" y2="114.8" />
+				<g>
+					<path class="smoke" d="M346.1,14.2c-1.2,1.9-2.4,3.8-3.3,5.8c-0.9,2-1.6,4.1-1.8,6.1c-0.2,2,0.2,4,1.1,5.6c0.5,0.8,1.1,1.5,1.8,2.2
 				c0.7,0.7,1.6,1.5,2.5,2.3c1.7,1.7,3.3,3.9,4.2,6.4c1,2.4,1.2,5,0.9,7.5c-0.2,2.5-0.9,4.8-1.8,7c-0.9,2.2-2.1,4.2-3.5,6.1
 				c-0.1,0.1-0.3,0.1-0.4,0c-0.1-0.1-0.1-0.1-0.1-0.2c0.1-2.3,0.4-4.6,0.6-6.7c0.2-2.2,0.3-4.3,0.2-6.3c-0.1-2-0.2-4-0.7-5.8
 				c-0.4-1.9-1.2-3.6-2.5-5.2c-0.6-0.8-1.4-1.6-2.2-2.5c-0.8-0.9-1.6-2-2.1-3.2c-1-2.5-1.1-5.1-0.5-7.5c0.5-2.4,1.6-4.5,2.9-6.4
-				c1.2-1.9,2.7-3.7,4.3-5.3c0.1-0.1,0.3-0.1,0.4,0C346.2,13.9,346.2,14.1,346.1,14.2z"/>
-		</g>
-		<g>
-			<path class="smoke2" d="M375.5,4.7c-1.3,4-2,8.1-1.7,12.1c0.1,2,0.5,4,1.1,5.9c0.6,1.9,1.4,3.7,2.3,5.6c0.9,1.9,1.9,4,2.6,6.2
+				c1.2-1.9,2.7-3.7,4.3-5.3c0.1-0.1,0.3-0.1,0.4,0C346.2,13.9,346.2,14.1,346.1,14.2z" />
+				</g>
+				<g>
+					<path class="smoke2" d="M375.5,4.7c-1.3,4-2,8.1-1.7,12.1c0.1,2,0.5,4,1.1,5.9c0.6,1.9,1.4,3.7,2.3,5.6c0.9,1.9,1.9,4,2.6,6.2
 				c0.7,2.2,0.9,4.6,0.7,6.9c-0.2,2.3-0.7,4.5-1.6,6.6c-0.8,2.1-2,4-3.4,5.7c-0.1,0.1-0.3,0.1-0.4,0c-0.1-0.1-0.1-0.1-0.1-0.2
 				c0.1-2.2,0.4-4.3,0.5-6.3c0.1-2,0.1-4,0-5.9c-0.3-3.8-0.5-7.5-2-11.5c-0.7-2-1.4-4.1-1.9-6.3c-0.4-2.2-0.5-4.5-0.4-6.7
-				c0.3-4.4,1.7-8.6,3.8-12.3c0.1-0.1,0.2-0.2,0.3-0.1C375.5,4.5,375.5,4.6,375.5,4.7z"/>
-		</g>
-		<g>
-			<path class="smoke3" d="M408.6,8.1c-2.3,4-4.4,8.2-5.1,12.6c-0.4,2.2-0.3,4.4,0.2,6.4c0.5,2,1.4,3.8,2.8,5.5c1.4,1.7,3.1,3.8,4.2,6.3
+				c0.3-4.4,1.7-8.6,3.8-12.3c0.1-0.1,0.2-0.2,0.3-0.1C375.5,4.5,375.5,4.6,375.5,4.7z" />
+				</g>
+				<g>
+					<path class="smoke3"
+						d="M408.6,8.1c-2.3,4-4.4,8.2-5.1,12.6c-0.4,2.2-0.3,4.4,0.2,6.4c0.5,2,1.4,3.8,2.8,5.5c1.4,1.7,3.1,3.8,4.2,6.3
 				c1.1,2.4,1.5,5.2,1.3,7.8c-0.2,2.6-0.9,5.1-2,7.3c-1.1,2.2-2.5,4.3-4.2,6c-0.1,0.1-0.3,0.1-0.4,0c-0.1-0.1-0.1-0.2-0.1-0.2
 				c0.5-2.4,1-4.6,1.3-6.8c0.3-2.2,0.5-4.3,0.4-6.4c-0.1-2.1-0.4-4-1-5.9c-0.5-1.9-1.5-3.7-2.9-5.7c-0.6-1-1.3-2.2-1.8-3.4
-				c-0.5-1.2-0.8-2.5-1-3.8c-0.4-2.6,0-5.2,0.7-7.5c1.5-4.7,4.1-8.7,7.1-12.3c0.1-0.1,0.2-0.1,0.4,0C408.6,7.9,408.6,8,408.6,8.1z"/>
-		</g>
-		</svg>
-		<h2 class="H-2-first">НАШ ХЛІБ - «СМАЧНИЙ»</h2>
-		<img class="bread" src="images/home/bread-main.png" alt="bread">
-		<a href="about.html" class="botton-about">ДІЗНАТИСЬ&nbspБІЛЬШЕ</a>
-		<div class="baker-box">
-			<img class="baker-full" src="images/home/baker.svg" alt="bread">
-<svg version="1.1" class="baker-anim" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 1986 977" style="enable-background:new 0 0 1986 977;" xml:space="preserve">
-<style type="text/css">
-	
-</style>
-<g>
-	<path class="baker-line" d="M1235.3,2.1c-12.1,0.1-21,2.5-26.8,4.7c-2.9,1.1-4,1.7-16.2,7.2c-10.9,4.9-15.1,6.7-17.2,7.6
-		c-12.1,5.6-40.4,23.6-37.6,40.4c1.9,11.6,18.1,18.2,24.2,20.3"/>
-	<path class="baker-line" d="M1204.9,181.2c-5.6-6.8-9.8-8-12.7-7.8c-2.6,0.2-3.9,1.5-9.7,2.5c-3.7,0.6-5.6,0.9-7.6,0
+				c-0.5-1.2-0.8-2.5-1-3.8c-0.4-2.6,0-5.2,0.7-7.5c1.5-4.7,4.1-8.7,7.1-12.3c0.1-0.1,0.2-0.1,0.4,0C408.6,7.9,408.6,8,408.6,8.1z" />
+				</g>
+			</svg>
+			<h2 class="H-2-first">НАШ ХЛІБ - «СМАЧНИЙ»</h2>
+			<img class="bread" src="images/home/bread-main.png" alt="bread">
+			<a href="about.html" class="botton-about">ДІЗНАТИСЬ&nbspБІЛЬШЕ</a>
+			<div class="baker-box">
+				<img class="baker-full" src="images/home/baker.svg" alt="bread">
+				<svg version="1.1" class="baker-anim" xmlns="http://www.w3.org/2000/svg"
+					xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1986 977"
+					style="enable-background:new 0 0 1986 977;" xml:space="preserve">
+					<style type="text/css">
+
+					</style>
+					<g>
+						<path class="baker-line" d="M1235.3,2.1c-12.1,0.1-21,2.5-26.8,4.7c-2.9,1.1-4,1.7-16.2,7.2c-10.9,4.9-15.1,6.7-17.2,7.6
+		c-12.1,5.6-40.4,23.6-37.6,40.4c1.9,11.6,18.1,18.2,24.2,20.3" />
+						<path class="baker-line" d="M1204.9,181.2c-5.6-6.8-9.8-8-12.7-7.8c-2.6,0.2-3.9,1.5-9.7,2.5c-3.7,0.6-5.6,0.9-7.6,0
 		c-1.5-0.7-2.2-1.7-5.4-6.8c-2.8-4.5-4.2-6.8-4.3-7.2c-1.5-5.2,2.2-7.5,3.2-15.5c0.3-2.6,1-7.6-1.1-12.6c-3.1-7.6-9-6.9-10.8-13.3
-		c-0.6-2,0.1-1.8,1.9-14.2c0.4-2.7,0.8-5.9,1.7-12.4c0.6-4.9,1.1-8.8,1.4-11.5"/>
-	<path class="baker-line" d="M1184.6,183.2c-0.1,2.4,0.2,6.9,3,11.1c4,6,10.6,7.6,15,8.7c10.7,2.5,15.1-0.9,24.5-0.4
-		c6.1,0.3,14.8,2.3,25.2,10.4"/>
-	<path class="baker-line" d="M1226.8,248c2.4-6.3,6.6-14.9,13.8-23.6c4-4.8,8.1-8.6,11.8-11.4"/>
-	<path class="baker-line" d="M1220.7,371.4c-0.1-9.9,0.4-17.9,1-23.4c0.9-8.9,1.9-13.1,1.4-21.1c-0.2-3.7-0.5-9.1-2.4-15.6
-		c-3.3-11.4-7-11-8.2-19c-1.4-9.4,2.5-18,4.4-22c1.6-3.6,3.5-6.4,4.8-8.3"/>
-	<path class="baker-line" d="M1257.4,205.2c2.1-1.4,5.3-3.3,9.6-5c2.9-1.2,4.1-1.4,6.2-2.4c0,0,4.8-2.3,9.1-7.2c6.6-7.5,6.7-19.1,9.8-31.4
-		c1.5-5.8,4.2-14.1,9.8-23.8"/>
-	<path class="baker-line" d="M1303,30.2c0.5,3.4,0.9,8.1,1,13.5c0,5.1,0,11.8-1.9,19.7c-2.2,8.9-4.3,8.8-7,18.9c-1.2,4.7-2.6,9.6-2.4,16.1
-		c0.1,3.7,0.6,6.5,3.8,18c1.4,5,3.2,11.4,5.5,19"/>
-	<path class="baker-line" d="M1250,8c5.8,0.8,11,1.5,15.4,2.2c10,1.5,13,2.1,16.6,3.6c4.6,1.9,8,4.4,10.1,6.2"/>
-	<line class="baker-line" x1="1296.9" y1="22.8" x2="1303" y2="30.2"/>
-	<path class="baker-line" d="M1156.4,72.5c4.3-3.8,9.6-8,15.8-12c5.9-3.8,11.5-6.8,16.6-9.1"/>
-	<path class="baker-line" d="M1163.8,78.8c6-5.5,14.2-12,25-17.8c13.7-7.4,26.3-10.9,35.5-12.7"/>
-	<path class="baker-line" d="M1151.5,64.4c1-1.5,2.5-3.3,4.6-5c1.9-1.7,3.8-2.8,5.3-3.6"/>
-	<path class="baker-line" d="M1290.5,11.8c-2.2,5.8-3.4,10.7-4.1,13.9c-1.6,7.9-1.4,12.2-3.1,23.3c-0.7,4.8-1.5,8.6-1.9,11"/>
-	<path class="baker-line" d="M1273.5,44.2c-0.3,2.1-0.4,4.5-0.5,7c-0.1,4,0.3,7.7,0.7,10.8"/>
-	<path class="baker-line" d="M1299.9,12.5c-0.6,1.1-1.4,2.7-2.2,4.8c-3,7.4-3.7,13.4-4.1,17c-0.9,7.9-2.3,17.5-3.8,29.2"/>
-	<path class="baker-line" d="M1228.8,182.9c-3.2,2.8-7,5.9-11.5,8.9c-5.1,3.4-9.9,6-14.2,7.9"/>
-	<path class="baker-line" d="M1231.7,187.5c-1.8,2.2-4.4,4.9-7.9,7.4c-3.6,2.6-7,4.2-9.6,5.3"/>
-	<path class="baker-line" d="M1168.1,87.2c2.7,1.4,7.1,3.4,12.7,3.6c6.6,0.3,8.6-2.1,16.8-2.4c1.5-0.1,7.4-0.2,14.6,1.9
+		c-0.6-2,0.1-1.8,1.9-14.2c0.4-2.7,0.8-5.9,1.7-12.4c0.6-4.9,1.1-8.8,1.4-11.5" />
+						<path class="baker-line" d="M1184.6,183.2c-0.1,2.4,0.2,6.9,3,11.1c4,6,10.6,7.6,15,8.7c10.7,2.5,15.1-0.9,24.5-0.4
+		c6.1,0.3,14.8,2.3,25.2,10.4" />
+						<path class="baker-line" d="M1226.8,248c2.4-6.3,6.6-14.9,13.8-23.6c4-4.8,8.1-8.6,11.8-11.4" />
+						<path class="baker-line" d="M1220.7,371.4c-0.1-9.9,0.4-17.9,1-23.4c0.9-8.9,1.9-13.1,1.4-21.1c-0.2-3.7-0.5-9.1-2.4-15.6
+		c-3.3-11.4-7-11-8.2-19c-1.4-9.4,2.5-18,4.4-22c1.6-3.6,3.5-6.4,4.8-8.3" />
+						<path class="baker-line" d="M1257.4,205.2c2.1-1.4,5.3-3.3,9.6-5c2.9-1.2,4.1-1.4,6.2-2.4c0,0,4.8-2.3,9.1-7.2c6.6-7.5,6.7-19.1,9.8-31.4
+		c1.5-5.8,4.2-14.1,9.8-23.8" />
+						<path class="baker-line" d="M1303,30.2c0.5,3.4,0.9,8.1,1,13.5c0,5.1,0,11.8-1.9,19.7c-2.2,8.9-4.3,8.8-7,18.9c-1.2,4.7-2.6,9.6-2.4,16.1
+		c0.1,3.7,0.6,6.5,3.8,18c1.4,5,3.2,11.4,5.5,19" />
+						<path class="baker-line"
+							d="M1250,8c5.8,0.8,11,1.5,15.4,2.2c10,1.5,13,2.1,16.6,3.6c4.6,1.9,8,4.4,10.1,6.2" />
+						<line class="baker-line" x1="1296.9" y1="22.8" x2="1303" y2="30.2" />
+						<path class="baker-line" d="M1156.4,72.5c4.3-3.8,9.6-8,15.8-12c5.9-3.8,11.5-6.8,16.6-9.1" />
+						<path class="baker-line" d="M1163.8,78.8c6-5.5,14.2-12,25-17.8c13.7-7.4,26.3-10.9,35.5-12.7" />
+						<path class="baker-line" d="M1151.5,64.4c1-1.5,2.5-3.3,4.6-5c1.9-1.7,3.8-2.8,5.3-3.6" />
+						<path class="baker-line"
+							d="M1290.5,11.8c-2.2,5.8-3.4,10.7-4.1,13.9c-1.6,7.9-1.4,12.2-3.1,23.3c-0.7,4.8-1.5,8.6-1.9,11" />
+						<path class="baker-line" d="M1273.5,44.2c-0.3,2.1-0.4,4.5-0.5,7c-0.1,4,0.3,7.7,0.7,10.8" />
+						<path class="baker-line"
+							d="M1299.9,12.5c-0.6,1.1-1.4,2.7-2.2,4.8c-3,7.4-3.7,13.4-4.1,17c-0.9,7.9-2.3,17.5-3.8,29.2" />
+						<path class="baker-line" d="M1228.8,182.9c-3.2,2.8-7,5.9-11.5,8.9c-5.1,3.4-9.9,6-14.2,7.9" />
+						<path class="baker-line" d="M1231.7,187.5c-1.8,2.2-4.4,4.9-7.9,7.4c-3.6,2.6-7,4.2-9.6,5.3" />
+						<path class="baker-line"
+							d="M1168.1,87.2c2.7,1.4,7.1,3.4,12.7,3.6c6.6,0.3,8.6-2.1,16.8-2.4c1.5-0.1,7.4-0.2,14.6,1.9
 		c7.4,2.2,12.6,5.6,15.1,7.4c9.2,6.7,11,13.1,13.9,12.2c3.5-1,3.5-10.9,8.2-18.9c0.3-0.5,1.7-2.8,4.3-5.1c1.8-1.5,3.3-2.8,4.1-2.4
-		c1.4,0.7-0.1,6.1-3.4,18.7c-3.2,12.5-3.8,15-2.4,18c2.7,6,10.1,7.8,10.6,7.9c7.7,1.8,11.3-3.5,18.2-1.9c3,0.7,7,2.7,11.1,9.1"/>
-	<path class="baker-line" d="M1237.7,116.2c-0.2,3.1-0.4,7.7-0.1,13.3c0.5,9,1.7,12.8,2.2,19.8c0.3,4.7,0.3,11.4-1.4,19.7"/>
-	<line class="baker-line" x1="1161.4" y1="120.8" x2="1182.8" y2="127"/>
-	<path class="baker-line" d="M1196,161.8c-5.3-6.7-10.1-13-14.4-19c-2.4-3.3-4.8-6.7-3.8-10.3c0.8-2.9,3.4-4.6,5-5.5"/>
-	<path class="baker-line" d="M1178.8,144.4c-0.1,3.5,0.2,7.9,1.1,12.8c0.9,4.6,2.1,8.6,3.4,11.8"/>
-	<path class="baker-line" d="M1237.7,286.6c-0.3,3.4-0.6,8.4-0.6,14.5c0,14.2,1.9,25.1,4.1,38.2c1,5.5,2.4,13,4.4,21.8"/>
-	<path class="baker-line" d="M1250,248c-0.5,7.1-0.9,14.6-1,22.3c-0.3,20.9,1.1,40,3.4,57.1"/>
-	<path class="baker-line" d="M1302,311.6c-5.9,1.5-12.2,2.9-18.9,4.1c-9.1,1.7-17.7,2.8-25.7,3.6"/>
-	<path class="baker-line" d="M1259.7,233.9c0.9,2,2.1,5,2.7,8.8c0.8,4.8,0,7,0,14.1c0,2.4,0,6.9,0.7,12c0.9,6.2,2.1,8.6,3.6,14.8
-		c1,4,2.2,9.9,2.7,17.4"/>
-	<line class="baker-line" x1="1306.1" y1="144.4" x2="1333.1" y2="161.8"/>
-	<path class="baker-line" d="M1302.9,213c3.7-7.8,7-13.8,9.2-18c6.9-12.5,7.6-11.9,8.6-15.9c0.4-1.6,1-4.7,3.6-7.2c1.9-1.8,4.1-2.6,5.7-3"
-		/>
-	<path class="baker-line" d="M1327.7,193.8c9.6-3.8,16.9-6.3,21.8-7.8c5.2-1.6,6.6-1.8,11-3.4c4.3-1.6,6.8-2.7,11-3.6
-		c3-0.6,5.5-0.8,7.1-0.9"/>
-	<path class="baker-line" d="M1338.3,173.3c6.8-5.6,12.4-6.8,16.3-6.7c7,0.1,11.5,4,18.7,1.6c3.2-1,5-2.7,6.3-1.8c2,1.3,0.5,7-1,11.7"/>
-	<path class="baker-line" d="M1412.2,170.3c-2.5-1.4-6.9-3.3-11.5-1.9c-3.5,1-5.8,3.5-10.1,8.2c-2.5,2.7-4,5-4.5,5.6c-3,4.4-4,7.5-5.6,10.8
+		c1.4,0.7-0.1,6.1-3.4,18.7c-3.2,12.5-3.8,15-2.4,18c2.7,6,10.1,7.8,10.6,7.9c7.7,1.8,11.3-3.5,18.2-1.9c3,0.7,7,2.7,11.1,9.1" />
+						<path class="baker-line"
+							d="M1237.7,116.2c-0.2,3.1-0.4,7.7-0.1,13.3c0.5,9,1.7,12.8,2.2,19.8c0.3,4.7,0.3,11.4-1.4,19.7" />
+						<line class="baker-line" x1="1161.4" y1="120.8" x2="1182.8" y2="127" />
+						<path class="baker-line"
+							d="M1196,161.8c-5.3-6.7-10.1-13-14.4-19c-2.4-3.3-4.8-6.7-3.8-10.3c0.8-2.9,3.4-4.6,5-5.5" />
+						<path class="baker-line" d="M1178.8,144.4c-0.1,3.5,0.2,7.9,1.1,12.8c0.9,4.6,2.1,8.6,3.4,11.8" />
+						<path class="baker-line"
+							d="M1237.7,286.6c-0.3,3.4-0.6,8.4-0.6,14.5c0,14.2,1.9,25.1,4.1,38.2c1,5.5,2.4,13,4.4,21.8" />
+						<path class="baker-line" d="M1250,248c-0.5,7.1-0.9,14.6-1,22.3c-0.3,20.9,1.1,40,3.4,57.1" />
+						<path class="baker-line"
+							d="M1302,311.6c-5.9,1.5-12.2,2.9-18.9,4.1c-9.1,1.7-17.7,2.8-25.7,3.6" />
+						<path class="baker-line" d="M1259.7,233.9c0.9,2,2.1,5,2.7,8.8c0.8,4.8,0,7,0,14.1c0,2.4,0,6.9,0.7,12c0.9,6.2,2.1,8.6,3.6,14.8
+		c1,4,2.2,9.9,2.7,17.4" />
+						<line class="baker-line" x1="1306.1" y1="144.4" x2="1333.1" y2="161.8" />
+						<path class="baker-line"
+							d="M1302.9,213c3.7-7.8,7-13.8,9.2-18c6.9-12.5,7.6-11.9,8.6-15.9c0.4-1.6,1-4.7,3.6-7.2c1.9-1.8,4.1-2.6,5.7-3" />
+						<path class="baker-line" d="M1327.7,193.8c9.6-3.8,16.9-6.3,21.8-7.8c5.2-1.6,6.6-1.8,11-3.4c4.3-1.6,6.8-2.7,11-3.6
+		c3-0.6,5.5-0.8,7.1-0.9" />
+						<path class="baker-line"
+							d="M1338.3,173.3c6.8-5.6,12.4-6.8,16.3-6.7c7,0.1,11.5,4,18.7,1.6c3.2-1,5-2.7,6.3-1.8c2,1.3,0.5,7-1,11.7" />
+						<path class="baker-line" d="M1412.2,170.3c-2.5-1.4-6.9-3.3-11.5-1.9c-3.5,1-5.8,3.5-10.1,8.2c-2.5,2.7-4,5-4.5,5.6c-3,4.4-4,7.5-5.6,10.8
 		c-3.4,7.2-5.9,8.2-13.5,21.1c-1,1.7-2.9,5-2.2,8.6c0.5,2.2,1.8,3.9,2,4.1c1.5,1.8,3,2.2,4.5,3.2c2.7,1.8,3.8,4.1,5.4,6.8
-		c2.3,3.9,6,9.5,12.3,17.9"/>
-	<path class="baker-line" d="M1324.8,201.6c-2.5,6.4-4,12.1-5,16.6c-1.1,5.2-2.6,12.3-2.3,21.3c0.1,2.6,0.2,2.4,1.4,14.2
-		c0.8,7.7,1.2,12.4,1.4,14.6c0.7,7.1,2.3,19.6,6.3,43.6"/>
-	<path class="baker-line" d="M1304,231c0.7,3.5,1.8,9.1,3.5,16.1c2.6,10.8,3.7,13.3,4.7,20.3c1,7.3-0.2,4.4,0.9,17.3
-		c0.4,5,0.9,9.5-1.8,13.5c-0.9,1.3-2,2.2-2.7,2.8"/>
-	<line class="baker-line" x1="1264.6" y1="240" x2="1286" y2="251.1"/>
-	<line class="baker-line" x1="1378.6" y1="183.2" x2="1359.4" y2="198.1"/>
-	<line class="baker-line" x1="1388.4" y1="186" x2="1399.6" y2="182.9"/>
-	<path class="baker-line" d="M1409.1,240c4.3-1,9.5-2.5,15.1-5c8-3.6,14.1-7.9,18.5-11.5"/>
-	<path class="baker-line" d="M1444.1,203.3c-1.7,0.3-4.3,0.8-7.2,2.2c-3.1,1.4-4.2,2.6-6.7,3.8c-2.1,1-5.3,2.1-10.1,2.1"/>
-	<path class="baker-line" d="M1435.2,180.3c2.1-1,6.2-2.7,10.6-1.4c2.8,0.8,4.6,2.4,7.4,5.3c6,5.9,10.2,10.8,10.8,11.5
-		c3.5,3.9,9.3,8.7,19.9,11.7"/>
-	<path class="baker-line" d="M875.8,362.4c-0.5-10.5-1.5-25.1-3.4-42.5c-2.3-21.7-4.1-38.2-8.6-58.1c-4.4-19.6-12.5-53.7-36-87.8
+		c2.3,3.9,6,9.5,12.3,17.9" />
+						<path class="baker-line" d="M1324.8,201.6c-2.5,6.4-4,12.1-5,16.6c-1.1,5.2-2.6,12.3-2.3,21.3c0.1,2.6,0.2,2.4,1.4,14.2
+		c0.8,7.7,1.2,12.4,1.4,14.6c0.7,7.1,2.3,19.6,6.3,43.6" />
+						<path class="baker-line" d="M1304,231c0.7,3.5,1.8,9.1,3.5,16.1c2.6,10.8,3.7,13.3,4.7,20.3c1,7.3-0.2,4.4,0.9,17.3
+		c0.4,5,0.9,9.5-1.8,13.5c-0.9,1.3-2,2.2-2.7,2.8" />
+						<line class="baker-line" x1="1264.6" y1="240" x2="1286" y2="251.1" />
+						<line class="baker-line" x1="1378.6" y1="183.2" x2="1359.4" y2="198.1" />
+						<line class="baker-line" x1="1388.4" y1="186" x2="1399.6" y2="182.9" />
+						<path class="baker-line" d="M1409.1,240c4.3-1,9.5-2.5,15.1-5c8-3.6,14.1-7.9,18.5-11.5" />
+						<path class="baker-line"
+							d="M1444.1,203.3c-1.7,0.3-4.3,0.8-7.2,2.2c-3.1,1.4-4.2,2.6-6.7,3.8c-2.1,1-5.3,2.1-10.1,2.1" />
+						<path class="baker-line" d="M1435.2,180.3c2.1-1,6.2-2.7,10.6-1.4c2.8,0.8,4.6,2.4,7.4,5.3c6,5.9,10.2,10.8,10.8,11.5
+		c3.5,3.9,9.3,8.7,19.9,11.7" />
+						<path class="baker-line" d="M875.8,362.4c-0.5-10.5-1.5-25.1-3.4-42.5c-2.3-21.7-4.1-38.2-8.6-58.1c-4.4-19.6-12.5-53.7-36-87.8
 		c-11.6-16.8-19.5-22.9-22-24.7c-11.4-8.4-30.5-17.5-47.9-19.2c-4.8-0.5-10.3-0.4-17.3-3.6c-6.8-3.1-8.2-6.2-13.6-6.7
-		c-2.8-0.3-5,0.3-15.1,4.7c-4.3,1.9-9.5,4.1-15.4,6.9"/>
-	<path class="baker-line" d="M721.2,135.4c-18.7,3.3-32.1,9.7-40.6,14.6c-14.5,8.4-24.2,19-43.7,40.1c-12.4,13.5-19,20.7-26.4,32.4
-		c-7,11.1-11.4,21-17.1,33.8c-5.6,12.7-9.7,23.5-12.5,31.2"/>
-	<path class="baker-line" d="M576,302.9c-0.5,4.9-1.2,10.4-2.1,16.2c-1.3,8-2.7,15.2-4.2,21.5"/>
-	<path class="baker-line" d="M539.4,574c-3.9,46.1-7.6,66.7-10.7,75.7c-1.2,3.6-4.2,10.8-2,18.9c1.3,4.6,3.4,6.3,4.2,11.8
-		c0.2,1.2,0.6,4.7-1.5,13.8c-2.9,12.2-5.4,13.1-6.7,22c-0.7,5.4,0.1,5.4-0.5,13.5c-0.7,8-2,13.9-2.7,16.9c-2.5,11-8.9,42-17.6,84.4"
-		/>
-	<path class="baker-line" d="M560,384.4c0.2,5.8,0.5,10.6,0.8,13.8c0.6,7.7,1.2,10.9-0.9,14c-1.7,2.7-3.6,2.7-5.8,4.7
-		c-5.9,5.4-4.2,16.2-3.8,19.4c1.1,9.5,0.1,26.9-7.4,61.2"/>
-	<path class="baker-line" d="M881,440.7c0.9,5.5,1.7,11.3,2.2,17.5c0.9,9.9,1.2,19.1,1,27.5"/>
-	<line class="baker-line" x1="891.3" y1="460.2" x2="896.3" y2="511.5"/>
-	<path class="baker-line" d="M905.5,505c1.1,4.2,2.2,8.8,2.9,13.9c1.3,8.7,1.6,16.5,1.4,23.2"/>
-	<path class="baker-line" d="M935,659.4c1.1-11.2,1.3-20.3,1.3-26.6c-0.1-7.7-0.4-9.6-0.3-18.4c0.1-9.2,0.6-11,0.5-19.2
-		c-0.1-7.3-0.1-11.5-1.2-17c-1.3-7-3.1-10.1-4.8-15.1c-2-6-3.8-14.9-2.7-27.3"/>
-	<path class="baker-line" d="M910.1,630.9c1.6,9,3.8,22.1,6.5,38c3.1,18.7,0.9,5.7,4.1,24.7c5.5,32.7,6.1,35.3,5.5,42
-		c-0.8,8.5-2.5,11.4-3.3,23.8c-0.5,8.7-0.2,15.4,0,18.7c0.9,15.3,3.7,58.1,7.9,115.7"/>
-	<path class="baker-line" d="M673.2,241.1c6.3-11.1,13.4-17.1,18.7-20.5c4.1-2.6,5.5-2.6,16.8-8.6c13.4-7.1,12.8-7.8,16.4-8.8
+		c-2.8-0.3-5,0.3-15.1,4.7c-4.3,1.9-9.5,4.1-15.4,6.9" />
+						<path class="baker-line" d="M721.2,135.4c-18.7,3.3-32.1,9.7-40.6,14.6c-14.5,8.4-24.2,19-43.7,40.1c-12.4,13.5-19,20.7-26.4,32.4
+		c-7,11.1-11.4,21-17.1,33.8c-5.6,12.7-9.7,23.5-12.5,31.2" />
+						<path class="baker-line" d="M576,302.9c-0.5,4.9-1.2,10.4-2.1,16.2c-1.3,8-2.7,15.2-4.2,21.5" />
+						<path class="baker-line"
+							d="M539.4,574c-3.9,46.1-7.6,66.7-10.7,75.7c-1.2,3.6-4.2,10.8-2,18.9c1.3,4.6,3.4,6.3,4.2,11.8
+		c0.2,1.2,0.6,4.7-1.5,13.8c-2.9,12.2-5.4,13.1-6.7,22c-0.7,5.4,0.1,5.4-0.5,13.5c-0.7,8-2,13.9-2.7,16.9c-2.5,11-8.9,42-17.6,84.4" />
+						<path class="baker-line" d="M560,384.4c0.2,5.8,0.5,10.6,0.8,13.8c0.6,7.7,1.2,10.9-0.9,14c-1.7,2.7-3.6,2.7-5.8,4.7
+		c-5.9,5.4-4.2,16.2-3.8,19.4c1.1,9.5,0.1,26.9-7.4,61.2" />
+						<path class="baker-line" d="M881,440.7c0.9,5.5,1.7,11.3,2.2,17.5c0.9,9.9,1.2,19.1,1,27.5" />
+						<line class="baker-line" x1="891.3" y1="460.2" x2="896.3" y2="511.5" />
+						<path class="baker-line" d="M905.5,505c1.1,4.2,2.2,8.8,2.9,13.9c1.3,8.7,1.6,16.5,1.4,23.2" />
+						<path class="baker-line" d="M935,659.4c1.1-11.2,1.3-20.3,1.3-26.6c-0.1-7.7-0.4-9.6-0.3-18.4c0.1-9.2,0.6-11,0.5-19.2
+		c-0.1-7.3-0.1-11.5-1.2-17c-1.3-7-3.1-10.1-4.8-15.1c-2-6-3.8-14.9-2.7-27.3" />
+						<path class="baker-line" d="M910.1,630.9c1.6,9,3.8,22.1,6.5,38c3.1,18.7,0.9,5.7,4.1,24.7c5.5,32.7,6.1,35.3,5.5,42
+		c-0.8,8.5-2.5,11.4-3.3,23.8c-0.5,8.7-0.2,15.4,0,18.7c0.9,15.3,3.7,58.1,7.9,115.7" />
+						<path class="baker-line" d="M673.2,241.1c6.3-11.1,13.4-17.1,18.7-20.5c4.1-2.6,5.5-2.6,16.8-8.6c13.4-7.1,12.8-7.8,16.4-8.8
 		c10.4-2.9,20,1.6,29.9,6.1c2.3,1,12.3,5.8,25.4,17.1c23.6,20.4,35.8,43.8,37.4,52.2c0.1,0.6,0.5,2.6,1.6,5
-		c2.3,4.9,6.1,8.2,9.5,10.4"/>
-	<path class="baker-line" d="M708.8,228c-6.9,5.2-15.6,12.3-24.8,21.6c0,0-16.6,16.9-28.7,36.5c-14.2,22.9-19.7,48.5-27,111.4
-		c-3,25.5-6.3,57.4-9.1,94.4"/>
-	<line class="baker-line" x1="806.3" y1="161.8" x2="782" y2="205.5"/>
-	<path class="baker-line" d="M651.2,196.4c-0.3,7.2-0.3,15,0,23.3c0.5,12.1,1.8,23.2,3.4,33.1"/>
-	<path class="baker-line" d="M679.8,159.4c1.6,5.6,3.1,11.7,4.3,18.2c2.7,15.2,3.2,28.9,2.6,40.3"/>
-	<path class="baker-line" d="M717.4,154.1c-2.1,7.6-4.1,16.1-5.7,25.5c-1.5,8.9-2.4,17.1-2.9,24.7"/>
-	<path class="baker-line" d="M767.1,145c-2.7,6.7-5.3,13.9-7.7,21.6c-3.6,11.4-6.3,22.1-8.3,32"/>
-	<line class="baker-line" x1="845.3" y1="224.6" x2="817.5" y2="260.7"/>
-	<path class="baker-line" d="M586.7,608.3c-0.2,3.8-0.7,9.5-1.6,16.4c-1.2,9.5-2,12.5-2.9,18.8c-1.7,11.7-0.7,15-1.4,33.5
-		c-0.2,5.9-0.7,14.5-1.6,25"/>
-	<path class="baker-line" d="M629.6,485.8c15.6,2,28.4,3.1,37.4,3.8c6.8,0.5,14.2,1,14.2,1.4c0,0.8-19.2,0.4-19.2,1.2
-		c-0.1,1.3,55.6,5.1,110.9,5.3c13.7,0,31-0.1,53.3-3.1c13-1.7,23.6-3.9,31-5.5"/>
-	<line class="baker-line" x1="613.1" y1="602.4" x2="871" y2="589.5"/>
-	<path class="baker-line" d="M716.7,557.2c20.9-3.3,37.4-3.6,48.8-3.2c8.4,0.3,18.1,1,33,0.5c10.2-0.4,18.6-1.2,24.1-1.9"/>
-	<path class="baker-line" d="M705.4,661c15,0.2,36.5-0.3,62.4-3.4c17.1-2,25.6-4,47-7.1c15.8-2.3,37.6-5.1,64.2-7.3"/>
-	<line class="baker-line" x1="819.9" y1="759.8" x2="903.2" y2="743.2"/>
-	<line class="baker-line" x1="796.1" y1="804.3" x2="873.4" y2="795.2"/>
-	<line class="baker-line" x1="663.9" y1="731.1" x2="737.6" y2="728.9"/>
-	<line class="baker-line" x1="658.4" y1="837.9" x2="762.5" y2="825.6"/>
-	<line class="baker-line" x1="656.7" y1="933.6" x2="767.1" y2="926.4"/>
-	<line class="baker-line" x1="858.5" y1="920.8" x2="890" y2="913"/>
-	<path class="baker-line" d="M675.7,145c-1-2.2-2.6-5.4-5.4-8.6c-5-5.7-10.6-7.9-18.7-11.5c-6.6-2.9-13-6.3-19.7-9.1
+		c2.3,4.9,6.1,8.2,9.5,10.4" />
+						<path class="baker-line" d="M708.8,228c-6.9,5.2-15.6,12.3-24.8,21.6c0,0-16.6,16.9-28.7,36.5c-14.2,22.9-19.7,48.5-27,111.4
+		c-3,25.5-6.3,57.4-9.1,94.4" />
+						<line class="baker-line" x1="806.3" y1="161.8" x2="782" y2="205.5" />
+						<path class="baker-line" d="M651.2,196.4c-0.3,7.2-0.3,15,0,23.3c0.5,12.1,1.8,23.2,3.4,33.1" />
+						<path class="baker-line"
+							d="M679.8,159.4c1.6,5.6,3.1,11.7,4.3,18.2c2.7,15.2,3.2,28.9,2.6,40.3" />
+						<path class="baker-line"
+							d="M717.4,154.1c-2.1,7.6-4.1,16.1-5.7,25.5c-1.5,8.9-2.4,17.1-2.9,24.7" />
+						<path class="baker-line" d="M767.1,145c-2.7,6.7-5.3,13.9-7.7,21.6c-3.6,11.4-6.3,22.1-8.3,32" />
+						<line class="baker-line" x1="845.3" y1="224.6" x2="817.5" y2="260.7" />
+						<path class="baker-line" d="M586.7,608.3c-0.2,3.8-0.7,9.5-1.6,16.4c-1.2,9.5-2,12.5-2.9,18.8c-1.7,11.7-0.7,15-1.4,33.5
+		c-0.2,5.9-0.7,14.5-1.6,25" />
+						<path class="baker-line" d="M629.6,485.8c15.6,2,28.4,3.1,37.4,3.8c6.8,0.5,14.2,1,14.2,1.4c0,0.8-19.2,0.4-19.2,1.2
+		c-0.1,1.3,55.6,5.1,110.9,5.3c13.7,0,31-0.1,53.3-3.1c13-1.7,23.6-3.9,31-5.5" />
+						<line class="baker-line" x1="613.1" y1="602.4" x2="871" y2="589.5" />
+						<path class="baker-line"
+							d="M716.7,557.2c20.9-3.3,37.4-3.6,48.8-3.2c8.4,0.3,18.1,1,33,0.5c10.2-0.4,18.6-1.2,24.1-1.9" />
+						<path class="baker-line"
+							d="M705.4,661c15,0.2,36.5-0.3,62.4-3.4c17.1-2,25.6-4,47-7.1c15.8-2.3,37.6-5.1,64.2-7.3" />
+						<line class="baker-line" x1="819.9" y1="759.8" x2="903.2" y2="743.2" />
+						<line class="baker-line" x1="796.1" y1="804.3" x2="873.4" y2="795.2" />
+						<line class="baker-line" x1="663.9" y1="731.1" x2="737.6" y2="728.9" />
+						<line class="baker-line" x1="658.4" y1="837.9" x2="762.5" y2="825.6" />
+						<line class="baker-line" x1="656.7" y1="933.6" x2="767.1" y2="926.4" />
+						<line class="baker-line" x1="858.5" y1="920.8" x2="890" y2="913" />
+						<path class="baker-line" d="M675.7,145c-1-2.2-2.6-5.4-5.4-8.6c-5-5.7-10.6-7.9-18.7-11.5c-6.6-2.9-13-6.3-19.7-9.1
 		c-26.6-11.6-28.9-15.7-47.3-22.2c-1.9-0.7-8.8-2.6-22.7-6.5c-41.2-11.5-39.8-10.6-53.3-14.8c-20.3-6.2-22.7-8-35.6-10.8
-		c-12.2-2.6-22.4-3.8-29.4-4.3"/>
-	<path class="baker-line" d="M133.8,218.4c9.4-10,22.9-23.4,40.7-37.7c4.1-3.3,18.2-14.5,51.6-35c30.9-19,63.5-39.1,100.8-54
-		c5.7-2.3,26.9-10.6,49.4-17.8c6.7-2.1,9.2-2.8,18.2-5.8c15.9-5.2,19.8-7,27.6-8.6c5-1.1,12.2-2.3,21.4-2.4"/>
-	<path class="baker-line" d="M2,407.6c1.5-5.8,3.7-13.4,7-22.3c6.2-16.9,12.7-29,18-38.6c5.7-10.4,12.8-23.3,24-37.9
-		c10.7-13.9,20.1-22.7,26.6-29c13.7-13.2,33-33.1,56.3-61.2"/>
-	<path class="baker-line" d="M233.3,392.5c7.8,1.5,19,3.6,32.7,5.6c18.9,2.8,31.8,3.9,52.6,5.8c58.2,5.3,47.9,4.7,73.8,6.8
-		c19,1.5,42.3,3.3,69.1,4.9"/>
-	<path class="baker-line" d="M302.1,435.9c8.2,2,19.5,4.6,33.1,6.8c16.8,2.8,30.5,4,44.5,5c36.6,2.6,72,3.3,93.7,3.4"/>
-	<path class="baker-line" d="M211.2,492.8c7.8,1.2,20.1,3,35.3,4.6c6.1,0.6,24.6,2.4,79.9,3.6c39.2,0.9,35.2,0.1,47.6,1
-		c14.6,1,25.8,2.5,43.2,1.7c10.3-0.5,18.7-1.5,24.3-2.4"/>
-	<path class="baker-line" d="M330.8,541.9c3.7,0,8.2,0.2,13.2,1.3c4,0.8,6.9,1.8,7.4,2c15.7,5.3,131.2,8,158.9,9c9.6,0.3,25.2,1.1,44.7,2.9
-		"/>
-	<path class="baker-line" d="M396.1,647.6c19.7-2.5,41.3-4.2,64.6-4.5c12.1-0.1,23.6,0.1,34.7,0.7"/>
-	<path class="baker-line" d="M75.3,422.8c28.4-15.2,60.5-30.4,96.2-44.5c23.5-9.3,46.1-17.1,67.5-23.8"/>
-	<path class="baker-line" d="M41.8,511.4c0.9-6.2,2.4-13.3,4.9-21.1c2-6.3,4.3-11.9,6.6-16.7"/>
-</g>
-</svg>
-		</div>
-	</section>
-	<section class="second">
-		<div class="production">
-			<div class="prod-menu">
-				<div class="menu">
-					<a class="link-style" href="catalog.html#bun">
-						<img class="menu-img-bun" src="images/bun.png" alt="bun">
-						<h2 class="buns-link">Булочні&nbspвироби</h2>
-					</a>
+		c-12.2-2.6-22.4-3.8-29.4-4.3" />
+						<path class="baker-line" d="M133.8,218.4c9.4-10,22.9-23.4,40.7-37.7c4.1-3.3,18.2-14.5,51.6-35c30.9-19,63.5-39.1,100.8-54
+		c5.7-2.3,26.9-10.6,49.4-17.8c6.7-2.1,9.2-2.8,18.2-5.8c15.9-5.2,19.8-7,27.6-8.6c5-1.1,12.2-2.3,21.4-2.4" />
+						<path class="baker-line" d="M2,407.6c1.5-5.8,3.7-13.4,7-22.3c6.2-16.9,12.7-29,18-38.6c5.7-10.4,12.8-23.3,24-37.9
+		c10.7-13.9,20.1-22.7,26.6-29c13.7-13.2,33-33.1,56.3-61.2" />
+						<path class="baker-line" d="M233.3,392.5c7.8,1.5,19,3.6,32.7,5.6c18.9,2.8,31.8,3.9,52.6,5.8c58.2,5.3,47.9,4.7,73.8,6.8
+		c19,1.5,42.3,3.3,69.1,4.9" />
+						<path class="baker-line"
+							d="M302.1,435.9c8.2,2,19.5,4.6,33.1,6.8c16.8,2.8,30.5,4,44.5,5c36.6,2.6,72,3.3,93.7,3.4" />
+						<path class="baker-line" d="M211.2,492.8c7.8,1.2,20.1,3,35.3,4.6c6.1,0.6,24.6,2.4,79.9,3.6c39.2,0.9,35.2,0.1,47.6,1
+		c14.6,1,25.8,2.5,43.2,1.7c10.3-0.5,18.7-1.5,24.3-2.4" />
+						<path class="baker-line" d="M330.8,541.9c3.7,0,8.2,0.2,13.2,1.3c4,0.8,6.9,1.8,7.4,2c15.7,5.3,131.2,8,158.9,9c9.6,0.3,25.2,1.1,44.7,2.9
+		" />
+						<path class="baker-line"
+							d="M396.1,647.6c19.7-2.5,41.3-4.2,64.6-4.5c12.1-0.1,23.6,0.1,34.7,0.7" />
+						<path class="baker-line"
+							d="M75.3,422.8c28.4-15.2,60.5-30.4,96.2-44.5c23.5-9.3,46.1-17.1,67.5-23.8" />
+						<path class="baker-line" d="M41.8,511.4c0.9-6.2,2.4-13.3,4.9-21.1c2-6.3,4.3-11.9,6.6-16.7" />
+					</g>
+				</svg>
+			</div>
+		</section>
+		<section class="second">
+			<div class="production">
+				<div class="prod-menu">
+					<div class="menu">
+						<a class="link-style" href="catalog.html#bun">
+							<img class="menu-img-bun" src="images/bun.png" alt="bun">
+							<h2 class="buns-link">Булочні&nbspвироби</h2>
+						</a>
+					</div>
+					<div class="menu bread-menu-link">
+						<a class="link-style" href="catalog.html#bread">
+							<img class="menu-img" src="images/bread.png" alt="bread">
+							<h1 class="bread-link">Хліб</h1>
+						</a>
+					</div>
+					<div class="menu">
+						<a class="link-style" href="catalog.html#other">
+							<img class="menu-img" src="images/other.png" alt="other">
+							<h3 class="other-link">Хлібобулочні вироби</h3>
+						</a>
+					</div>
 				</div>
-				<div class="menu bread-menu-link">
-					<a class="link-style" href="catalog.html#bread">
-						<img class="menu-img" src="images/bread.png" alt="bread">
-						<h1 class="bread-link">Хліб</h1>
-					</a>
-				</div>
-				<div class="menu">
-					<a class="link-style" href="catalog.html#other">
-						<img class="menu-img" src="images/other.png" alt="other">
-						<h3 class="other-link">Хлібобулочні вироби</h3>
-					</a>
+				<div class="prod-link">
+					<a href="catalog.html" class="botton-prod">ПРОДУКЦІЯ</a>
 				</div>
 			</div>
-			<div class="prod-link">
-				<a href="catalog.html" class="botton-prod">ПРОДУКЦІЯ</a>
+			<div class="property">
+				<div class="property-setup">
+					<img class="quality-img" width="130" height="130" src="images/okay-chaf.svg" alt="quality">
+					<p class="quality-text">Якість</p>
+				</div>
+				<div class="property-setup">
+					<img class="care-img" width="130" height="130" src="images/heart.svg" alt="care">
+					<p class="care-text">Турбота</p>
+				</div>
+				<div class="property-setup">
+					<img class="natural-img" width="130" height="130" src="images/gmo.svg" alt="natural">
+					<p class="natural-text">Натуральність</p>
+				</div>
+				<div class="property-setup">
+					<img class="fresh-img" width="130" height="130" src="images/fresh-bread.svg" alt="fresh">
+					<p class="fresh-text">Завжди&nbspсвіже</p>
+				</div>
 			</div>
-		</div>
-		<div class="property">
-			<div class="property-setup">
-				<img class="quality-img" width="130" height="130" src="images/okay-chaf.svg" alt="quality">
-				<p class="quality-text">Якість</p>
-			</div>
-			<div class="property-setup">
-				<img class="care-img" width="130" height="130" src="images/heart.svg" alt="care">
-				<p class="care-text">Турбота</p>
-			</div>
-			<div class="property-setup">
-				<img class="natural-img" width="130" height="130" src="images/gmo.svg" alt="natural">
-				<p class="natural-text">Натуральність</p>
-			</div>
-			<div class="property-setup">
-				<img class="fresh-img" width="130" height="130" src="images/fresh-bread.svg" alt="fresh">
-				<p class="fresh-text">Завжди&nbspсвіже</p>
-			</div>
-		</div>
-	</section>
+		</section>
 	</main>
 	<footer>
 		<section class="footer">
@@ -1489,10 +1661,11 @@ nav {
 				<a href="index.html"><img class="footer-logo" src="images/logo.svg" alt="Сіль Землі"></a>
 			</div>
 			<p class="address">
-				Міні-пекарня:</br>«Сіль Землі»</br>Україна, Закарпатська обл., смт. Буштино,</br>№1 - вул. Заводська, 13,</br>№2 - вул. Б. Хмельницького, 4.</br>© «Сіль Землі» 2019. Всі права захищені.
+				Міні-пекарня:</br>«Сіль Землі»</br>Україна, Закарпатська обл., смт. Буштино,</br>№1 - вул. Заводська,
+				13,</br>№2 - вул. Б. Хмельницького, 4.</br>© «Сіль Землі» 2020. Всі права захищені.
 			</p>
 			<div class="social-link">
-				<a class="email-link" href="mailto:ivanovichsb@gmail.com" target="_blank">email</a>
+				<a class="email-link" href="mailto:silzemli111@gmail.com" target="_blank">email</a>
 				<div class="social-icons">
 					<a href="https://www.instagram.com/sil.zemli/" target="_blank" rel="noopener">
 						<img width="20" height="20" src="images/instagram.svg" alt="instagram">
@@ -1525,51 +1698,99 @@ nav {
 			rootMargin: '0px',
 			threshold: 1.0
 		}
-		let callback = function(entries, observer) { 
-	
+		let callback = function (entries, observer) {
+
 			for (entry of entries) {
-			// console.log(entry);
-	
-			if (entry.isIntersecting) {
-				document.getElementById('line').style.display = 'block';
-				document.getElementById('line2').style.display = 'block';
-				document.getElementById('line3').style.display = 'block';
-				document.getElementById('line4').style.display = 'block';
-			} else {
-				document.getElementById('line').style.display = 'none';
-				document.getElementById('line2').style.display = 'none';
-				document.getElementById('line3').style.display = 'none';
-				document.getElementById('line4').style.display = 'none';
+				// console.log(entry);
+
+				if (entry.isIntersecting) {
+					document.getElementById('line').style.display = 'block';
+					document.getElementById('line2').style.display = 'block';
+					document.getElementById('line3').style.display = 'block';
+					document.getElementById('line4').style.display = 'block';
+				} else {
+					document.getElementById('line').style.display = 'none';
+					document.getElementById('line2').style.display = 'none';
+					document.getElementById('line3').style.display = 'none';
+					document.getElementById('line4').style.display = 'none';
+				}
 			}
 		}
-		}
-	
+
 		let observer = new IntersectionObserver(callback, options);
 		observer.observe(document.querySelector('.bread-line'));
-	
-	
-		let callbackText = function(entries, observerText) { 
-	
+
+
+		let callbackText = function (entries, observerText) {
+
 			for (entry of entries) {
-	
-			if (entry.isIntersecting) {
-				document.querySelector('.quality-text').classList.add('tracking-in-expand');
-				document.querySelector('.care-text').classList.add('tracking-in-expand');
-				document.querySelector('.natural-text').classList.add('tracking-in-expand');
-				document.querySelector('.fresh-text').classList.add('tracking-in-expand');
-			} else {
-				document.querySelector('.quality-text').classList.remove('tracking-in-expand');
-				document.querySelector('.care-text').classList.remove('tracking-in-expand');
-				document.querySelector('.natural-text').classList.remove('tracking-in-expand');
-				document.querySelector('.fresh-text').classList.remove('tracking-in-expand');
+
+				if (entry.isIntersecting) {
+					document.querySelector('.quality-text').classList.add('tracking-in-expand');
+					document.querySelector('.care-text').classList.add('tracking-in-expand');
+					document.querySelector('.natural-text').classList.add('tracking-in-expand');
+					document.querySelector('.fresh-text').classList.add('tracking-in-expand');
+				} else {
+					document.querySelector('.quality-text').classList.remove('tracking-in-expand');
+					document.querySelector('.care-text').classList.remove('tracking-in-expand');
+					document.querySelector('.natural-text').classList.remove('tracking-in-expand');
+					document.querySelector('.fresh-text').classList.remove('tracking-in-expand');
+				}
 			}
 		}
-		}
-	
+
 		let observerText = new IntersectionObserver(callbackText, options);
 		observerText.observe(document.querySelector('.property'));
 	</script>
-
+	<!-- <script type="application/ld+json">
+		{
+		  "@context": "https://schema.org",
+		  "@type": "Bakery",
+		  "image": [
+			"https://silzemli.com.ua/screma-prew.png"
+		   ],
+		  "@id": "https://silzemli.com.ua",
+		  "name": "Сіль Землі",
+		  "address": {
+			"@type": "PostalAddress",
+			"streetAddress": "вул. Заводська 13",
+			"addressLocality": "смт. Буштино",
+			"addressRegion": "Закарпатська обл.",
+			"postalCode": "90556",
+			"addressCountry": "UA"
+		  },
+		  "geo": {
+			"@type": "GeoCoordinates",
+			"latitude": 48.0604883,
+			"longitude": 23.4911417
+		  },
+		  "url": "https://silzemli.com.ua",
+		  "telephone": "+380673102145",
+		  "openingHoursSpecification": [{
+			"@type": "OpeningHoursSpecification",
+			"dayOfWeek": [
+			  "Monday",
+			  "Tuesday",
+			  "Wednesday",
+			  "Thursday",
+			  "Friday",
+			  "Saturday"
+			],
+			"opens": "00:00",
+			"closes": "23:59"
+		  },{
+			"@type": "OpeningHoursSpecification",
+			"dayOfWeek": "Sunday",
+			"opens": "10:00",
+			"closes": "23:59"
+		  }],
+		  "sameAs": [
+		  "https://m.facebook.com/Пекарня-Сіль-Землі-799960886817298/",
+		  "https://www.instagram.com/sil.zemli/"
+		],
+		  "menu": "https://silzemli.com.ua/catalog.html"
+		}
+		</script> -->
 </body>
 
 </html>
