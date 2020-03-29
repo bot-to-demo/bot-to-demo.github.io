@@ -1208,9 +1208,13 @@
 		}
 	}
 @media
-	
-		only screen and (min-device-pixel-ratio: 2.625) {
-		.main {
+only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 412px),
+only screen and (        min-device-pixel-ratio: 2)      and (min-width: 412px),
+only screen and (                min-resolution: 403dpi) and (min-width: 412px),
+only screen and (                min-resolution: 2.625dppx)  and (min-width: 412px) { 
+
+  /* Small screen, retina, stuff to override above media query */
+.main {
 			background-color:red;
 		}
 }
