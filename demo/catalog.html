@@ -3,7 +3,7 @@
 
 <head>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161766012-1"></script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-161766012-1"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
 
@@ -13,7 +13,7 @@
 		gtag('js', new Date());
 
 		gtag('config', 'UA-161766012-1');
-	</script> -->
+	</script>
 	<title>Продкція - Сіль Землі</title>
 	<meta charset="UTF-8">
 	<meta name="description" content="Приватна пекарня Сіль Землі, смт. Буштино. Хліб та хлібобулочні вироби.">
@@ -464,7 +464,6 @@
 	.product-navigation {
 		/* width: 100%; */
 		/* padding-top: 10%; */
-		line-height: 1;
 		height: 85vh;
 		background: url(images/catalog/back-min.png) no-repeat;
 		background-size: 100% 100%;
@@ -620,9 +619,19 @@
 		padding: 1rem;
 		margin: 1rem;
 		position: relative;
+		/* z-index: -999999; */
 		top: -300px;
 	}
 
+	/* .prod-box:hover {
+	background-color:#f37b03;
+	transition: 0.5s;
+}
+
+.prod-box:hover .prod-name {
+	color:#fffefd;
+	transition: 0.5s;
+} */
 
 	.prod-name {
 		color: #cc9933;
@@ -1128,31 +1137,30 @@
 
 	}
 
+		/* iPhone X ----------- */
+
+		@media
+		only screen and (min-device-width: 375px),
+		only screen and (min-device-height: 812px),
+		only screen and (orientation : portrait),
+		only screen and (-webkit-min-device-pixel-ratio: 3.0),
+		only screen and (        min-device-pixel-ratio: 3.0),
+		only screen and (                min-resolution: 458dpi),
+  		only screen and (                min-resolution: 3dppx) {
+		.prod-box {
+			line-height: 0.9em;
+			/* font-size: 0.8em; */
+		}
+
+		.prod-name {
+			margin-top: 0.5rem;
+			margin-bottom: 0.2rem;
+		}
+		}
+
 
 
 	@media all and (max-width: 500px) {
-
-
-
-		/* .svg-wrapper {
-			line-height: normal;
-		} */
-
-		/* .prod-name {
-			font-size: 1.1em;
-		} */
-
-		/* .prod-box {
-			     font-weight: 400;
-			color: lightcoral;
-			font-size: 0.7em;
-			line-height: 0.9em;
-			letter-spacing: normal;
-		} */
-
-
-
-
 
 		.main,
 		.about,
@@ -1199,30 +1207,6 @@
 
 		.svg-wrapper {
 			margin: 0;
-		}
-	}
-
-	/* iPhone X ----------- */
-
-	 @media
-		only screen and (min-device-width: 375px),
-		only screen and (min-device-height: 812px),
-		only screen and (orientation : portrait),
-		only screen and (-webkit-min-device-pixel-ratio: 3.0),
-		only screen and (        min-device-pixel-ratio: 3.0),
-		only screen and (                min-resolution: 458dpi),
-  		only screen and (                min-resolution: 3dppx) {
-		main {
-			background-color:rgb(163, 163, 163);
-		}
-		.prod-box {
-			line-height: 0.9em;
-			/* font-size: 0.8em; */
-		}
-
-		.prod-name {
-			margin-top: 0.5rem;
-			margin-bottom: 0.2rem;
 		}
 	}
 </style>
@@ -1509,7 +1493,7 @@
 							</a>
 							<p class="prod-name">Хліб «Смачний Заварний» формовий</p>
 							<p>Із пшеничного борошна вищого</br>гатунку. Без ГМО.
-								</br>Маса нетто: 13000 кг (+-5,5%).</p> <!-- delete 2,5 cache -->
+								</br>Маса нетто: 0.350 кг (+-2,5%).</p>
 						</div>
 					</svg>
 				</div>
@@ -1841,7 +1825,7 @@
 							</a>
 							<p class="prod-name">«Багет»</p>
 							<p>Із пшеничного борошна вищого</br>гатунку. Без ГМО.
-								</br>Маса нетто: 0,350 кг (+-5,5%).</p> <!-- delete 2,5 cache -->
+								</br>Маса нетто: 0,350 кг (+-2,5%).</p>
 						</div>
 					</svg>
 				</div>
