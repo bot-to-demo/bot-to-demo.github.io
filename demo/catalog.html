@@ -1209,11 +1209,9 @@
 	}
 @media
 	
-		only screen and (-webkit-min-device-pixel-ratio: 2) and (width: 375px),
-		only screen and (                min-resolution: 326dpi) and (width: 375px),
-  		only screen and (                min-resolution: 2dppx) and (width: 375px) {
-		main {
-			background-color:blue;
+		only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 375px) and (min-resolution: 326dpi) {
+		.main {
+			background-color:red;
 		}
 }
 
