@@ -162,9 +162,9 @@
 		display: block;
 	}
 
-	/* body {
+	body {
 		line-height: 1;
-	} */
+	}
 
 	ol,
 	ul {
@@ -615,12 +615,11 @@
 		font-family: 'Comfortaa', cursive;
 		font-size: 0.8em;
 		font-weight: bold;
-		/* line-height: 1.2em; */
+		line-height: 1.2em;
 		text-align: center;
 		padding: 1rem;
 		margin: 1rem;
 		position: relative;
-		/* z-index: -999999; */
 		top: -300px;
 	}
 
@@ -1203,13 +1202,7 @@
 		}
 	}
 
-	/* iPhone XR ----------- */
-
-	@media only screen and (min-device-width: 414px) {
-		.prod-box {
-			color: lightcoral;
-		}
-	}
+	/* iPhone X ----------- */
 
 	 @media
 		only screen and (min-device-width: 375px),
@@ -1220,29 +1213,18 @@
 		only screen and (                min-resolution: 458dpi),
   		only screen and (                min-resolution: 3dppx) {
 		main {
-			background-color:rgb(0, 149, 241);
+			background-color:rgb(163, 163, 163);
 		}
 		.prod-box {
-			color: rgb(58, 250, 0);
+			line-height: 0.9em;
+			/* font-size: 0.8em; */
+		}
+
+		.prod-name {
+			margin-top: 0.5rem;
+			margin-bottom: 0.2rem;
 		}
 	}
-
-	/* iPhone 6+, 7+, 8+ ----------- */
-	/* @media
-		only screen and (min-device-width: 414px),
-		only screen and (min-device-height: 736px),
-		only screen and (orientation : portrait),
-		only screen and (-webkit-min-device-pixel-ratio: 3.0),
-		only screen and (        min-device-pixel-ratio: 3.0),
-		only screen and (                min-resolution: 401dpi),
-  		only screen and (                min-resolution: 3.0dppx) {
-		main {
-			background-color:rgb(0, 149, 241);
-		}
-		.prod-box {
-			color: rgb(58, 250, 0);
-		}
-	} */
 </style>
 
 <body>
