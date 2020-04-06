@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /
+Host: https://bot-to-demo.github.io/demo/
+
+User-agent: YandexBot
+Disallow: /
+Host: https://bot-to-demo.github.io/demo/
