@@ -495,7 +495,7 @@ only screen and (min-resolution: 2dppx) and (max-width: 375px) {
 
     .connect {
         margin: 5px;
-        padding: 2px;
+        padding: 4px;
     }
 
     .acount-link {
