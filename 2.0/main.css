@@ -13,10 +13,6 @@ canvas {
     opacity: 0.2;
 }
 
-/* body {
-    margin: 0;
-} */
-
 .lol {
     position: absolute;
     top: 0;
@@ -24,25 +20,6 @@ canvas {
     left: 0;
     right: 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 header {
     position: absolute;
@@ -167,6 +144,10 @@ li:hover {
     text-shadow: none;
 }
 
+#portfolio {
+    color: rgb(255, 2, 2);
+}
+
 /* FOOTER */
 .connect {
     position: -webkit-sticky;
@@ -235,7 +216,7 @@ li:hover {
     50% {
         opacity: 1;
         transform: scale(1.2);
-}
+    }
 
     70% {
         opacity: 1;
@@ -384,7 +365,7 @@ li:hover {
     }
 }
 
- @media screen and (max-width: 895px) and (orientation: landscape) {
+@media screen and (max-width: 895px) and (orientation: landscape) {
     #logo {
         animation: logo-land 2s ease forwards 2.5s;
     }
@@ -413,7 +394,9 @@ li:hover {
         padding-top: 2px;
     }
 
-    #working-hard, #skills-hard, #not-working-hard {
+    #working-hard,
+    #skills-hard,
+    #not-working-hard {
         font-size: 1.2em;
         margin-top: 0.2rem;
     }

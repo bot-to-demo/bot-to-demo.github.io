@@ -20,7 +20,8 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.min.js"></script>
 	<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
-	<meta name="keywords" content="kapustiansky oleg, front-end, javascript, node.js, web-developer, Капустянский Олег Вадимович">
+	<meta name="keywords"
+		content="kapustiansky oleg, front-end, javascript, node.js, web-developer, Капустянский Олег Вадимович">
 	<meta name="description" content="Front-end, javascript, node.js, web-developer">
 	<meta charset="UTF-8">
 	<meta property="og:type" content="website">
@@ -101,36 +102,45 @@
 			<img data-src="images/not.svg" alt="my-not-working">
 			<pre id="not-working-hard"></pre>
 		</section>
+		<section class="not-working vertical-scrolling">
+			<header>
+				<!-- <h1>Капустянський Олег Вадимович</h1> -->
+			</header>
+			<img data-src="" alt="portfolio">
+			<pre id="portfolio"></pre>
+		</section>
 	</div>
 	<nav>
 		<ul class="navigate">
 			<li><a class="nav-link" id="working" href="#working">#
-w
-o
-r
-k
-i
-n
-g</a></li>
+					w
+					o
+					r
+					k
+					i
+					n
+					g</a></li>
 			<li><a class="nav-link" id="skills" href="#skills">#
-s
-k
-i
-l
-l
-s</a></li>
+					s
+					k
+					i
+					l
+					l
+					s</a></li>
 			<li><a class="nav-link" id="not-working" href="#not-working">#
-n
-o
-t
--
-w
-o
-r
-k
-i
-n
-g</a></li>
+					n
+					o
+					t
+					-
+					w
+					o
+					r
+					k
+					i
+					n
+					g</a></li>
+			<li><a class="nav-link" id="portfolio" href="#not-working">#
+?</a></li>
 		</ul>
 	</nav>
 	<footer class="connect" itemscope="" itemtype="http://schema.org/Person">
@@ -141,7 +151,8 @@ g</a></li>
 		<link itemprop="url" href="https://kapustiansky.tk">
 		<div class="social-cont">
 			<link itemprop="sameAs" href="https://www.linkedin.com/in/oleg-kapustiansky-b73303183/">
-			<a href="https://www.linkedin.com/in/oleg-kapustiansky-b73303183/" class="hover-img" target="_blank" rel="noopener">
+			<a href="https://www.linkedin.com/in/oleg-kapustiansky-b73303183/" class="hover-img" target="_blank"
+				rel="noopener">
 				<svg class="lin" viewBox="0 0 448 512">
 					<path fill="black"
 						d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z">
@@ -194,28 +205,28 @@ g</a></li>
 	</footer>
 	<script>
 		(function () {
-		
+
 			var canvas = document.querySelector('canvas');
 			var c = canvas.getContext('2d');
-		
+
 			canvas.width = window.innerWidth;
 			canvas.height = window.innerHeight;
-		
+
 			window.addEventListener('resize', function () {
 				canvas.width = window.innerWidth;
 				canvas.height = window.innerHeight;
-		
+
 				init();
 			});
-		
+
 			var mouse = {
 				x: undefined,
 				y: undefined
 			}
-		
+
 			var maxRadius = 40;
 			// minRadius = 2;
-		
+
 			var colorArray = [
 				'#248EA6',
 				'#25C7D9',
@@ -223,13 +234,13 @@ g</a></li>
 				'#F2762E',
 				'#F23030',
 			];
-		
+
 			window.addEventListener('mousemove', function (event) {
-					mouse.x = event.x;
-					mouse.y = event.y;
-					//console.log(mouse);
+				mouse.x = event.x;
+				mouse.y = event.y;
+				//console.log(mouse);
 			});
-		
+
 			function Circle(x, y, dx, dy, radius) {
 				this.x = x;
 				this.y = y;
@@ -237,15 +248,16 @@ g</a></li>
 				this.dy = dy;
 				this.radius = radius;
 				this.minRadius = radius;
-				this.color = colorArray[Math.floor(Math.random() * colorArray.length)]; //округляем рандомное число до целого значения
-		
+				this.color = colorArray[Math.floor(Math.random() * colorArray
+				.length)]; //округляем рандомное число до целого значения
+
 				this.draw = function () {
 					c.beginPath();
 					c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
 					c.fillStyle = this.color;
 					c.fill();
 				}
-		
+
 				this.update = function () {
 					if (this.x + this.radius > innerWidth || this.x - this.radius < 0) {
 						this.dx = -this.dx;
@@ -253,13 +265,14 @@ g</a></li>
 					if (this.y + this.radius > innerHeight || this.y - this.radius < 0) {
 						this.dy = -this.dy;
 					}
-		
+
 					this.x += this.dx;
 					this.y += this.dy;
-		
+
 					//interactiviti
-		
-					if (mouse.x - this.x < 50 && mouse.x - this.x > -50 && mouse.y - this.y < 50 && mouse.y - this.y > -
+
+					if (mouse.x - this.x < 50 && mouse.x - this.x > -50 && mouse.y - this.y < 50 && mouse.y - this.y >
+						-
 						50) { //финт ушами!
 						if (this.radius < maxRadius) {
 							this.radius += 1;
@@ -267,18 +280,18 @@ g</a></li>
 					} else if (this.radius > this.minRadius) {
 						this.radius -= 1; // исходя(после) из предыдущего условия, уменьшить радиус
 					}
-		
+
 					this.draw();
 				}
 			}
-		
-			
+
+
 			var circleArray = [];
-		
+
 			function init() {
-		
+
 				circleArray = []; //не дает запускать каждый цикл при динамическом расширении окна
-		
+
 				for (var i = 0; i < 650; i++) {
 					var radius = Math.random() * 3 + 1;
 					var x = Math.random() * (innerWidth - radius * 2) + radius;
@@ -288,24 +301,24 @@ g</a></li>
 					circleArray.push(new Circle(x, y, dx, dy, radius));
 				}
 			}
-		
+
 			function animate() {
 				requestAnimationFrame(animate);
-		
+
 				c.clearRect(0, 0, innerWidth, innerHeight);
-		
+
 				for (var i = 0; i < circleArray.length; i++) {
 					circleArray[i].update();
 				}
 			}
-		
+
 			init();
 			animate();
 		})();
-		</script>
+	</script>
 	<script>
 		(function () {
-			
+
 			history.pushState(null, document.title, window.location.pathname);
 
 			let clWork = document.querySelector('.working');
@@ -320,7 +333,7 @@ g</a></li>
 				sectionSelector: '.vertical-scrolling',
 				controlArrows: false,
 				lazyLoading: true,
-				anchors:['logo', 'working', 'skills', 'not-working']
+				anchors: ['logo', 'working', 'skills', 'not-working']
 			});
 
 			window.addEventListener('hashchange', (event) => {
@@ -475,14 +488,14 @@ g</a></li>
 					}
 				}
 
-				if (location.hash === '#logo') {						
-						clSkill.classList.remove('bounce');
-						clWork.classList.remove('bounce');
-						clNot.classList.remove('bounce');
+				if (location.hash === '#logo') {
+					clSkill.classList.remove('bounce');
+					clWork.classList.remove('bounce');
+					clNot.classList.remove('bounce');
 
-						idSkill.innerHTML = '';
-						idWork.innerHTML = '';
-						idNot.innerHTML = '';
+					idSkill.innerHTML = '';
+					idWork.innerHTML = '';
+					idNot.innerHTML = '';
 				}
 
 			});
