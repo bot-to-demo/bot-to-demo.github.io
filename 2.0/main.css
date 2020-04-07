@@ -156,8 +156,15 @@ li:hover {
     transform: translate(-3px, -3px);
 }
 
+
+
 .nav-link {
     color: black;
+}
+
+.nav-link:target {
+    color: rgba(114, 108, 108, 0.863);
+    text-shadow: none;
 }
 
 /* FOOTER */
