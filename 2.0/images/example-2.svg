@@ -5,11 +5,11 @@
 <style type="text/css">
 	@font-face {
 		font-family: 'Mansalva';
-		src: url(founts/Mansalva.ttf);
+		src: url(../founts/Mansalva.ttf);
 	}
 	@font-face {
 		font-family: 'ArchivoBlack';
-		src: url(founts/ArchivoBlack.ttf);
+		src: url(../founts/ArchivoBlack.ttf);
 	}
 	.st0{fill:#EF0F0F;}
 	.st1{font-family:'Archivo Black';}
