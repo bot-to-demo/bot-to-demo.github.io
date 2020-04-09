@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" itemscope itemtype="http://schema.org/WebPage" prefix="og: http://ogp.me/ns#">
+<html lang="en" prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
 
 <head>
 	<title>Kapustiansky Oleg</title>
@@ -7,16 +7,7 @@
 		<p>Your browser does not support scripts!</p>
 	</noscript> -->
 	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-150359996-1"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
 
-		function gtag() {
-			dataLayer.push(arguments);
-		}
-		gtag('js', new Date());
-		gtag('config', 'UA-150359996-1');
-	</script> -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.min.js"></script>
 	<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
@@ -102,12 +93,19 @@
 			<img data-src="images/not.svg" alt="my-not-working">
 			<pre id="not-working-hard"></pre>
 		</section>
-		<section class="portfolio vertical-scrolling">
+		<section style="opacity: 1;" class="portfolio vertical-scrolling">
 			<header>
-				<!-- <h1>Капустянський Олег Вадимович</h1> -->
+				<h1>Капустянський Олег Вадимович портфолио</h1>
 			</header>
-			<img data-src="" alt="portfolio">
-			<pre id="portfolio"></pre>
+			<a href="https://silzemli.com.ua/" target="_blank">
+				<img class="portfolio-img" data-src="images/example-1.svg" alt="example-1">
+			</a>
+			<a href="https://lolchatt.herokuapp.com" target="_blank">
+				<pre id="portfolio-hard">And visit my GitHub Pages</pre>
+			</a>
+			<a href="https://lolchatt.herokuapp.com" target="_blank">
+				<img class="portfolio-img" data-src="images/example-2.svg" alt="example-2">
+			</a>
 		</section>
 	</div>
 	<nav>
@@ -139,20 +137,14 @@ k
 i
 n
 g</a></li>
-<li><a class="nav-link" id="portfolio" href="#not-working">#
+<li><a class="nav-link" id="portfolio" href="#portfolio">#
 ?
 ?
 ?</a></li>
 		</ul>
 	</nav>
-	<footer class="connect" itemscope="" itemtype="http://schema.org/Person">
-		<meta itemprop="name" content="Oleg Kapustiansky">
-		<meta itemprop="knowsAbout" content="Front-end, javascript, full-stack, illustration, animation, UX, UI">
-		<meta itemprop="description" content="Front-end developer, full stack, coder, programer, mean">
-		<meta itemprop="image" content="https://kapustiansky.tk/social-preview.png">
-		<link itemprop="url" href="https://kapustiansky.tk">
+	<footer class="connect">
 		<div class="social-cont">
-			<link itemprop="sameAs" href="https://www.linkedin.com/in/oleg-kapustiansky-b73303183/">
 			<a href="https://www.linkedin.com/in/oleg-kapustiansky-b73303183/" class="hover-img" target="_blank"
 				rel="noopener">
 				<svg class="lin" viewBox="0 0 448 512">
@@ -167,7 +159,6 @@ g</a></li>
 			</a>
 		</div>
 		<div class="social-cont">
-			<link itemprop="sameAs" href="https://github.com/kapustiansky">
 			<a href="https://github.com/kapustiansky" class="hover-img" target="_blank" rel="noopener">
 				<svg class="gh" viewBox="0 0 496 512">
 					<path fill="black"
@@ -192,7 +183,6 @@ g</a></li>
 			</a>
 		</div>
 		<div class="social-cont">
-			<link itemprop="sameAs" href="https://t.me/oleg_kapustianky">
 			<a href="https://t.me/oleg_kapustianky" class="hover-img" target="_blank" rel="noopener">
 				<svg class="tg" width="50" height="50" viewBox="0 0 448 512">
 					<path fill="black"
