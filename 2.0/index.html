@@ -7,7 +7,16 @@
 		<p>Your browser does not support scripts!</p>
 	</noscript> -->
 	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-150359996-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
 
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+		gtag('config', 'UA-150359996-1');
+	</script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.min.js"></script>
 	<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
@@ -97,13 +106,13 @@
 				<h1>Капустянський Олег Вадимович портфолио</h1>
 			</header>
 			<a href="https://silzemli.com.ua/" target="_blank">
-				<img class="portfolio-img" data-src="images/example-1.svg" alt="example-1">
+				<img class="portfolio-img-1" data-src="images/example-1.svg" alt="example-1">
 			</a>
 			<a href="https://github.com/kapustiansky/kapustiansky.github.io" target="_blank">
-				<pre id="portfolio-hard">And visit my GitHub Pages</pre>
+				<pre id="portfolio-hard"></pre>
 			</a>
 			<a href="https://lolchatt.herokuapp.com" target="_blank">
-				<img class="portfolio-img" data-src="images/example-2.svg" alt="example-2">
+				<img class="portfolio-img-2" data-src="images/example-2.svg" alt="example-2">
 			</a>
 		</section>
 	</div>
@@ -315,10 +324,12 @@ g</a></li>
 			let clWork = document.querySelector('.working');
 			let clSkill = document.querySelector('.skills');
 			let clNot = document.querySelector('.not-working');
+			let clPortfolio = document.querySelector('.portfolio');
 
 			let idWork = document.querySelector('#working-hard');
 			let idSkill = document.querySelector('#skills-hard');
 			let idNot = document.querySelector('#not-working-hard');
+			let idPortfolio = document.querySelector('#portfolio-hard');
 
 			$('#fullpage').fullpage({
 				sectionSelector: '.vertical-scrolling',
@@ -334,6 +345,7 @@ g</a></li>
 					clWork.classList.add('bounce');
 					idSkill.innerHTML = '';
 					idNot.innerHTML = '';
+					idPortfolio.innerHTML = '';
 
 					function bounce() {
 						return new Promise((resolve) => {
@@ -376,6 +388,7 @@ g</a></li>
 					function bounceOff() {
 						clSkill.classList.remove('bounce');
 						clNot.classList.remove('bounce');
+						clPortfolio.classList.remove('bounce');
 						return false;
 					}
 				}
@@ -385,6 +398,7 @@ g</a></li>
 					clSkill.classList.add('bounce');
 					idWork.innerHTML = '';
 					idNot.innerHTML = '';
+					idPortfolio.innerHTML = '';
 
 					function bounce() {
 						return new Promise((resolve) => {
@@ -426,6 +440,7 @@ g</a></li>
 					function bounceOff() {
 						clWork.classList.remove('bounce');
 						clNot.classList.remove('bounce');
+						clPortfolio.classList.remove('bounce');
 						return false;
 					}
 				}
@@ -435,6 +450,7 @@ g</a></li>
 					clNot.classList.add('bounce');
 					idSkill.innerHTML = '';
 					idWork.innerHTML = '';
+					idPortfolio.innerHTML = '';
 
 					function bounce() {
 						return new Promise((resolve) => {
@@ -475,6 +491,49 @@ g</a></li>
 					function bounceOff() {
 						clSkill.classList.remove('bounce');
 						clWork.classList.remove('bounce');
+						clPortfolio.classList.remove('bounce');
+						return false;
+					}
+				}
+
+				if (location.hash === '#portfolio') {
+
+					clPortfolio.classList.add('bounce');
+					idSkill.innerHTML = '';
+					idNot.innerHTML = '';
+					idWork.innerHTML = '';
+
+					function bounce() {
+						return new Promise((resolve) => {
+
+							setTimeout(() => {
+								bounceOff();
+								resolve();
+							}, 200);
+						})
+						.then(writeText);
+					}
+
+					function writeText() {
+						return new Promise((resolve) => {
+							setTimeout(() => {
+									writeTextByJS(
+									"portfolio-hard",
+									[
+									"!..and visit my github pages..!"
+									]
+									);
+								
+							resolve();
+							}, 2000);
+						});
+					}
+					bounce();
+
+					function bounceOff() {
+						clSkill.classList.remove('bounce');
+						clNot.classList.remove('bounce');
+						clWork.classList.remove('bounce');
 						return false;
 					}
 				}
@@ -483,10 +542,12 @@ g</a></li>
 					clSkill.classList.remove('bounce');
 					clWork.classList.remove('bounce');
 					clNot.classList.remove('bounce');
+					clPortfolio.classList.remove('bounce');
 
 					idSkill.innerHTML = '';
 					idWork.innerHTML = '';
 					idNot.innerHTML = '';
+					idPortfolio.innerHTML = '';
 				}
 
 			});
