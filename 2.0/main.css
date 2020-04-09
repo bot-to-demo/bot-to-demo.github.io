@@ -1,3 +1,21 @@
+@font-face {
+    font-family: 'Mansalva';
+    src: url(founts/Mansalva.ttf);
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'Appetite';
+    src: url(founts/Appetite.ttf);
+    font-display: fallback;
+  }
+
+@font-face {
+    font-family: 'ArchivoBlack';
+    src: url(founts/ArchivoBlack.ttf);
+    font-display: fallback;
+  }
+
 * {
     padding: 0;
     margin: 0;
