@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 550 175" style="enable-background:new 0 0 550 175;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#EF0F0F;}
+	.st1{font-family:'Archivo Black';}
+	.st2{font-size:60.4865px;}
+	.st3{font-size:30.4431px;}
+	.st4{font-family:'Mansalva';}
+	.st5{font-size:22px;}
+</style>
+<g>
+	
+		<image style="overflow:visible;opacity:0.75;" width="294" height="69" xlink:href="10B396D7.png"  transform="matrix(1 0 0 1 5.24 12.64)">
+	</image>
+	<g>
+		<rect x="10.2" y="17.4" width="280.8" height="56"/>
+	</g>
+</g>
+<text transform="matrix(1 0 0 1 9.7205 65.2904)" class="st0 st1 st2">LolChatt</text>
+<text transform="matrix(1 0 0 1 310.6797 57.3179)" class="st0 st1 st3">Personal chat</text>
+<text transform="matrix(1 0 0 1 25.521 128.48)"><tspan x="0" y="0" class="st4 st5">Design, adaptive layout, database connection MongoDB.</tspan><tspan x="41.9" y="26" class="st4 st5">Personal server on Node.js, hosting on Heroku.</tspan></text>
+</svg>
