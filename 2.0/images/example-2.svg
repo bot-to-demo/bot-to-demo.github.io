@@ -5,7 +5,7 @@
 <style type="text/css">
 @font-face {
             font-family: 'Mansalva';
-            src: local('Mansalva');
+            src: url('https://fonts.googleapis.com/css2?family=Girassol&display=swap');
           }
 	.st0{fill:#EF0F0F;}
 	.st1{font-family:'Archivo Black';}
