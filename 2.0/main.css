@@ -516,18 +516,20 @@ li:hover {
     
     @keyframes slidein-3 { 
         to {
-            min-height: 23px;
+            min-height: 20px;
         }
     }
 
     img,
     .portfolio-img-1 {
         width: 240px;
+height: auto;
         margin-top: 0.1rem;
     }
 
     .portfolio-img-2 {
         width: 240px;
+height: auto;
     }
 }
 
