@@ -464,7 +464,7 @@ li:hover {
     
     @keyframes slidein-1 { 
         to {
-            min-height: 45px;
+            min-height: 42px;
         }
     }
 }
@@ -516,7 +516,7 @@ li:hover {
     
     @keyframes slidein-3 { 
         to {
-            min-height: 30px;
+            min-height: 28px;
         }
     }
 
@@ -593,7 +593,7 @@ li:hover {
     
     @keyframes slidein-2 { 
         to {
-            min-height: 35px;
+            min-height: 31px;
         }
     }
 }
