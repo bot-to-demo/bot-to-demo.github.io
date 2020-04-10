@@ -145,7 +145,7 @@ a {
 
 @keyframes slidein { 
     to {
-        min-height: 75px;
+        min-height: 5px;
     }
 }
 
