@@ -4,7 +4,7 @@
     font-display: fallback;
 }
 
-@font-face {
+/* @font-face {
     font-family: 'Appetite';
     src: url(founts/Appetite.ttf);
     font-display: fallback;
@@ -14,7 +14,7 @@
     font-family: 'ArchivoBlack';
     src: url(founts/ArchivoBlack.ttf);
     font-display: fallback;
-}
+} */
 
 * {
     padding: 0;
