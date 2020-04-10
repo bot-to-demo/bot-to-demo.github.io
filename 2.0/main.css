@@ -88,6 +88,9 @@ a {
 
 .fp-tableCell {
     text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 .working,
@@ -124,12 +127,26 @@ a {
 
 #portfolio-hard {
     margin-bottom: 2rem;
-    transition: .3s;
-    /* text-decoration: underline; */
+    transition: .6s;
+    min-height: 0;
 }
 
 #portfolio-hard:hover {
     text-shadow: none;
+    transform: scale(1.2);
+}
+
+.height-port-hard {
+    animation-duration: 1s;
+    animation-name: slidein;
+    animation-iteration-count: 1;
+    animation-delay: 1.5s;
+}
+
+@keyframes slidein { 
+    to {
+        min-height: 75px;
+    }
 }
 
 img {
@@ -164,12 +181,6 @@ img {
     75% {
         opacity: 0;
     }
-}
-
-.fp-tableCell {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
 }
 
 /* NAVIGATE */
@@ -446,6 +457,16 @@ li:hover {
         margin-left: 3rem;
         margin-right: 3rem;
     }
+
+    .height-port-hard {
+        animation-name: slidein-1;
+    }
+    
+    @keyframes slidein-1 { 
+        to {
+            min-height: 45px;
+        }
+    }
 }
 
 @media screen and (max-width: 895px) and (orientation: landscape) {
@@ -487,6 +508,16 @@ li:hover {
 
     #portfolio-hard {
         margin-bottom: 0;
+    }
+
+    .height-port-hard {
+        animation-name: slidein-3;
+    }
+    
+    @keyframes slidein-3 { 
+        to {
+            min-height: 30px;
+        }
     }
 
     img,
@@ -548,9 +579,22 @@ li:hover {
 
     #working-hard,
     #skills-hard,
-    #not-working-hard,
-    #portfolio-hard {
+    #not-working-hard {
         font-size: 1.6em;
+    }
+
+    #portfolio-hard {
+        font-size: 1.4em;
+    }
+
+    .height-port-hard {
+        animation-name: slidein-2;
+    }
+    
+    @keyframes slidein-2 { 
+        to {
+            min-height: 35px;
+        }
     }
 }
 
