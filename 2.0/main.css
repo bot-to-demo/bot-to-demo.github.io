@@ -144,7 +144,7 @@ img {
     width: 450px;
     height: 140px;
     margin-top: 1rem;
-    filter: drop-shadow(0 0 1px rgba(0, 0, 0, .8));
+    filter: drop-shadow(0 0 1px rgba(0, 0, 0, .4));
 }
 
 .portfolio-img-1:hover,
@@ -401,13 +401,13 @@ li:hover {
 
     .portfolio-img-1 {
         width: 320px;
-        height: 80px;
+        height: 98px;
         margin-top: 6rem;
     }
 
     .portfolio-img-2 {
         width: 320px;
-        height: 80px;
+        height: 97px;
         margin-top: 2rem;
     }
 
@@ -541,9 +541,9 @@ li:hover {
         height: 140px;
     }
 
-    .portfolio-img {
+    .portfolio-img-1, .portfolio-img-2 {
         width: 280px;
-        height: 70px;
+        height: auto;
     }
 
     #working-hard,
@@ -609,10 +609,12 @@ only screen and (min-resolution: 2dppx) and (max-width: 375px) {
     img,
     .portfolio-img-1 {
         width: 240px;
+        height: auto;
         margin-top: 4rem;
     }
 
     .portfolio-img-2 {
         width: 240px;
+        height: auto;
     }
 }
