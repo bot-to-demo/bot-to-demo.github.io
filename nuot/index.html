@@ -1,0 +1,367 @@
+<!DOCTYPE html><html lang="ua"><head>    <meta charset="UTF-8">    <meta http-equiv="X-UA-Compatible" content="IE=edge">    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <!-- Chrome, Firefox OS and Opera -->    <meta name="theme-color" content="#144563" />    <!-- iOS Safari -->    <meta name="apple-mobile-web-app-capable" content="yes" />    <meta name="apple-mobile-web-app-status-bar-style" content="#144563" />    <title>Nuot</title>    <link rel="shortcut icon" type="image/jpg" href="./images/favicon.ico" />    <!-- <link rel="stylesheet" href="./css/bootstrap-reboot.min.css"> -->    <link rel="stylesheet" href="./css/bootstrap.min.css">    <link rel="stylesheet" href="./css/swiper-bundle.min.css">    <link rel="stylesheet" href="./css/style.min.css"></head><body>    <!-- <script>        function testWebP(callback) {            var webP = new Image();            webP.onload = webP.onerror = function() {                callback(webP.height == 2);            };            webP.src =                'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';        }        testWebP(function(support) {            if (support == true) {                document.querySelector('body').classList.add('webp');            } else {                document.querySelector('body').classList.add('no-webp');            }        });    </script> -->    <header>        <div class="header__wrapper">
+    <div class="header__top custom__container">
+        <!-- <div class=""> -->
+        <div class="header__contacts">
+            <a href="tel:+380931074140" class="header__number _icon-tel"><span>+380 93 107 4 140</span></a>
+            <div class="header__time _icon-clock"><span>с 9.00 до 20.00</span></div>
+        </div>
+        <!-- </div> -->
+    </div>
+    <div class="header__bottom custom__container">
+        <!-- <div class=""> -->
+        <div class="header__body">
+            <!-- <button type="button" class="menu__icon icon-menu">
+                    <span></span>
+                    <span></span>
+                    Меню
+                </button> -->
+            <div class="header__main">
+                <div class="header__menu menu">
+                    <nav class="menu__list">
+                        <li class="menu__item female-anim">
+                            <a href="" class="menu__link menu__item-active">Женщины</a>
+                            <div class="menu__sub-wrapper custom__container">
+                                <hr>
+                                <div class="sub-column">
+                                    <div class="menu__sub-container">
+                                        <a href="" class="menu__sub-title">Одежда</a>
+                                        <ul class="menu__sub-list">
+                                            <li class="menu__sub-item"><a href="" class="menu__sub-link">Куртки /пальто</a></li>
+                                            <li class="menu__sub-item"><a href="" class="menu__sub-link">Костюмы</a></li>
+                                            <li class="menu__sub-item"><a href="" class="menu__sub-link">Футболки</a></li>
+                                            <li class="menu__sub-item"><a href="" class="menu__sub-link">Штаны /джинсы</a></li>
+                                            <li class="menu__sub-item"><a href="" class="menu__sub-link">Свитера /кофты</a></li>
+                                            <li class="menu__sub-item"><a href="" class="menu__sub-link">Шорты /юбки </a></li>
+                                            <li class="menu__sub-item"><a href="" class="menu__sub-link">Платья</a></li>
+                                            <li class="menu__sub-item"><a href="" class="menu__sub-link">Пижамы</a></li>
+                                            <li class="menu__sub-item"><a href="" class="menu__sub-link">Шорты</a></li>
+                                            <li class="menu__sub-item"><a href="" class="menu__sub-link">Нижнее белье</a></li>
+                                            <li class="menu__sub-item"><a href="" class="menu__sub-link">Вся одежда</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="menu__sub-container">
+                                        <a href="" class="menu__sub-title">Аксессуары</a>
+                                        <ul class="menu__sub-list">
+                                            <li class="menu__sub-item"><a href="" class="menu__sub-link">Рюкзаки</a></li>
+                                            <li class="menu__sub-item"><a href="" class="menu__sub-link">Сумки</a></li>
+                                            <li class="menu__sub-item"><a href="" class="menu__sub-link">Головные уборы /шарфы /перчатки</a></li>
+                                            <li class="menu__sub-item"><a href="" class="menu__sub-link">Носки</a></li>
+                                            <li class="menu__sub-item"><a href="" class="menu__sub-link">Украшения</a></li>
+                                            <li class="menu__sub-item"><a href="" class="menu__sub-link">Кошельки</a></li>
+                                            <li class="menu__sub-item"><a href="" class="menu__sub-link">Все аксессуары</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="menu__sub-container">
+                                        <a href="" class="menu__sub-title">Обувь</a>
+                                        <ul class="menu__sub-list">
+                                            <li class="menu__sub-item"><a href="" class="menu__sub-link">Кроссовки</a></li>
+                                            <li class="menu__sub-item"><a href="" class="menu__sub-link">Кеды</a></li>
+                                            <li class="menu__sub-item"><a href="" class="menu__sub-link">Вся обувь</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="menu__sub-img">
+                                        <img src="./images/female-header.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="menu__item male-anim">
+                            <a href="" class="menu__link">Мужчины</a>
+                            <div class="menu__sub-wrapper custom__container">
+                                <hr>
+                                <div class="sub-column">
+                                    <div class="menu__sub-container">
+                                        <a href="" class="menu__sub-title">Одежда</a>
+                                        <ul class="menu__sub-list">
+                                            <li class="menu__sub-item"><a href="" class="menu__sub-link">Куртки /пальто</a></li>
+                                            <li class="menu__sub-item"><a href="" class="menu__sub-link">Костюмы</a></li>
+                                            <li class="menu__sub-item"><a href="" class="menu__sub-link">Футболки</a></li>
+                                            <li class="menu__sub-item"><a href="" class="menu__sub-link">Штаны /джинсы</a></li>
+                                            <li class="menu__sub-item"><a href="" class="menu__sub-link">Свитера /кофты</a></li>
+                                            <li class="menu__sub-item"><a href="" class="menu__sub-link">Шорты /юбки </a></li>
+                                            <li class="menu__sub-item"><a href="" class="menu__sub-link">Платья</a></li>
+                                            <li class="menu__sub-item"><a href="" class="menu__sub-link">Пижамы</a></li>
+                                            <li class="menu__sub-item"><a href="" class="menu__sub-link">Шорты</a></li>
+                                            <li class="menu__sub-item"><a href="" class="menu__sub-link">Нижнее белье</a></li>
+                                            <li class="menu__sub-item"><a href="" class="menu__sub-link">Вся одежда</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="menu__sub-container">
+                                        <a href="" class="menu__sub-title">Аксессуары</a>
+                                        <ul class="menu__sub-list">
+                                            <li class="menu__sub-item"><a href="" class="menu__sub-link">Рюкзаки</a></li>
+                                            <li class="menu__sub-item"><a href="" class="menu__sub-link">Сумки</a></li>
+                                            <li class="menu__sub-item"><a href="" class="menu__sub-link">Головные уборы /шарфы /перчатки</a></li>
+                                            <li class="menu__sub-item"><a href="" class="menu__sub-link">Носки</a></li>
+                                            <li class="menu__sub-item"><a href="" class="menu__sub-link">Украшения</a></li>
+                                            <li class="menu__sub-item"><a href="" class="menu__sub-link">Кошельки</a></li>
+                                            <li class="menu__sub-item"><a href="" class="menu__sub-link">Все аксессуары</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="menu__sub-container">
+                                        <a href="" class="menu__sub-title">Обувь</a>
+                                        <ul class="menu__sub-list">
+                                            <li class="menu__sub-item"><a href="" class="menu__sub-link">Кроссовки</a></li>
+                                            <li class="menu__sub-item"><a href="" class="menu__sub-link">Кеды</a></li>
+                                            <li class="menu__sub-item"><a href="" class="menu__sub-link">Вся обувь</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="menu__sub-img">
+                                        <img src="./images/male-collection.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="menu__item child-anim">
+                            <a href="" class="menu__link">Дети</a>
+                            <div class="menu__sub-wrapper custom__container">
+                                <hr>
+                                <div class="sub-column">
+                                    <div class="menu__sub-container">
+                                        <a href="" class="menu__sub-title">Одежда</a>
+                                        <ul class="menu__sub-list">
+                                            <li class="menu__sub-item"><a href="" class="menu__sub-link">Куртки /пальто</a></li>
+                                            <li class="menu__sub-item"><a href="" class="menu__sub-link">Костюмы</a></li>
+                                            <li class="menu__sub-item"><a href="" class="menu__sub-link">Футболки</a></li>
+                                            <li class="menu__sub-item"><a href="" class="menu__sub-link">Штаны /джинсы</a></li>
+                                            <li class="menu__sub-item"><a href="" class="menu__sub-link">Свитера /кофты</a></li>
+                                            <li class="menu__sub-item"><a href="" class="menu__sub-link">Шорты /юбки </a></li>
+                                            <li class="menu__sub-item"><a href="" class="menu__sub-link">Платья</a></li>
+                                            <li class="menu__sub-item"><a href="" class="menu__sub-link">Пижамы</a></li>
+                                            <li class="menu__sub-item"><a href="" class="menu__sub-link">Шорты</a></li>
+                                            <li class="menu__sub-item"><a href="" class="menu__sub-link">Нижнее белье</a></li>
+                                            <li class="menu__sub-item"><a href="" class="menu__sub-link">Вся одежда</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="menu__sub-container">
+                                        <a href="" class="menu__sub-title">Аксессуары</a>
+                                        <ul class="menu__sub-list">
+                                            <li class="menu__sub-item"><a href="" class="menu__sub-link">Рюкзаки</a></li>
+                                            <li class="menu__sub-item"><a href="" class="menu__sub-link">Сумки</a></li>
+                                            <li class="menu__sub-item"><a href="" class="menu__sub-link">Головные уборы /шарфы /перчатки</a></li>
+                                            <li class="menu__sub-item"><a href="" class="menu__sub-link">Носки</a></li>
+                                            <li class="menu__sub-item"><a href="" class="menu__sub-link">Украшения</a></li>
+                                            <li class="menu__sub-item"><a href="" class="menu__sub-link">Кошельки</a></li>
+                                            <li class="menu__sub-item"><a href="" class="menu__sub-link">Все аксессуары</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="menu__sub-container">
+                                        <a href="" class="menu__sub-title">Обувь</a>
+                                        <ul class="menu__sub-list">
+                                            <li class="menu__sub-item"><a href="" class="menu__sub-link">Кроссовки</a></li>
+                                            <li class="menu__sub-item"><a href="" class="menu__sub-link">Кеды</a></li>
+                                            <li class="menu__sub-item"><a href="" class="menu__sub-link">Вся обувь</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="menu__sub-img">
+                                        <img src="./images/child-collection.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </nav>
+                </div>
+                <div class="header__lang__wrapper">
+                    <span>UA</span>
+                </div>
+            </div>
+            <a href="" class="header__logo">
+                <img src="./images/logo.svg" alt="">
+            </a>
+            <div class="header__actions">
+                <a href="" class="header-shops _icon-shops header-icon"></a>
+                <div role="button" class="header-search _icon-search header-icon"></div>
+                <div class="header__search-wrapper">
+                    <hr>
+                    <div class="header__search-container">
+                        <form action="#">
+                            <span class="_icon-search"></span>
+                            <input class="search-input" type="search" placeholder="Поиск" value="">
+                        </form>
+                        <div class="search__results-container">
+                            <a href="">Сумки</a>
+                            <a href="">Штаны черные мужские</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="" class="header-favorites _icon-favorites header-icon"></a>
+                <a href="" class="header-user _icon-user header-icon"></a>
+                <!-- <div class="header-user _icon-user header-icon"></div> -->
+                <a href="" class="header-bag _icon-bag header-icon">(2)</a>
+            </div>
+        </div>
+        <!-- </div> -->
+    </div>
+</div>    </header>    <main>        <section class="new-collection__wrapper">
+    <div class="custom__container">
+        <!-- <div class="male__wrapper"> -->
+        <div class="male__container">
+            <img src="./images/female-collection.jpg" alt="">
+            <div class="male__title-wrapper">
+                <div class="title-collection">НОВАЯ ЖЕНСКАЯ КОЛЛЕКЦИЯ</div>
+                <div class="new-collection">весна 2021</div>
+            </div>
+            <a href="#" class="button-link new-collection__button">
+                <span>Перейти</span>
+                <div class="_icon-arrow-link"></div>
+            </a>
+        </div>
+        <!-- </div> -->
+        <!-- <div class="female__wrapper"> -->
+        <div class="female__container">
+            <img src="./images/male-collection.jpg" alt="">
+            <div class="female__title-wrapper">
+                <div class="title-collection">НОВАЯ МУЖСКАЯ КОЛЛЕКЦИЯ</div>
+                <div class="new-collection">весна 2021</div>
+            </div>
+            <a href="#" class="button-link new-collection__button">
+                <span>Перейти</span>
+                <div class="_icon-arrow-link"></div>
+            </a>
+        </div>
+        <!-- </div> -->
+        <!-- <div class="child__wrapper"> -->
+        <div class="child__container">
+            <img src="./images/child-collection.jpg" alt="">
+            <div class="child__title-wrapper">
+                <div class="title-collection">НОВАЯ ДЕТСКАЯ КОЛЛЕКЦИЯ</div>
+                <div class="new-collection">весна 2021</div>
+            </div>
+            <a href="#" class="button-link new-collection__button">
+                <span>Перейти</span>
+                <div class="_icon-arrow-link"></div>
+            </a>
+        </div>
+        <!-- </div> -->
+    </div>
+</section>
+<section class="sale__wrapper">
+    <div class="custom__container">
+        <div id="sale__swiper" class="swiper-container">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <img src="./images/sale-slide.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/sale-slide.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/sale-slide.jpg" alt="">
+                </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <!-- If we need scrollbar -->
+            <div class="swiper-scrollbar"></div>
+        </div>
+    </div>
+</section>
+<section class="short-description__warapper">
+    <div class="custom__container">
+        <h5 class="short-description__title">НАШЕ ПРОИЗВОДСТВО</h5>
+        <div class="short-description__container">
+            <div class="short-description__left">
+                <p class="short-description__text">
+                    Amet ridiculus dictumst vulputate cursus maecenas montes feugiat dapibus interdum, sollicitudin
+                    suspendisse dui mus habitant mattis iaculis quis platea etiam, elit ad luctus erat morbi
+                    malesuada facilisis posuere. Ullamcorper pellentesque pretium ipsum vivamus iaculis odio
+                    ridiculus natoque at, nascetur duis vel gravida torquent inceptos elementum fermentum, porttitor
+                    libero sit vestibulum amet finibus blandit feugiat.
+                </p>
+                <a href="#" class="button-link short-description__button">
+                    <span>Перейти</span>
+                    <div class="_icon-arrow-link"></div>
+                </a>
+            </div>
+            <div class="short-description__right">
+                <img class="right__main-img" src="./images/short-description-main.jpg" alt="">
+                <div class="right__second-img">
+                    <img src="./images/short-description-second.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="categories__wrapper">
+    <div class="custom__container">
+        <div class="categories__container">
+            <div class="categories__img_container">
+                <img src="./images/bags-collection.jpg" alt="">
+            </div>
+            <div class="categories__text_container">
+                <div class="categories__text__title">Название коллекции или категории из каталога</div>
+                <a href="#" class="button-link">
+                    <span>Перейти</span>
+                    <div class="_icon-arrow-link"></div>
+                </a>
+            </div>
+        </div>
+        <div class="categories__container">
+            <div class="categories__img_container">
+                <img src="./images/category-collection-2.jpg" alt="">
+            </div>
+            <div class="categories__text_container">
+                <div class="categories__text__title">Название коллекции или категории из каталога</div>
+                <a href="#" class="button-link">
+                    <span>Перейти</span>
+                    <div class="_icon-arrow-link"></div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="new__wrapper">
+</section>
+<!-- <section class="nuostyle__wrapper">
+    <div class="custom__container">
+        <div class="nuot__title">#nuotstyle</div>
+        <div class="nuot__grid-wrapper">
+            <div class="nuot__block">
+                <div class="nuot__img-container">
+                    <img src="./images/nuot-1.jpg" alt="">
+                </div>
+                <div class="nuot__img-container">
+                    <img src="./images/nuot-2.jpg" alt="">
+                </div>
+            </div>
+            <div class="nuot__block">
+                <div class="nuot__style-block">
+                    <div class="nuot__title-head">
+                        #nuotstyle
+                    </div>
+                    <div class="nuot__text">
+                        Нам очень интересно узнать, с чем вы комбинируете свои покупки в NUOT. Поделитесь своим образом
+                        и упомяните нас как @nuot или добавьте хештег #nuotstyle.
+                    </div>
+                    <a href="#" class="button-link">
+                        <span>Перейти</span>
+                        <div class="_icon-arrow-link"></div>
+                    </a>
+                </div>
+                <div class="nuot__style-img">
+                    <img src="./images/nuot-3.jpg" alt="">
+                </div>
+            </div>
+            <div class="nuot__block">
+                <div class="nuot__img-container">
+                    <img src="./images/nuot-2.jpg" alt="">
+                </div>
+                <div class="nuot__img-container">
+                    <img src="./images/nuot-1.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+<section class="blog__wrapper">
+    <div class="custom__container">
+
+    </div>
+</section>    </main>    <footer>        <div class="container">Footer</div>    </footer>    <script src="js/jquery.min.js"></script>    <script src="js/bootstrap.bundle.min.js"></script>    <script src="js/swiper-bundle.min.js"></script>    <script src="js/script.js"></script></body></html>
