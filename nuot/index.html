@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="ua"><head>    <meta charset="UTF-8">    <meta http-equiv="X-UA-Compatible" content="IE=edge">    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <!-- Chrome, Firefox OS and Opera -->    <meta name="theme-color" content="#144563" />    <!-- iOS Safari -->    <meta name="apple-mobile-web-app-capable" content="yes" />    <meta name="apple-mobile-web-app-status-bar-style" content="#144563" />    <title>Nuot</title>    <link rel="shortcut icon" type="image/jpg" href="./images/favicon.ico" />    <!-- <link rel="stylesheet" href="./css/bootstrap-reboot.min.css"> -->    <link rel="stylesheet" href="./css/bootstrap.min.css">    <link rel="stylesheet" href="./css/swiper-bundle.min.css">    <link rel="stylesheet" href="./css/style.min.css"></head><body>    <!-- <script>        function testWebP(callback) {            var webP = new Image();            webP.onload = webP.onerror = function() {                callback(webP.height == 2);            };            webP.src =                'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';        }        testWebP(function(support) {            if (support == true) {                document.querySelector('body').classList.add('webp');            } else {                document.querySelector('body').classList.add('no-webp');            }        });    </script> -->    <header>        <div class="header__wrapper">
+<!DOCTYPE html><html lang="ua"><head>    <meta charset="UTF-8">    <meta http-equiv="X-UA-Compatible" content="IE=edge">    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <!-- Chrome, Firefox OS and Opera -->    <meta name="theme-color" content="#fffaf6" />    <!-- iOS Safari -->    <meta name="apple-mobile-web-app-capable" content="yes" />    <meta name="apple-mobile-web-app-status-bar-style" content="#fffaf6" />    <title>Nuot</title>    <link rel="shortcut icon" type="image/jpg" href="./images/favicon.ico" />    <!-- <link rel="stylesheet" href="./css/bootstrap-reboot.min.css"> -->    <link rel="stylesheet" href="./css/bootstrap.min.css">    <link rel="stylesheet" href="./css/swiper-bundle.min.css">    <link rel="stylesheet" href="./css/style.min.css"></head><body>    <script>        function testWebP(callback) {            var webP = new Image();            webP.onload = webP.onerror = function() {                callback(webP.height == 2);            };            webP.src =                'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';        }        testWebP(function(support) {            if (support == true) {                document.querySelector('body').classList.add('webp');            } else {                document.querySelector('body').classList.add('no-webp');            }        });    </script>    <header>        <div class="header__wrapper">
     <div class="header__top custom__container">
         <!-- <div class=""> -->
         <div class="header__contacts">
@@ -10,17 +10,17 @@
     <div class="header__bottom custom__container">
         <!-- <div class=""> -->
         <div class="header__body">
-            <!-- <button type="button" class="menu__icon icon-menu">
-                    <span></span>
-                    <span></span>
-                    Меню
-                </button> -->
+            <div role="button" class="menu__icon icon-menu">
+                <div></div>
+                <div></div>
+                меню
+            </div>
             <div class="header__main">
                 <div class="header__menu menu">
                     <nav class="menu__list">
                         <li class="menu__item female-anim">
                             <a href="" class="menu__link menu__item-active">Женщины</a>
-                            <div class="menu__sub-wrapper custom__container">
+                            <div class="menu__sub-wrapper custom__container" aria-modal="true">
                                 <hr>
                                 <div class="sub-column">
                                     <div class="menu__sub-container">
@@ -67,7 +67,7 @@
                         </li>
                         <li class="menu__item male-anim">
                             <a href="" class="menu__link">Мужчины</a>
-                            <div class="menu__sub-wrapper custom__container">
+                            <div class="menu__sub-wrapper custom__container" aria-modal="true">
                                 <hr>
                                 <div class="sub-column">
                                     <div class="menu__sub-container">
@@ -114,7 +114,7 @@
                         </li>
                         <li class="menu__item child-anim">
                             <a href="" class="menu__link">Дети</a>
-                            <div class="menu__sub-wrapper custom__container">
+                            <div class="menu__sub-wrapper custom__container" aria-modal="true">
                                 <hr>
                                 <div class="sub-column">
                                     <div class="menu__sub-container">
@@ -163,6 +163,11 @@
                 </div>
                 <div class="header__lang__wrapper">
                     <span>UA</span>
+                    <ul class="lang__container" aria-modal="true">
+                        <li>
+                            <button class="lang-select" type="button" name="ru-ru">RU</button>
+                        </li>
+                    </ul>
                 </div>
             </div>
             <a href="" class="header__logo">
@@ -171,7 +176,7 @@
             <div class="header__actions">
                 <a href="" class="header-shops _icon-shops header-icon"></a>
                 <div role="button" class="header-search _icon-search header-icon"></div>
-                <div class="header__search-wrapper">
+                <div class="header__search-wrapper" aria-modal="true">
                     <hr>
                     <div class="header__search-container">
                         <form action="#">
@@ -185,9 +190,106 @@
                     </div>
                 </div>
                 <a href="" class="header-favorites _icon-favorites header-icon"></a>
-                <a href="" class="header-user _icon-user header-icon"></a>
-                <!-- <div class="header-user _icon-user header-icon"></div> -->
-                <a href="" class="header-bag _icon-bag header-icon">(2)</a>
+                <!-- <div class="header-user"> -->
+                <div role="button" class="header-user">
+                    <div class="_icon-user header-icon unknown-user"></div>
+                    <div class="auth__wrapper" aria-modal="true">
+                        <div class="auth__container">
+                            <div class="auth__title">АВТОРИЗАЦИЯ</div>
+                            <div class="number__container">
+                                <div class="number__container-title">
+                                    Введите ваш номер телефона
+                                </div>
+                                <p class="number__container-text">
+                                    Мы пришлем SMS c кодом
+                                    подтверждения
+                                </p>
+                                <form class="number__form" action="">
+                                    <input type="tel" pattern="[\+][0-9]{12}" placeholder="+380 ( _ _ ) _ _ _ _ _ _ _">
+                                    <button type="submit">получить код</button>
+                                </form>
+                            </div>
+
+                            <!-- <div class="code__container">
+                                <div class="code__container-title">
+                                    Для подтверждения номера телефона
+                                </div>
+                                <p class="code__container-text">
+                                    +38 066 123 44 55
+                                </p>
+                                <form class="code__form" action="">
+                                    <label for="">Введие код подтверждения</label>
+                                    <input type="number" placeholder="">
+                                    <div role="button">Повторное СМС</div>
+                                    <button type="submit">ПОДТВЕРДИТЬ</button>
+                                </form>
+                            </div> -->
+
+                            <div class="social__auth-wrapper">
+                                <div class="social__aut-hr">
+                                    <div></div>
+                                    или
+                                    <div></div>
+                                </div>
+                                <div class="social__auth-container">
+                                    <a href="" class="social__auth-action">
+                                        <div>
+                                            <img src="./images/google-auth.svg" alt="">
+                                        </div>
+                                    </a>
+                                    <a href="" class="social__auth-action">
+                                        <div>
+                                            <img src="./images/facebook-auth.svg" alt="">
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="personal__wrapper" aria-modal="true">
+                        <div class="personal__container">
+                            <div class="personal__title">ЛИЧНЫЕ ДАННЫЕ</div>
+                            <form class="personal__form" action="">
+                                <label for="surname">Фамилия</label>
+                                <input id="surname" name="surname" type="text" placeholder="Иванов">
+                                <label for="name">Имя</label>
+                                <input id="name" name="name" type="text" placeholder="Иван">
+                                <label for="secondname">Отчество</label>
+                                <input id="secondname" name="secondname" type="text" placeholder="Иванович">
+                                <label for="email">E-mail</label>
+                                <input id="email" name="email" type="email" placeholder="E-mail">
+                                <label for="gender">Пол</label>
+                                <select class="" id="gender" name="gender">
+                                    <option selected disabled></option>
+                                    <option value="male">Муж.</option>
+                                    <option value="female">Жен.</option>
+                                </select>
+                                <label for="date">Дата рождения</label>
+                                <input id="date" name="date" type="date" placeholder="ДД.ММ.ГГГГ">
+                                <div role="button">Пропустить</div>
+                                <button type="submit">сохранить</button>
+                            </form>
+                        </div>
+                    </div> -->
+                    <!-- <a href="" class="_icon-user header-icon"></a>
+                    <div class="user__menu" aria-modal="true">
+                        <ul>
+                            <li class="user__menu-item">
+                                <a href="" class="user__menu-link"><span>МОИ ДАННЫЕ</span><span class="_icon-arrow-link"></span></a>
+                            </li>
+                            <li class="user__menu-item">
+                                <a href="" class="user__menu-link"><span>ИСТОРИЯ ЗАКАЗОВ</span><span class="_icon-arrow-link"></span></a>
+                            </li>
+                            <li class="user__menu-item">
+                                <a href="" class="user__menu-link"><span>КЕШБЕК СИСТЕМА</span><span class="_icon-arrow-link"></span></a>
+                            </li>
+                            <li class="user__menu-item">
+                                <a href="" class="user__menu-link">ВЫЙТИ</span></a>
+                            </li>
+                        </ul>
+                    </div> -->
+                </div>
+                <a href="" class="header-bag _icon-bag header-icon"></a>
             </div>
         </div>
         <!-- </div> -->
@@ -238,28 +340,26 @@
 <section class="sale__wrapper">
     <div class="custom__container">
         <div id="sale__swiper" class="swiper-container">
-            <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
-                <!-- Slides -->
-                <div class="swiper-slide">
+                <div class="sale__slide swiper-slide">
                     <img src="./images/sale-slide.jpg" alt="">
                 </div>
-                <div class="swiper-slide">
+                <div class="sale__slide swiper-slide">
                     <img src="./images/sale-slide.jpg" alt="">
                 </div>
-                <div class="swiper-slide">
+                <div class="sale__slide swiper-slide">
                     <img src="./images/sale-slide.jpg" alt="">
                 </div>
             </div>
             <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
+            <div class="sale-pagination swiper-pagination"></div>
 
             <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+            <div class="sale-prev swiper-button-prev"></div>
+            <div class="sale-next swiper-button-next"></div>
 
             <!-- If we need scrollbar -->
-            <div class="swiper-scrollbar"></div>
+            <div class="sale-scrollbar swiper-scrollbar"></div>
         </div>
     </div>
 </section>
@@ -319,7 +419,7 @@
 </section>
 <section class="new__wrapper">
 </section>
-<!-- <section class="nuostyle__wrapper">
+<section class="nuostyle__wrapper">
     <div class="custom__container">
         <div class="nuot__title">#nuotstyle</div>
         <div class="nuot__grid-wrapper">
@@ -333,6 +433,7 @@
             </div>
             <div class="nuot__block">
                 <div class="nuot__style-block">
+                    <div class="lol"></div>
                     <div class="nuot__title-head">
                         #nuotstyle
                     </div>
@@ -349,7 +450,7 @@
                     <img src="./images/nuot-3.jpg" alt="">
                 </div>
             </div>
-            <div class="nuot__block">
+            <div class="nuot__block _third-block">
                 <div class="nuot__img-container">
                     <img src="./images/nuot-2.jpg" alt="">
                 </div>
@@ -359,7 +460,7 @@
             </div>
         </div>
     </div>
-</section> -->
+</section>
 <section class="blog__wrapper">
     <div class="custom__container">
 

@@ -8,7 +8,7 @@ window.onload = function () {
 
 			let head = document.querySelector('header');
 
-			if (res == 2 && window.scrollY > 920) {
+			if (res == 2 && window.scrollY > 400) {
 				//head.classList.add('little-had');
 				head.style.transform = 'translateY(-100%)';
 			} else if (res == 1) {
@@ -21,6 +21,7 @@ window.onload = function () {
 		let searchIcon = document.querySelector('.header-search');
 		let searchWrap = document.querySelector('.header__search-wrapper');
 		let searchInput = document.querySelector('.search-input');
+		let nuotSection = document.querySelector('.nuot__grid-wrapper');
 
 		async function getSearchRes() {
 			console.log(searchInput.value);
@@ -56,9 +57,16 @@ window.onload = function () {
 
 		function toggle() {
 			//!переделать функцию для логина, для мобильного меню
+			//searchIcon.style.transform = 'scale(0.5)';
+
 			searchIcon.classList.toggle('_icon-search');
 			searchIcon.classList.toggle('_icon-cancel');
+			searchIcon.classList.toggle('rotate-anim');
 			searchWrap.classList.toggle('show');
+		}
+
+		function redirect() {
+			console.log('111');
 		}
 
 		searchInput.addEventListener('input', function (e) {
@@ -85,9 +93,25 @@ window.onload = function () {
 			toggle();
 			searchInput.focus();
 		});
+
+		nuotSection.addEventListener('click', (e) => {
+			e.stopPropagation();
+			let target = e.target.parentNode;
+
+			if (!target.classList.contains('button-link')) {
+				window.location.href = 'www.yourtube.com';
+			}
+		});
 	})();
-	//SWIPER  Sale
+	//SWIPER
 	(function () {
+		//*new collection
+		window.addEventListener('resize', function () {
+			if (window.matchMedia('(max-width: 600px)').matches) {
+				console.log('9999');
+			}
+		});
+		//*sale
 		const swiper = new Swiper('#sale__swiper', {
 			navigation: {
 				nextEl: '.swiper-button-next',
@@ -96,6 +120,31 @@ window.onload = function () {
 			pagination: {
 				el: '.swiper-pagination',
 			},
+			scrollbar: {
+				el: '.swiper-scrollbar',
+				//draggable: true,
+			},
+			watchOverflow: true,
 		});
+
+		// let saleLength = document.querySelectorAll('.sale__slide');
+		// console.log(saleLength);
+	})();
+
+	//? auth
+	(function () {
+		let unknownUser = document.querySelector('.unknown-user');
+		let authWrapper = document.querySelector('.auth__wrapper');
+
+		if (unknownUser) {
+			console.log('1111');
+
+			unknownUser.addEventListener('click', (e) => {
+				//if (!e.target.classList.contains('auth__wrapper')) {
+				e.stopPropagation();
+				authWrapper.classList.toggle('show');
+				//}
+			});
+		}
 	})();
 };
