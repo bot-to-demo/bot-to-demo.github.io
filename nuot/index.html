@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="ua"><head>    <meta charset="UTF-8">    <meta http-equiv="X-UA-Compatible" content="IE=edge">    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <!-- Chrome, Firefox OS and Opera -->    <meta name="theme-color" content="#fffaf6" />    <!-- iOS Safari -->    <meta name="apple-mobile-web-app-capable" content="yes" />    <meta name="apple-mobile-web-app-status-bar-style" content="#fffaf6" />    <title>Nuot</title>    <link rel="shortcut icon" type="image/jpg" href="./images/favicon.ico" />    <!-- <link rel="stylesheet" href="./css/bootstrap-reboot.min.css"> -->    <link rel="stylesheet" href="./css/bootstrap.min.css">    <link rel="stylesheet" href="./css/swiper-bundle.min.css">    <link rel="stylesheet" href="./css/style.min.css"></head><body>    <script>        function testWebP(callback) {            var webP = new Image();            webP.onload = webP.onerror = function() {                callback(webP.height == 2);            };            webP.src =                'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';        }        testWebP(function(support) {            if (support == true) {                document.querySelector('body').classList.add('webp');            } else {                document.querySelector('body').classList.add('no-webp');            }        });    </script>    <header>        <div class="header__wrapper">
+<!DOCTYPE html><html lang="ua"><head>    <meta charset="UTF-8">    <meta http-equiv="X-UA-Compatible" content="IE=edge">    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <!-- Chrome, Firefox OS and Opera -->    <meta name="theme-color" content="#144563" />    <!-- iOS Safari -->    <meta name="apple-mobile-web-app-capable" content="yes" />    <meta name="apple-mobile-web-app-status-bar-style" content="#144563" />    <title>Nuot</title>    <link rel="shortcut icon" type="image/jpg" href="./images/favicon.ico" />    <!-- <link rel="stylesheet" href="./css/bootstrap-reboot.min.css"> -->    <link rel="stylesheet" href="./css/bootstrap.min.css">    <link rel="stylesheet" href="./css/swiper-bundle.min.css">    <link rel="stylesheet" href="./css/style.min.css"></head><body>    <script>        function testWebP(callback) {            var webP = new Image();            webP.onload = webP.onerror = function() {                callback(webP.height == 2);            };            webP.src =                'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';        }        testWebP(function(support) {            if (support == true) {                document.querySelector('body').classList.add('webp');            } else {                document.querySelector('body').classList.add('no-webp');            }        });    </script>    <header>        <div class="header__wrapper">
     <div class="header__top custom__container">
         <!-- <div class=""> -->
         <div class="header__contacts">
@@ -15,6 +15,149 @@
                 <div></div>
                 меню
             </div>
+            <!-- <nav class="menu__list">
+                <li class="menu__item female-anim">
+                    <a href="" class="menu__link menu__item-active">Женщины</a>
+                    <div class="menu__sub-wrapper custom__container" aria-modal="true">
+                        <hr>
+                        <div class="sub-column">
+                            <div class="menu__sub-container">
+                                <a href="" class="menu__sub-title">Одежда</a>
+                                <ul class="menu__sub-list">
+                                    <li class="menu__sub-item"><a href="" class="menu__sub-link">Куртки /пальто</a></li>
+                                    <li class="menu__sub-item"><a href="" class="menu__sub-link">Костюмы</a></li>
+                                    <li class="menu__sub-item"><a href="" class="menu__sub-link">Футболки</a></li>
+                                    <li class="menu__sub-item"><a href="" class="menu__sub-link">Штаны /джинсы</a></li>
+                                    <li class="menu__sub-item"><a href="" class="menu__sub-link">Свитера /кофты</a></li>
+                                    <li class="menu__sub-item"><a href="" class="menu__sub-link">Шорты /юбки </a></li>
+                                    <li class="menu__sub-item"><a href="" class="menu__sub-link">Платья</a></li>
+                                    <li class="menu__sub-item"><a href="" class="menu__sub-link">Пижамы</a></li>
+                                    <li class="menu__sub-item"><a href="" class="menu__sub-link">Шорты</a></li>
+                                    <li class="menu__sub-item"><a href="" class="menu__sub-link">Нижнее белье</a></li>
+                                    <li class="menu__sub-item"><a href="" class="menu__sub-link">Вся одежда</a></li>
+                                </ul>
+                            </div>
+                            <div class="menu__sub-container">
+                                <a href="" class="menu__sub-title">Аксессуары</a>
+                                <ul class="menu__sub-list">
+                                    <li class="menu__sub-item"><a href="" class="menu__sub-link">Рюкзаки</a></li>
+                                    <li class="menu__sub-item"><a href="" class="menu__sub-link">Сумки</a></li>
+                                    <li class="menu__sub-item"><a href="" class="menu__sub-link">Головные уборы /шарфы /перчатки</a></li>
+                                    <li class="menu__sub-item"><a href="" class="menu__sub-link">Носки</a></li>
+                                    <li class="menu__sub-item"><a href="" class="menu__sub-link">Украшения</a></li>
+                                    <li class="menu__sub-item"><a href="" class="menu__sub-link">Кошельки</a></li>
+                                    <li class="menu__sub-item"><a href="" class="menu__sub-link">Все аксессуары</a></li>
+                                </ul>
+                            </div>
+                            <div class="menu__sub-container">
+                                <a href="" class="menu__sub-title">Обувь</a>
+                                <ul class="menu__sub-list">
+                                    <li class="menu__sub-item"><a href="" class="menu__sub-link">Кроссовки</a></li>
+                                    <li class="menu__sub-item"><a href="" class="menu__sub-link">Кеды</a></li>
+                                    <li class="menu__sub-item"><a href="" class="menu__sub-link">Вся обувь</a></li>
+                                </ul>
+                            </div>
+                            <div class="menu__sub-img">
+                                <img src="./images/female-header.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="menu__item male-anim">
+                    <a href="" class="menu__link">Мужчины</a>
+                    <div class="menu__sub-wrapper custom__container" aria-modal="true">
+                        <hr>
+                        <div class="sub-column">
+                            <div class="menu__sub-container">
+                                <a href="" class="menu__sub-title">Одежда</a>
+                                <ul class="menu__sub-list">
+                                    <li class="menu__sub-item"><a href="" class="menu__sub-link">Куртки /пальто</a></li>
+                                    <li class="menu__sub-item"><a href="" class="menu__sub-link">Костюмы</a></li>
+                                    <li class="menu__sub-item"><a href="" class="menu__sub-link">Футболки</a></li>
+                                    <li class="menu__sub-item"><a href="" class="menu__sub-link">Штаны /джинсы</a></li>
+                                    <li class="menu__sub-item"><a href="" class="menu__sub-link">Свитера /кофты</a></li>
+                                    <li class="menu__sub-item"><a href="" class="menu__sub-link">Шорты /юбки </a></li>
+                                    <li class="menu__sub-item"><a href="" class="menu__sub-link">Платья</a></li>
+                                    <li class="menu__sub-item"><a href="" class="menu__sub-link">Пижамы</a></li>
+                                    <li class="menu__sub-item"><a href="" class="menu__sub-link">Шорты</a></li>
+                                    <li class="menu__sub-item"><a href="" class="menu__sub-link">Нижнее белье</a></li>
+                                    <li class="menu__sub-item"><a href="" class="menu__sub-link">Вся одежда</a></li>
+                                </ul>
+                            </div>
+                            <div class="menu__sub-container">
+                                <a href="" class="menu__sub-title">Аксессуары</a>
+                                <ul class="menu__sub-list">
+                                    <li class="menu__sub-item"><a href="" class="menu__sub-link">Рюкзаки</a></li>
+                                    <li class="menu__sub-item"><a href="" class="menu__sub-link">Сумки</a></li>
+                                    <li class="menu__sub-item"><a href="" class="menu__sub-link">Головные уборы /шарфы /перчатки</a></li>
+                                    <li class="menu__sub-item"><a href="" class="menu__sub-link">Носки</a></li>
+                                    <li class="menu__sub-item"><a href="" class="menu__sub-link">Украшения</a></li>
+                                    <li class="menu__sub-item"><a href="" class="menu__sub-link">Кошельки</a></li>
+                                    <li class="menu__sub-item"><a href="" class="menu__sub-link">Все аксессуары</a></li>
+                                </ul>
+                            </div>
+                            <div class="menu__sub-container">
+                                <a href="" class="menu__sub-title">Обувь</a>
+                                <ul class="menu__sub-list">
+                                    <li class="menu__sub-item"><a href="" class="menu__sub-link">Кроссовки</a></li>
+                                    <li class="menu__sub-item"><a href="" class="menu__sub-link">Кеды</a></li>
+                                    <li class="menu__sub-item"><a href="" class="menu__sub-link">Вся обувь</a></li>
+                                </ul>
+                            </div>
+                            <div class="menu__sub-img">
+                                <img src="./images/male-collection.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="menu__item child-anim">
+                    <a href="" class="menu__link">Дети</a>
+                    <div class="menu__sub-wrapper custom__container" aria-modal="true">
+                        <hr>
+                        <div class="sub-column">
+                            <div class="menu__sub-container">
+                                <a href="" class="menu__sub-title">Одежда</a>
+                                <ul class="menu__sub-list">
+                                    <li class="menu__sub-item"><a href="" class="menu__sub-link">Куртки /пальто</a></li>
+                                    <li class="menu__sub-item"><a href="" class="menu__sub-link">Костюмы</a></li>
+                                    <li class="menu__sub-item"><a href="" class="menu__sub-link">Футболки</a></li>
+                                    <li class="menu__sub-item"><a href="" class="menu__sub-link">Штаны /джинсы</a></li>
+                                    <li class="menu__sub-item"><a href="" class="menu__sub-link">Свитера /кофты</a></li>
+                                    <li class="menu__sub-item"><a href="" class="menu__sub-link">Шорты /юбки </a></li>
+                                    <li class="menu__sub-item"><a href="" class="menu__sub-link">Платья</a></li>
+                                    <li class="menu__sub-item"><a href="" class="menu__sub-link">Пижамы</a></li>
+                                    <li class="menu__sub-item"><a href="" class="menu__sub-link">Шорты</a></li>
+                                    <li class="menu__sub-item"><a href="" class="menu__sub-link">Нижнее белье</a></li>
+                                    <li class="menu__sub-item"><a href="" class="menu__sub-link">Вся одежда</a></li>
+                                </ul>
+                            </div>
+                            <div class="menu__sub-container">
+                                <a href="" class="menu__sub-title">Аксессуары</a>
+                                <ul class="menu__sub-list">
+                                    <li class="menu__sub-item"><a href="" class="menu__sub-link">Рюкзаки</a></li>
+                                    <li class="menu__sub-item"><a href="" class="menu__sub-link">Сумки</a></li>
+                                    <li class="menu__sub-item"><a href="" class="menu__sub-link">Головные уборы /шарфы /перчатки</a></li>
+                                    <li class="menu__sub-item"><a href="" class="menu__sub-link">Носки</a></li>
+                                    <li class="menu__sub-item"><a href="" class="menu__sub-link">Украшения</a></li>
+                                    <li class="menu__sub-item"><a href="" class="menu__sub-link">Кошельки</a></li>
+                                    <li class="menu__sub-item"><a href="" class="menu__sub-link">Все аксессуары</a></li>
+                                </ul>
+                            </div>
+                            <div class="menu__sub-container">
+                                <a href="" class="menu__sub-title">Обувь</a>
+                                <ul class="menu__sub-list">
+                                    <li class="menu__sub-item"><a href="" class="menu__sub-link">Кроссовки</a></li>
+                                    <li class="menu__sub-item"><a href="" class="menu__sub-link">Кеды</a></li>
+                                    <li class="menu__sub-item"><a href="" class="menu__sub-link">Вся обувь</a></li>
+                                </ul>
+                            </div>
+                            <div class="menu__sub-img">
+                                <img src="./images/child-collection.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </nav> -->
             <div class="header__main">
                 <div class="header__menu menu">
                     <nav class="menu__list">

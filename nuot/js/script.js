@@ -137,14 +137,24 @@ window.onload = function () {
 		let authWrapper = document.querySelector('.auth__wrapper');
 
 		if (unknownUser) {
-			console.log('1111');
-
 			unknownUser.addEventListener('click', (e) => {
 				//if (!e.target.classList.contains('auth__wrapper')) {
 				e.stopPropagation();
 				authWrapper.classList.toggle('show');
 				//}
 			});
+			//!сделать универсальным
+			document.onclick = function (e) {
+				let target = e.target;
+				let itsContainer = target == authWrapper || authWrapper.contains(target);
+				let itsBtn = target == unknownUser;
+				let isActive = authWrapper.classList.contains('show');
+	
+				if (!itsContainer && !itsBtn && isActive) {
+					e.stopPropagation();
+					authWrapper.classList.toggle('show');
+				}
+			};
 		}
 	})();
 };
