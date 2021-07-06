@@ -65,10 +65,6 @@ window.onload = function () {
 			searchWrap.classList.toggle('show');
 		}
 
-		function redirect() {
-			console.log('111');
-		}
-
 		searchInput.addEventListener('input', function (e) {
 			let searchLength = searchInput.value.length;
 
@@ -77,7 +73,7 @@ window.onload = function () {
 			}
 		});
 
-		document.onclick = function (e) {
+		document.addEventListener('click', function (e) {
 			let target = e.target;
 			let itsSearch = target == searchWrap || searchWrap.contains(target);
 			let itsBtn = target == searchIcon;
@@ -86,16 +82,27 @@ window.onload = function () {
 			if (!itsSearch && !itsBtn && isActive) {
 				toggle();
 			}
-		};
+		});
+
+		// document.onclick = function (e) {
+		// 	let target = e.target;
+		// 	let itsSearch = target == searchWrap || searchWrap.contains(target);
+		// 	let itsBtn = target == searchIcon;
+		// 	let isActive = searchWrap.classList.contains('show');
+
+		// 	if (!itsSearch && !itsBtn && isActive) {
+		// 		toggle();
+		// 	}
+		// };
 
 		searchIcon.addEventListener('click', (e) => {
-			e.stopPropagation();
+			//e.stopPropagation();
 			toggle();
 			searchInput.focus();
 		});
 
 		nuotSection.addEventListener('click', (e) => {
-			e.stopPropagation();
+			//e.stopPropagation();
 			let target = e.target.parentNode;
 
 			if (!target.classList.contains('button-link')) {
@@ -135,26 +142,122 @@ window.onload = function () {
 	(function () {
 		let unknownUser = document.querySelector('.unknown-user');
 		let authWrapper = document.querySelector('.auth__wrapper');
+		let unknownMobile = document.querySelector(
+			'.menu__mobile-unregistered'
+		);
+		//? mob menu
+		let menuIcon = document.querySelector('.menu__icon');
+		let menuModal = document.querySelector('.menu__mobile-modal');
+
+		//let menuModalBody = document.querySelector('#menu__mobile-modal');
 
 		if (unknownUser) {
+			unknownMobile.addEventListener('click', (e) => {
+				//if (!e.target.classList.contains('auth__wrapper')) {
+				//e.stopPropagation();
+				menuModal.classList.toggle('active-modal');
+				authWrapper.classList.toggle('show');
+				console.log('6666');
+
+				//}
+			});
+
 			unknownUser.addEventListener('click', (e) => {
 				//if (!e.target.classList.contains('auth__wrapper')) {
-				e.stopPropagation();
+				//e.stopPropagation();
 				authWrapper.classList.toggle('show');
 				//}
 			});
 			//!сделать универсальным
-			document.onclick = function (e) {
+			document.addEventListener('click', function (e) {
+				//console.log('22222');
+
 				let target = e.target;
-				let itsContainer = target == authWrapper || authWrapper.contains(target);
+				let itsContainer =
+					target == authWrapper || authWrapper.contains(target);
 				let itsBtn = target == unknownUser;
 				let isActive = authWrapper.classList.contains('show');
-	
-				if (!itsContainer && !itsBtn && isActive) {
-					e.stopPropagation();
+
+				if (
+					!itsContainer &&
+					!itsBtn &&
+					isActive &&
+					!e.target.classList.contains('menu__mobile-unregistered')
+				) {
+					//e.stopPropagation();
 					authWrapper.classList.toggle('show');
 				}
-			};
+			});
+		}
+
+		//? mob menu
+
+		if (menuIcon) {
+			let femaleMob = document.querySelector('#female-mob');
+			let maleMob = document.querySelector('#male-mob');
+			let childMob = document.querySelector('#child-mob');
+
+			let femaleSub = document.querySelector('#female-mob-sub');
+			let maleSub = document.querySelector('#male-mob-sub');
+			let childSub = document.querySelector('#child-mob-sub');
+
+			let unregMob = document.querySelector('menu__mobile-unregistered');
+
+			menuIcon.addEventListener('click', (e) => {
+				//e.stopPropagation();
+				//menuModal.classList.toggle('show-left');
+				menuModal.classList.toggle('active-modal');
+				//menuModalBody.classList.toggle('active-modal');
+			});
+			//!сделать универсальным
+			document.addEventListener('click', function (e) {
+				if (
+					e.target.classList.contains('active-modal') ||
+					e.target.classList.contains('menu__mobile-close')
+				) {
+					menuModal.classList.toggle('active-modal');
+				}
+
+				//console.log(e.target);
+
+				if (
+					e.target.classList.contains('female-js') ||
+					e.target.parentNode.classList.contains('female-js')
+				) {
+					femaleSub.classList.toggle('show');
+				}
+
+				if (
+					e.target.classList.contains('male-js') ||
+					e.target.parentNode.classList.contains('male-js')
+				) {
+					maleSub.classList.toggle('show');
+				}
+
+				if (
+					e.target.classList.contains('child-js') ||
+					e.target.parentNode.classList.contains('child-js')
+				) {
+					childSub.classList.toggle('show');
+				}
+
+				if (e.target.classList.contains('menu__mob-sub-title')) {
+					e.target.parentNode.classList.toggle('show');
+				}
+				//console.log(e.target);
+
+				// let target = e.target;
+				// let itsContainer = target == authWrapper || authWrapper.contains(target);
+				// let itsBtn = target == unknownUser;
+				// let isActive = authWrapper.classList.contains('show');
+				// if (!itsContainer && !itsBtn && isActive) {
+				// 	e.stopPropagation();
+				// 	authWrapper.classList.toggle('show');
+				// }
+			});
 		}
 	})();
+
+	//? mob menu
+	(function () {})();
 };
