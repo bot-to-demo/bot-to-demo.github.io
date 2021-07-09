@@ -24,32 +24,56 @@ window.onload = function () {
 		let nuotSection = document.querySelector('.nuot__grid-wrapper');
 
 		async function getSearchRes() {
-			console.log(searchInput.value);
-
 			try {
-				const res = await fetch('/...', {
-					method: 'POST',
-					headers: {
-						'Content-Type': 'text/plain;charset=UTF-8',
+				let data = {
+					filter_name: searchInput.value,
+				};
+
+				$.ajax({
+					url: `${window.location.href}index.php?route=common/search/autocomplete/`,
+					type: 'get',
+					data: data,
+					dataType: 'json',
+					success: function (data) {
+						console.log(data);
+
+						data.map((i) => {
+							document
+								.querySelector('.search__results-container')
+								.insertAdjacentHTML(
+									'beforeend',
+									`<a href="${i.href}">${i.name}</a>`
+								);
+						});
 					},
-					body: searchInput.value,
+					error: function (xhr, ajaxOptions, thrownError) {
+						throw new Error(response.status);
+					},
 				});
 
-				if (res.status == 200) {
-					const data = await res.json();
-					console.log(data);
+				// const res = await fetch('/...', {
+				// 	method: 'POST',
+				// 	headers: {
+				// 		'Content-Type': 'text/plain;charset=UTF-8',
+				// 	},
+				// 	body: searchInput.value,
+				// });
 
-					data.map((i) => {
-						document
-							.querySelector('.search__results-container')
-							.insertAdjacentHTML(
-								'beforeend',
-								`<a href="${i.href}">${i.title}</a>`
-							);
-					});
-				} else {
-					throw new Error(response.status);
-				}
+				// if (res.status == 200) {
+				// 	const data = await res.json();
+				// 	console.log(data);
+
+				// 	data.map((i) => {
+				// 		document
+				// 			.querySelector('.search__results-container')
+				// 			.insertAdjacentHTML(
+				// 				'beforeend',
+				// 				`<a href="${i.href}">${i.title}</a>`
+				// 			);
+				// 	});
+				// } else {
+				// 	throw new Error(response.status);
+				// }
 			} catch (err) {
 				console.log(err);
 			}
@@ -101,41 +125,51 @@ window.onload = function () {
 			searchInput.focus();
 		});
 
-		nuotSection.addEventListener('click', (e) => {
-			//e.stopPropagation();
-			let target = e.target.parentNode;
+		if (nuotSection) {
+			nuotSection.addEventListener('click', (e) => {
+				//e.stopPropagation();
+				let target = e.target.parentNode;
 
-			if (!target.classList.contains('button-link')) {
-				window.location.href = 'www.yourtube.com';
-			}
-		});
+				if (!target.classList.contains('button-link')) {
+					window.location.href = 'www.yourtube.com';
+				}
+			});
+		}
 	})();
 	//SWIPER
 	(function () {
+		let newСollection = document.querySelector('.new-collection-slider');
+		let saleSwiper = document.getElementById('sale__swiper');
 		//*new collection
-		window.addEventListener('resize', function () {
-			if (window.matchMedia('(max-width: 600px)').matches) {
-				console.log('9999');
-			}
-		});
+		//if (newСollection) {
+			//window.addEventListener('resize', function () {
+				if (window.matchMedia('(max-width: 520px)').matches) {
+					const swiper = new Swiper('.new-collection-slider', {
+						pagination: {
+							el: '.new-collection-pagination',
+						},
+						//watchOverflow: true,
+					});
+				}
+			//});
+		//}
 		//*sale
-		const swiper = new Swiper('#sale__swiper', {
-			navigation: {
-				nextEl: '.swiper-button-next',
-				prevEl: '.swiper-button-prev',
-			},
-			pagination: {
-				el: '.swiper-pagination',
-			},
-			scrollbar: {
-				el: '.swiper-scrollbar',
-				//draggable: true,
-			},
-			watchOverflow: true,
-		});
-
-		// let saleLength = document.querySelectorAll('.sale__slide');
-		// console.log(saleLength);
+		if (saleSwiper) {
+			const swiper = new Swiper('#sale__swiper', {
+				navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev',
+				},
+				pagination: {
+					el: '.swiper-pagination',
+				},
+				scrollbar: {
+					el: '.swiper-scrollbar',
+					//draggable: true,
+				},
+				watchOverflow: true,
+			});
+		}
 	})();
 
 	//? auth
@@ -145,6 +179,11 @@ window.onload = function () {
 		let unknownMobile = document.querySelector(
 			'.menu__mobile-unregistered'
 		);
+		let personalWrapper =
+			document.querySelector(
+				'.personal__wrapper'
+			);
+		//console.log(getComputedStyle(personalWrapper).display);
 		//? mob menu
 		let menuIcon = document.querySelector('.menu__icon');
 		let menuModal = document.querySelector('.menu__mobile-modal');
@@ -152,42 +191,192 @@ window.onload = function () {
 		//let menuModalBody = document.querySelector('#menu__mobile-modal');
 
 		if (unknownUser) {
+			//form show
 			unknownMobile.addEventListener('click', (e) => {
-				//if (!e.target.classList.contains('auth__wrapper')) {
-				//e.stopPropagation();
-				menuModal.classList.toggle('active-modal');
-				authWrapper.classList.toggle('show');
-				console.log('6666');
-
-				//}
-			});
-
-			unknownUser.addEventListener('click', (e) => {
-				//if (!e.target.classList.contains('auth__wrapper')) {
-				//e.stopPropagation();
-				authWrapper.classList.toggle('show');
-				//}
-			});
-			//!сделать универсальным
-			document.addEventListener('click', function (e) {
-				//console.log('22222');
-
-				let target = e.target;
-				let itsContainer =
-					target == authWrapper || authWrapper.contains(target);
-				let itsBtn = target == unknownUser;
-				let isActive = authWrapper.classList.contains('show');
-
-				if (
-					!itsContainer &&
-					!itsBtn &&
-					isActive &&
-					!e.target.classList.contains('menu__mobile-unregistered')
-				) {
-					//e.stopPropagation();
+				if (getComputedStyle(authWrapper).display == 'none') {
+					menuModal.classList.toggle('active-modal');
+					personalWrapper.classList.toggle('show');
+				} else {
+					menuModal.classList.toggle('active-modal');
 					authWrapper.classList.toggle('show');
 				}
 			});
+
+			unknownUser.addEventListener('click', (e) => {
+				if (getComputedStyle(authWrapper).display == 'none') {
+					personalWrapper.classList.toggle('show');
+				} else {
+					authWrapper.classList.toggle('show');
+				}
+				//authWrapper.classList.toggle('show');
+			});
+
+			document.querySelector('.back-number').addEventListener('click', (e) => {
+				numberCont.style.display = 'block';
+				codeCont.style.display = 'none';
+				document.querySelector('.send-tel').disabled = false;
+			});
+
+			//!сделать универсальным
+			document.addEventListener('click', function (e) {
+
+				if (getComputedStyle(authWrapper).display == 'none') {
+					let target = e.target;
+					let itsContainer =
+						target == personalWrapper || personalWrapper.contains(target);
+					let itsBtn = target == unknownUser;
+					let isActive = personalWrapper.classList.contains('show');
+
+					if (
+						!itsContainer &&
+						!itsBtn &&
+						isActive &&
+						!e.target.classList.contains('menu__mobile-unregistered')
+					) {
+						//e.stopPropagation();
+						personalWrapper.classList.toggle('show');
+					}
+				} else {
+					let target = e.target;
+					let itsContainer =
+						target == authWrapper || authWrapper.contains(target);
+					let itsBtn = target == unknownUser;
+					let isActive = authWrapper.classList.contains('show');
+
+					if (
+						!itsContainer &&
+						!itsBtn &&
+						isActive &&
+						!e.target.classList.contains('menu__mobile-unregistered')
+					) {
+						//e.stopPropagation();
+						authWrapper.classList.toggle('show');
+					}
+				}
+			});
+
+			//form submit
+			let numberForm = document.getElementById('numberForm');
+			let numberInput = numberForm.getElementsByTagName('input');
+			let codeForm = document.getElementById('codeForm');
+			let codeInput = codeForm.getElementsByTagName('input');
+			//переименовать если id формы изменется
+			//let personalDataForm = document.getElementById('personal-data');
+			//переименовать если id input изменется
+			let persTelephone = document.getElementById('telephone');
+			let userPhone;
+			let truCode;
+
+			let numberCont = document.querySelector('.number__container');
+			let codeCont = document.querySelector('.code__container');
+			let resTel = document.querySelector('.code__container-text');
+
+			numberForm.addEventListener('submit', function (e) {
+				e.preventDefault();
+
+				let numberValue = numberInput[0].value;
+
+				if (numberValue !== '') {
+					userPhone = {
+						phone: numberValue,
+					};
+					document.querySelector('.send-tel').disabled = true;
+					sendNumber(userPhone);
+				}
+			});
+
+			async function sendNumber(userPhone) {
+				try {
+					$.ajax({
+						url: `${window.location.href}index.php?route=account/login/turboSmsGetCode`,
+						type: 'post',
+						data: userPhone,
+						dataType: 'json',
+						success: function (data) {
+							// ожидается {"send_sms":true,"send_code":12345678,"phone":"380955078435"}
+							console.log(data);
+
+							if (data.send_sms === true) {
+								// authWrapper.classList.toggle('show');
+								// authWrapper.style.display = "none"
+								// personalWrapper.classList.toggle('show');
+								//persTelephone.value = data.phone;
+								numberCont.style.display = 'none';
+								codeCont.style.display = 'block';
+								resTel.textContent = `+${data.phone}`;
+								truCode = data.send_code;
+								userPhone = data.phone;
+							}
+
+							// if (data.auth) {
+							// }
+							// document.querySelector(
+							// 	'.number__container'
+							// ).style.display = 'none';
+							// document.querySelector(
+							// 	'.code__container'
+							// ).style.display = 'block';
+							// document.querySelector(
+							// 	'.code__container-text'
+							// ).textContent = userPhone.phone;
+						},
+						error: function (xhr, ajaxOptions, thrownError) {
+							// document.querySelector(
+							// 	'.error-number'
+							// ).textContent = xhr.responseText;
+							throw new Error(xhr);
+						},
+					});
+				} catch (err) {
+					console.log(err);
+				}
+			}
+
+			codeForm.addEventListener('submit', function (e) {
+				e.preventDefault();
+				let codeValue = codeInput[0].value;
+
+				if (codeValue !== '') {
+					let data = {
+				 		"sms_code": codeValue,
+						"opencart_code": truCode,
+						"phone": userPhone
+					}
+					sendCode(data);
+				}
+			});
+			
+			async function sendCode(data) {
+				try {
+					$.ajax({
+						url: `${window.location.href}index.php?route=account/login/turboSmsCheckCode`,
+						type: 'post',
+						data: data,
+						dataType: 'json',
+						success: function (data) {
+							console.log(data);
+							//if (data.code_error === false) {
+							//	if (data.try_count < 5) {
+									if (data.is_auth === false) {
+										authWrapper.style.display = "none";
+										personalWrapper.classList.toggle('show');
+										document.getElementById('telephone').value = data.telephone;
+										document.getElementById('code').value = data.code;
+									}
+								// } else {
+								// 	data.try_error
+								// }
+							//}
+						},
+						error: function (xhr, ajaxOptions, thrownError) {
+							numberInput[0].classList.add('error-input')
+							throw new Error(response.status);
+						},
+					});
+				} catch (err) {
+					console.log(err);
+				}
+			}
 		}
 
 		//? mob menu
@@ -259,5 +448,5 @@ window.onload = function () {
 	})();
 
 	//? mob menu
-	(function () {})();
+	(function () { })();
 };
