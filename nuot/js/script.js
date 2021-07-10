@@ -138,36 +138,64 @@ window.onload = function () {
 	})();
 	//SWIPER
 	(function () {
-		let newСollection = document.querySelector('.new-collection-slider');
-		let saleSwiper = document.getElementById('sale__swiper');
 		//*new collection
-		//if (newСollection) {
-			//window.addEventListener('resize', function () {
+		let newСollection = document.querySelector('.new-collection-slider');
+		if (newСollection) {
+			window.addEventListener('resize', function () {
 				if (window.matchMedia('(max-width: 520px)').matches) {
-					const swiper = new Swiper('.new-collection-slider', {
-						pagination: {
-							el: '.new-collection-pagination',
-						},
-						//watchOverflow: true,
-					});
+					swiperInit();
 				}
-			//});
-		//}
+			});
+
+			if (window.matchMedia('(max-width: 520px)').matches) {
+				swiperInit();
+			}
+
+			function swiperInit() {
+				const newCollectionSwiper = new Swiper('.new-collection-slider', {
+					pagination: {
+						el: '.new-collection-pagination',
+					},
+					autoplay: {
+						delay: 5000,
+					},
+					watchOverflow: true,
+					breakpoints: {
+						521: {
+						  slidesPerView: 3,
+						},
+					}
+				});
+			}
+		}
 		//*sale
+		let saleSwiper = document.querySelector('.sale__swiper');
 		if (saleSwiper) {
-			const swiper = new Swiper('#sale__swiper', {
-				navigation: {
-					nextEl: '.swiper-button-next',
-					prevEl: '.swiper-button-prev',
-				},
-				pagination: {
-					el: '.swiper-pagination',
-				},
-				scrollbar: {
-					el: '.swiper-scrollbar',
-					//draggable: true,
-				},
+			const saleSwiper = new Swiper('.sale__swiper', {
 				watchOverflow: true,
+				pagination: {
+					el: '.sale-swiper-pagination',
+					type: 'bullets'
+				},
+				autoplay: {
+					delay: 5000,
+				},
+				breakpoints: {
+					769: {
+						navigation: {
+							nextEl: '.sale-swiper-next',
+							prevEl: '.sale-swiper-prev',
+						},
+						pagination: {
+							el: '.sale-swiper-pagination',
+							type: 'fraction'
+						},
+						scrollbar: {
+							el: '.sale-swiper-scrollbar',
+							draggable: true,
+						},
+					},
+				}
 			});
 		}
 	})();
@@ -209,12 +237,6 @@ window.onload = function () {
 					authWrapper.classList.toggle('show');
 				}
 				//authWrapper.classList.toggle('show');
-			});
-
-			document.querySelector('.back-number').addEventListener('click', (e) => {
-				numberCont.style.display = 'block';
-				codeCont.style.display = 'none';
-				document.querySelector('.send-tel').disabled = false;
 			});
 
 			//!сделать универсальным
@@ -264,12 +286,48 @@ window.onload = function () {
 			//let personalDataForm = document.getElementById('personal-data');
 			//переименовать если id input изменется
 			let persTelephone = document.getElementById('telephone');
+			let refreshBtn = document.querySelector('.refresh-form');
 			let userPhone;
-			let truCode;
+			let trueCode;
 
 			let numberCont = document.querySelector('.number__container');
 			let codeCont = document.querySelector('.code__container');
 			let resTel = document.querySelector('.code__container-text');
+
+			document.querySelector('.back-number').addEventListener('click', (e) => {
+				numberCont.style.display = 'block';
+				codeCont.style.display = 'none';
+				document.querySelector('.send-tel').disabled = false;
+				resetCode();
+
+				console.log(trueCode);
+			});
+
+			refreshBtn.addEventListener('click', (e) => {
+				resetCode();
+				setTimeout(() => sendNumber(userPhone), 400);
+
+				console.log(trueCode);
+			});
+
+			async function resetCode() {
+				try {
+					$.ajax({
+						url: `${window.location.href}index.php?route=account/login/turboSmsClearAttemps`,
+						type: 'post',
+						data: trueCode,
+						dataType: 'json',
+						success: function () {
+							console.log('true');
+						},
+						error: function (xhr, ajaxOptions, thrownError) {
+							throw new Error(xhr);
+						},
+					});
+				} catch (err) {
+					console.log(err);
+				}
+			}
 
 			numberForm.addEventListener('submit', function (e) {
 				e.preventDefault();
@@ -293,37 +351,18 @@ window.onload = function () {
 						data: userPhone,
 						dataType: 'json',
 						success: function (data) {
-							// ожидается {"send_sms":true,"send_code":12345678,"phone":"380955078435"}
 							console.log(data);
 
 							if (data.send_sms === true) {
-								// authWrapper.classList.toggle('show');
-								// authWrapper.style.display = "none"
-								// personalWrapper.classList.toggle('show');
-								//persTelephone.value = data.phone;
 								numberCont.style.display = 'none';
 								codeCont.style.display = 'block';
 								resTel.textContent = `+${data.phone}`;
-								truCode = data.send_code;
+								trueCode = data.send_code;
 								userPhone = data.phone;
 							}
-
-							// if (data.auth) {
-							// }
-							// document.querySelector(
-							// 	'.number__container'
-							// ).style.display = 'none';
-							// document.querySelector(
-							// 	'.code__container'
-							// ).style.display = 'block';
-							// document.querySelector(
-							// 	'.code__container-text'
-							// ).textContent = userPhone.phone;
 						},
 						error: function (xhr, ajaxOptions, thrownError) {
-							// document.querySelector(
-							// 	'.error-number'
-							// ).textContent = xhr.responseText;
+							numberInput[0].classList.add('error-input');
 							throw new Error(xhr);
 						},
 					});
@@ -339,7 +378,7 @@ window.onload = function () {
 				if (codeValue !== '') {
 					let data = {
 				 		"sms_code": codeValue,
-						"opencart_code": truCode,
+						"opencart_code": trueCode,
 						"phone": userPhone
 					}
 					sendCode(data);
@@ -355,21 +394,47 @@ window.onload = function () {
 						dataType: 'json',
 						success: function (data) {
 							console.log(data);
-							//if (data.code_error === false) {
-							//	if (data.try_count < 5) {
-									if (data.is_auth === false) {
-										authWrapper.style.display = "none";
-										personalWrapper.classList.toggle('show');
-										document.getElementById('telephone').value = data.telephone;
-										document.getElementById('code').value = data.code;
-									}
-								// } else {
-								// 	data.try_error
-								// }
-							//}
+							if (data.code_matching === true && data.is_auth === false) {
+								authWrapper.style.display = "none";
+								personalWrapper.classList.toggle('show');
+								document.getElementById('telephone').value = data.telephone;
+								document.getElementById('code').value = data.code;
+							} else if (data.code_matching === false && data.try_count <= 5) {
+								codeInput[0].classList.add('error-input');
+								document.querySelector('.code-error-block').textContent = data.code_error;
+							} else if (data.code_matching === false && data.try_count > 5) {
+								codeInput[0].classList.add('error-input');
+								document.querySelector('.code-error-block').textContent = data.try_error;
+								refreshBtn.style.display = "block";
+							} else if (data.is_auth === true) {
+								let auth = {
+									telephone: data.telephone,
+									code: data.code,
+								}
+								authFun(auth);
+							}
 						},
 						error: function (xhr, ajaxOptions, thrownError) {
-							numberInput[0].classList.add('error-input')
+							codeInput[0].classList.add('error-input')
+							throw new Error(response.status);
+						},
+					});
+				} catch (err) {
+					console.log(err);
+				}
+			}
+
+			async function authFun(data) {
+				try {
+					$.ajax({
+						url: `${window.location.href}index.php?route=account/login/turboSmsLogin`,
+						type: 'post',
+						data: data,
+						dataType: 'json',
+						success: function () {
+							console.log('ok');
+						},
+						error: function (xhr, ajaxOptions, thrownError) {
 							throw new Error(response.status);
 						},
 					});

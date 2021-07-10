@@ -481,9 +481,8 @@
                                     <form class="code__form" name="codeForm" id="codeForm">
                                         <label for="">Введие код подтверждения</label>
                                         <input form="codeForm" type="text" pattern="[0-9]+" required minlength="6" placeholder="">
-                                        <!-- <div class="refresh-form" role="button">Повторное СМС</div> -->
                                         <div role="button" class="back-number">Назад</div>
-                                        <div class="refresh-form" role="button"></div>
+                                        <div class="refresh-form" role="button">Повторное СМС</div>
                                         <div class="code-error-block"></div>
                                         <button form="codeForm" type="submit">ПОДТВЕРДИТЬ</button>
                                     </form>
@@ -591,27 +590,37 @@
 </section>
 <section class="sale__wrapper">
     <div class="custom__container">
-        <div id="sale__swiper" class="swiper-container">
+        <div class="swiper-container sale__swiper">
             <div class="swiper-wrapper">
                 <div class="sale__slide swiper-slide">
                     <img src="./images/sale-slide.jpg" alt="">
+                    <a href="#" class="button-link">
+                        <span>Скидки</span>
+                        <div class="_icon-arrow-link"></div>
+                    </a>
                 </div>
                 <div class="sale__slide swiper-slide">
                     <img src="./images/sale-slide.jpg" alt="">
+                    <a href="#" class="button-link">
+                        <span>Скидки</span>
+                        <div class="_icon-arrow-link"></div>
+                    </a>
                 </div>
                 <div class="sale__slide swiper-slide">
                     <img src="./images/sale-slide.jpg" alt="">
+                    <a href="#" class="button-link">
+                        <span>Скидки</span>
+                        <div class="_icon-arrow-link"></div>
+                    </a>
                 </div>
             </div>
-            <!-- If we need pagination -->
-            <div class="sale-pagination swiper-pagination"></div>
-
-            <!-- If we need navigation buttons -->
-            <div class="sale-prev swiper-button-prev"></div>
-            <div class="sale-next swiper-button-next"></div>
-
-            <!-- If we need scrollbar -->
-            <div class="sale-scrollbar swiper-scrollbar"></div>
+            <div class="sale-swiper-pagination"></div>
+            <div class="slider__btn-cont">
+                <div class="_icon-arrow-slider-1 sale-swiper-prev"></div>
+                <span>|</span>
+                <div class="_icon-arrow-slider-2 sale-swiper-next"></div>
+            </div>
+            <div class="sale-swiper-scrollbar"></div>
         </div>
     </div>
 </section>
@@ -685,7 +694,6 @@
             </div>
             <div class="nuot__block">
                 <div class="nuot__style-block">
-                    <div class="lol"></div>
                     <div class="nuot__title-head">
                         #nuotstyle
                     </div>
@@ -723,9 +731,9 @@
         <div class="footer__sub-action">
             <div class="footer__sub-title">Подпишитесь на новости</div>
             <div class="footer__sub-form">
-                <form action="">
-                    <input type="email" minlength="6" required placeholder="Ваша електронная почта">
-                    <button class="footer__sub-form-btn _icon-arrow-link" type="submit"></button>
+                <form action="" method=""  name="" id="">
+                    <input form="" type="email" minlength="6" required placeholder="Ваша електронная почта">
+                    <button class="footer__sub-form-btn _icon-arrow-link" type="submit" form=""></button>
                 </form>
             </div>
             <hr>
