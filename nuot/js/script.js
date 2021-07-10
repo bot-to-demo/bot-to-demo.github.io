@@ -211,21 +211,20 @@ window.onload = function () {
 			document.querySelector(
 				'.personal__wrapper'
 			);
-		//console.log(getComputedStyle(personalWrapper).display);
-		//? mob menu
 		let menuIcon = document.querySelector('.menu__icon');
 		let menuModal = document.querySelector('.menu__mobile-modal');
-
-		//let menuModalBody = document.querySelector('#menu__mobile-modal');
+		let bodyModal = document.querySelector('#menu__mobile-modal');
 
 		if (unknownUser) {
 			//form show
 			unknownMobile.addEventListener('click', (e) => {
 				if (getComputedStyle(authWrapper).display == 'none') {
 					menuModal.classList.toggle('active-modal');
+					bodyModal.classList.toggle('active-modal');
 					personalWrapper.classList.toggle('show');
 				} else {
 					menuModal.classList.toggle('active-modal');
+					bodyModal.classList.toggle('active-modal');
 					authWrapper.classList.toggle('show');
 				}
 			});
@@ -447,21 +446,15 @@ window.onload = function () {
 		//? mob menu
 
 		if (menuIcon) {
-			let femaleMob = document.querySelector('#female-mob');
-			let maleMob = document.querySelector('#male-mob');
-			let childMob = document.querySelector('#child-mob');
-
 			let femaleSub = document.querySelector('#female-mob-sub');
 			let maleSub = document.querySelector('#male-mob-sub');
 			let childSub = document.querySelector('#child-mob-sub');
-
-			let unregMob = document.querySelector('menu__mobile-unregistered');
 
 			menuIcon.addEventListener('click', (e) => {
 				//e.stopPropagation();
 				//menuModal.classList.toggle('show-left');
 				menuModal.classList.toggle('active-modal');
-				//menuModalBody.classList.toggle('active-modal');
+				bodyModal.classList.toggle('active-modal');
 			});
 			//!сделать универсальным
 			document.addEventListener('click', function (e) {
@@ -470,6 +463,7 @@ window.onload = function () {
 					e.target.classList.contains('menu__mobile-close')
 				) {
 					menuModal.classList.toggle('active-modal');
+					bodyModal.classList.toggle('active-modal');
 				}
 
 				//console.log(e.target);
@@ -512,6 +506,5 @@ window.onload = function () {
 		}
 	})();
 
-	//? mob menu
 	(function () { })();
 };
