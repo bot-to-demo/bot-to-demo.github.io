@@ -1780,8 +1780,8 @@ header li {
   bottom: 20px;
   color: #ffffff;
   left: 30px;
-  -webkit-transform: translateY(48%);
-          transform: translateY(48%);
+  -webkit-transform: translateY(56%);
+          transform: translateY(56%);
   width: 81%;
   -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
   transition: -webkit-transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -2888,6 +2888,10 @@ body {
   .nuot__style-img img {
     -o-object-position: top;
        object-position: top;
+  }
+
+  .blog__wrapper .slider-controls-container {
+    margin-right: 16px;
   }
 
   .blog__column-description {

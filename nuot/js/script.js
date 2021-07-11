@@ -180,9 +180,9 @@ window.onload = function () {
 					el: '.sale-swiper-pagination',
 					type: 'bullets',
 				},
-				autoplay: {
-					delay: 5000,
-				},
+				// autoplay: {
+				// 	delay: 5000,
+				// },
 				breakpoints: {
 					769: {
 						navigation: {
