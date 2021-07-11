@@ -152,20 +152,23 @@ window.onload = function () {
 			}
 
 			function swiperInit() {
-				const newCollectionSwiper = new Swiper('.new-collection-slider', {
-					pagination: {
-						el: '.new-collection-pagination',
-					},
-					autoplay: {
-						delay: 5000,
-					},
-					watchOverflow: true,
-					breakpoints: {
-						521: {
-						  slidesPerView: 3,
+				const newCollectionSwiper = new Swiper(
+					'.new-collection-slider',
+					{
+						pagination: {
+							el: '.new-collection-pagination',
+						},
+						autoplay: {
+							delay: 5000,
+						},
+						watchOverflow: true,
+						breakpoints: {
+							521: {
+								slidesPerView: 3,
+							},
 						},
 					}
-				});
+				);
 			}
 		}
 		//*sale
@@ -175,7 +178,7 @@ window.onload = function () {
 				watchOverflow: true,
 				pagination: {
 					el: '.sale-swiper-pagination',
-					type: 'bullets'
+					type: 'bullets',
 				},
 				autoplay: {
 					delay: 5000,
@@ -188,14 +191,47 @@ window.onload = function () {
 						},
 						pagination: {
 							el: '.sale-swiper-pagination',
-							type: 'fraction'
+							type: 'fraction',
 						},
 						scrollbar: {
 							el: '.sale-swiper-scrollbar',
 							draggable: true,
 						},
 					},
-				}
+				},
+			});
+		}
+		//*blog
+		let blogSwiper = document.querySelector('.blog__swiper');
+		if (blogSwiper) {
+			const blogSwiper = new Swiper('.blog__swiper', {
+				watchOverflow: true,
+				slidesPerView: 1,
+				spaceBetween: 10,
+				pagination: {
+					el: '.blog-swiper-pagination',
+					type: 'bullets',
+				},
+				breakpoints: {
+					769: {
+						spaceBetween: 20,
+						navigation: {
+							nextEl: '.blog-swiper-next',
+							prevEl: '.blog-swiper-prev',
+						},
+						pagination: {
+							el: '.blog-swiper-pagination',
+							type: 'fraction',
+						},
+						scrollbar: {
+							el: '.blog-swiper-scrollbar',
+							draggable: true,
+						},
+					},
+					641: {
+						slidesPerView: 2,
+					},
+				},
 			});
 		}
 	})();
@@ -207,10 +243,7 @@ window.onload = function () {
 		let unknownMobile = document.querySelector(
 			'.menu__mobile-unregistered'
 		);
-		let personalWrapper =
-			document.querySelector(
-				'.personal__wrapper'
-			);
+		let personalWrapper = document.querySelector('.personal__wrapper');
 		let menuIcon = document.querySelector('.menu__icon');
 		let menuModal = document.querySelector('.menu__mobile-modal');
 		let bodyModal = document.querySelector('#menu__mobile-modal');
@@ -240,11 +273,11 @@ window.onload = function () {
 
 			//!сделать универсальным
 			document.addEventListener('click', function (e) {
-
 				if (getComputedStyle(authWrapper).display == 'none') {
 					let target = e.target;
 					let itsContainer =
-						target == personalWrapper || personalWrapper.contains(target);
+						target == personalWrapper ||
+						personalWrapper.contains(target);
 					let itsBtn = target == unknownUser;
 					let isActive = personalWrapper.classList.contains('show');
 
@@ -252,7 +285,9 @@ window.onload = function () {
 						!itsContainer &&
 						!itsBtn &&
 						isActive &&
-						!e.target.classList.contains('menu__mobile-unregistered')
+						!e.target.classList.contains(
+							'menu__mobile-unregistered'
+						)
 					) {
 						//e.stopPropagation();
 						personalWrapper.classList.toggle('show');
@@ -268,7 +303,9 @@ window.onload = function () {
 						!itsContainer &&
 						!itsBtn &&
 						isActive &&
-						!e.target.classList.contains('menu__mobile-unregistered')
+						!e.target.classList.contains(
+							'menu__mobile-unregistered'
+						)
 					) {
 						//e.stopPropagation();
 						authWrapper.classList.toggle('show');
@@ -293,14 +330,16 @@ window.onload = function () {
 			let codeCont = document.querySelector('.code__container');
 			let resTel = document.querySelector('.code__container-text');
 
-			document.querySelector('.back-number').addEventListener('click', (e) => {
-				numberCont.style.display = 'block';
-				codeCont.style.display = 'none';
-				document.querySelector('.send-tel').disabled = false;
-				resetCode();
+			document
+				.querySelector('.back-number')
+				.addEventListener('click', (e) => {
+					numberCont.style.display = 'block';
+					codeCont.style.display = 'none';
+					document.querySelector('.send-tel').disabled = false;
+					resetCode();
 
-				console.log(trueCode);
-			});
+					console.log(trueCode);
+				});
 
 			refreshBtn.addEventListener('click', (e) => {
 				resetCode();
@@ -376,14 +415,14 @@ window.onload = function () {
 
 				if (codeValue !== '') {
 					let data = {
-				 		"sms_code": codeValue,
-						"opencart_code": trueCode,
-						"phone": userPhone
-					}
+						sms_code: codeValue,
+						opencart_code: trueCode,
+						phone: userPhone,
+					};
 					sendCode(data);
 				}
 			});
-			
+
 			async function sendCode(data) {
 				try {
 					$.ajax({
@@ -393,28 +432,43 @@ window.onload = function () {
 						dataType: 'json',
 						success: function (data) {
 							console.log(data);
-							if (data.code_matching === true && data.is_auth === false) {
-								authWrapper.style.display = "none";
+							if (
+								data.code_matching === true &&
+								data.is_auth === false
+							) {
+								authWrapper.style.display = 'none';
 								personalWrapper.classList.toggle('show');
-								document.getElementById('telephone').value = data.telephone;
-								document.getElementById('code').value = data.code;
-							} else if (data.code_matching === false && data.try_count <= 5) {
+								document.getElementById('telephone').value =
+									data.telephone;
+								document.getElementById('code').value =
+									data.code;
+							} else if (
+								data.code_matching === false &&
+								data.try_count <= 5
+							) {
 								codeInput[0].classList.add('error-input');
-								document.querySelector('.code-error-block').textContent = data.code_error;
-							} else if (data.code_matching === false && data.try_count > 5) {
+								document.querySelector(
+									'.code-error-block'
+								).textContent = data.code_error;
+							} else if (
+								data.code_matching === false &&
+								data.try_count > 5
+							) {
 								codeInput[0].classList.add('error-input');
-								document.querySelector('.code-error-block').textContent = data.try_error;
-								refreshBtn.style.display = "block";
+								document.querySelector(
+									'.code-error-block'
+								).textContent = data.try_error;
+								refreshBtn.style.display = 'block';
 							} else if (data.is_auth === true) {
 								let auth = {
 									telephone: data.telephone,
 									code: data.code,
-								}
+								};
 								authFun(auth);
 							}
 						},
 						error: function (xhr, ajaxOptions, thrownError) {
-							codeInput[0].classList.add('error-input')
+							codeInput[0].classList.add('error-input');
 							throw new Error(response.status);
 						},
 					});
@@ -506,5 +560,5 @@ window.onload = function () {
 		}
 	})();
 
-	(function () { })();
+	(function () {})();
 };
