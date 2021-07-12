@@ -158,9 +158,9 @@ window.onload = function () {
 						pagination: {
 							el: '.new-collection-pagination',
 						},
-						autoplay: {
-							delay: 5000,
-						},
+						// autoplay: {
+						// 	delay: 5000,
+						// },
 						watchOverflow: true,
 						breakpoints: {
 							521: {
@@ -227,6 +227,7 @@ window.onload = function () {
 							el: '.blog-swiper-scrollbar',
 							draggable: true,
 						},
+						slidesPerView: 2,
 					},
 					641: {
 						slidesPerView: 2,
