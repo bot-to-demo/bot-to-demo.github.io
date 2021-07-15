@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="ua"><head>    <meta charset="UTF-8">    <meta http-equiv="X-UA-Compatible" content="IE=edge">    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <!-- Chrome, Firefox OS and Opera -->    <meta name="theme-color" content="#144563" />    <!-- iOS Safari -->    <meta name="apple-mobile-web-app-capable" content="yes" />    <meta name="apple-mobile-web-app-status-bar-style" content="#144563" />    <title>Nuot</title>    <link rel="shortcut icon" type="image/jpg" href="./images/favicon.ico" />    <!-- <link rel="stylesheet" href="./css/bootstrap-reboot.min.css"> -->    <link rel="stylesheet" href="./css/bootstrap.min.css">    <link rel="stylesheet" href="./css/swiper-bundle.min.css">    <link rel="stylesheet" href="./css/style.min.css"></head><body>    <script>        function testWebP(callback) {            var webP = new Image();            webP.onload = webP.onerror = function() {                callback(webP.height == 2);            };            webP.src =                'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';        }        testWebP(function(support) {            if (support == true) {                document.querySelector('body').classList.add('webp');            } else {                document.querySelector('body').classList.add('no-webp');            }        });    </script>    <header>        <div class="header__wrapper">
+<!DOCTYPE html><html lang="ua"><head>    <meta charset="UTF-8">    <meta http-equiv="X-UA-Compatible" content="IE=edge">    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <!-- Chrome, Firefox OS and Opera -->    <meta name="theme-color" content="#144563" />    <!-- iOS Safari -->    <meta name="apple-mobile-web-app-capable" content="yes" />    <meta name="apple-mobile-web-app-status-bar-style" content="#144563" />    <title>Nuot</title>    <link rel="shortcut icon" type="image/jpg" href="./images/favicon.ico" />    <link rel="stylesheet" href="./css/bootstrap.min.css">    <link rel="stylesheet" href="./css/swiper-bundle.min.css">    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />    <link rel="stylesheet" href="./css/style.min.css"></head><body>    <div id="menu__mobile-modal"></div>    <header>        <div class="header__wrapper">
     <div class="header__top custom__container">
         <!-- <div class=""> -->
         <div class="header__contacts">
@@ -466,7 +466,8 @@
                                         подтверждения
                                     </p>
                                     <form class="number__form" id="numberForm" name="numberForm">
-                                        <input form="numberForm" type="tel" pattern="[\+][0-9]{12}" placeholder="+380 ( _ _ ) _ _ _ _ _ _ _">
+                                        <input form="numberForm" id="telephoneInput" type="tel" required placeholder="+380 ( _ _ ) _ _ _ _ _ _ _">
+                                        <input form="numberForm" name="chekoutTel" id="chekoutTel" type="text" style="display: none;" value="">
                                         <div class="error-number"></div>
                                         <button class="send-tel" form="numberForm" type="submit">получить код</button>
                                     </form>
@@ -480,7 +481,7 @@
                                     </p>
                                     <form class="code__form" name="codeForm" id="codeForm">
                                         <label for="">Введие код подтверждения</label>
-                                        <input form="codeForm" type="text" pattern="[0-9]+" required minlength="6" placeholder="">
+                                        <input form="codeForm" name="code" type="number" required placeholder="">
                                         <div role="button" class="back-number">Назад</div>
                                         <div class="refresh-form" role="button">Повторное СМС</div>
                                         <div class="code-error-block"></div>
@@ -515,14 +516,14 @@
                             <form name="personal-data" id="personal-data" class="personal__form" action="" method="post">
                                 <!-- needs for backend -->
                                 <input id="telephone" name="telephone" type="text" style="display: none;" value>
-                                <input id="code" name="code" type="text" style="display: none;" value>
-                                <input id="newsletter" name="" type="text" style="display: none;" value="0">
+                                <input id="code" name="codePersone" type="text" style="display: none;" value>
+                                <input id="newsletter" name="newsletter" type="text" style="display: none;" value="0">
                                 <input id="agree" name="agree" type="text" style="display: none;" value="1">
                                 <!-- needs for backend -->
                                 <label for="lastname">Фамилия</label>
-                                <input id="lastname" name="lastname" type="text" placeholder="Иванов">                               
+                                <input id="lastname" name="lastname" type="text" placeholder="Иванов">
                                 <label for="firstname">Имя</label>
-                                <input id="firstname" name="firstname" type="text" placeholder="Иван">                                
+                                <input id="firstname" name="firstname" type="text" placeholder="Иван">
                                 <label for="patronymic">Отчество</label>
                                 <input id="patronymic" name="patronymic" type="text" placeholder="Иванович">
                                 <label for="email">E-mail</label>
@@ -542,143 +543,79 @@
                         </div>
                     </div>
                 </div>
-                <a href="" class="header-bag _icon-bag header-icon"></a>
+                <div role="button" class="header-bag _icon-bag header-icon"></a>
+                </div>
             </div>
+            <!-- </div> -->
         </div>
-        <!-- </div> -->
-    </div>
-</div>    </header>    <main>        <div id="menu__mobile-modal"></div>
-<section class="new-collection__wrapper">
-    <div class="new-collection-slider">
-        <div class="custom__container swiper-wrapper">
-            <div class="male__container swiper-slide">
-                <img src="./images/female-collection.jpg" alt="">
-                <div class="male__title-wrapper">
-                    <div class="title-collection">НОВАЯ ЖЕНСКАЯ КОЛЛЕКЦИЯ</div>
-                    <div class="new-collection">весна 2021</div>
-                </div>
-                <a href="#" class="button-link new-collection__button">
-                    <span>Перейти</span>
-                    <div class="_icon-arrow-link"></div>
-                </a>
-            </div>
-            <div class="female__container swiper-slide">
-                <img src="./images/male-collection.jpg" alt="">
-                <div class="female__title-wrapper">
-                    <div class="title-collection">НОВАЯ МУЖСКАЯ КОЛЛЕКЦИЯ</div>
-                    <div class="new-collection">весна 2021</div>
-                </div>
-                <a href="#" class="button-link new-collection__button">
-                    <span>Перейти</span>
-                    <div class="_icon-arrow-link"></div>
-                </a>
-            </div>
-            <div class="child__container swiper-slide">
-                <img src="./images/child-collection.jpg" alt="">
-                <div class="child__title-wrapper">
-                    <div class="title-collection">НОВАЯ ДЕТСКАЯ КОЛЛЕКЦИЯ</div>
-                    <div class="new-collection">весна 2021</div>
-                </div>
-                <a href="#" class="button-link new-collection__button">
-                    <span>Перейти</span>
-                    <div class="_icon-arrow-link"></div>
-                </a>
-            </div>
+    </div>    </header>    <main>                <section class="category__baner-wrapper">
+    <div class="category__baner-container custom__container">
+        <img src="./images/category-baner-2.jpg" alt="">
+        <div class="category__title">
+            <div class="category__title-title">НОВАЯ ЖЕНСКАЯ КОЛЛЕКЦИЯ</div>
+            <div class="category__title-date">весна 2021</div>
         </div>
-        <div class="new-collection-pagination"></div>
+        <a href="#" class="button-link">
+            <span>Перейти</span>
+            <div class="_icon-arrow-link"></div>
+        </a>
     </div>
 </section>
-<section class="sale__wrapper">
-    <div class="custom__container">
-        <div class="swiper-container sale__swiper">
+<section class="subcategory__wrapper">
+    <div class="subcategory__container custom__container">
+        <div>title</div>
+        <div class="slider">
+            <div class="sl swiper-slide">
+                <img src="./images/cat-1.jpg" alt="">
+            </div>
+            <div class="sl swiper-slide">
+                <img src="./images/cat-2.jpg" alt="">
+            </div>
+            <div class="sl swiper-slide">
+                <img src="./images/cat-3.jpg" alt="">
+            </div>
+            <div class="sl swiper-slide">
+                <img src="./images/cat-4.jpg" alt="">
+            </div>
+            <div class="sl swiper-slide">
+                <img src="./images/cat-5.jpg" alt="">
+            </div>
+            <div class="sl swiper-slide">
+                <img src="./images/cat-5.jpg" alt="">
+            </div>
+            <div class="sl swiper-slide">
+                <img src="./images/cat-5.jpg" alt="">
+            </div>
+        </div>
+        <!-- <div class="webgl"></div> -->
+        <!-- <div class="slider1 swiper-container">
             <div class="swiper-wrapper">
-                <div class="sale__slide swiper-slide">
-                    <img src="./images/sale-slide.jpg" alt="">
-                    <a href="#" class="button-link">
-                        <span>Скидки</span>
-                        <div class="_icon-arrow-link"></div>
-                    </a>
+                <div class="sl swiper-slide">
+                    <img src="./images/new-4.jpg" alt="">
                 </div>
-                <div class="sale__slide swiper-slide">
-                    <img src="./images/sale-slide.jpg" alt="">
-                    <a href="#" class="button-link">
-                        <span>Скидки</span>
-                        <div class="_icon-arrow-link"></div>
-                    </a>
+                <div class="sl swiper-slide">
+                    <img src="./images/new-1.jpg" alt="">
                 </div>
-                <div class="sale__slide swiper-slide">
-                    <img src="./images/sale-slide.jpg" alt="">
-                    <a href="#" class="button-link">
-                        <span>Скидки</span>
-                        <div class="_icon-arrow-link"></div>
-                    </a>
+                <div class="sl swiper-slide">
+                    <img src="./images/new-1.jpg" alt="">
+                </div>
+                <div class="sl swiper-slide">
+                    <img src="./images/new-1.jpg" alt="">
+                </div>
+                <div class="sl swiper-slide">
+                    <img src="./images/new-1.jpg" alt="">
+                </div>
+                <div class="sl swiper-slide">
+                    <img src="./images/new-1.jpg" alt="">
+                </div>
+                <div class="sl swiper-slide">
+                    <img src="./images/new-1.jpg" alt="">
                 </div>
             </div>
-            <div class="sale-swiper-pagination custom-swiper-pagination"></div>
-            <div class="slider__btn-cont custom-swiper-btn-cont">
-                <div class="_icon-arrow-slider-1 sale-swiper-prev"></div>
-                <span>|</span>
-                <div class="_icon-arrow-slider-2 sale-swiper-next"></div>
-            </div>
-            <div class="sale-swiper-scrollbar custom-swiper-scrollbar"></div>
-        </div>
+        </div> -->
     </div>
 </section>
-<section class="short-description__warapper">
-    <div class="custom__container">
-        <h5 class="short-description__title">НАШЕ ПРОИЗВОДСТВО</h5>
-        <div class="short-description__container">
-            <div class="short-description__left">
-                <p class="short-description__text">
-                    Amet ridiculus dictumst vulputate cursus maecenas montes feugiat dapibus interdum, sollicitudin
-                    suspendisse dui mus habitant mattis iaculis quis platea etiam, elit ad luctus erat morbi
-                    malesuada facilisis posuere. Ullamcorper pellentesque pretium ipsum vivamus iaculis odio
-                    ridiculus natoque at, nascetur duis vel gravida torquent inceptos elementum fermentum, porttitor
-                    libero sit vestibulum amet finibus blandit feugiat.
-                </p>
-                <a href="#" class="button-link short-description__button">
-                    <span>Перейти</span>
-                    <div class="_icon-arrow-link"></div>
-                </a>
-            </div>
-            <div class="short-description__right">
-                <img class="right__main-img" src="./images/short-description-main.jpg" alt="">
-                <div class="right__second-img">
-                    <img src="./images/short-description-second.jpg" alt="">
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="categories__wrapper">
-    <div class="custom__container">
-        <div class="categories__container">
-            <div class="categories__img_container">
-                <img src="./images/bags-collection.jpg" alt="">
-            </div>
-            <div class="categories__text_container">
-                <div class="categories__text__title">Название коллекции или категории из каталога</div>
-                <a href="#" class="button-link">
-                    <span>Перейти</span>
-                    <div class="_icon-arrow-link"></div>
-                </a>
-            </div>
-        </div>
-        <div class="categories__container">
-            <div class="categories__img_container">
-                <img src="./images/category-collection-2.jpg" alt="">
-            </div>
-            <div class="categories__text_container">
-                <div class="categories__text__title">Название коллекции или категории из каталога</div>
-                <a href="#" class="button-link">
-                    <span>Перейти</span>
-                    <div class="_icon-arrow-link"></div>
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="new-block__wrapper">
+<section class="new-block__wrapper-category">
     <div class="new-block__container custom__container">
         <div class="new-block__title">НОВИНКИ</div>
         <div class="swiper-container new-block__swiper">
@@ -686,27 +623,25 @@
                 <div class="new-block__slide swiper-slide">
                     <div class="product__card-container">
                         <div class="product__card">
-                            <div class="product__card-link">
-                                <div aria-label="Добавить в избранное" class="_icon-favorites" role="button"></div>
-                                <!-- <a href="#" class=""> -->
+                            <div class="product__card-link" id="product-id-123456" data-json='[{"colorID":"white","productLink":"#","colorSrc":["./images/new-4.jpg","./images/new-4.jpg","./images/new-4.jpg","./images/new-4.jpg"],"colorSize":[{"size":"xs","isDisabled":"enabled"},{"size":"s","isDisabled":"disabled"},{"size":"m","isDisabled":"enabled"},{"size":"l","isDisabled":"enabled"},{"size":"xl","isDisabled":"disabled"}]},{"colorID":"aquamarine","productLink":"#","colorSrc":["./images/new-2.jpg","./images/new-2.jpg"],"colorSize":[{"size":"xs","isDisabled":"enabled"},{"size":"s","isDisabled":"disabled"},{"size":"m","isDisabled":"enabled"},{"size":"l","isDisabled":"enabled"},{"size":"xl","isDisabled":"disabled"}]},{"colorID":"darkturquoise","productLink":"#","colorSrc":["./images/new-3.jpg","./images/new-3.jpg","./images/new-3.jpg"],"colorSize":[{"size":"xs","isDisabled":"enabled"},{"size":"s","isDisabled":"disabled"},{"size":"m","isDisabled":"enabled"},{"size":"l","isDisabled":"enabled"},{"size":"xl","isDisabled":"disabled"}]}]'>
+                                <div aria-label="Добавить в избранное" class="_icon-favorites-fill favorit" role="button"></div>
                                 <div class="product-card-swiper swiper-container">
                                     <a href="" class="product__card-sub-wrapper swiper-wrapper">
                                         <div class="product__card-img-cont swiper-slide">
-                                            <img src="./images/new-1.jpg">
+                                            <img class="slide-img" src="./images/new-1.jpg">
                                         </div>
                                         <div class="product__card-img-cont swiper-slide">
-                                            <img src="./images/new-2.jpg">
+                                            <img class="slide-img" src="./images/new-2.jpg">
                                         </div>
                                         <div class="product__card-img-cont swiper-slide">
-                                            <img src="./images/new-3.jpg">
+                                            <img class="slide-img" src="./images/new-3.jpg">
                                         </div>
                                     </a>
                                     <div class="_icon-arrow-slider-1 product-card-swiper-prev" role="button" aria-label="Next slide"></div>
                                     <div class="_icon-arrow-slider-2 product-card-swiper-next" role="button" aria-label="Previous slide"></div>
                                 </div>
-                                <!-- </a> -->
-                                <div class="product__buy-container">
-                                    <!-- <div class="product__sizes">
+                                <a href="#" class="product__buy-container">
+                                    <div class="product__sizes">
                                         <p class="product__sizes-title">Добавить размер</p>
                                         <div class="product__sizes-container">
                                             <button class="product__sizes-item" type="button" disabled>XS</button>
@@ -715,9 +650,8 @@
                                             <button class="product__sizes-item" type="button">L</button>
                                             <button class="product__sizes-item" type="button">XL</button>
                                         </div>
-                                    </div> -->
-                                    <div class="_icon-bag" role="button"></div>
-                                </div>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                         <div class="product__description-item">
@@ -726,9 +660,10 @@
                                 <div class="product__description-price">500&nbsp;грн</div>
                             </div>
                             <div class="product__description-colors">
-                                <button></button>
-                                <button></button>
-                                <button></button>
+                                <!-- каждый первый элеменит должен содержать класс class="active-color" -->
+                                <button data-color='white' class="active-color" style="background-color: white;"></button>
+                                <button data-color="aquamarine" style="background-color: aquamarine;"></button>
+                                <button data-color='darkturquoise' style="background-color: darkturquoise;"></button>
                             </div>
                         </div>
                     </div>
@@ -736,38 +671,26 @@
                 <div class="new-block__slide swiper-slide">
                     <div class="product__card-container">
                         <div class="product__card">
-                            <div class="product__card-link">
-                                <div aria-label="Добавить в избранное" class="_icon-favorites" role="button"></div>
-                                <!-- <a href="#" class=""> -->
+                            <div class="product__card-link" id="product-id-123455" data-json='[{"colorID":"white","productLink":"#","colorSrc":["./images/new-4.jpg","./images/new-4.jpg","./images/new-4.jpg","./images/new-4.jpg"],"colorSize":[{"size":"xs","isDisabled":"enabled"},{"size":"s","isDisabled":"disabled"},{"size":"m","isDisabled":"enabled"},{"size":"l","isDisabled":"enabled"},{"size":"xl","isDisabled":"disabled"}]},{"colorID":"aquamarine","productLink":"#","colorSrc":["./images/new-2.jpg","./images/new-2.jpg"],"colorSize":[{"size":"xs","isDisabled":"enabled"},{"size":"s","isDisabled":"disabled"},{"size":"m","isDisabled":"enabled"},{"size":"l","isDisabled":"enabled"},{"size":"xl","isDisabled":"disabled"}]},{"colorID":"darkturquoise","productLink":"#","colorSrc":["./images/new-3.jpg","./images/new-3.jpg","./images/new-3.jpg"],"colorSize":[{"size":"xs","isDisabled":"enabled"},{"size":"s","isDisabled":"disabled"},{"size":"m","isDisabled":"enabled"},{"size":"l","isDisabled":"enabled"},{"size":"xl","isDisabled":"disabled"}]}]'>
+                                <div aria-label="Добавить в избранное" class="_icon-favorites favorit" role="button"></div>
                                 <div class="product-card-swiper swiper-container">
                                     <a href="" class="product__card-sub-wrapper swiper-wrapper">
                                         <div class="product__card-img-cont swiper-slide">
-                                            <img src="./images/new-1.jpg">
+                                            <img class="slide-img" src="./images/new-2.jpg">
                                         </div>
                                         <div class="product__card-img-cont swiper-slide">
-                                            <img src="./images/new-2.jpg">
+                                            <img class="slide-img" src="./images/new-3.jpg">
                                         </div>
                                         <div class="product__card-img-cont swiper-slide">
-                                            <img src="./images/new-3.jpg">
+                                            <img class="slide-img" src="./images/new-4.jpg">
                                         </div>
                                     </a>
                                     <div class="_icon-arrow-slider-1 product-card-swiper-prev" role="button" aria-label="Next slide"></div>
                                     <div class="_icon-arrow-slider-2 product-card-swiper-next" role="button" aria-label="Previous slide"></div>
                                 </div>
-                                <!-- </a> -->
-                                <div class="product__buy-container">
-                                    <!-- <div class="product__sizes">
-                                        <p class="product__sizes-title">Добавить размер</p>
-                                        <div class="product__sizes-container">
-                                            <button class="product__sizes-item" type="button" disabled>XS</button>
-                                            <button class="product__sizes-item" type="button">S</button>
-                                            <button class="product__sizes-item" type="button" disabled>M</button>
-                                            <button class="product__sizes-item" type="button">L</button>
-                                            <button class="product__sizes-item" type="button">XL</button>
-                                        </div>
-                                    </div> -->
+                                <a href="#" class="product__buy-container">
                                     <div class="_icon-bag" role="button"></div>
-                                </div>
+                                </a>
                             </div>
                         </div>
                         <div class="product__description-item">
@@ -776,9 +699,9 @@
                                 <div class="product__description-price">500&nbsp;грн</div>
                             </div>
                             <div class="product__description-colors">
-                                <button></button>
-                                <button></button>
-                                <button></button>
+                                <button data-color='white' class="active-color" style="background-color: white;"></button>
+                                <button data-color="aquamarine" style="background-color: aquamarine;"></button>
+                                <button data-color='darkturquoise' style="background-color: darkturquoise;"></button>
                             </div>
                         </div>
                     </div>
@@ -786,27 +709,25 @@
                 <div class="new-block__slide swiper-slide">
                     <div class="product__card-container">
                         <div class="product__card">
-                            <div class="product__card-link">
-                                <div aria-label="Добавить в избранное" class="_icon-favorites" role="button"></div>
-                                <!-- <a href="#" class=""> -->
+                            <div class="product__card-link" id="product-id-123451" data-json='[{"colorID":"white","productLink":"#","colorSrc":["./images/new-4.jpg","./images/new-4.jpg","./images/new-4.jpg","./images/new-4.jpg"],"colorSize":[{"size":"xs","isDisabled":"enabled"},{"size":"s","isDisabled":"disabled"},{"size":"m","isDisabled":"enabled"},{"size":"l","isDisabled":"enabled"},{"size":"xl","isDisabled":"disabled"}]},{"colorID":"aquamarine","productLink":"#","colorSrc":["./images/new-2.jpg","./images/new-2.jpg"],"colorSize":[{"size":"xs","isDisabled":"enabled"},{"size":"s","isDisabled":"disabled"},{"size":"m","isDisabled":"enabled"},{"size":"l","isDisabled":"enabled"},{"size":"xl","isDisabled":"disabled"}]},{"colorID":"darkturquoise","productLink":"#","colorSrc":["./images/new-3.jpg","./images/new-3.jpg","./images/new-3.jpg"],"colorSize":[{"size":"xs","isDisabled":"enabled"},{"size":"s","isDisabled":"disabled"},{"size":"m","isDisabled":"enabled"},{"size":"l","isDisabled":"enabled"},{"size":"xl","isDisabled":"disabled"}]}]'>
+                                <div aria-label="Добавить в избранное" class="_icon-favorites-fill favorit" role="button"></div>
                                 <div class="product-card-swiper swiper-container">
                                     <a href="" class="product__card-sub-wrapper swiper-wrapper">
                                         <div class="product__card-img-cont swiper-slide">
-                                            <img src="./images/new-1.jpg">
+                                            <img class="slide-img" src="./images/new-3.jpg">
                                         </div>
                                         <div class="product__card-img-cont swiper-slide">
-                                            <img src="./images/new-2.jpg">
+                                            <img class="slide-img" src="./images/new-4.jpg">
                                         </div>
                                         <div class="product__card-img-cont swiper-slide">
-                                            <img src="./images/new-3.jpg">
+                                            <img class="slide-img" src="./images/new-1.jpg">
                                         </div>
                                     </a>
                                     <div class="_icon-arrow-slider-1 product-card-swiper-prev" role="button" aria-label="Next slide"></div>
                                     <div class="_icon-arrow-slider-2 product-card-swiper-next" role="button" aria-label="Previous slide"></div>
                                 </div>
-                                <!-- </a> -->
-                                <div class="product__buy-container">
-                                    <!-- <div class="product__sizes">
+                                <a href="#" class="product__buy-container">
+                                    <div class="product__sizes">
                                         <p class="product__sizes-title">Добавить размер</p>
                                         <div class="product__sizes-container">
                                             <button class="product__sizes-item" type="button" disabled>XS</button>
@@ -815,9 +736,8 @@
                                             <button class="product__sizes-item" type="button">L</button>
                                             <button class="product__sizes-item" type="button">XL</button>
                                         </div>
-                                    </div> -->
-                                    <div class="_icon-bag" role="button"></div>
-                                </div>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                         <div class="product__description-item">
@@ -826,9 +746,9 @@
                                 <div class="product__description-price">500&nbsp;грн</div>
                             </div>
                             <div class="product__description-colors">
-                                <button></button>
-                                <button></button>
-                                <button></button>
+                                <button data-color='white' class="active-color" style="background-color: white;"></button>
+                                <button data-color="aquamarine" style="background-color: aquamarine;"></button>
+                                <button data-color='darkturquoise' style="background-color: darkturquoise;"></button>
                             </div>
                         </div>
                     </div>
@@ -836,38 +756,26 @@
                 <div class="new-block__slide swiper-slide">
                     <div class="product__card-container">
                         <div class="product__card">
-                            <div class="product__card-link">
-                                <div aria-label="Добавить в избранное" class="_icon-favorites" role="button"></div>
-                                <!-- <a href="#" class=""> -->
+                            <div class="product__card-link" id="product-id-123450" data-json='[{"colorID":"white","productLink":"#","colorSrc":["./images/new-4.jpg","./images/new-4.jpg","./images/new-4.jpg","./images/new-4.jpg"],"colorSize":[{"size":"xs","isDisabled":"enabled"},{"size":"s","isDisabled":"disabled"},{"size":"m","isDisabled":"enabled"},{"size":"l","isDisabled":"enabled"},{"size":"xl","isDisabled":"disabled"}]},{"colorID":"aquamarine","productLink":"#","colorSrc":["./images/new-2.jpg","./images/new-2.jpg"],"colorSize":[{"size":"xs","isDisabled":"enabled"},{"size":"s","isDisabled":"disabled"},{"size":"m","isDisabled":"enabled"},{"size":"l","isDisabled":"enabled"},{"size":"xl","isDisabled":"disabled"}]},{"colorID":"darkturquoise","productLink":"#","colorSrc":["./images/new-3.jpg","./images/new-3.jpg","./images/new-3.jpg"],"colorSize":[{"size":"xs","isDisabled":"enabled"},{"size":"s","isDisabled":"disabled"},{"size":"m","isDisabled":"enabled"},{"size":"l","isDisabled":"enabled"},{"size":"xl","isDisabled":"disabled"}]}]'>
+                                <div aria-label="Добавить в избранное" class="_icon-favorites favorit" role="button"></div>
                                 <div class="product-card-swiper swiper-container">
                                     <a href="" class="product__card-sub-wrapper swiper-wrapper">
                                         <div class="product__card-img-cont swiper-slide">
-                                            <img src="./images/new-1.jpg">
+                                            <img class="slide-img" src="./images/new-4.jpg">
                                         </div>
                                         <div class="product__card-img-cont swiper-slide">
-                                            <img src="./images/new-2.jpg">
+                                            <img class="slide-img" src="./images/new-1.jpg">
                                         </div>
                                         <div class="product__card-img-cont swiper-slide">
-                                            <img src="./images/new-3.jpg">
+                                            <img class="slide-img" src="./images/new-2.jpg">
                                         </div>
                                     </a>
                                     <div class="_icon-arrow-slider-1 product-card-swiper-prev" role="button" aria-label="Next slide"></div>
                                     <div class="_icon-arrow-slider-2 product-card-swiper-next" role="button" aria-label="Previous slide"></div>
                                 </div>
-                                <!-- </a> -->
-                                <div class="product__buy-container">
-                                    <!-- <div class="product__sizes">
-                                        <p class="product__sizes-title">Добавить размер</p>
-                                        <div class="product__sizes-container">
-                                            <button class="product__sizes-item" type="button" disabled>XS</button>
-                                            <button class="product__sizes-item" type="button">S</button>
-                                            <button class="product__sizes-item" type="button" disabled>M</button>
-                                            <button class="product__sizes-item" type="button">L</button>
-                                            <button class="product__sizes-item" type="button">XL</button>
-                                        </div>
-                                    </div> -->
+                                <a href="#" class="product__buy-container">
                                     <div class="_icon-bag" role="button"></div>
-                                </div>
+                                </a>
                             </div>
                         </div>
                         <div class="product__description-item">
@@ -876,9 +784,9 @@
                                 <div class="product__description-price">500&nbsp;грн</div>
                             </div>
                             <div class="product__description-colors">
-                                <button></button>
-                                <button></button>
-                                <button></button>
+                                <button data-color='white' class="active-color" style="background-color: white;"></button>
+                                <button data-color="aquamarine" style="background-color: aquamarine;"></button>
+                                <button data-color='darkturquoise' style="background-color: darkturquoise;"></button>
                             </div>
                         </div>
                     </div>
@@ -886,27 +794,25 @@
                 <div class="new-block__slide swiper-slide">
                     <div class="product__card-container">
                         <div class="product__card">
-                            <div class="product__card-link">
-                                <div aria-label="Добавить в избранное" class="_icon-favorites" role="button"></div>
-                                <!-- <a href="#" class=""> -->
+                            <div class="product__card-link" id="product-id-123458" data-json='[{"colorID":"white","productLink":"#","colorSrc":["./images/new-4.jpg","./images/new-4.jpg","./images/new-4.jpg","./images/new-4.jpg"],"colorSize":[{"size":"xs","isDisabled":"enabled"},{"size":"s","isDisabled":"disabled"},{"size":"m","isDisabled":"enabled"},{"size":"l","isDisabled":"enabled"},{"size":"xl","isDisabled":"disabled"}]},{"colorID":"aquamarine","productLink":"#","colorSrc":["./images/new-2.jpg","./images/new-2.jpg"],"colorSize":[{"size":"xs","isDisabled":"enabled"},{"size":"s","isDisabled":"disabled"},{"size":"m","isDisabled":"enabled"},{"size":"l","isDisabled":"enabled"},{"size":"xl","isDisabled":"disabled"}]},{"colorID":"darkturquoise","productLink":"#","colorSrc":["./images/new-3.jpg","./images/new-3.jpg","./images/new-3.jpg"],"colorSize":[{"size":"xs","isDisabled":"enabled"},{"size":"s","isDisabled":"disabled"},{"size":"m","isDisabled":"enabled"},{"size":"l","isDisabled":"enabled"},{"size":"xl","isDisabled":"disabled"}]}]'>
+                                <div aria-label="Добавить в избранное" class="_icon-favorites-fill favorit" role="button"></div>
                                 <div class="product-card-swiper swiper-container">
                                     <a href="" class="product__card-sub-wrapper swiper-wrapper">
                                         <div class="product__card-img-cont swiper-slide">
-                                            <img src="./images/new-1.jpg">
+                                            <img class="slide-img" src="./images/new-1.jpg">
                                         </div>
                                         <div class="product__card-img-cont swiper-slide">
-                                            <img src="./images/new-2.jpg">
+                                            <img class="slide-img" src="./images/new-2.jpg">
                                         </div>
                                         <div class="product__card-img-cont swiper-slide">
-                                            <img src="./images/new-3.jpg">
+                                            <img class="slide-img" src="./images/new-3.jpg">
                                         </div>
                                     </a>
                                     <div class="_icon-arrow-slider-1 product-card-swiper-prev" role="button" aria-label="Next slide"></div>
                                     <div class="_icon-arrow-slider-2 product-card-swiper-next" role="button" aria-label="Previous slide"></div>
                                 </div>
-                                <!-- </a> -->
-                                <div class="product__buy-container">
-                                    <!-- <div class="product__sizes">
+                                <a href="#" class="product__buy-container">
+                                    <div class="product__sizes">
                                         <p class="product__sizes-title">Добавить размер</p>
                                         <div class="product__sizes-container">
                                             <button class="product__sizes-item" type="button" disabled>XS</button>
@@ -915,9 +821,8 @@
                                             <button class="product__sizes-item" type="button">L</button>
                                             <button class="product__sizes-item" type="button">XL</button>
                                         </div>
-                                    </div> -->
-                                    <div class="_icon-bag" role="button"></div>
-                                </div>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                         <div class="product__description-item">
@@ -926,9 +831,199 @@
                                 <div class="product__description-price">500&nbsp;грн</div>
                             </div>
                             <div class="product__description-colors">
-                                <button></button>
-                                <button></button>
-                                <button></button>
+                                <button data-color='white' class="active-color" style="background-color: white;"></button>
+                                <button data-color="aquamarine" style="background-color: aquamarine;"></button>
+                                <button data-color='darkturquoise' style="background-color: darkturquoise;"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="new-block__slide swiper-slide">
+                    <div class="product__card-container">
+                        <div class="product__card">
+                            <div class="product__card-link" id="product-id-123452" data-json='[{"colorID":"white","productLink":"#","colorSrc":["./images/new-4.jpg","./images/new-4.jpg","./images/new-4.jpg","./images/new-4.jpg"],"colorSize":[{"size":"xs","isDisabled":"enabled"},{"size":"s","isDisabled":"disabled"},{"size":"m","isDisabled":"enabled"},{"size":"l","isDisabled":"enabled"},{"size":"xl","isDisabled":"disabled"}]},{"colorID":"aquamarine","productLink":"#","colorSrc":["./images/new-2.jpg","./images/new-2.jpg"],"colorSize":[{"size":"xs","isDisabled":"enabled"},{"size":"s","isDisabled":"disabled"},{"size":"m","isDisabled":"enabled"},{"size":"l","isDisabled":"enabled"},{"size":"xl","isDisabled":"disabled"}]},{"colorID":"darkturquoise","productLink":"#","colorSrc":["./images/new-3.jpg","./images/new-3.jpg","./images/new-3.jpg"],"colorSize":[{"size":"xs","isDisabled":"enabled"},{"size":"s","isDisabled":"disabled"},{"size":"m","isDisabled":"enabled"},{"size":"l","isDisabled":"enabled"},{"size":"xl","isDisabled":"disabled"}]}]'>
+                                <div aria-label="Добавить в избранное" class="_icon-favorites favorit" role="button"></div>
+                                <div class="product-card-swiper swiper-container">
+                                    <a href="" class="product__card-sub-wrapper swiper-wrapper">
+                                        <div class="product__card-img-cont swiper-slide">
+                                            <img class="slide-img" src="./images/new-2.jpg">
+                                        </div>
+                                        <div class="product__card-img-cont swiper-slide">
+                                            <img class="slide-img" src="./images/new-3.jpg">
+                                        </div>
+                                        <div class="product__card-img-cont swiper-slide">
+                                            <img class="slide-img" src="./images/new-4.jpg">
+                                        </div>
+                                    </a>
+                                    <div class="_icon-arrow-slider-1 product-card-swiper-prev" role="button" aria-label="Next slide"></div>
+                                    <div class="_icon-arrow-slider-2 product-card-swiper-next" role="button" aria-label="Previous slide"></div>
+                                </div>
+                                <a href="#" class="product__buy-container">
+                                    <div class="_icon-bag" role="button"></div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="product__description-item">
+                            <div class="product__description-cont">
+                                <div class="product__description-title">Футболка из хлопка</div>
+                                <div class="product__description-price">500&nbsp;грн</div>
+                            </div>
+                            <div class="product__description-colors">
+                                <button data-color='white' class="active-color" style="background-color: white;"></button>
+                                <button data-color="aquamarine" style="background-color: aquamarine;"></button>
+                                <button data-color='darkturquoise' style="background-color: darkturquoise;"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="new-block__slide swiper-slide">
+                    <div class="product__card-container">
+                        <div class="product__card">
+                            <div class="product__card-link" id="product-id-123452" data-json='[{"colorID":"white","productLink":"#","colorSrc":["./images/new-4.jpg","./images/new-4.jpg","./images/new-4.jpg","./images/new-4.jpg"],"colorSize":[{"size":"xs","isDisabled":"enabled"},{"size":"s","isDisabled":"disabled"},{"size":"m","isDisabled":"enabled"},{"size":"l","isDisabled":"enabled"},{"size":"xl","isDisabled":"disabled"}]},{"colorID":"aquamarine","productLink":"#","colorSrc":["./images/new-2.jpg","./images/new-2.jpg"],"colorSize":[{"size":"xs","isDisabled":"enabled"},{"size":"s","isDisabled":"disabled"},{"size":"m","isDisabled":"enabled"},{"size":"l","isDisabled":"enabled"},{"size":"xl","isDisabled":"disabled"}]},{"colorID":"darkturquoise","productLink":"#","colorSrc":["./images/new-3.jpg","./images/new-3.jpg","./images/new-3.jpg"],"colorSize":[{"size":"xs","isDisabled":"enabled"},{"size":"s","isDisabled":"disabled"},{"size":"m","isDisabled":"enabled"},{"size":"l","isDisabled":"enabled"},{"size":"xl","isDisabled":"disabled"}]}]'>
+                                <div aria-label="Добавить в избранное" class="_icon-favorites favorit" role="button"></div>
+                                <div class="product-card-swiper swiper-container">
+                                    <a href="" class="product__card-sub-wrapper swiper-wrapper">
+                                        <div class="product__card-img-cont swiper-slide">
+                                            <img class="slide-img" src="./images/new-2.jpg">
+                                        </div>
+                                        <div class="product__card-img-cont swiper-slide">
+                                            <img class="slide-img" src="./images/new-3.jpg">
+                                        </div>
+                                        <div class="product__card-img-cont swiper-slide">
+                                            <img class="slide-img" src="./images/new-4.jpg">
+                                        </div>
+                                    </a>
+                                    <div class="_icon-arrow-slider-1 product-card-swiper-prev" role="button" aria-label="Next slide"></div>
+                                    <div class="_icon-arrow-slider-2 product-card-swiper-next" role="button" aria-label="Previous slide"></div>
+                                </div>
+                                <a href="#" class="product__buy-container">
+                                    <div class="_icon-bag" role="button"></div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="product__description-item">
+                            <div class="product__description-cont">
+                                <div class="product__description-title">Футболка из хлопка</div>
+                                <div class="product__description-price">500&nbsp;грн</div>
+                            </div>
+                            <div class="product__description-colors">
+                                <button data-color='white' class="active-color" style="background-color: white;"></button>
+                                <button data-color="aquamarine" style="background-color: aquamarine;"></button>
+                                <button data-color='darkturquoise' style="background-color: darkturquoise;"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="new-block__slide swiper-slide">
+                    <div class="product__card-container">
+                        <div class="product__card">
+                            <div class="product__card-link" id="product-id-123452" data-json='[{"colorID":"white","productLink":"#","colorSrc":["./images/new-4.jpg","./images/new-4.jpg","./images/new-4.jpg","./images/new-4.jpg"],"colorSize":[{"size":"xs","isDisabled":"enabled"},{"size":"s","isDisabled":"disabled"},{"size":"m","isDisabled":"enabled"},{"size":"l","isDisabled":"enabled"},{"size":"xl","isDisabled":"disabled"}]},{"colorID":"aquamarine","productLink":"#","colorSrc":["./images/new-2.jpg","./images/new-2.jpg"],"colorSize":[{"size":"xs","isDisabled":"enabled"},{"size":"s","isDisabled":"disabled"},{"size":"m","isDisabled":"enabled"},{"size":"l","isDisabled":"enabled"},{"size":"xl","isDisabled":"disabled"}]},{"colorID":"darkturquoise","productLink":"#","colorSrc":["./images/new-3.jpg","./images/new-3.jpg","./images/new-3.jpg"],"colorSize":[{"size":"xs","isDisabled":"enabled"},{"size":"s","isDisabled":"disabled"},{"size":"m","isDisabled":"enabled"},{"size":"l","isDisabled":"enabled"},{"size":"xl","isDisabled":"disabled"}]}]'>
+                                <div aria-label="Добавить в избранное" class="_icon-favorites favorit" role="button"></div>
+                                <div class="product-card-swiper swiper-container">
+                                    <a href="" class="product__card-sub-wrapper swiper-wrapper">
+                                        <div class="product__card-img-cont swiper-slide">
+                                            <img class="slide-img" src="./images/new-2.jpg">
+                                        </div>
+                                        <div class="product__card-img-cont swiper-slide">
+                                            <img class="slide-img" src="./images/new-3.jpg">
+                                        </div>
+                                        <div class="product__card-img-cont swiper-slide">
+                                            <img class="slide-img" src="./images/new-4.jpg">
+                                        </div>
+                                    </a>
+                                    <div class="_icon-arrow-slider-1 product-card-swiper-prev" role="button" aria-label="Next slide"></div>
+                                    <div class="_icon-arrow-slider-2 product-card-swiper-next" role="button" aria-label="Previous slide"></div>
+                                </div>
+                                <a href="#" class="product__buy-container">
+                                    <div class="_icon-bag" role="button"></div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="product__description-item">
+                            <div class="product__description-cont">
+                                <div class="product__description-title">Футболка из хлопка</div>
+                                <div class="product__description-price">500&nbsp;грн</div>
+                            </div>
+                            <div class="product__description-colors">
+                                <button data-color='white' class="active-color" style="background-color: white;"></button>
+                                <button data-color="aquamarine" style="background-color: aquamarine;"></button>
+                                <button data-color='darkturquoise' style="background-color: darkturquoise;"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="new-block__slide swiper-slide">
+                    <div class="product__card-container">
+                        <div class="product__card">
+                            <div class="product__card-link" id="product-id-123452" data-json='[{"colorID":"white","productLink":"#","colorSrc":["./images/new-4.jpg","./images/new-4.jpg","./images/new-4.jpg","./images/new-4.jpg"],"colorSize":[{"size":"xs","isDisabled":"enabled"},{"size":"s","isDisabled":"disabled"},{"size":"m","isDisabled":"enabled"},{"size":"l","isDisabled":"enabled"},{"size":"xl","isDisabled":"disabled"}]},{"colorID":"aquamarine","productLink":"#","colorSrc":["./images/new-2.jpg","./images/new-2.jpg"],"colorSize":[{"size":"xs","isDisabled":"enabled"},{"size":"s","isDisabled":"disabled"},{"size":"m","isDisabled":"enabled"},{"size":"l","isDisabled":"enabled"},{"size":"xl","isDisabled":"disabled"}]},{"colorID":"darkturquoise","productLink":"#","colorSrc":["./images/new-3.jpg","./images/new-3.jpg","./images/new-3.jpg"],"colorSize":[{"size":"xs","isDisabled":"enabled"},{"size":"s","isDisabled":"disabled"},{"size":"m","isDisabled":"enabled"},{"size":"l","isDisabled":"enabled"},{"size":"xl","isDisabled":"disabled"}]}]'>
+                                <div aria-label="Добавить в избранное" class="_icon-favorites favorit" role="button"></div>
+                                <div class="product-card-swiper swiper-container">
+                                    <a href="" class="product__card-sub-wrapper swiper-wrapper">
+                                        <div class="product__card-img-cont swiper-slide">
+                                            <img class="slide-img" src="./images/new-2.jpg">
+                                        </div>
+                                        <div class="product__card-img-cont swiper-slide">
+                                            <img class="slide-img" src="./images/new-3.jpg">
+                                        </div>
+                                        <div class="product__card-img-cont swiper-slide">
+                                            <img class="slide-img" src="./images/new-4.jpg">
+                                        </div>
+                                    </a>
+                                    <div class="_icon-arrow-slider-1 product-card-swiper-prev" role="button" aria-label="Next slide"></div>
+                                    <div class="_icon-arrow-slider-2 product-card-swiper-next" role="button" aria-label="Previous slide"></div>
+                                </div>
+                                <a href="#" class="product__buy-container">
+                                    <div class="_icon-bag" role="button"></div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="product__description-item">
+                            <div class="product__description-cont">
+                                <div class="product__description-title">Футболка из хлопка</div>
+                                <div class="product__description-price">500&nbsp;грн</div>
+                            </div>
+                            <div class="product__description-colors">
+                                <button data-color='white' class="active-color" style="background-color: white;"></button>
+                                <button data-color="aquamarine" style="background-color: aquamarine;"></button>
+                                <button data-color='darkturquoise' style="background-color: darkturquoise;"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="new-block__slide swiper-slide">
+                    <div class="product__card-container">
+                        <div class="product__card">
+                            <div class="product__card-link" id="product-id-123452" data-json='[{"colorID":"white","productLink":"#","colorSrc":["./images/new-4.jpg","./images/new-4.jpg","./images/new-4.jpg","./images/new-4.jpg"],"colorSize":[{"size":"xs","isDisabled":"enabled"},{"size":"s","isDisabled":"disabled"},{"size":"m","isDisabled":"enabled"},{"size":"l","isDisabled":"enabled"},{"size":"xl","isDisabled":"disabled"}]},{"colorID":"aquamarine","productLink":"#","colorSrc":["./images/new-2.jpg","./images/new-2.jpg"],"colorSize":[{"size":"xs","isDisabled":"enabled"},{"size":"s","isDisabled":"disabled"},{"size":"m","isDisabled":"enabled"},{"size":"l","isDisabled":"enabled"},{"size":"xl","isDisabled":"disabled"}]},{"colorID":"darkturquoise","productLink":"#","colorSrc":["./images/new-3.jpg","./images/new-3.jpg","./images/new-3.jpg"],"colorSize":[{"size":"xs","isDisabled":"enabled"},{"size":"s","isDisabled":"disabled"},{"size":"m","isDisabled":"enabled"},{"size":"l","isDisabled":"enabled"},{"size":"xl","isDisabled":"disabled"}]}]'>
+                                <div aria-label="Добавить в избранное" class="_icon-favorites favorit" role="button"></div>
+                                <div class="product-card-swiper swiper-container">
+                                    <a href="" class="product__card-sub-wrapper swiper-wrapper">
+                                        <div class="product__card-img-cont swiper-slide">
+                                            <img class="slide-img" src="./images/new-2.jpg">
+                                        </div>
+                                        <div class="product__card-img-cont swiper-slide">
+                                            <img class="slide-img" src="./images/new-3.jpg">
+                                        </div>
+                                        <div class="product__card-img-cont swiper-slide">
+                                            <img class="slide-img" src="./images/new-4.jpg">
+                                        </div>
+                                    </a>
+                                    <div class="_icon-arrow-slider-1 product-card-swiper-prev" role="button" aria-label="Next slide"></div>
+                                    <div class="_icon-arrow-slider-2 product-card-swiper-next" role="button" aria-label="Previous slide"></div>
+                                </div>
+                                <a href="#" class="product__buy-container">
+                                    <div class="_icon-bag" role="button"></div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="product__description-item">
+                            <div class="product__description-cont">
+                                <div class="product__description-title">Футболка из хлопка</div>
+                                <div class="product__description-price">500&nbsp;грн</div>
+                            </div>
+                            <div class="product__description-colors">
+                                <button data-color='white' class="active-color" style="background-color: white;"></button>
+                                <button data-color="aquamarine" style="background-color: aquamarine;"></button>
+                                <button data-color='darkturquoise' style="background-color: darkturquoise;"></button>
                             </div>
                         </div>
                     </div>
@@ -940,7 +1035,7 @@
                 <div class="new-block-swiper-pagination custom-swiper-pagination"></div>
                 <div class="slider__btn-cont custom-swiper-btn-cont">
                     <div class="_icon-arrow-slider-1 new-block-swiper-prev"></div>
-                    <!-- <span>|</span> -->
+                    <span>|</span>
                     <div class="_icon-arrow-slider-2 new-block-swiper-next"></div>
                 </div>
             </div>
@@ -948,7 +1043,7 @@
         </div>
     </div>
 </section>
-<section class="nuostyle__wrapper">
+<section class="nuostyle__wrapper-category">
     <div class="custom__container">
         <div class="nuot__title">#nuotstyle</div>
         <div class="nuot__grid-wrapper">
@@ -988,139 +1083,15 @@
             </div>
         </div>
     </div>
-</section>
-<section class="blog__wrapper">
-    <div class="custom__container">
-        <div class="blog__title">БЛОГ</div>
-        <div class="blog__swiper swiper-container">
-            <div class="swiper-wrapper">
-                <div class="blog__column swiper-slide">
-                    <a href="" class="blog__column-item">
-                        <img src="./images/blog-1.jpg" alt="">
-                        <div class="blog__column-description">
-                            <div class="blog__column-title">Господа, выбранный нами инновационный путь предопределяет
-                                высокую востребованность</div>
-                            <div class="button-link">
-                                <span>Подробнее</span>
-                                <div class="_icon-arrow-link"></div>
-                            </div>
-                        </div>
-                        <div class="blog__column-date">20.05.2021</div>
-                    </a>
-                    <a href="" class="blog__column-item">
-                        <img src="./images/blog-2.jpg" alt="">
-                        <div class="blog__column-description">
-                            <div class="blog__column-title">Господа, выбранный нами инновационный путь предопределяет
-                                высокую востребованность </div>
-                            <div class="button-link">
-                                <span>Подробнее</span>
-                                <div class="_icon-arrow-link"></div>
-                            </div>
-                        </div>
-                        <div class="blog__column-date">20.05.2021</div>
-                    </a>
-                </div>
-                <div class="blog__column swiper-slide">
-                    <a href="" class="blog__column-item">
-                        <img src="./images/blog-4.jpg" alt="">
-                        <div class="blog__column-description">
-                            <div class="blog__column-title">Господа, выбранный нами инновационный путь предопределяет
-                                высокую востребованность</div>
-                            <div class="button-link">
-                                <span>Подробнее</span>
-                                <div class="_icon-arrow-link"></div>
-                            </div>
-                        </div>
-                        <div class="blog__column-date">20.05.2021</div>
-                    </a>
-                    <a href="" class="blog__column-item">
-                        <img src="./images/blog-3.jpg" alt="">
-                        <div class="blog__column-description">
-                            <div class="blog__column-title">Господа, выбранный нами инновационный путь предопределяет
-                                высокую востребованность </div>
-                            <div class="button-link">
-                                <span>Подробнее</span>
-                                <div class="_icon-arrow-link"></div>
-                            </div>
-                        </div>
-                        <div class="blog__column-date">20.05.2021</div>
-                    </a>
-                </div>
-                <div class="blog__column swiper-slide">
-                    <a href="" class="blog__column-item">
-                        <img src="./images/blog-3.jpg" alt="">
-                        <div class="blog__column-description">
-                            <div class="blog__column-title">Господа, выбранный нами инновационный путь предопределяет
-                                высокую востребованность</div>
-                            <div class="button-link">
-                                <span>Подробнее</span>
-                                <div class="_icon-arrow-link"></div>
-                            </div>
-                        </div>
-                        <div class="blog__column-date">20.05.2021</div>
-                    </a>
-                    <a href="" class="blog__column-item">
-                        <img src="./images/blog-4.jpg" alt="">
-                        <div class="blog__column-description">
-                            <div class="blog__column-title">Господа, выбранный нами инновационный путь предопределяет
-                                высокую востребованность </div>
-                            <div class="button-link">
-                                <span>Подробнее</span>
-                                <div class="_icon-arrow-link"></div>
-                            </div>
-                        </div>
-                        <div class="blog__column-date">20.05.2021</div>
-                    </a>
-                </div>
-                <div class="blog__column swiper-slide">
-                    <a href="" class="blog__column-item">
-                        <img src="./images/blog-3.jpg" alt="">
-                        <div class="blog__column-description">
-                            <div class="blog__column-title">Господа, выбранный нами инновационный путь предопределяет
-                                высокую востребованность</div>
-                            <div class="button-link">
-                                <span>Подробнее</span>
-                                <div class="_icon-arrow-link"></div>
-                            </div>
-                        </div>
-                        <div class="blog__column-date">20.05.2021</div>
-                    </a>
-                    <a href="" class="blog__column-item">
-                        <img src="./images/blog-4.jpg" alt="">
-                        <div class="blog__column-description">
-                            <div class="blog__column-title">Господа, выбранный нами инновационный путь предопределяет
-                                высокую востребованность </div>
-                            <div class="button-link">
-                                <span>Подробнее</span>
-                                <div class="_icon-arrow-link"></div>
-                            </div>
-                        </div>
-                        <div class="blog__column-date">20.05.2021</div>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="slider-controls-container">
-            <div class="blog-controls-wrapper">
-                <div class="blog-swiper-pagination custom-swiper-pagination"></div>
-                <div class="slider__btn-cont custom-swiper-btn-cont">
-                    <div class="_icon-arrow-slider-1 blog-swiper-prev"></div>
-                    <span>|</span>
-                    <div class="_icon-arrow-slider-2 blog-swiper-next"></div>
-                </div>
-            </div>
-            <div class="blog-swiper-scrollbar custom-swiper-scrollbar"></div>
-        </div>
-    </div>
-</section>    </main>    <footer>        <section class="footer__wrapper">
+</section>        <div id="topBtn" class="_icon-arrow-top" role="button"></div>    </main>    <footer>        <section class="footer__wrapper">
 <div class="footer__container">
     <div class="footer__sub">
         <div class="footer__sub-action">
             <div class="footer__sub-title">Подпишитесь на новости</div>
             <div class="footer__sub-form">
-                <form action="" method=""  name="" id="">
-                    <input form="" type="email" minlength="6" required placeholder="Ваша електронная почта">
-                    <button class="footer__sub-form-btn _icon-arrow-link" type="submit" form=""></button>
+                <form name="newstler" id="newstler">
+                    <input form="newstler" type="email" minlength="6" required  placeholder="Ваша електронная почта">
+                    <button class="footer__sub-form-btn _icon-arrow-link" type="submit" form="newstler"></button>
                 </form>
             </div>
             <hr>
@@ -1177,4 +1148,4 @@
         </div>
     </div>
 </div>
-</section>    </footer>    <script src="js/jquery.min.js"></script>    <script src="js/bootstrap.bundle.min.js"></script>    <script src="js/swiper-bundle.min.js"></script>    <script src="js/script.js"></script></body></html>
+</section>    </footer>    <script src="js/jquery.min.js"></script>    <script src="js/jquery.maskedinput.js"></script>    <script src="js/bootstrap.bundle.min.js"></script>    <script src="js/swiper-bundle.min.js"></script>    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>    <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/5.1.3/pixi.min.js"></script>    <script src="js/script.js"></script></body></html>
