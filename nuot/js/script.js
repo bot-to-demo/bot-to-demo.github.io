@@ -148,7 +148,25 @@ window.onload = function () {
 		let bodyModal = document.querySelector('#menu__mobile-modal');
 
 		if (unknownUser) {
-			//$('#telephoneInput').mask('+380(99) 999-9999');
+			//mask plagin
+			$('#telephoneInput')
+				.click(function () {
+					$(this).setCursorPosition(5);
+				})
+				.mask('+380(99)9999999');
+			$('#telephoneInput').mask('+380(99)9999999');
+			//mask plagin fix center
+			$.fn.setCursorPosition = function (pos) {
+				if ($(this).get(0).setSelectionRange) {
+					$(this).get(0).setSelectionRange(pos, pos);
+				} else if ($(this).get(0).createTextRange) {
+					var range = $(this).get(0).createTextRange();
+					range.collapse(true);
+					range.moveEnd('character', pos);
+					range.moveStart('character', pos);
+					range.select();
+				}
+			};
 			//form show
 			unknownMobile.addEventListener('click', (e) => {
 				if (getComputedStyle(authWrapper).display == 'none') {
@@ -258,13 +276,16 @@ window.onload = function () {
 
 			numberForm.addEventListener('submit', function (e) {
 				e.preventDefault();
-
 				let numberValue = numberInput[0].value;
-				console.log(numberValue);
 
-				if (numberValue !== '') {
+				if (
+					numberValue !== '' &&
+					!numberValue.includes('_') &&
+					numberInput[1].value == ''
+				) {
+					let number = numberValue.replace('(', '').replace(')', '');
 					userPhone = {
-						phone: numberValue,
+						phone: number,
 					};
 					document.querySelector('.send-tel').disabled = true;
 					sendNumber(userPhone);
@@ -287,6 +308,11 @@ window.onload = function () {
 								resTel.textContent = `+${data.phone}`;
 								trueCode = data.send_code;
 								userPhone = data.phone;
+								//show refresh btn after 60 sec.
+								setTimeout(
+									() => (refreshBtn.style.display = 'block'),
+									60000
+								);
 							}
 						},
 						error: function (xhr, ajaxOptions, thrownError) {
@@ -313,7 +339,7 @@ window.onload = function () {
 				e.preventDefault();
 				let codeValue = codeInput[0].value;
 
-				if (codeValue !== '') {
+				if (codeValue.length == 6 && codeInput[1].value == '') {
 					let data = {
 						sms_code: codeValue,
 						opencart_code: trueCode,
@@ -402,6 +428,17 @@ window.onload = function () {
 					console.log(err);
 				}
 			}
+
+			let personalForm = document.querySelector('#personal-data');
+			personalForm.addEventListener('submit', function (e) {
+				e.preventDefault();
+				if (
+					personalForm.querySelector('input[name="chekoutPersone"]')
+						.value == ''
+				) {
+					personalForm.submit();
+				}
+			});
 		}
 
 		//? mob menu
@@ -547,9 +584,9 @@ window.onload = function () {
 		if (newBlock) {
 			const newBlockSwiper = new Swiper('.new-block__swiper', {
 				//
-				autoplay: {
-					delay: 3000,
-				},
+				// autoplay: {
+				// 	delay: 3000,
+				// },
 				// coverflowEffect: {
 				// 	rotate: 50,
 				// 	stretch: 0,
@@ -737,7 +774,7 @@ window.onload = function () {
 				});
 			});
 		}
-		//email response
+		//email reqest
 		let newstler = document.querySelector('#newstler');
 		let emailContainet = document.querySelector('.footer__sub-action');
 		let successContainet = document.querySelector('.footer__sub-success');
@@ -749,23 +786,48 @@ window.onload = function () {
 				email: inputs[0].value,
 			};
 
-			$.ajax({
-				url: `index.php?route=mail/newsletter/setToDatabase`,
-				type: 'post',
-				data: data,
-				dataType: 'json',
-				success: function (data) {
-					console.log('ok');
-					inputs[0].value = '';
-					data = {};
-					emailContainet.style.display = 'none';
-					successContainet.style.display = 'block';
-				},
-				error: function (xhr, ajaxOptions, thrownError) {
-					console.log(xhr);
-				},
-			});
+			if (inputs[1].value == '') {
+				$.ajax({
+					url: `index.php?route=mail/newsletter/setToDatabase`,
+					type: 'post',
+					data: data,
+					dataType: 'json',
+					success: function (data) {
+						console.log('ok');
+						inputs[0].value = '';
+						data = {};
+						emailContainet.style.display = 'none';
+						successContainet.style.display = 'block';
+					},
+					error: function (xhr, ajaxOptions, thrownError) {
+						console.log(xhr);
+					},
+				});
+			}
 		});
+
+		//btn-slider-span init on display
+		let sliderSpan = document.querySelectorAll('.btn-slider-span');
+		if (sliderSpan.length > 0) {
+			sliderSpan.forEach((i) => {
+				let prevBtn = i.parentNode.querySelector(
+					'._icon-arrow-slider-1'
+				);
+				if (prevBtn.classList.contains('swiper-button-lock')) {
+					i.style.display = 'none';
+				}
+			});
+		}
+		//add toltip bootstrap
+		// let descriptionSize = document.querySelector('.card__description-size');
+		// let descriptionSizeTooltip = new bootstrap.Tooltip(descriptionSize, {
+		// 	container: 'body'
+		// })
+		//console.log(descriptionSizeTooltip);
+		// var myModal = new bootstrap.Modal(document.getElementById('myModal'))
+		// console.log(myModal);
+		//myModal.show()
+		
 	})();
 };
 
@@ -864,109 +926,288 @@ window.onload = function () {
 // 		]
 // 	},
 // ]
+let webgl = document.querySelector('.webgl');
+if (webgl) {
+	//Create a Pixi Application
+	function cover(target, container) {
+		return calculate(target, container, true);
+	}
 
-//Create a Pixi Application
-// function loadImages(paths, whenLoaded) {
-// 	const imgs = [];
-// 	const imgO = [];
-// 	paths.forEach(function (path) {
-// 		const img = new Image();
-// 		img.onload = function () {
-// 			imgs.push(img);
-// 			imgO.push({ path, img });
-// 			if (imgs.length === paths.length) whenLoaded(imgO);
-// 		};
-// 		img.src = path;
-// 	});
-// }
+	function contain(target, container) {
+		return calculate(target, container, false);
+	}
 
-// class Sketch {
-// 	constructor() {
-// 		this.app = new PIXI.Application({
-// 			backgroundColor: 0x1099bb,
-// 			resizeTo: window,
-// 		});
-// 		document.querySelector('.webgl').appendChild(this.app.view);
-// 		this.margin = 50;
-// 		this.scroll = 0;
-// 		this.width = (window.innerWidth - 2 * this.margin) / 3;
-// 		this.height = window.innerHeight * 0.8;
-// 		//this.width = 1440;
-// 		//this.height = window.innerHeight;
-// 		this.container = new PIXI.Container();
-// 		this.app.stage.addChild(this.container);
-// 		this.images = [
-// 			'./images/cat-1.jpg',
-// 			'./images/cat-2.jpg',
-// 			'./images/cat-3.jpg',
-// 			'./images/cat-4.jpg',
-// 			'./images/cat-5.jpg',
-// 		];
+	function calculate(target, container, cover) {
+		var containerW = container.width || container.w;
+		var containerH = container.height || container.h;
+		var targetW = target.width || target.w;
+		var targetH = target.height || target.h;
 
-// 		loadImages(this.images, (images) => {
-// 			this.loadedImages = images;
-// 			this.add();
-// 			this.render();
-// 			this.scrollEvent();
-// 		});
-// 	}
+		var rw = containerW / targetW;
+		var rh = containerH / targetH;
+		var r;
 
-// 	scrollEvent() {
-// 		document.addEventListener('mousewhell', (e) => {
-// 			this.scroll = e.wheelDelta / 3;
-// 		});
-// 	}
+		if (cover) {
+			r = rw > rh ? rw : rh;
+		} else {
+			r = rw < rh ? rw : rh;
+		}
 
-// 	add() {
-// 		this.thumbs = [];
-// 		this.loadedImages.forEach((img, i) => {
-// 			// console.log(img);
-// 			let texture = PIXI.Texture.from(img.img);
-// 			const sprite = new PIXI.Sprite(texture);
-// 			let container = new PIXI.Container();
-// 			let spriteContainer = new PIXI.Container();
+		return {
+			left: (containerW - targetW * r) >> 1,
+			top: (containerH - targetH * r) >> 1,
+			width: targetW * r,
+			height: targetH * r,
+			scale: r,
+		};
+	}
 
-// 			// sprite.width = 350;
-// 			// sprite.height = 470;
+	function loadImages(data, whenLoaded) {
+		const imgs = [];
+		const imgO = [];
 
-// 			sprite.anchor.set(0.5);
-// 			sprite.position.set(
-// 				sprite.texture.orig.width / 2,
-// 				sprite.texture.orig.height / 2
-// 			);
+		data.forEach(function (i) {
+			const img = new Image();
+			let path = i.dataImg;
+			let link = i.link;
+			img.onload = function () {
+				imgs.push(img);
+				imgO.push({ path, img, link });
+				if (imgs.length === data.length) whenLoaded(imgO);
+			};
+			img.src = path;
+		});
+	}
 
-// 			container.x = (this.margin + this.width) * i;
-// 			container.y = this.height / 10;
+	class Sketch {
+		constructor() {
+			this.app = new PIXI.Application({
+				backgroundColor: 0xfffaf6,
+				width: 1440,
+				height: 388
+				//resizeTo: window,
+				//resolution: devicePixelRatio
+			});
+			document.querySelector('.webgl').appendChild(this.app.view);
+			this.margin = 6;
+			// this.scroll = -1;
+			// this.scrollTarget = -3;
+			this.scroll = 1;
+			this.scrollTarget = 2;
+			this.width = (window.innerWidth - 2 * this.margin) / 7;
+			//this.height = window.innerHeight * 0.8;
+			//this.height = window.innerHeight;
+			//this.width = 1440;
+			this.height = 388;
+			this.container = new PIXI.Container();
+			this.app.stage.addChild(this.container);
+			this.images = [
+				{
+					dataImg: './images/cat-1.jpg',
+					link: 'https://learn.javascript.ru/form-elements',
+				},
+				{
+					dataImg: './images/cat-2.jpg',
+					link: 'https://www.pixijs.com/',
+				},
+				{
+					dataImg: './images/cat-3.jpg',
+					link: 'https://learn.javascript.ru/form-elements',
+				},
+				{
+					dataImg: './images/cat-4.jpg',
+					link: 'https://learn.javascript.ru/form-elements',
+				},
+				{
+					dataImg: './images/cat-5.jpg',
+					link: 'https://learn.javascript.ru/form-elements',
+				},
+				{
+					dataImg: './images/cat-6.jpg',
+					link: 'https://learn.javascript.ru/form-elements',
+				},
+				{
+					dataImg: './images/cat-7.jpg',
+					link: 'https://learn.javascript.ru/form-elements',
+				},
+				{
+					dataImg: './images/cat-8.jpg',
+					link: 'https://learn.javascript.ru/form-elements',
+				},
+				{
+					dataImg: './images/cat-9.jpg',
+					link: 'https://learn.javascript.ru/form-elements',
+				},
+				{
+					dataImg: './images/cat-10.jpg',
+					link: 'https://learn.javascript.ru/form-elements',
+				},
+			];
+			this.WHOLEWIDTH = this.images.length * (this.width + this.margin);
+			// const canvas = document.querySelector('canvas');
+			// canvas.width = this.width;
+			// canvas.height = this.height;
 
-// 			container.addChild(sprite);
-// 			this.container.addChild(container);
-// 			this.thumbs.push(container);
-// 		});
-// 	}
+			loadImages(this.images, (images) => {
+				this.loadedImages = images;
+				this.add();
+				this.render();
+				this.scrollEvent();
+			});
+		}
 
-// 	render() {
-// 		this.app.ticker.add(() => {
-// 			this.app.renderer.render(this.container);
+		scrollEvent() {
+			document
+				.querySelector('.webgl')
+				.addEventListener('mousewheel', (e) => {
+					this.scrollTarget = e.wheelDelta / 16;					
+				});
+		}
 
-// 			this.scroll += (this.scroll - this.scrollTarget) * 0.1;
-// 			this.thumbs.forEach((th) => {
-// 				th.position.x += this.scroll;
-// 			});
-// 		});
-// 	}
-// }
+		add() {
+			let parent = {
+				w: this.width,
+				h: this.height,
+			};
+			this.thumbs = [];
+			this.loadedImages.forEach((img, i) => {
+				// console.log(img);
+				let texture = PIXI.Texture.from(img.img);
+				const sprite = new PIXI.Sprite(texture);
+				let container = new PIXI.Container();
+				let spriteContainer = new PIXI.Container();
 
-// new Sketch();
+				let mask = new PIXI.Sprite(PIXI.Texture.WHITE);
+				mask.width = this.width;
+				mask.height = this.height;
 
-$('.slider').slick({
-	slidesToShow: 4,
-	slidesToScroll: 1,
-	autoplay: true,
-	autoplaySpeed: 0,
-	variableWidth: true,
-	speed: 5500,
-	easing: 'linear',
-	cssEase: 'linear',
-	arrows: true,
-	swipe: false,
-});
+				sprite.mask = mask;
+
+				// sprite.width = 350;
+				// sprite.height = 470;
+				// sprite.texture.orig.width = 350;
+				// sprite.texture.orig.height = 470;
+				// console.log(sprite.texture.orig);
+
+				sprite.anchor.set(0.5);
+				sprite.position.set(
+					sprite.texture.orig.width / 2,
+					sprite.texture.orig.height / 2
+				);
+				
+				let image = {
+					w: sprite.texture.orig.width,
+					h: sprite.texture.orig.height,
+				};
+
+				let cover1 = cover(image, parent);
+				//console.log(spriteContainer);
+				//console.log(container);
+				spriteContainer.position.set(cover1.left, cover.top);
+				spriteContainer.scale.set(cover1.scale, cover.scale);
+
+				container.x = (this.margin + this.width) * i;
+				container.y = this.height / 35;
+
+				spriteContainer.addChild(sprite);
+				container.interactive = true;
+				container.buttonMode = true;
+				container.link = img.link;
+				container.on('mouseover', this.mouseOn);
+				container.on('mouseout', this.mouseOut);
+				container.on('click', this.onClick);
+				container.addChild(spriteContainer);
+				container.addChild(mask);
+				this.container.addChild(container);
+				this.thumbs.push(container);
+			});
+		}
+
+		onClick(e) {
+			//console.log(e.target.link);
+			window.location.assign(e.target.link);
+		}
+
+		mouseOn(e) {
+			let el = e.target.children[0].children[0];
+
+			gsap.to(el.scale, {
+				duration: 1,
+				x: 1.1,
+				y: 1.1,
+			});
+			document.querySelector('body').style.overflowY = 'hidden';
+			document.querySelector('header').style.paddingRight = '15px';
+			document.querySelector('main').style.paddingRight = '15px';
+		}
+
+		mouseOut(e) {
+			let el = e.currentTarget.children[0].children[0];
+
+			gsap.to(el.scale, {
+				duration: 1,
+				x: 1,
+				y: 1,
+			});
+			document.querySelector('body').style.overflowY = 'scroll';
+			document.querySelector('header').style.paddingRight = '0px';
+			document.querySelector('main').style.paddingRight = '0px';
+		}
+
+		calcPos(src, pos) {
+			let temp =
+				((src + pos + this.WHOLEWIDTH + this.width + this.margin) %
+					this.WHOLEWIDTH) -
+				this.width -
+				this.margin;
+
+			return temp;
+		}
+
+		render() {
+			this.app.ticker.add(() => {
+				this.app.renderer.render(this.container);
+
+				this.scroll -= (this.scroll - this.scrollTarget) * 0.1;
+				this.scroll *= 0.9;				
+				this.thumbs.forEach((th) => {
+					th.position.x = this.calcPos(this.scroll, th.position.x);
+				});
+			});
+		}
+	}
+
+	// document.querySelector('.webgl').addEventListener('mouseover', (e) => {
+	// 	document.querySelector('body').style.overflow = 'hidden';
+	// 	document.querySelector('header').style.paddingRight = '15px';
+	// 	document.querySelector('main').style.paddingRight = '15px';
+	// });
+
+	// document.querySelector('.webgl').addEventListener('mouseout', (e) => {
+	// 	document.querySelector('body').style.overflow = 'scroll';
+	// 	document.querySelector('header').style.paddingRight = '0px';
+	// 	document.querySelector('main').style.paddingRight = '0px';
+	// });
+
+	new Sketch();
+}
+// $('.slider').slick({
+// 	slidesToShow: 4,
+// 	slidesToScroll: 1,
+// 	autoplay: true,
+// 	autoplaySpeed: 0,
+// 	variableWidth: true,
+// 	speed: 5500,
+// 	easing: 'linear',
+// 	cssEase: 'linear',
+// 	arrows: true,
+// 	swipe: false,
+// });
+
+//if(jQuery().fancybox) {
+// const fancybox = new Fancybox([
+// 	{
+// 		infinite: false
+// 	},
+//   ]);
+//}

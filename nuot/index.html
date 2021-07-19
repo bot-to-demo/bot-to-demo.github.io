@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="ua"><head>    <meta charset="UTF-8">    <meta http-equiv="X-UA-Compatible" content="IE=edge">    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <!-- Chrome, Firefox OS and Opera -->    <meta name="theme-color" content="#144563" />    <!-- iOS Safari -->    <meta name="apple-mobile-web-app-capable" content="yes" />    <meta name="apple-mobile-web-app-status-bar-style" content="#144563" />    <title>Nuot</title>    <link rel="shortcut icon" type="image/jpg" href="./images/favicon.ico" />    <link rel="stylesheet" href="./css/bootstrap.min.css">    <link rel="stylesheet" href="./css/swiper-bundle.min.css">    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />    <link rel="stylesheet" href="./css/style.min.css"></head><body>    <div id="menu__mobile-modal"></div>    <header>        <div class="header__wrapper">
+<!DOCTYPE html><html lang="ua"><head>    <meta charset="UTF-8">    <meta http-equiv="X-UA-Compatible" content="IE=edge">    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <!-- Chrome, Firefox OS and Opera -->    <meta name="theme-color" content="#144563" />    <!-- iOS Safari -->    <meta name="apple-mobile-web-app-capable" content="yes" />    <meta name="apple-mobile-web-app-status-bar-style" content="#144563" />    <title>Nuot</title>    <link rel="shortcut icon" type="image/jpg" href="./images/favicon.ico" />    <link rel="stylesheet" href="./css/bootstrap.min.css">    <link rel="stylesheet" href="./css/swiper-bundle.min.css">    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />    <link rel="stylesheet" href="./css/fancybox.css">    <link rel="stylesheet" href="./css/style.min.css"></head><body>    <div id="menu__mobile-modal"></div>    <header>        <div class="header__wrapper">
     <div class="header__top custom__container">
         <!-- <div class=""> -->
         <div class="header__contacts">
@@ -21,7 +21,7 @@
                         <div class="menu__mobile-container">
                             <div class="menu__mobile-top">
                                 <div class="menu__mobile-logo">
-                                    <img src="./images/logo.svg" alt="">
+                                    <img src="./images/logo.svg" alt="" loading="lazy">
                                 </div>
                                 <div class="header__contacts header__contacts-mobile">
                                     <a href="tel:+380931074140" class="header__number _icon-tel"><span>+380 93 107 4
@@ -269,7 +269,7 @@
                                         </ul>
                                     </div>
                                     <div class="menu__sub-img">
-                                        <img src="./images/female-header.jpg" alt="">
+                                        <img src="./images/female-header.jpg" alt="" loading="lazy">
                                     </div>
                                 </div>
                             </div>
@@ -331,7 +331,7 @@
                                         </ul>
                                     </div>
                                     <div class="menu__sub-img">
-                                        <img src="./images/male-collection.jpg" alt="">
+                                        <img src="./images/male-collection.jpg" alt="" loading="lazy">
                                     </div>
                                 </div>
                             </div>
@@ -393,7 +393,7 @@
                                         </ul>
                                     </div>
                                     <div class="menu__sub-img">
-                                        <img src="./images/child-collection.jpg" alt="">
+                                        <img src="./images/child-collection.jpg" alt="" loading="lazy">
                                     </div>
                                 </div>
                             </div>
@@ -413,7 +413,7 @@
                 </div>
             </div>
             <a href="" class="header__logo">
-                <img src="./images/logo.svg" alt="">
+                <img src="./images/logo.svg" alt="" loading="lazy">
             </a>
             <div class="header__actions">
                 <a href="" class="header-shops _icon-shops header-icon"></a>
@@ -479,9 +479,15 @@
                                     <p class="code__container-text">
                                         +38 066 123 44 55
                                     </p>
-                                    <form class="code__form" name="codeForm" id="codeForm">
-                                        <label for="">Введие код подтверждения</label>
-                                        <input form="codeForm" name="code" type="number" required placeholder="">
+                                    <form novalidate class="code__form" name="codeForm" id="codeForm">
+                                        <label for="telCode">
+                                            Введие код подтверждения
+                                        </label>
+                                        <input form="codeForm" id="telCode" name="code" type="number" min="99999" max="999999" required placeholder="">
+                                        <div class="requirements">
+                                            Мин. 6 символов
+                                        </div>
+                                        <input form="codeForm" name="chekoutCode" type="text" style="display: none;" value="">
                                         <div role="button" class="back-number">Назад</div>
                                         <div class="refresh-form" role="button">Повторное СМС</div>
                                         <div class="code-error-block"></div>
@@ -498,12 +504,12 @@
                                 <div class="social__auth-container">
                                     <a href="" class="social__auth-action">
                                         <div>
-                                            <img src="./images/google-auth.svg" alt="">
+                                            <img src="./images/google-auth.svg" alt="" loading="lazy">
                                         </div>
                                     </a>
                                     <a href="" class="social__auth-action">
                                         <div>
-                                            <img src="./images/facebook-auth.svg" alt="">
+                                            <img src="./images/facebook-auth.svg" alt="" loading="lazy">
                                         </div>
                                     </a>
                                 </div>
@@ -519,6 +525,7 @@
                                 <input id="code" name="codePersone" type="text" style="display: none;" value>
                                 <input id="newsletter" name="newsletter" type="text" style="display: none;" value="0">
                                 <input id="agree" name="agree" type="text" style="display: none;" value="1">
+                                <input form="personal-data" name="chekoutPersone" type="text" style="display: none;" value="">
                                 <!-- needs for backend -->
                                 <label for="lastname">Фамилия</label>
                                 <input id="lastname" name="lastname" type="text" placeholder="Иванов">
@@ -548,9 +555,13 @@
             </div>
             <!-- </div> -->
         </div>
-    </div>    </header>    <main>                <section class="category__baner-wrapper">
+    </div>
+</div>        <hr>    </header>    <main>                        <section class="category__baner-wrapper">
     <div class="category__baner-container custom__container">
-        <img src="./images/category-baner-2.jpg" alt="">
+        <picture>
+            <source srcset="./images/category-baner-2.jpg" media="(max-width: 768px)">
+            <img src="./images/category-baner-1.jpg" alt="" loading="lazy">
+        </picture>
         <div class="category__title">
             <div class="category__title-title">НОВАЯ ЖЕНСКАЯ КОЛЛЕКЦИЯ</div>
             <div class="category__title-date">весна 2021</div>
@@ -563,53 +574,53 @@
 </section>
 <section class="subcategory__wrapper">
     <div class="subcategory__container custom__container">
-        <div>title</div>
-        <div class="slider">
+        <div class="subcategory__title">категории</div>
+        <!-- <div class="slider">
             <div class="sl swiper-slide">
-                <img src="./images/cat-1.jpg" alt="">
+                <img src="./images/cat-1.jpg" alt="" loading="lazy">
             </div>
             <div class="sl swiper-slide">
-                <img src="./images/cat-2.jpg" alt="">
+                <img src="./images/cat-2.jpg" alt="" loading="lazy">
             </div>
             <div class="sl swiper-slide">
-                <img src="./images/cat-3.jpg" alt="">
+                <img src="./images/cat-3.jpg" alt="" loading="lazy">
             </div>
             <div class="sl swiper-slide">
-                <img src="./images/cat-4.jpg" alt="">
+                <img src="./images/cat-4.jpg" alt="" loading="lazy">
             </div>
             <div class="sl swiper-slide">
-                <img src="./images/cat-5.jpg" alt="">
+                <img src="./images/cat-5.jpg" alt="" loading="lazy">
             </div>
             <div class="sl swiper-slide">
-                <img src="./images/cat-5.jpg" alt="">
+                <img src="./images/cat-5.jpg" alt="" loading="lazy">
             </div>
             <div class="sl swiper-slide">
-                <img src="./images/cat-5.jpg" alt="">
+                <img src="./images/cat-5.jpg" alt="" loading="lazy">
             </div>
-        </div>
-        <!-- <div class="webgl"></div> -->
+        </div> -->
+        <div class="webgl"></div>
         <!-- <div class="slider1 swiper-container">
             <div class="swiper-wrapper">
                 <div class="sl swiper-slide">
-                    <img src="./images/new-4.jpg" alt="">
+                    <img src="./images/new-4.jpg" alt="" loading="lazy">
                 </div>
                 <div class="sl swiper-slide">
-                    <img src="./images/new-1.jpg" alt="">
+                    <img src="./images/new-1.jpg" alt="" loading="lazy">
                 </div>
                 <div class="sl swiper-slide">
-                    <img src="./images/new-1.jpg" alt="">
+                    <img src="./images/new-1.jpg" alt="" loading="lazy">
                 </div>
                 <div class="sl swiper-slide">
-                    <img src="./images/new-1.jpg" alt="">
+                    <img src="./images/new-1.jpg" alt="" loading="lazy">
                 </div>
                 <div class="sl swiper-slide">
-                    <img src="./images/new-1.jpg" alt="">
+                    <img src="./images/new-1.jpg" alt="" loading="lazy">
                 </div>
                 <div class="sl swiper-slide">
-                    <img src="./images/new-1.jpg" alt="">
+                    <img src="./images/new-1.jpg" alt="" loading="lazy">
                 </div>
                 <div class="sl swiper-slide">
-                    <img src="./images/new-1.jpg" alt="">
+                    <img src="./images/new-1.jpg" alt="" loading="lazy">
                 </div>
             </div>
         </div> -->
@@ -661,9 +672,9 @@
                             </div>
                             <div class="product__description-colors">
                                 <!-- каждый первый элеменит должен содержать класс class="active-color" -->
-                                <button data-color='white' class="active-color" style="background-color: white;"></button>
-                                <button data-color="aquamarine" style="background-color: aquamarine;"></button>
-                                <button data-color='darkturquoise' style="background-color: darkturquoise;"></button>
+                                <button data-color="white" class="active-color item-color" style="background-color: white;"></button>
+                                <button data-color="aquamarine" class="item-color" style="background-color: aquamarine;"></button>
+                                <button data-color="darkturquoise" class="item-color" style="background-color: darkturquoise;"></button>
                             </div>
                         </div>
                     </div>
@@ -699,9 +710,9 @@
                                 <div class="product__description-price">500&nbsp;грн</div>
                             </div>
                             <div class="product__description-colors">
-                                <button data-color='white' class="active-color" style="background-color: white;"></button>
-                                <button data-color="aquamarine" style="background-color: aquamarine;"></button>
-                                <button data-color='darkturquoise' style="background-color: darkturquoise;"></button>
+                                <button data-color="white" class="active-color item-color" style="background-color: white;"></button>
+                                <button data-color="aquamarine" class="item-color" style="background-color: aquamarine;"></button>
+                                <button data-color="darkturquoise" class="item-color" style="background-color: darkturquoise;"></button>
                             </div>
                         </div>
                     </div>
@@ -746,9 +757,9 @@
                                 <div class="product__description-price">500&nbsp;грн</div>
                             </div>
                             <div class="product__description-colors">
-                                <button data-color='white' class="active-color" style="background-color: white;"></button>
-                                <button data-color="aquamarine" style="background-color: aquamarine;"></button>
-                                <button data-color='darkturquoise' style="background-color: darkturquoise;"></button>
+                                <button data-color="white" class="active-color item-color" style="background-color: white;"></button>
+                                <button data-color="aquamarine" class="item-color" style="background-color: aquamarine;"></button>
+                                <button data-color="darkturquoise" class="item-color" style="background-color: darkturquoise;"></button>
                             </div>
                         </div>
                     </div>
@@ -784,9 +795,9 @@
                                 <div class="product__description-price">500&nbsp;грн</div>
                             </div>
                             <div class="product__description-colors">
-                                <button data-color='white' class="active-color" style="background-color: white;"></button>
-                                <button data-color="aquamarine" style="background-color: aquamarine;"></button>
-                                <button data-color='darkturquoise' style="background-color: darkturquoise;"></button>
+                                <button data-color="white" class="active-color item-color" style="background-color: white;"></button>
+                                <button data-color="aquamarine" class="item-color" style="background-color: aquamarine;"></button>
+                                <button data-color="darkturquoise" class="item-color" style="background-color: darkturquoise;"></button>
                             </div>
                         </div>
                     </div>
@@ -831,9 +842,9 @@
                                 <div class="product__description-price">500&nbsp;грн</div>
                             </div>
                             <div class="product__description-colors">
-                                <button data-color='white' class="active-color" style="background-color: white;"></button>
-                                <button data-color="aquamarine" style="background-color: aquamarine;"></button>
-                                <button data-color='darkturquoise' style="background-color: darkturquoise;"></button>
+                                <button data-color="white" class="active-color item-color" style="background-color: white;"></button>
+                                <button data-color="aquamarine" class="item-color" style="background-color: aquamarine;"></button>
+                                <button data-color="darkturquoise" class="item-color" style="background-color: darkturquoise;"></button>
                             </div>
                         </div>
                     </div>
@@ -869,161 +880,9 @@
                                 <div class="product__description-price">500&nbsp;грн</div>
                             </div>
                             <div class="product__description-colors">
-                                <button data-color='white' class="active-color" style="background-color: white;"></button>
-                                <button data-color="aquamarine" style="background-color: aquamarine;"></button>
-                                <button data-color='darkturquoise' style="background-color: darkturquoise;"></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="new-block__slide swiper-slide">
-                    <div class="product__card-container">
-                        <div class="product__card">
-                            <div class="product__card-link" id="product-id-123452" data-json='[{"colorID":"white","productLink":"#","colorSrc":["./images/new-4.jpg","./images/new-4.jpg","./images/new-4.jpg","./images/new-4.jpg"],"colorSize":[{"size":"xs","isDisabled":"enabled"},{"size":"s","isDisabled":"disabled"},{"size":"m","isDisabled":"enabled"},{"size":"l","isDisabled":"enabled"},{"size":"xl","isDisabled":"disabled"}]},{"colorID":"aquamarine","productLink":"#","colorSrc":["./images/new-2.jpg","./images/new-2.jpg"],"colorSize":[{"size":"xs","isDisabled":"enabled"},{"size":"s","isDisabled":"disabled"},{"size":"m","isDisabled":"enabled"},{"size":"l","isDisabled":"enabled"},{"size":"xl","isDisabled":"disabled"}]},{"colorID":"darkturquoise","productLink":"#","colorSrc":["./images/new-3.jpg","./images/new-3.jpg","./images/new-3.jpg"],"colorSize":[{"size":"xs","isDisabled":"enabled"},{"size":"s","isDisabled":"disabled"},{"size":"m","isDisabled":"enabled"},{"size":"l","isDisabled":"enabled"},{"size":"xl","isDisabled":"disabled"}]}]'>
-                                <div aria-label="Добавить в избранное" class="_icon-favorites favorit" role="button"></div>
-                                <div class="product-card-swiper swiper-container">
-                                    <a href="" class="product__card-sub-wrapper swiper-wrapper">
-                                        <div class="product__card-img-cont swiper-slide">
-                                            <img class="slide-img" src="./images/new-2.jpg">
-                                        </div>
-                                        <div class="product__card-img-cont swiper-slide">
-                                            <img class="slide-img" src="./images/new-3.jpg">
-                                        </div>
-                                        <div class="product__card-img-cont swiper-slide">
-                                            <img class="slide-img" src="./images/new-4.jpg">
-                                        </div>
-                                    </a>
-                                    <div class="_icon-arrow-slider-1 product-card-swiper-prev" role="button" aria-label="Next slide"></div>
-                                    <div class="_icon-arrow-slider-2 product-card-swiper-next" role="button" aria-label="Previous slide"></div>
-                                </div>
-                                <a href="#" class="product__buy-container">
-                                    <div class="_icon-bag" role="button"></div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="product__description-item">
-                            <div class="product__description-cont">
-                                <div class="product__description-title">Футболка из хлопка</div>
-                                <div class="product__description-price">500&nbsp;грн</div>
-                            </div>
-                            <div class="product__description-colors">
-                                <button data-color='white' class="active-color" style="background-color: white;"></button>
-                                <button data-color="aquamarine" style="background-color: aquamarine;"></button>
-                                <button data-color='darkturquoise' style="background-color: darkturquoise;"></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="new-block__slide swiper-slide">
-                    <div class="product__card-container">
-                        <div class="product__card">
-                            <div class="product__card-link" id="product-id-123452" data-json='[{"colorID":"white","productLink":"#","colorSrc":["./images/new-4.jpg","./images/new-4.jpg","./images/new-4.jpg","./images/new-4.jpg"],"colorSize":[{"size":"xs","isDisabled":"enabled"},{"size":"s","isDisabled":"disabled"},{"size":"m","isDisabled":"enabled"},{"size":"l","isDisabled":"enabled"},{"size":"xl","isDisabled":"disabled"}]},{"colorID":"aquamarine","productLink":"#","colorSrc":["./images/new-2.jpg","./images/new-2.jpg"],"colorSize":[{"size":"xs","isDisabled":"enabled"},{"size":"s","isDisabled":"disabled"},{"size":"m","isDisabled":"enabled"},{"size":"l","isDisabled":"enabled"},{"size":"xl","isDisabled":"disabled"}]},{"colorID":"darkturquoise","productLink":"#","colorSrc":["./images/new-3.jpg","./images/new-3.jpg","./images/new-3.jpg"],"colorSize":[{"size":"xs","isDisabled":"enabled"},{"size":"s","isDisabled":"disabled"},{"size":"m","isDisabled":"enabled"},{"size":"l","isDisabled":"enabled"},{"size":"xl","isDisabled":"disabled"}]}]'>
-                                <div aria-label="Добавить в избранное" class="_icon-favorites favorit" role="button"></div>
-                                <div class="product-card-swiper swiper-container">
-                                    <a href="" class="product__card-sub-wrapper swiper-wrapper">
-                                        <div class="product__card-img-cont swiper-slide">
-                                            <img class="slide-img" src="./images/new-2.jpg">
-                                        </div>
-                                        <div class="product__card-img-cont swiper-slide">
-                                            <img class="slide-img" src="./images/new-3.jpg">
-                                        </div>
-                                        <div class="product__card-img-cont swiper-slide">
-                                            <img class="slide-img" src="./images/new-4.jpg">
-                                        </div>
-                                    </a>
-                                    <div class="_icon-arrow-slider-1 product-card-swiper-prev" role="button" aria-label="Next slide"></div>
-                                    <div class="_icon-arrow-slider-2 product-card-swiper-next" role="button" aria-label="Previous slide"></div>
-                                </div>
-                                <a href="#" class="product__buy-container">
-                                    <div class="_icon-bag" role="button"></div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="product__description-item">
-                            <div class="product__description-cont">
-                                <div class="product__description-title">Футболка из хлопка</div>
-                                <div class="product__description-price">500&nbsp;грн</div>
-                            </div>
-                            <div class="product__description-colors">
-                                <button data-color='white' class="active-color" style="background-color: white;"></button>
-                                <button data-color="aquamarine" style="background-color: aquamarine;"></button>
-                                <button data-color='darkturquoise' style="background-color: darkturquoise;"></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="new-block__slide swiper-slide">
-                    <div class="product__card-container">
-                        <div class="product__card">
-                            <div class="product__card-link" id="product-id-123452" data-json='[{"colorID":"white","productLink":"#","colorSrc":["./images/new-4.jpg","./images/new-4.jpg","./images/new-4.jpg","./images/new-4.jpg"],"colorSize":[{"size":"xs","isDisabled":"enabled"},{"size":"s","isDisabled":"disabled"},{"size":"m","isDisabled":"enabled"},{"size":"l","isDisabled":"enabled"},{"size":"xl","isDisabled":"disabled"}]},{"colorID":"aquamarine","productLink":"#","colorSrc":["./images/new-2.jpg","./images/new-2.jpg"],"colorSize":[{"size":"xs","isDisabled":"enabled"},{"size":"s","isDisabled":"disabled"},{"size":"m","isDisabled":"enabled"},{"size":"l","isDisabled":"enabled"},{"size":"xl","isDisabled":"disabled"}]},{"colorID":"darkturquoise","productLink":"#","colorSrc":["./images/new-3.jpg","./images/new-3.jpg","./images/new-3.jpg"],"colorSize":[{"size":"xs","isDisabled":"enabled"},{"size":"s","isDisabled":"disabled"},{"size":"m","isDisabled":"enabled"},{"size":"l","isDisabled":"enabled"},{"size":"xl","isDisabled":"disabled"}]}]'>
-                                <div aria-label="Добавить в избранное" class="_icon-favorites favorit" role="button"></div>
-                                <div class="product-card-swiper swiper-container">
-                                    <a href="" class="product__card-sub-wrapper swiper-wrapper">
-                                        <div class="product__card-img-cont swiper-slide">
-                                            <img class="slide-img" src="./images/new-2.jpg">
-                                        </div>
-                                        <div class="product__card-img-cont swiper-slide">
-                                            <img class="slide-img" src="./images/new-3.jpg">
-                                        </div>
-                                        <div class="product__card-img-cont swiper-slide">
-                                            <img class="slide-img" src="./images/new-4.jpg">
-                                        </div>
-                                    </a>
-                                    <div class="_icon-arrow-slider-1 product-card-swiper-prev" role="button" aria-label="Next slide"></div>
-                                    <div class="_icon-arrow-slider-2 product-card-swiper-next" role="button" aria-label="Previous slide"></div>
-                                </div>
-                                <a href="#" class="product__buy-container">
-                                    <div class="_icon-bag" role="button"></div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="product__description-item">
-                            <div class="product__description-cont">
-                                <div class="product__description-title">Футболка из хлопка</div>
-                                <div class="product__description-price">500&nbsp;грн</div>
-                            </div>
-                            <div class="product__description-colors">
-                                <button data-color='white' class="active-color" style="background-color: white;"></button>
-                                <button data-color="aquamarine" style="background-color: aquamarine;"></button>
-                                <button data-color='darkturquoise' style="background-color: darkturquoise;"></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="new-block__slide swiper-slide">
-                    <div class="product__card-container">
-                        <div class="product__card">
-                            <div class="product__card-link" id="product-id-123452" data-json='[{"colorID":"white","productLink":"#","colorSrc":["./images/new-4.jpg","./images/new-4.jpg","./images/new-4.jpg","./images/new-4.jpg"],"colorSize":[{"size":"xs","isDisabled":"enabled"},{"size":"s","isDisabled":"disabled"},{"size":"m","isDisabled":"enabled"},{"size":"l","isDisabled":"enabled"},{"size":"xl","isDisabled":"disabled"}]},{"colorID":"aquamarine","productLink":"#","colorSrc":["./images/new-2.jpg","./images/new-2.jpg"],"colorSize":[{"size":"xs","isDisabled":"enabled"},{"size":"s","isDisabled":"disabled"},{"size":"m","isDisabled":"enabled"},{"size":"l","isDisabled":"enabled"},{"size":"xl","isDisabled":"disabled"}]},{"colorID":"darkturquoise","productLink":"#","colorSrc":["./images/new-3.jpg","./images/new-3.jpg","./images/new-3.jpg"],"colorSize":[{"size":"xs","isDisabled":"enabled"},{"size":"s","isDisabled":"disabled"},{"size":"m","isDisabled":"enabled"},{"size":"l","isDisabled":"enabled"},{"size":"xl","isDisabled":"disabled"}]}]'>
-                                <div aria-label="Добавить в избранное" class="_icon-favorites favorit" role="button"></div>
-                                <div class="product-card-swiper swiper-container">
-                                    <a href="" class="product__card-sub-wrapper swiper-wrapper">
-                                        <div class="product__card-img-cont swiper-slide">
-                                            <img class="slide-img" src="./images/new-2.jpg">
-                                        </div>
-                                        <div class="product__card-img-cont swiper-slide">
-                                            <img class="slide-img" src="./images/new-3.jpg">
-                                        </div>
-                                        <div class="product__card-img-cont swiper-slide">
-                                            <img class="slide-img" src="./images/new-4.jpg">
-                                        </div>
-                                    </a>
-                                    <div class="_icon-arrow-slider-1 product-card-swiper-prev" role="button" aria-label="Next slide"></div>
-                                    <div class="_icon-arrow-slider-2 product-card-swiper-next" role="button" aria-label="Previous slide"></div>
-                                </div>
-                                <a href="#" class="product__buy-container">
-                                    <div class="_icon-bag" role="button"></div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="product__description-item">
-                            <div class="product__description-cont">
-                                <div class="product__description-title">Футболка из хлопка</div>
-                                <div class="product__description-price">500&nbsp;грн</div>
-                            </div>
-                            <div class="product__description-colors">
-                                <button data-color='white' class="active-color" style="background-color: white;"></button>
-                                <button data-color="aquamarine" style="background-color: aquamarine;"></button>
-                                <button data-color='darkturquoise' style="background-color: darkturquoise;"></button>
+                                <button data-color="white" class="active-color item-color" style="background-color: white;"></button>
+                                <button data-color="aquamarine" class="item-color" style="background-color: aquamarine;"></button>
+                                <button data-color="darkturquoise" class="item-color" style="background-color: darkturquoise;"></button>
                             </div>
                         </div>
                     </div>
@@ -1035,7 +894,7 @@
                 <div class="new-block-swiper-pagination custom-swiper-pagination"></div>
                 <div class="slider__btn-cont custom-swiper-btn-cont">
                     <div class="_icon-arrow-slider-1 new-block-swiper-prev"></div>
-                    <span>|</span>
+                    <span class="btn-slider-span">|</span>
                     <div class="_icon-arrow-slider-2 new-block-swiper-next"></div>
                 </div>
             </div>
@@ -1049,10 +908,10 @@
         <div class="nuot__grid-wrapper">
             <div class="nuot__block">
                 <div class="nuot__img-container">
-                    <img src="./images/nuot-1.jpg" alt="">
+                    <img src="./images/nuot-1.jpg" alt="" loading="lazy">
                 </div>
                 <div class="nuot__img-container">
-                    <img src="./images/nuot-2.jpg" alt="">
+                    <img src="./images/nuot-2.jpg" alt="" loading="lazy">
                 </div>
             </div>
             <div class="nuot__block">
@@ -1070,45 +929,46 @@
                     </a>
                 </div>
                 <div class="nuot__style-img">
-                    <img src="./images/nuot-3.jpg" alt="">
+                    <img src="./images/nuot-3.jpg" alt="" loading="lazy">
                 </div>
             </div>
             <div class="nuot__block _third-block">
                 <div class="nuot__img-container">
-                    <img src="./images/nuot-2.jpg" alt="">
+                    <img src="./images/nuot-2.jpg" alt="" loading="lazy">
                 </div>
                 <div class="nuot__img-container">
-                    <img src="./images/nuot-1.jpg" alt="">
+                    <img src="./images/nuot-1.jpg" alt="" loading="lazy">
                 </div>
             </div>
         </div>
     </div>
 </section>        <div id="topBtn" class="_icon-arrow-top" role="button"></div>    </main>    <footer>        <section class="footer__wrapper">
-<div class="footer__container">
-    <div class="footer__sub">
-        <div class="footer__sub-action">
-            <div class="footer__sub-title">Подпишитесь на новости</div>
-            <div class="footer__sub-form">
-                <form name="newstler" id="newstler">
-                    <input form="newstler" type="email" minlength="6" required  placeholder="Ваша електронная почта">
-                    <button class="footer__sub-form-btn _icon-arrow-link" type="submit" form="newstler"></button>
-                </form>
+    <div class="footer__container">
+        <div class="footer__sub">
+            <div class="footer__sub-action">
+                <div class="footer__sub-title">Подпишитесь на новости</div>
+                <div class="footer__sub-form">
+                    <form name="newstler" id="newstler">
+                        <input form="newstler" type="email" minlength="6" required placeholder="Ваша електронная почта">
+                        <input form="newstler" name="chekoutNewstler" type="text" style="display: none;" value="">
+                        <button class="footer__sub-form-btn _icon-arrow-link" type="submit" form="newstler"></button>
+                    </form>
+                </div>
+                <hr>
             </div>
-            <hr>
+            <div class="footer__sub-success">
+                <p>Ваш email был добавлен в рассылку!</p>
+                <p>
+                    Вы можете отписаться в любой момент. Для этого воспользуйтесь нашими контактными данными в юридическом уведомлении.
+                </p>
+            </div>
+            <div class="footer__sub-social-cont">
+                <a class="_icon-instagram" href=""></a>
+                <a class="_icon-facebook" href=""></a>
+                <a class="_icon-youtube" href=""></a>
+            </div>
         </div>
-        <div class="footer__sub-success">
-            <p>Ваш email был добавлен в рассылку!</p>
-            <p>
-                Вы можете отписаться в любой момент. Для этого воспользуйтесь нашими контактными данными в юридическом уведомлении.
-            </p>
-        </div>
-        <div class="footer__sub-social-cont">
-            <a class="_icon-instagram" href=""></a>
-            <a class="_icon-facebook" href=""></a>
-            <a class="_icon-youtube" href=""></a>
-        </div>
-    </div>
-    <div class="footer__info">
+        <div class="footer__info">
             <div class="footer__info-title">ИНФОРМАЦИЯ И ПОМОЩЬ/</div>
             <div class="footer__info-links">
                 <ul class="info-links-left">
@@ -1124,28 +984,28 @@
                     <li><a class="info-links-item sale" href="">СКИДКИ</a></li>
                 </ul>
             </div>
-    </div>
-    <div class="footer__delivery">
-        <div class="footer__deliver-cont">
-            <div class="footer__delivery-title">ОПЛАТА И ДОСТАВКА/</div>
-            <div class="footer__delivery-links">
-                <a class="footer__delivery-item" href="">Варианты доставки</a>
+        </div>
+        <div class="footer__delivery">
+            <div class="footer__deliver-cont">
+                <div class="footer__delivery-title">ОПЛАТА И ДОСТАВКА/</div>
+                <div class="footer__delivery-links">
+                    <a class="footer__delivery-item" href="">Варианты доставки</a>
+                </div>
+            </div>
+            <div class="footer__delivery-method">
+                <div class="footer__delivery-pay">
+                    <img src="./images/ApplePay.svg" alt="">
+                </div>
+                <div class="footer__delivery-pay">
+                    <img src="./images/GooglePay.svg" alt="">
+                </div>
+                <div class="footer__delivery-pay">
+                    <img src="./images/Mastercard.svg" alt="">
+                </div>
+                <div class="footer__delivery-pay">
+                    <img src="./images/Visa.svg" alt="">
+                </div>
             </div>
         </div>
-        <div class="footer__delivery-method">
-            <div class="footer__delivery-pay">
-                <img src="./images/ApplePay.svg" alt="">
-            </div>
-            <div class="footer__delivery-pay">
-                <img src="./images/GooglePay.svg" alt="">
-            </div>
-            <div class="footer__delivery-pay">
-                <img src="./images/Mastercard.svg" alt="">
-            </div>
-            <div class="footer__delivery-pay">
-                <img src="./images/Visa.svg" alt="">
-            </div>
-        </div>
     </div>
-</div>
-</section>    </footer>    <script src="js/jquery.min.js"></script>    <script src="js/jquery.maskedinput.js"></script>    <script src="js/bootstrap.bundle.min.js"></script>    <script src="js/swiper-bundle.min.js"></script>    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>    <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/5.1.3/pixi.min.js"></script>    <script src="js/script.js"></script></body></html>
+</section>    </footer>    <script src="js/jquery.min.js"></script>    <script src="js/jquery.maskedinput.js"></script>    <script src="js/bootstrap.bundle.min.js"></script>    <script src="js/swiper-bundle.min.js"></script>    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>    <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/5.1.3/pixi.min.js"></script>    <script src="js/fancybox.umd.js"></script>    <script src="js/script.js"></script></body></html>
