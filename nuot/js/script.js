@@ -608,7 +608,8 @@ window.onload = function () {
 
 				watchOverflow: true,
 				slidesPerView: 2,
-				spaceBetween: 6,
+				//spaceBetween: 6,
+				spaceBetween: 0,
 				pagination: {
 					el: '.new-block-swiper-pagination',
 					type: 'bullets',
@@ -709,11 +710,14 @@ window.onload = function () {
 			colorsBtn.forEach((i) => {
 				i.addEventListener('click', (e) => {
 					let target = e.target;
-					let btnDataId = target.getAttribute('data-color');
+					let btnDataColor = target.getAttribute('data-color');
 					let parent = target.parentNode.parentNode.parentNode;
 					let card = parent.querySelector('[data-json]');
 					let dataJson = card.getAttribute('data-json');
 					let dataArr = JSON.parse(dataJson);
+
+					console.log(dataArr);
+
 					let colorsCont = target.parentNode;
 					colorsCont
 						.querySelector('.active-color')
@@ -721,30 +725,33 @@ window.onload = function () {
 					target.classList.add('active-color');
 
 					dataArr.forEach((i) => {
-						if (i.colorID == btnDataId) {
+						if (i.product_id == btnDataColor) {
 							let buyCont = parent.querySelector(
 								'.product__buy-container'
 							);
+							buyCont.setAttribute('href', i.href);
 							let sizesCont = buyCont.querySelector(
 								'.product__sizes-container'
 							);
-							// let cardLink = parent.querySelector(
-							// 	'.product__card-sub-wrapper'
-							// );
-							// cardLink.setAttribute('href', i.productLink);
+							let cardLink = parent.querySelector(
+								'.product__card-sub-wrapper'
+							);
+							cardLink.setAttribute('href', i.href);
 
 							if (sizesCont) {
 								while (sizesCont.firstChild) {
 									sizesCont.removeChild(sizesCont.firstChild);
 								}
 
-								i.colorSize.forEach((i) => {
-									sizesCont.insertAdjacentHTML(
-										'beforeend',
-										`
-										<button class="product__sizes-item" type="button" ${i.isDisabled}>${i.size}</button>
-									`
-									);
+								i.sizes.forEach((i) => {
+									console.log(i);
+
+									// sizesCont.insertAdjacentHTML(
+									// 	'beforeend',
+									// 	`
+									// 	<button class="product__sizes-item" type="button" ${i.isDisabled}>${i.size}</button>
+									// `
+									// );
 								});
 							}
 
@@ -755,14 +762,14 @@ window.onload = function () {
 								imgCont.removeChild(imgCont.firstChild);
 							}
 
-							i.colorSrc.forEach((i) => {
+							i.images.forEach((i) => {
 								imgCont.insertAdjacentHTML(
 									'afterbegin',
 									`
-									<div class="product__card-img-cont swiper-slide">
-										<img class="slide-img" src="${i}">
-									</div>
-								`
+										<div class="product__card-img-cont swiper-slide">
+											<img class="slide-img" src="${i}">
+										</div>
+									`
 								);
 							});
 
@@ -818,396 +825,434 @@ window.onload = function () {
 				}
 			});
 		}
-		//add toltip bootstrap
-		// let descriptionSize = document.querySelector('.card__description-size');
-		// let descriptionSizeTooltip = new bootstrap.Tooltip(descriptionSize, {
-		// 	container: 'body'
-		// })
-		//console.log(descriptionSizeTooltip);
-		// var myModal = new bootstrap.Modal(document.getElementById('myModal'))
-		// console.log(myModal);
-		//myModal.show()
-		
 	})();
+	// //all change
+	// (function () {
+	// 	//new block
+	// 	let newBlock = document.querySelector('.new-block__swiper');
+	// 	if (newBlock) {
+	// 		//fun for prevent def for a link size
+	// 		if (window.matchMedia('(min-width: 640px)').matches) {
+	// 			document
+	// 				.querySelectorAll('.product__buy-container')
+	// 				.forEach((i) => {
+	// 					i.addEventListener('click', (e) => {
+	// 						let longSize = i.classList.contains('long-size');
+	// 						if (!longSize) {
+	// 							e.preventDefault();
+	// 						}
+	// 					});
+	// 				});
+	// 		}
+	// 		//add to favorite
+	// 		let favorites = document.querySelectorAll('.favorit');
+	// 		favorites.forEach((i) => {
+	// 			i.addEventListener('click', (e) => {
+	// 				let target = e.target;
+	// 				if (target.classList.contains('_icon-favorites')) {
+	// 					target.classList.remove('_icon-favorites');
+	// 					target.classList.add('_icon-favorites-fill');
+	// 				} else if (
+	// 					target.classList.contains('_icon-favorites-fill')
+	// 				) {
+	// 					target.classList.remove('_icon-favorites-fill');
+	// 					target.classList.add('_icon-favorites');
+	// 				}
+	// 			});
+	// 		});
+	// 		//slider cards
+	// 		const productCardSwiper = new Swiper('.product-card-swiper', {
+	// 			watchOverflow: true,
+	// 			slidesPerView: 1,
+	// 			navigation: {
+	// 				nextEl: '.product-card-swiper-next',
+	// 				prevEl: '.product-card-swiper-prev',
+	// 			},
+	// 		});
+	// 		//change card slides
+	// 		let colorsBtn = document.querySelectorAll('button[data-color]');
+	// 		colorsBtn.forEach((i) => {
+	// 			i.addEventListener('click', (e) => {
+	// 				let target = e.target;
+	// 				let btnDataColor = target.getAttribute('data-color');
+	// 				let parent = target.parentNode.parentNode.parentNode;
+	// 				let card = parent.querySelector('[data-json]');
+	// 				let dataJson = card.getAttribute('data-json');
+	// 				let dataArr = JSON.parse(dataJson);
+
+	// 				console.log(dataArr);
+
+	// 				let colorsCont = target.parentNode;
+	// 				colorsCont
+	// 					.querySelector('.active-color')
+	// 					.classList.remove('active-color');
+	// 				target.classList.add('active-color');
+
+	// 				dataArr.forEach((i) => {
+	// 					if (i.product_id == btnDataColor) {
+	// 						let buyCont = parent.querySelector(
+	// 							'.product__buy-container'
+	// 						);
+	// 						buyCont.setAttribute('href', i.href);
+	// 						let sizesCont = buyCont.querySelector(
+	// 							'.product__sizes-container'
+	// 						);
+	// 						let cardLink = parent.querySelector(
+	// 							'.product__card-sub-wrapper'
+	// 						);
+	// 						cardLink.setAttribute('href', i.href);
+
+	// 						if (sizesCont) {
+	// 							while (sizesCont.firstChild) {
+	// 								sizesCont.removeChild(sizesCont.firstChild);
+	// 							}
+
+	// 							i.sizes.forEach((i) => {
+	// 								//console.log(i);
+	// 								sizesCont.insertAdjacentHTML(
+	// 									'beforeend',
+	// 									`
+	// 									<button class="product__sizes-item" type="button" data-stock-status="${i.stock_status_id}" ${i.isDisabled}>${i.size}</button>
+	// 								`
+	// 								);
+	// 							});
+	// 						}
+
+	// 						let imgCont = parent.querySelector(
+	// 							'.product__card-sub-wrapper'
+	// 						);
+	// 						while (imgCont.firstChild) {
+	// 							imgCont.removeChild(imgCont.firstChild);
+	// 						}
+
+	// 						i.images.forEach((i) => {
+	// 							imgCont.insertAdjacentHTML(
+	// 								'afterbegin',
+	// 								`
+	// 									<div class="product__card-img-cont swiper-slide">
+	// 										<img class="slide-img" src="${i}">
+	// 									</div>
+	// 								`
+	// 							);
+	// 						});
+
+	// 						productCardSwiper.map((i) => {
+	// 							i.update();
+	// 						});
+	// 					}
+	// 				});
+	// 			});
+	// 		});
+	// 	}
+	// 	//email reqest
+	// 	let newstler = document.querySelector('#newstler');
+	// 	let emailContainet = document.querySelector('.footer__sub-action');
+	// 	let successContainet = document.querySelector('.footer__sub-success');
+
+	// 	newstler.addEventListener('submit', function (e) {
+	// 		e.preventDefault();
+	// 		let inputs = newstler.getElementsByTagName('input');
+	// 		let data = {
+	// 			email: inputs[0].value,
+	// 		};
+
+	// 		if (inputs[1].value == '') {
+	// 			$.ajax({
+	// 				url: `index.php?route=mail/newsletter/setToDatabase`,
+	// 				type: 'post',
+	// 				data: data,
+	// 				dataType: 'json',
+	// 				success: function (data) {
+	// 					console.log('ok');
+	// 					inputs[0].value = '';
+	// 					data = {};
+	// 					emailContainet.style.display = 'none';
+	// 					successContainet.style.display = 'block';
+	// 				},
+	// 				error: function (xhr, ajaxOptions, thrownError) {
+	// 					console.log(xhr);
+	// 				},
+	// 			});
+	// 		}
+	// 	});
+
+	// 	//btn-slider-span init on display
+	// 	let sliderSpan = document.querySelectorAll('.btn-slider-span');
+	// 	if (sliderSpan.length > 0) {
+	// 		sliderSpan.forEach((i) => {
+	// 			let prevBtn = i.parentNode.querySelector(
+	// 				'._icon-arrow-slider-1'
+	// 			);
+	// 			if (prevBtn.classList.contains('swiper-button-lock')) {
+	// 				i.style.display = 'none';
+	// 			}
+	// 		});
+	// 	}
+	// })();
 };
 
-// [
-// 	{
-// 		"colorID":"white",
-// 		"productLink":"#",
-// 		"colorSrc":[
-// 			"./images/new-4.jpg",
-// 			"./images/new-4.jpg",
-// 			"./images/new-4.jpg",
-// 			"./images/new-4.jpg"
-// 		],
-// 		"colorSize":[
-// 			{
-// 				"size":"xs",
-// 				"isDisabled":"enabled"
-// 			},
-// 			{
-// 				"size":"s",
-// 				"isDisabled":"disabled"
-// 			},
-// 			{
-// 				"size":"m",
-// 				"isDisabled":"enabled"
-// 			},
-// 			{
-// 				"size":"l",
-// 				"isDisabled":"enabled"
-// 			},
-// 			{
-// 				"size":"xl",
-// 				"isDisabled":"disabled"
-// 			}
-// 		]
-// 	},
-// 	{
-// 		"colorID":"darkturquoise",
-// 		"productLink":"#",
-// 		"colorSrc":[
-// 			"./images/new-2.jpg",
-// 			"./images/new-2.jpg",
-// 		],
-// 		"colorSize":[
-// 			{
-// 				"size":"xs",
-// 				"isDisabled":"enabled"
-// 			},
-// 			{
-// 				"size":"s",
-// 				"isDisabled":"disabled"
-// 			},
-// 			{
-// 				"size":"m",
-// 				"isDisabled":"enabled"
-// 			},
-// 			{
-// 				"size":"l",
-// 				"isDisabled":"enabled"
-// 			},
-// 			{
-// 				"size":"xl",
-// 				"isDisabled":"disabled"
-// 			}
-// 		]
-// 	},
-// 	{
-// 		"colorID":"aquamarine",
-// 		"productLink":"#",
-// 		"colorSrc":[
-// 			"./images/new-3.jpg",
-// 			"./images/new-3.jpg",
-// 			"./images/new-3.jpg",
-// 		],
-// 		"colorSize":[
-// 			{
-// 				"size":"xs",
-// 				"isDisabled":"enabled"
-// 			},
-// 			{
-// 				"size":"s",
-// 				"isDisabled":"disabled"
-// 			},
-// 			{
-// 				"size":"m",
-// 				"isDisabled":"enabled"
-// 			},
-// 			{
-// 				"size":"l",
-// 				"isDisabled":"enabled"
-// 			},
-// 			{
-// 				"size":"xl",
-// 				"isDisabled":"disabled"
-// 			}
-// 		]
-// 	},
-// ]
-let webgl = document.querySelector('.webgl');
-if (webgl) {
-	//Create a Pixi Application
-	function cover(target, container) {
-		return calculate(target, container, true);
-	}
+// let webgl = document.querySelector('.webgl');
+// if (webgl) {
+// 	//Create a Pixi Application
+// 	function cover(target, container) {
+// 		return calculate(target, container, true);
+// 	}
 
-	function contain(target, container) {
-		return calculate(target, container, false);
-	}
+// 	function contain(target, container) {
+// 		return calculate(target, container, false);
+// 	}
 
-	function calculate(target, container, cover) {
-		var containerW = container.width || container.w;
-		var containerH = container.height || container.h;
-		var targetW = target.width || target.w;
-		var targetH = target.height || target.h;
+// 	function calculate(target, container, cover) {
+// 		var containerW = container.width || container.w;
+// 		var containerH = container.height || container.h;
+// 		var targetW = target.width || target.w;
+// 		var targetH = target.height || target.h;
 
-		var rw = containerW / targetW;
-		var rh = containerH / targetH;
-		var r;
+// 		var rw = containerW / targetW;
+// 		var rh = containerH / targetH;
+// 		var r;
 
-		if (cover) {
-			r = rw > rh ? rw : rh;
-		} else {
-			r = rw < rh ? rw : rh;
-		}
+// 		if (cover) {
+// 			r = rw > rh ? rw : rh;
+// 		} else {
+// 			r = rw < rh ? rw : rh;
+// 		}
 
-		return {
-			left: (containerW - targetW * r) >> 1,
-			top: (containerH - targetH * r) >> 1,
-			width: targetW * r,
-			height: targetH * r,
-			scale: r,
-		};
-	}
+// 		return {
+// 			left: (containerW - targetW * r) >> 1,
+// 			top: (containerH - targetH * r) >> 1,
+// 			width: targetW * r,
+// 			height: targetH * r,
+// 			scale: r,
+// 		};
+// 	}
 
-	function loadImages(data, whenLoaded) {
-		const imgs = [];
-		const imgO = [];
+// 	function loadImages(data, whenLoaded) {
+// 		const imgs = [];
+// 		const imgO = [];
 
-		data.forEach(function (i) {
-			const img = new Image();
-			let path = i.dataImg;
-			let link = i.link;
-			img.onload = function () {
-				imgs.push(img);
-				imgO.push({ path, img, link });
-				if (imgs.length === data.length) whenLoaded(imgO);
-			};
-			img.src = path;
-		});
-	}
+// 		data.forEach(function (i) {
+// 			const img = new Image();
+// 			let path = i.dataImg;
+// 			let link = i.link;
+// 			img.onload = function () {
+// 				imgs.push(img);
+// 				imgO.push({ path, img, link });
+// 				if (imgs.length === data.length) whenLoaded(imgO);
+// 			};
+// 			img.src = path;
+// 		});
+// 	}
 
-	class Sketch {
-		constructor() {
-			this.app = new PIXI.Application({
-				backgroundColor: 0xfffaf6,
-				width: 1440,
-				height: 388
-				//resizeTo: window,
-				//resolution: devicePixelRatio
-			});
-			document.querySelector('.webgl').appendChild(this.app.view);
-			this.margin = 6;
-			// this.scroll = -1;
-			// this.scrollTarget = -3;
-			this.scroll = 1;
-			this.scrollTarget = 2;
-			this.width = (window.innerWidth - 2 * this.margin) / 7;
-			//this.height = window.innerHeight * 0.8;
-			//this.height = window.innerHeight;
-			//this.width = 1440;
-			this.height = 388;
-			this.container = new PIXI.Container();
-			this.app.stage.addChild(this.container);
-			this.images = [
-				{
-					dataImg: './images/cat-1.jpg',
-					link: 'https://learn.javascript.ru/form-elements',
-				},
-				{
-					dataImg: './images/cat-2.jpg',
-					link: 'https://www.pixijs.com/',
-				},
-				{
-					dataImg: './images/cat-3.jpg',
-					link: 'https://learn.javascript.ru/form-elements',
-				},
-				{
-					dataImg: './images/cat-4.jpg',
-					link: 'https://learn.javascript.ru/form-elements',
-				},
-				{
-					dataImg: './images/cat-5.jpg',
-					link: 'https://learn.javascript.ru/form-elements',
-				},
-				{
-					dataImg: './images/cat-6.jpg',
-					link: 'https://learn.javascript.ru/form-elements',
-				},
-				{
-					dataImg: './images/cat-7.jpg',
-					link: 'https://learn.javascript.ru/form-elements',
-				},
-				{
-					dataImg: './images/cat-8.jpg',
-					link: 'https://learn.javascript.ru/form-elements',
-				},
-				{
-					dataImg: './images/cat-9.jpg',
-					link: 'https://learn.javascript.ru/form-elements',
-				},
-				{
-					dataImg: './images/cat-10.jpg',
-					link: 'https://learn.javascript.ru/form-elements',
-				},
-			];
-			this.WHOLEWIDTH = this.images.length * (this.width + this.margin);
-			// const canvas = document.querySelector('canvas');
-			// canvas.width = this.width;
-			// canvas.height = this.height;
+// 	class Sketch {
+// 		constructor() {
+// 			this.app = new PIXI.Application({
+// 				backgroundColor: 0xfffaf6,
+// 				width: 1440,
+// 				height: 388
+// 				//resizeTo: window,
+// 				//resolution: devicePixelRatio
+// 			});
+// 			document.querySelector('.webgl').appendChild(this.app.view);
+// 			this.margin = 6;
+// 			// this.scroll = -1;
+// 			// this.scrollTarget = -3;
+// 			this.scroll = 1;
+// 			this.scrollTarget = 2;
+// 			this.width = (window.innerWidth - 2 * this.margin) / 7;
+// 			//this.height = window.innerHeight * 0.8;
+// 			//this.height = window.innerHeight;
+// 			//this.width = 1440;
+// 			this.height = 388;
+// 			this.container = new PIXI.Container();
+// 			this.app.stage.addChild(this.container);
+// 			this.images = [
+// 				{
+// 					dataImg: './images/cat-1.jpg',
+// 					link: 'https://learn.javascript.ru/form-elements',
+// 				},
+// 				{
+// 					dataImg: './images/cat-2.jpg',
+// 					link: 'https://www.pixijs.com/',
+// 				},
+// 				{
+// 					dataImg: './images/cat-3.jpg',
+// 					link: 'https://learn.javascript.ru/form-elements',
+// 				},
+// 				{
+// 					dataImg: './images/cat-4.jpg',
+// 					link: 'https://learn.javascript.ru/form-elements',
+// 				},
+// 				{
+// 					dataImg: './images/cat-5.jpg',
+// 					link: 'https://learn.javascript.ru/form-elements',
+// 				},
+// 				{
+// 					dataImg: './images/cat-6.jpg',
+// 					link: 'https://learn.javascript.ru/form-elements',
+// 				},
+// 				{
+// 					dataImg: './images/cat-7.jpg',
+// 					link: 'https://learn.javascript.ru/form-elements',
+// 				},
+// 				{
+// 					dataImg: './images/cat-8.jpg',
+// 					link: 'https://learn.javascript.ru/form-elements',
+// 				},
+// 				{
+// 					dataImg: './images/cat-9.jpg',
+// 					link: 'https://learn.javascript.ru/form-elements',
+// 				},
+// 				{
+// 					dataImg: './images/cat-10.jpg',
+// 					link: 'https://learn.javascript.ru/form-elements',
+// 				},
+// 			];
+// 			this.WHOLEWIDTH = this.images.length * (this.width + this.margin);
+// 			// const canvas = document.querySelector('canvas');
+// 			// canvas.width = this.width;
+// 			// canvas.height = this.height;
 
-			loadImages(this.images, (images) => {
-				this.loadedImages = images;
-				this.add();
-				this.render();
-				this.scrollEvent();
-			});
-		}
+// 			loadImages(this.images, (images) => {
+// 				this.loadedImages = images;
+// 				this.add();
+// 				this.render();
+// 				this.scrollEvent();
+// 			});
+// 		}
 
-		scrollEvent() {
-			document
-				.querySelector('.webgl')
-				.addEventListener('mousewheel', (e) => {
-					this.scrollTarget = e.wheelDelta / 16;					
-				});
-		}
+// 		scrollEvent() {
+// 			document
+// 				.querySelector('.webgl')
+// 				.addEventListener('mousewheel', (e) => {
+// 					this.scrollTarget = e.wheelDelta / 16;
+// 				});
+// 		}
 
-		add() {
-			let parent = {
-				w: this.width,
-				h: this.height,
-			};
-			this.thumbs = [];
-			this.loadedImages.forEach((img, i) => {
-				// console.log(img);
-				let texture = PIXI.Texture.from(img.img);
-				const sprite = new PIXI.Sprite(texture);
-				let container = new PIXI.Container();
-				let spriteContainer = new PIXI.Container();
+// 		add() {
+// 			let parent = {
+// 				w: this.width,
+// 				h: this.height,
+// 			};
+// 			this.thumbs = [];
+// 			this.loadedImages.forEach((img, i) => {
+// 				// console.log(img);
+// 				let texture = PIXI.Texture.from(img.img);
+// 				const sprite = new PIXI.Sprite(texture);
+// 				let container = new PIXI.Container();
+// 				let spriteContainer = new PIXI.Container();
 
-				let mask = new PIXI.Sprite(PIXI.Texture.WHITE);
-				mask.width = this.width;
-				mask.height = this.height;
+// 				let mask = new PIXI.Sprite(PIXI.Texture.WHITE);
+// 				mask.width = this.width;
+// 				mask.height = this.height;
 
-				sprite.mask = mask;
+// 				sprite.mask = mask;
 
-				// sprite.width = 350;
-				// sprite.height = 470;
-				// sprite.texture.orig.width = 350;
-				// sprite.texture.orig.height = 470;
-				// console.log(sprite.texture.orig);
+// 				// sprite.width = 350;
+// 				// sprite.height = 470;
+// 				// sprite.texture.orig.width = 350;
+// 				// sprite.texture.orig.height = 470;
+// 				// console.log(sprite.texture.orig);
 
-				sprite.anchor.set(0.5);
-				sprite.position.set(
-					sprite.texture.orig.width / 2,
-					sprite.texture.orig.height / 2
-				);
-				
-				let image = {
-					w: sprite.texture.orig.width,
-					h: sprite.texture.orig.height,
-				};
+// 				sprite.anchor.set(0.5);
+// 				sprite.position.set(
+// 					sprite.texture.orig.width / 2,
+// 					sprite.texture.orig.height / 2
+// 				);
 
-				let cover1 = cover(image, parent);
-				//console.log(spriteContainer);
-				//console.log(container);
-				spriteContainer.position.set(cover1.left, cover.top);
-				spriteContainer.scale.set(cover1.scale, cover.scale);
+// 				let image = {
+// 					w: sprite.texture.orig.width,
+// 					h: sprite.texture.orig.height,
+// 				};
 
-				container.x = (this.margin + this.width) * i;
-				container.y = this.height / 35;
+// 				let cover1 = cover(image, parent);
+// 				//console.log(spriteContainer);
+// 				//console.log(container);
+// 				spriteContainer.position.set(cover1.left, cover.top);
+// 				spriteContainer.scale.set(cover1.scale, cover.scale);
 
-				spriteContainer.addChild(sprite);
-				container.interactive = true;
-				container.buttonMode = true;
-				container.link = img.link;
-				container.on('mouseover', this.mouseOn);
-				container.on('mouseout', this.mouseOut);
-				container.on('click', this.onClick);
-				container.addChild(spriteContainer);
-				container.addChild(mask);
-				this.container.addChild(container);
-				this.thumbs.push(container);
-			});
-		}
+// 				container.x = (this.margin + this.width) * i;
+// 				container.y = this.height / 35;
 
-		onClick(e) {
-			//console.log(e.target.link);
-			window.location.assign(e.target.link);
-		}
+// 				spriteContainer.addChild(sprite);
+// 				container.interactive = true;
+// 				container.buttonMode = true;
+// 				container.link = img.link;
+// 				container.on('mouseover', this.mouseOn);
+// 				container.on('mouseout', this.mouseOut);
+// 				container.on('click', this.onClick);
+// 				container.addChild(spriteContainer);
+// 				container.addChild(mask);
+// 				this.container.addChild(container);
+// 				this.thumbs.push(container);
+// 			});
+// 		}
 
-		mouseOn(e) {
-			let el = e.target.children[0].children[0];
+// 		onClick(e) {
+// 			//console.log(e.target.link);
+// 			window.location.assign(e.target.link);
+// 		}
 
-			gsap.to(el.scale, {
-				duration: 1,
-				x: 1.1,
-				y: 1.1,
-			});
-			document.querySelector('body').style.overflowY = 'hidden';
-			document.querySelector('header').style.paddingRight = '15px';
-			document.querySelector('main').style.paddingRight = '15px';
-		}
+// 		mouseOn(e) {
+// 			let el = e.target.children[0].children[0];
 
-		mouseOut(e) {
-			let el = e.currentTarget.children[0].children[0];
+// 			gsap.to(el.scale, {
+// 				duration: 1,
+// 				x: 1.1,
+// 				y: 1.1,
+// 			});
+// 			document.querySelector('body').style.overflowY = 'hidden';
+// 			document.querySelector('header').style.paddingRight = '15px';
+// 			document.querySelector('main').style.paddingRight = '15px';
+// 		}
 
-			gsap.to(el.scale, {
-				duration: 1,
-				x: 1,
-				y: 1,
-			});
-			document.querySelector('body').style.overflowY = 'scroll';
-			document.querySelector('header').style.paddingRight = '0px';
-			document.querySelector('main').style.paddingRight = '0px';
-		}
+// 		mouseOut(e) {
+// 			let el = e.currentTarget.children[0].children[0];
 
-		calcPos(src, pos) {
-			let temp =
-				((src + pos + this.WHOLEWIDTH + this.width + this.margin) %
-					this.WHOLEWIDTH) -
-				this.width -
-				this.margin;
+// 			gsap.to(el.scale, {
+// 				duration: 1,
+// 				x: 1,
+// 				y: 1,
+// 			});
+// 			document.querySelector('body').style.overflowY = 'scroll';
+// 			document.querySelector('header').style.paddingRight = '0px';
+// 			document.querySelector('main').style.paddingRight = '0px';
+// 		}
 
-			return temp;
-		}
+// 		calcPos(src, pos) {
+// 			let temp =
+// 				((src + pos + this.WHOLEWIDTH + this.width + this.margin) %
+// 					this.WHOLEWIDTH) -
+// 				this.width -
+// 				this.margin;
 
-		render() {
-			this.app.ticker.add(() => {
-				this.app.renderer.render(this.container);
+// 			return temp;
+// 		}
 
-				this.scroll -= (this.scroll - this.scrollTarget) * 0.1;
-				this.scroll *= 0.9;				
-				this.thumbs.forEach((th) => {
-					th.position.x = this.calcPos(this.scroll, th.position.x);
-				});
-			});
-		}
-	}
+// 		render() {
+// 			this.app.ticker.add(() => {
+// 				this.app.renderer.render(this.container);
 
-	// document.querySelector('.webgl').addEventListener('mouseover', (e) => {
-	// 	document.querySelector('body').style.overflow = 'hidden';
-	// 	document.querySelector('header').style.paddingRight = '15px';
-	// 	document.querySelector('main').style.paddingRight = '15px';
-	// });
-
-	// document.querySelector('.webgl').addEventListener('mouseout', (e) => {
-	// 	document.querySelector('body').style.overflow = 'scroll';
-	// 	document.querySelector('header').style.paddingRight = '0px';
-	// 	document.querySelector('main').style.paddingRight = '0px';
-	// });
-
-	new Sketch();
-}
-// $('.slider').slick({
-// 	slidesToShow: 4,
-// 	slidesToScroll: 1,
-// 	autoplay: true,
-// 	autoplaySpeed: 0,
-// 	variableWidth: true,
-// 	speed: 5500,
-// 	easing: 'linear',
-// 	cssEase: 'linear',
-// 	arrows: true,
-// 	swipe: false,
-// });
-
-//if(jQuery().fancybox) {
-// const fancybox = new Fancybox([
-// 	{
-// 		infinite: false
-// 	},
-//   ]);
-//}
+// 				this.scroll -= (this.scroll - this.scrollTarget) * 0.1;
+// 				this.scroll *= 0.9;
+// 				this.thumbs.forEach((th) => {
+// 					th.position.x = this.calcPos(this.scroll, th.position.x);
+// 				});
+// 			});
+// 		}
+// 	}
+// 	new Sketch();
+// }
+if (window.matchMedia('(max-width: 768px)').matches) {
+	//UIkit.slider('.uk-subcat-slider').stopAutoplay();
+	UIkit.slider('.uk-subcat-slider', {
+		draggable: true,
+		autoplay: false,
+	});
+} else
+	[
+		UIkit.slider('.uk-subcat-slider', {
+			draggable: false,
+			autoplay: true,
+		}),
+	];
