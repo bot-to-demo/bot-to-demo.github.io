@@ -825,6 +825,33 @@ window.onload = function () {
 				}
 			});
 		}
+		//category smooth slider
+		let subcategory = document.querySelector('.subcategory__wrapper');
+		if (subcategory) {
+			if (window.matchMedia('(max-width: 768px)').matches) {
+				//UIkit.slider('.uk-subcat-slider').stopAutoplay();
+				UIkit.slider('.uk-subcat-slider', {
+					draggable: true,
+					autoplay: false,
+				});
+			} else {
+				UIkit.slider('.uk-subcat-slider', {
+					draggable: false,
+					autoplay: true,
+				});
+			}
+		}
+		//FancyBox in card
+		let cardWrapper = document.querySelector('.card__wrapper');
+		if (cardWrapper) {
+			// const fancybox = new Fancybox([
+			// 	{
+			// 		//loop: true,
+			// 	},
+			// ]);
+
+			// console.log(fancybox);
+		}
 	})();
 	// //all change
 	// (function () {
@@ -1243,16 +1270,3 @@ window.onload = function () {
 // 	}
 // 	new Sketch();
 // }
-if (window.matchMedia('(max-width: 768px)').matches) {
-	//UIkit.slider('.uk-subcat-slider').stopAutoplay();
-	UIkit.slider('.uk-subcat-slider', {
-		draggable: true,
-		autoplay: false,
-	});
-} else
-	[
-		UIkit.slider('.uk-subcat-slider', {
-			draggable: false,
-			autoplay: true,
-		}),
-	];
